@@ -1,13 +1,13 @@
 {
-  "generated": "2026-04-02T21:04:00Z",
+  "generated": "2026-04-02T23:04:00Z",
   "summary": {
-    "total_agents": 41,
+    "total_agents": 43,
     "recurring_agents": 18,
-    "one_time_jobs": 23,
-    "healthy": 23,
-    "warning": 0,
+    "one_time_jobs": 25,
+    "healthy": 22,
+    "warning": 1,
     "broken": 0,
-    "idle": 18,
+    "idle": 20,
     "revenue_aligned": 8,
     "est_monthly_ai_cost": 558.44,
     "jobs_this_week": 16
@@ -58,8 +58,8 @@
       "delivery_target": "channel:1485491337095544963",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "1d ago",
-      "last_run_status": "running",
+      "last_run": "1h ago",
+      "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
       "inputs": [
@@ -606,10 +606,10 @@
       "delivery_target": "user:1485377509578244207",
       "session_target": "isolated",
       "timeout_seconds": 120,
-      "last_run": "10h ago",
-      "last_run_status": "ok",
+      "last_run": "6h ago",
+      "last_run_status": "error",
       "consecutive_errors": 0,
-      "status": "HEALTHY",
+      "status": "WARNING",
       "inputs": [
         "MEMORY.md",
         "projects/academy-lesson-breakdown.md"
