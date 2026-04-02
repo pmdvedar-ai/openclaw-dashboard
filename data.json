@@ -938,9 +938,9 @@
     },
     {
       "agent": "Consulting Outreach Midweek",
-      "current": "anthropic/claude-haiku-4-5",
+      "current": "openai/gpt-5.4",
       "recommended": "openai/gpt-5.4",
-      "action": "REVIEW \u2014 upgrade to GPT-5.4 flagged. Currently Haiku. Needs explicit approval before touching revenue-direct outreach drafts."
+      "action": "DONE \u2014 upgraded Haiku \u2192 GPT-5.4 on 2026-04-02 (revenue-direct, warm lead judgment)"
     },
     {
       "agent": "Daily Cost Sentinel",
