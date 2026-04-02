@@ -1,13 +1,13 @@
 {
-  "generated": "2026-04-02T15:04:00Z",
+  "generated": "2026-04-02T16:04:00Z",
   "summary": {
-    "total_agents": 40,
-    "recurring_agents": 22,
-    "one_time_jobs": 18,
-    "healthy": 19,
+    "total_agents": 36,
+    "recurring_agents": 17,
+    "one_time_jobs": 19,
+    "healthy": 16,
     "warning": 0,
     "broken": 1,
-    "idle": 20,
+    "idle": 19,
     "revenue_aligned": 8,
     "est_monthly_ai_cost": 558.44,
     "jobs_this_week": 14
