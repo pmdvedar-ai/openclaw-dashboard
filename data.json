@@ -275,7 +275,7 @@
       "purpose": "Creates Instagram/Facebook content for MBA PA brand growth",
       "schedule_cron": "0 11 * * 2",
       "schedule_human": "Every Tuesday 11:00 AM ET",
-      "model": "openai/gpt-5.4",
+      "model": "anthropic/claude-sonnet-4-6",
       "model_tier": "premium",
       "delivery_channel": "discord",
       "delivery_target": "channel:1485491233756549202",
@@ -831,34 +831,44 @@
   },
   "health_issues": [
     {
-      "agent": "Instagram Content Agent",
-      "severity": "RESOLVED",
-      "issue": "Fixed Apr 1 \u2014 wrong delivery method. Now uses openclaw CLI. Manually triggered and confirmed working Apr 1."
+      "name": "\u2705 Memory Governance Daily \u2014 Fixed Apr 1",
+      "status": "resolved",
+      "description": "Delivery channel misconfigured \u2014 resolved. Clean run confirmed. 0 consecutive errors."
     },
     {
-      "agent": "Memory Governance Daily",
-      "severity": "RESOLVED",
-      "issue": "Fixed Apr 1 \u2014 delivery channel misconfigured. Clean run confirmed."
+      "name": "\u2705 Instagram Content Agent \u2014 Fixed Apr 2",
+      "status": "resolved",
+      "description": "Model switched GPT-5.4 \u2192 Sonnet. 0 consecutive errors. Next run: Tuesday 11 AM ET."
     },
     {
-      "agent": "Consulting Outreach (Weekend)",
-      "severity": "RESOLVED",
-      "issue": "Fixed Apr 1 \u2014 model + delivery corrected. Runs Sunday 7 PM."
+      "name": "\u2705 Consulting Outreach Midweek \u2014 Upgraded Apr 2",
+      "status": "resolved",
+      "description": "Model upgraded Haiku \u2192 GPT-5.4. Revenue-direct warm lead judgment. Next run: Wednesday 6 PM ET."
     },
     {
-      "agent": "Course Architect",
-      "severity": "RESOLVED",
-      "issue": "Fixed Apr 1 \u2014 OpenAI API key rotated. Now weekly cadence for May 12 launch."
+      "name": "\u2705 launch-countdown-daily \u2014 Fixed Apr 2",
+      "status": "resolved",
+      "description": "Delivery mode error fixed (announce \u2192 none). Agent sends DM via exec. Next run: tomorrow 9 AM ET."
     },
     {
-      "agent": "Nightly Backup",
-      "severity": "RESOLVED",
-      "issue": "Fixed Apr 1 \u2014 exec approvals, secret leak guard, key rotation."
+      "name": "\u2705 Nightly Backup \u2014 Fixed Apr 1",
+      "status": "resolved",
+      "description": "Was failing (exec wall + secret leak). Fixed: sandbox off, exec policy full, pre-commit check, OpenAI key rotated."
     },
     {
-      "agent": "Daily Cost Sentinel",
-      "severity": "RESOLVED",
-      "issue": "Fixed Apr 1 \u2014 timeout doubled, timing buffer fixed."
+      "name": "\u2705 Daily Cost Sentinel \u2014 Fixed Apr 1",
+      "status": "resolved",
+      "description": "Was timing out. Fixed: timeout 300\u2192600s, collector moved to 7:45 AM for 15-min buffer."
+    },
+    {
+      "name": "\u2705 LinkedIn Growth",
+      "status": "healthy",
+      "description": "Running clean. 3\u00d7/week cadence. Posts scheduled through Apr 4."
+    },
+    {
+      "name": "\u2705 Exec Approvals \u2014 Fixed Apr 1",
+      "status": "healthy",
+      "description": "All sessions (main, isolated, cron) now have exec access. sandbox.mode=off, tools.exec.security=full."
     }
   ],
   "timing_conflicts": [
@@ -892,61 +902,71 @@
       "agent": "Weekly Executive Summary",
       "current": "anthropic/claude-sonnet-4-6",
       "recommended": "anthropic/claude-sonnet-4-6",
-      "action": "KEEP \u2014 public-facing synthesis"
+      "action": "KEEP \u2014 public-facing synthesis",
+      "impact": "\u2014"
     },
     {
       "agent": "LinkedIn Growth",
       "current": "anthropic/claude-sonnet-4-6",
       "recommended": "anthropic/claude-sonnet-4-6",
-      "action": "KEEP \u2014 brand-facing content"
+      "action": "KEEP \u2014 brand-facing content",
+      "impact": "\u2014"
     },
     {
       "agent": "Book Writing Session",
       "current": "anthropic/claude-sonnet-4-6",
       "recommended": "anthropic/claude-sonnet-4-6",
-      "action": "KEEP \u2014 long-form creative"
+      "action": "KEEP \u2014 long-form creative",
+      "impact": "\u2014"
     },
     {
       "agent": "Course Architect",
       "current": "openai/gpt-5.4",
       "recommended": "openai/gpt-5.4",
-      "action": "KEEP \u2014 complex structured output"
+      "action": "KEEP \u2014 complex structured output",
+      "impact": "\u2014"
     },
     {
       "agent": "Content Scout",
       "current": "openai/gpt-5.4",
       "recommended": "openai/gpt-5.4",
-      "action": "KEEP \u2014 upstream pipeline brief, research+synthesis task. Haiku lacks judgment for multi-source topic scoring. Decision: 2026-04-02."
+      "action": "KEEP \u2014 upstream pipeline brief, research+synthesis task. Haiku lacks judgment for multi-source topic scoring. Decision: 2026-04-02.",
+      "impact": "\u2014"
     },
     {
       "agent": "Lead Magnet Builder",
       "current": "openai/gpt-5.4",
       "recommended": "openai/gpt-5.4",
-      "action": "KEEP \u2014 revenue-direct asset creation"
+      "action": "KEEP \u2014 revenue-direct asset creation",
+      "impact": "\u2014"
     },
     {
       "agent": "Network Outreach",
       "current": "openai/gpt-5.4",
       "recommended": "openai/gpt-5.4",
-      "action": "KEEP \u2014 direct revenue, personalization matters"
+      "action": "KEEP \u2014 direct revenue, personalization matters",
+      "impact": "\u2014"
     },
     {
       "agent": "Instagram Content Agent",
       "current": "anthropic/claude-sonnet-4-6",
       "recommended": "anthropic/claude-sonnet-4-6",
-      "action": "DONE \u2014 switched GPT-5.4 \u2192 Sonnet on 2026-04-02 (writing lane)"
+      "action": "DONE \u2014 switched GPT-5.4 \u2192 Sonnet on 2026-04-02 (writing lane)",
+      "impact": "\u2014"
     },
     {
       "agent": "Consulting Outreach Midweek",
       "current": "openai/gpt-5.4",
       "recommended": "openai/gpt-5.4",
-      "action": "DONE \u2014 upgraded Haiku \u2192 GPT-5.4 on 2026-04-02 (revenue-direct, warm lead judgment)"
+      "action": "DONE \u2014 upgraded Haiku \u2192 GPT-5.4 on 2026-04-02 (revenue-direct, warm lead judgment)",
+      "impact": "\u2014"
     },
     {
       "agent": "Daily Cost Sentinel",
       "current": "anthropic/claude-haiku-4-5",
       "recommended": "anthropic/claude-haiku-4-5",
-      "action": "KEEP \u2014 structured analysis, rule-following task"
+      "action": "KEEP \u2014 structured analysis, rule-following task",
+      "impact": "\u2014"
     }
   ],
   "top_weaknesses": [
@@ -1008,5 +1028,6 @@
       "completed": null
     }
   ],
-  "bold_recommendation": "You have 23 warm leads from the lead magnet launch (Apr 1), including healthcare executives, APP supervisors, and program directors. The highest-leverage move RIGHT NOW is converting these leads into consulting conversations before momentum fades. April 7 follow-ups are scheduled \u2014 make sure you personally reach out to the top 5: Heather James (Heart & Vascular APP Manager), Dawn Hughes (Healthcare CEO), Michael Sullivan (EVH Consulting LLC), Christian Trent (CT/Vascular Administrator), and Brian Fontenot (PharmD/MPAS/MBA). One call this week = $2,500. Five calls = $12,500. The Teachable course is on track for May 12 \u2014 Stripe is connected, course shell is built, 29 lessons live."
+  "bold_recommendation": "You have 23 warm leads from the lead magnet launch (Apr 1), including healthcare executives, APP supervisors, and program directors. The highest-leverage move RIGHT NOW is converting these leads into consulting conversations before momentum fades. April 7 follow-ups are scheduled \u2014 make sure you personally reach out to the top 5: Heather James (Heart & Vascular APP Manager), Dawn Hughes (Healthcare CEO), Michael Sullivan (EVH Consulting LLC), Christian Trent (CT/Vascular Administrator), and Brian Fontenot (PharmD/MPAS/MBA). One call this week = $2,500. Five calls = $12,500. The Teachable course is on track for May 12 \u2014 Stripe is connected, course shell is built, 29 lessons live.",
+  "bold_recommendation_impact": "\ud83d\udcb0 Immediate actions: (1) Send 5 personal outreach DMs this week &nbsp;\u00b7&nbsp; (2) Prep Mitesh Patel briefing before Apr 9 call &nbsp;\u00b7&nbsp; (3) Script Module 4 before Apr 11 travel"
 }
