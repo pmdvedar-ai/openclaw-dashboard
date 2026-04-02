@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>OpenClaw Ops Dashboard</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0f1623;color:#e2e8f0;font-family:system-ui,-apple-system,sans-serif;font-size:14px;line-height:1.5;padding-bottom:env(safe-area-inset-bottom)}
+a{color:#C9973A;text-decoration:none}
+h1,h2,h3{color:#f8fafc;font-weight:600}
+.container{max-width:1400px;margin:0 auto;padding:0 24px}
+.mobile-hint{display:none;font-size:12px;color:#64748b;text-align:center;margin-top:8px;font-style:italic}
+
+/* Header */
+.header{background:linear-gradient(135deg,#1B2A4A 0%,#0f1623 100%);border-bottom:1px solid #C9973A33;padding:20px 0}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:12px}
+.logo h1{font-size:22px;color:#C9973A}
+.logo span{font-size:13px;color:#64748b}
+.header-meta{font-size:12px;color:#64748b;text-align:right}
+.header-meta strong{color:#94a3b8}
+
+/* Nav */
+nav{background:#1B2A4A;border-bottom:1px solid #1e3a5f;padding:0;position:sticky;top:0;z-index:100;padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right)}
+nav ul{display:flex;list-style:none;overflow-x:auto;-webkit-overflow-scrolling:touch}
+nav ul li a{display:block;padding:12px 18px;color:#94a3b8;font-size:13px;white-space:nowrap;border-bottom:2px solid transparent;transition:all .2s}
+nav ul li a:hover,nav ul li a.active{color:#C9973A;border-bottom-color:#C9973A}
+
+/* Summary cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;padding:24px 0}
+.card{background:#1e2d45;border:1px solid #1e3a5f;border-radius:10px;padding:20px;position:relative;overflow:hidden}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:#C9973A}
+.card.green::before{background:#22c55e}
+.card.red::before{background:#ef4444}
+.card.yellow::before{background:#eab308}
+.card.purple::before{background:#a855f7}
+.card-value{font-size:32px;font-weight:700;color:#f8fafc;line-height:1}
+.day-toggle{display:none;width:100%;background:#1B2A4A;color:#94a3b8;border:none;padding:10px 12px;font-size:13px;text-align:left;cursor:pointer;border-radius:6px;margin-bottom:4px}
+.card-label{font-size:12px;color:#64748b;margin-top:6px;text-transform:uppercase;letter-spacing:.05em}
+.card-sub{font-size:11px;color:#94a3b8;margin-top:4px}
+
+/* Sections */
+section{padding:32px 0;border-bottom:1px solid #1e2d45}
+.section-title{font-size:18px;font-weight:600;color:#C9973A;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.section-title::before{content:'';display:inline-block;width:4px;height:20px;background:#C9973A;border-radius:2px}
+
+/* Table */
+.table-wrap{overflow-x:auto;border-radius:10px;border:1px solid #1e3a5f}
+table{width:100%;border-collapse:collapse}
+th{background:#1B2A4A;color:#94a3b8;font-size:11px;text-transform:uppercase;letter-spacing:.05em;padding:12px 16px;text-align:left;border-bottom:1px solid #1e3a5f;white-space:nowrap}
+td{padding:12px 16px;border-bottom:1px solid #1a2540;vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:#1a2a40}
+.expand-row{display:none;background:#131e30}
+.expand-row td{padding:16px}
+.expand-inner{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.expand-item{background:#1B2A4A;padding:12px;border-radius:6px}
+.expand-item strong{font-size:11px;color:#64748b;display:block;margin-bottom:4px;text-transform:uppercase}
+.expand-item span{font-size:12px;color:#cbd5e1}
+tr.clickable{cursor:pointer}
+
+/* Badges */
+.badge{display:inline-flex;align-items:center;gap:4px;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:600;letter-spacing:.03em}
+.badge-healthy{background:#14532d;color:#22c55e}
+.badge-warning{background:#713f12;color:#eab308}
+.badge-broken{background:#7f1d1d;color:#ef4444}
+.badge-idle{background:#1e293b;color:#64748b}
+.badge-resolved{background:#1e3a5f;color:#60a5fa}
+.badge-content{background:#1e3a5f;color:#60a5fa}
+.badge-revenue{background:#14532d;color:#4ade80}
+.badge-finance{background:#713f12;color:#fbbf24}
+.badge-system{background:#2d1b69;color:#a78bfa}
+.badge-premium{background:#4c1d95;color:#c4b5fd}
+.badge-haiku{background:#1e3a5f;color:#7dd3fc}
+.badge-local{background:#1a2540;color:#64748b}
+.badge-direct{background:#14532d;color:#22c55e}
+.badge-indirect{background:#1e3a5f;color:#60a5fa}
+.badge-supporting{background:#2d1b69;color:#a78bfa}
+.badge-low{background:#7f1d1d;color:#f87171}
+.dot{width:8px;height:8px;border-radius:50%;display:inline-block}
+.dot-green{background:#22c55e}
+.dot-yellow{background:#eab308}
+.dot-red{background:#ef4444}
+.dot-gray{background:#64748b}
+
+/* Calendar */
+.calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:8px}
+.cal-day{background:#1e2d45;border-radius:8px;overflow:hidden;min-height:200px}
+.cal-header{background:#1B2A4A;padding:10px 12px;font-size:12px;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em}
+.cal-jobs{padding:8px}
+.cal-job{padding:6px 8px;border-radius:5px;margin-bottom:5px;font-size:11px;font-weight:500;line-height:1.3}
+.cal-job .time{font-size:10px;opacity:.7;display:block}
+.cal-content{background:#1e3a5f;color:#93c5fd}
+.cal-revenue{background:#14532d;color:#86efac}
+.cal-finance{background:#422006;color:#fde68a}
+.cal-system{background:#1a1a2e;color:#c4b5fd;border:1px solid #2d1b69}
+.cal-memory{background:#1a1a2e;color:#c4b5fd}
+.cal-conflict{border:2px solid #ef4444!important}
+.cal-warning{border:2px solid #eab308!important}
+.cal-empty{color:#4b5563;font-size:11px;padding:12px;text-align:center}
+
+/* Flow map */
+.flow-map{background:#131e30;border:1px solid #1e3a5f;border-radius:10px;padding:24px;font-family:monospace;font-size:12px;overflow-x:auto;line-height:2}
+.flow-section{margin-bottom:16px}
+.flow-label{color:#C9973A;font-weight:700;font-size:13px;margin-bottom:8px}
+.flow-node{display:inline-block;background:#1B2A4A;border:1px solid #1e3a5f;border-radius:6px;padding:4px 10px;margin:2px;font-size:11px;color:#cbd5e1}
+.flow-node.revenue{border-color:#22c55e;color:#4ade80}
+.flow-node.finance{border-color:#eab308;color:#fbbf24}
+.flow-node.system{border-color:#a855f7;color:#c4b5fd}
+.flow-node.broken{border-color:#ef4444;color:#f87171}
+.flow-arrow{color:#C9973A;margin:0 6px}
+.flow-channel{background:#1e3a5f;border-color:#3b82f6;color:#93c5fd}
+.flow-file{background:#1a2540;border-color:#334155;color:#94a3b8;font-style:italic}
+.flow-row{display:flex;align-items:center;flex-wrap:wrap;gap:4px;margin:4px 0}
+.singlepoint{color:#ef4444;font-weight:700}
+
+/* Health panel */
+.health-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+.health-item{background:#1e2d45;border-radius:8px;padding:16px;border-left:4px solid #1e3a5f}
+.health-item.warning{border-left-color:#eab308}
+.health-item.broken{border-left-color:#ef4444}
+.health-item.healthy{border-left-color:#22c55e}
+.health-item.resolved{border-left-color:#3b82f6}
+.health-name{font-weight:600;margin-bottom:4px}
+.health-issue{font-size:12px;color:#94a3b8}
+
+/* Model table */
+.model-row td:nth-child(3){color:#eab308}
+.model-row.keep td:nth-child(3){color:#22c55e}
+.model-row.upgrade td:nth-child(3){color:#ef4444}
+.model-row.downgrade td:nth-child(3){color:#eab308}
+
+/* Insights */
+.insights{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.insight-list{background:#1e2d45;border-radius:10px;padding:20px}
+.insight-list h3{color:#C9973A;margin-bottom:16px;font-size:15px}
+.insight-item{display:flex;gap:12px;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid #1a2540}
+.insight-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.insight-num{background:#C9973A;color:#0f1623;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0;margin-top:1px}
+.insight-text{font-size:13px;color:#cbd5e1;line-height:1.5}
+
+/* Bold recommendation */
+.bold-rec{background:linear-gradient(135deg,#1B2A4A,#0f1a2e);border:2px solid #C9973A;border-radius:12px;padding:28px;margin-top:24px}
+.bold-rec-label{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:#C9973A;margin-bottom:8px}
+.bold-rec-text{font-size:16px;color:#f8fafc;line-height:1.6}
+.bold-rec-impact{margin-top:12px;font-size:13px;color:#22c55e;font-weight:600}
+
+/* Value alignment */
+.value-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.value-card{background:#1e2d45;border-radius:8px;padding:16px}
+.value-card h4{font-size:12px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px}
+.value-card.direct h4{color:#22c55e}
+.value-card.indirect h4{color:#60a5fa}
+.value-card.supporting h4{color:#a855f7}
+.value-card.low h4{color:#ef4444}
+.value-card ul{list-style:none}
+.value-card ul li{font-size:12px;color:#94a3b8;padding:4px 0;border-bottom:1px solid #1a2540}
+.value-card ul li:last-child{border-bottom:none}
+
+/* Filters */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.filter-btn{padding:6px 14px;border-radius:20px;border:1px solid #1e3a5f;background:transparent;color:#94a3b8;font-size:12px;cursor:pointer;transition:all .2s}
+.filter-btn:hover,.filter-btn.active{background:#1B2A4A;border-color:#C9973A;color:#C9973A}
+
+/* Utility */
+.text-muted{color:#64748b}
+.text-sm{font-size:12px}
+.mb-0{margin-bottom:0}
+.mt-8{margin-top:8px}
+.conflict-note{display:inline-flex;align-items:center;gap:4px;font-size:11px;color:#ef4444;margin-left:6px}
+.warning-note{color:#eab308}
+
+@media(max-width:900px){
+  .insights{grid-template-columns:1fr}
+  .calendar{grid-template-columns:repeat(4,1fr)}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .health-grid{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+  .container{padding:0 16px}
+  section{padding:20px 0}
+  .header-inner{flex-direction:column;align-items:flex-start;gap:8px}
+  .header-meta{font-size:11px}
+  .logo h1{font-size:18px}
+  th.hide-mobile,td.hide-mobile{display:none}
+  .mobile-hint{display:block}
+  .filter-btn{min-height:40px;padding:8px 14px}
+  .clickable{min-height:48px}
+  .section-title{font-size:16px}
+  body{font-size:13px}
+  .bold-rec{padding:18px}
+  .bold-rec-text{font-size:14px}
+  .insight-list{padding:14px}
+  .flow-map{font-size:11px;-webkit-overflow-scrolling:touch}
+  .flow-row{flex-wrap:wrap}
+}
+@media(max-width:600px){
+  .calendar{grid-template-columns:1fr}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .card{padding:14px}
+  .card-value{font-size:24px}
+  .value-grid{grid-template-columns:repeat(2,1fr)}
+  .day-toggle{display:block}
+  .hide-reason{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="container">
+    <div class="header-inner">
+      <div class="logo">
+        <h1>⚡ OpenClaw Ops</h1>
+        <span>MBA PA System — Pol Vedar</span>
+      </div>
+      <div class="header-meta">
+        <strong>Generated: Thu Apr 2, 2026 · 11:04 AM ET<br></strong>
+        <strong>Environment:</strong> Mac Studio M4 · Darwin 25.4.0 · Gateway :18789
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav>
+  <div class="container">
+    <ul>
+      <li><a href="#summary" class="active">Summary</a></li>
+      <li><a href="#registry">Agent Registry</a></li>
+      <li><a href="#calendar">Weekly Calendar</a></li>
+      <li><a href="#flow">Flow Map</a></li>
+      <li><a href="#health">Health</a></li>
+      <li><a href="#value">Value Alignment</a></li>
+      <li><a href="#models">Model Optimization</a></li>
+      <li><a href="#insights">Insights</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+
+<!-- SUMMARY CARDS -->
+<div id="summary" class="cards">
+  <div class="card">
+    <div class="card-value">44</div>
+  <div class="card-label">Total Jobs</div>
+    <div class="card-sub">19 recurring · 25 one-time</div>
+  </div>
+  <div class="card green">
+    <div class="card-value">20 <span style="font-size:16px;color:#64748b">/ 0 / 2</span></div>
+    <div class="card-label">Healthy / Warning / Broken</div>
+    <div class="card-sub">22 idle (one-time, not yet run)</div>
+  </div>
+  <div class="card">
+    <div class="card-value">8</div>
+    <div class="card-label">Revenue-Aligned Agents</div>
+    <div class="card-sub">5 direct · 3 indirect</div>
+  </div>
+  <div class="card yellow">
+    <div class="card-value">12</div>
+    <div class="card-label">Jobs This Week</div>
+    <div class="card-sub">4 content · 4 finance · 4 system</div>
+  </div>
+  <div class="card red">
+    <div class="card-value">$558</div>
+    <div class="card-label">Est Monthly AI Cost</div>
+    <div class="card-sub">+$27 if trials convert (Apr 6/12)</div>
+  </div>
+  <div class="card purple">
+    <div class="card-value">~3h</div>
+    <div class="card-label">Next Job</div>
+    <div class="card-sub">Agent Commands Watcher · 4:00 PM</div>
+  </div>
+</div>
+
+<!-- AGENT REGISTRY -->
+<section id="registry">
+  <div class="section-title">Agent Registry</div>
+  <div class="filters">
+    <button class="filter-btn active" onclick="filterTable('all')">All (18)</button>
+    <button class="filter-btn" onclick="filterTable('content')">Content (4)</button>
+    <button class="filter-btn" onclick="filterTable('revenue')">Revenue (5)</button>
+    <button class="filter-btn" onclick="filterTable('finance')">Finance (3)</button>
+    <button class="filter-btn" onclick="filterTable('system')">System (6)</button>
+    <button class="filter-btn" onclick="filterTable('WARNING')">⚠ Warnings (3)</button>
+  </div>
+  <div class="table-wrap">
+    <table id="agentTable">
+      <thead>
+        <tr>
+          <th>Agent</th>
+          <th>Category</th>
+          <th class="hide-mobile">Schedule</th>
+          <th class="hide-mobile">Model</th>
+          <th>Status</th>
+          <th>Value</th>
+          <th class="hide-mobile">Last Run</th>
+          <th class="hide-mobile">Next Run</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="clickable" onclick="toggleRow('r1')" data-cat="content" data-status="HEALTHY">
+          <td><strong>Content Scout</strong></td>
+          <td><span class="badge badge-content">content</span></td>
+          <td class="hide-mobile">Mon 9:00 AM</td>
+          <td class="hide-mobile"><span class="badge badge-premium">GPT-5.4</span></td>
+          <td><span class="badge badge-healthy"><span class="dot dot-green"></span>Healthy</span></td>
+          <td><span class="badge badge-indirect">Indirect Rev</span></td>
+          <td class="hide-mobile">2d ago</td>
+          <td class="hide-mobile">Mon 9 AM</td>
+        </tr>
+        <tr id="r1" class="expand-row"><td colspan="8"><div class="expand-inner">
+          <div class="expand-item"><strong>Schedule</strong><span>Mon 9:00 AM ET</span></div>
+          <div class="expand-item"><strong>Model</strong><span>openai/gpt-5.4</span></div>
+          <div class="expand-item"><strong>Last Run</strong><span>2d ago</span></div>
+          <div class="expand-item"><strong>Next Run</strong><span>Mon 9 AM</span></div>
+          <div class="expand-item"><strong>Purpose</strong><span>Scans web for trending topics in cardiac surgery PA niche</span></div>
+          <div class="expand-item"><strong>Inputs</strong><span>Web search, MEMORY.md</span></div>
+          <div class="expand-item"><strong>Outputs</strong><span>Discord #content-scout ideas</span></div>
+          <div class="expand-item"><strong>Downstream</strong><span>LinkedIn Growth, Instagram Content</span></div>
+          <div class="expand-item"><strong>Delivery</strong><span>Discord channel:1485491233756549202</span></div>
+          <div class="expand-item"><strong>Model Note</strong><span>⚠ Consider downgrade to Haiku — saves ~$5-8/mo</span></div>
+        </div></td></tr>
+
+        <tr class="clickable" onclick="toggleRow('r2')" data-cat="revenue" data-status="HEALTHY">
+          <td><strong>LinkedIn Growth</strong></td>
+          <td><span class="badge badge-revenue">revenue</span></td>
+          <td>Mon/Wed/Fri 10 AM</td>
+          <td><span class="badge badge-premium">Sonnet</span></td>
+          <td><span class="badge badge-healthy"><span class="dot dot-green"></span>Healthy</span></td>
+          <td><span class="badge badge-direct">Direct Rev</span></td>
+          <td>3h ago</td>
+          <td>Fri 10 AM</td>
+        </tr>
+        <tr id="r2" class="expand-row"><td colspan="8"><div class="expand-inner">
+          <div class="expand-item"><strong>Purpose</strong><span>Drafts LinkedIn posts; triggers scheduled post crons</span></div>
+          <div class="expand-item"><strong>Inputs</strong><span>MEMORY.md, content/linkedin-posts, Content Scout</span></div>
+          <div class="expand-item"><strong>Outputs</strong><span>Discord drafts + linkedin-post-* cron jobs</span></div>
+          <div class="expand-item"><strong>Downstream</strong><span>48h/7d analytics reminder crons</span></div>
+          <div class="expand-item"><strong>Delivery</strong><span>Discord channel:1485491337095544963</span></div>
+          <div class="expand-item"><strong>Model Note</strong><span>✅ Sonnet correct — brand-facing output</span></div>
+        </div></td></tr>
+
+        <tr class="clickable" onclick="toggleRow('r3')" data-cat="revenue" data-status="HEALTHY">
+          <td><strong>Lead Magnet Builder</strong></td>
+          <td><span class="badge badge-revenue">revenue</span></td>
+          <td>Mon 2:00 PM</td>
+          <td><span class="badge badge-premium">GPT-5.4</span></td>
+          <td><span class="badge badge-healthy"><span class="dot dot-green"></span>Healthy</span></td>
+          <td><span class="badge badge-direct">Direct Rev</span></td>
+          <td>2d ago</td>
+          <td>Mon 2 PM</td>
+        </tr>
+        <tr id="r3" class="expand-row"><td colspan="8"><div class="expand-inner">
+          <div class="expand-item"><strong>Purpose</strong><span>Creates lead magnet PDFs/templates for MBA PA funnel</span></div>
+          <div class="expand-item"><strong>Inputs</strong><span>MEMORY.md, content/</span></div>
+          <div class="expand-item"><strong>Outputs</strong><span>PDFs to Discord + Google Drive</span></div>
+          <div class="expand-item"><strong>Downstream</strong><span>Linktree, ManyChat keyword automation</span></div>
+          <div class="expand-item"><strong>Delivery</strong><span>Discord channel:1485491390304747550</span></div>
+          <div class="expand-item"><strong>Model Note</strong><span>✅ GPT-5.4 correct — revenue-direct assets</span></div>
+        </div></td></tr>
+
+        <tr class="clickable" onclick="toggleRow('r4')" data-cat="revenue" data-status="HEALTHY">
+          <td><strong>Course Architect</strong></td>
+          <td><span class="badge badge-revenue">revenue</span></td>
+          <td>First Mon/mo 3 PM</td>
+          <td><span class="badge badge-premium">GPT-5.4</span></td>
+          <td><span class="badge badge-healthy"><span class="dot dot-green"></span>Healthy</span></td>
+          <td><span class="badge badge-direct">Direct Rev</span></td>
+          <td>2d ago</td>
+          <td>May 4 3 PM</td>
+        </tr>
+        <tr id="r4" class="expand-row"><td colspan="8"><div class="expand-inner">
+          <div class="expand-item"><strong>Purpose</strong><span>MBA PA Academy course content — scripts, lessons</span></div>
+          <div class="expand-item"><strong>Inputs</strong><span>academy-curriculum-final.md, lesson-breakdown.md</span></div>
+          <div class="expand-item"><strong>Outputs</strong><span>Course scripts + lesson drafts to Discord</span></div>
+          <div class="expand-item"><strong>Downstream</strong><span>Teachable course upload</span></div>
+          <div class="expand-item"><strong>Delivery</strong><span>Discord channel:1485491468683448451</span></div>
+          <div class="expand-item"><strong>⚠ Risk</strong><span>Runs monthly — too slow for May 12 launch. Should run weekly.</span></div>
+        </div></td></tr>
+
+        <tr class="clickable" onclick="toggleRow('r5')" data-cat="revenue" data-status="WARNING">
+          <td><strong>Consulting Outreach (Mid)</strong></td>
+          <td><span class="badge badge-revenue">revenue</span></td>
+          <td>Wed 6:00 PM</td>
+          <td><span class="badge badge-haiku">Haiku</span></td>
+          <td><span class="badge badge-warning"><span class="dot dot-yellow"></span>Warning</span></td>
+          <td><span class="badge badge-direct">Direct Rev</span></td>
+          <td>Never run</td>
+          <td>Today 6 PM</td>
+        </tr>
+        <tr id="r5" class="expand-row"><td colspan="8"><div class="expand-inner">
+          <div class="expand-item"><strong>Purpose</strong><span>Midweek consulting outreach drafts</span></div>
+          <div class="expand-item"><strong>Issue</strong><span>🔴 Has never run — possibly misconfigured or missing input data</span></div>
+          <div class="expand-item"><strong>Inputs</strong><span>agents/consulting-outreach/outreach-tracker.jsonl</span></div>
+          <div class="expand-item"><strong>Delivery</strong><span>Discord channel:1485491529991589888</span></div>
+          <div class="expand-item"><strong>Model Note</strong><span>⚠ Haiku for direct revenue outreach — consider GPT-5.4</span></div>
+          <div class="expand-item"><strong>Action</strong><span>Investigate why it's never run. Verify outreach-tracker.jsonl exists and has data.</span></div>
+        </div></td></tr>
+
+        <tr class="clickable" onclick="toggleRow('r6')" data-cat="revenue" data-status="WARNING">
+          <td><strong>Consulting Outreach (Wknd)</strong></td>
+          <td><span class="badge badge-revenue">revenue</span></td>
+          <td>Sun 7:00 PM</td>
+          <td><span class="badge badge-idle">Unknown</span></td>
+          <td><span class="badge badge-warning"><span class="dot dot-yellow"></span>Warning</span></td>
+          <td><span class="badge badge-direct">Direct Rev</span></td>
+          <td>3d ago (error)</td>
+          <td>Sun 7 PM</td>
+        </tr>
+        <tr id="r6" class="expand-row"><td colspan="8"><div class="expand-inner">
+          <div class="expand-item"><strong>Issue</strong><span>🔴 1 consecutive error + no model configured</span></div>
+          <div class="expand-item"><strong>Conflict</strong><span>⚠ Runs same time as Book Writing Session (Sun 7 PM)</span></div>
+          <div class="expand-item"><strong>Action</strong><span>Fix error, assign model, stagger by 30 min from Book Writing Session</span></div>
+        </div></td></tr>
+
+        <tr class="clickable" onclick="toggleRow('r7')" data-cat="revenue" data-status="HEALTHY">
+          <td><strong>Network Outreach</strong></td>
+          <td><span class="badge badge-revenue">revenue</span></td>
+          <td>Fri 4:00 PM</td>
+          <td><span class="badge badge-premium">GPT-5.4</span></td>
+          <td><span class="badge badge-healthy"><span class="dot dot-green"></span>Healthy</span></td>
+          <td><span class="badge badge-direct">Direct Rev</span></td>
+          <td>5d ago</td>
+          <td>Fri 4 PM</td>
+        </tr>
+        <tr id="r7" class="expand-row"><td colspan="8"><div class="expand-inner">
+          <div class="expand-item"><strong>Purpose</strong><span>Warm outreach to PA network for consulting + course beta</span></div>
+          <div class="expand-item"><strong>Inputs</strong><span>MEMORY.md, consulting outreach tracker</span></div>
+          <div class="expand-item"><strong>Outputs</strong><span>Outreach messages to Discord</span></div>
+          <div class="expand-item"><strong>Downstream</strong><span>Calendly 30-min discovery calls</span></div>
+        </div></td></tr>
+
+        <tr class="clickable" onclick="toggleRow('r8')" data-cat="content" data-status="HEALTHY">
+          <td><strong>Book Writing Session</strong></td>
+          <td><span class="badge badge-content">content</span></td>
+          <td>Sun 7:00 PM</td>
+          <td><span class="badge badge-premium">Sonnet</span></td>
+          <td><span class="badge badge-healthy"><span class="dot dot-green"></span>Healthy</span></td>
+          <td><span class="badge badge-indirect">Indirect Rev</span></td>
+          <td>3d ago</td>
+          <td>Sun 7 PM</td>
+        </tr>
+        <tr id="r8" class="expand-row"><td colspan="8"><div class="expand-inner">
+          <div class="expand-item"><strong>Purpose</strong><span>Structured PA leadership book writing sessions</span></div>
+          <div class="expand-item"><strong>Outputs</strong><span>Chapter drafts to Discord #book-sessions</span></div>
+          <div class="expand-item"><strong>Conflict</strong><span>⚠ Runs same time as Consulting Outreach Weekend</span></div>
+        </div></td></tr>
+
+        <tr class="clickable" onclick="toggleRow('r9')" data-cat="content" data-status="WARNING">
+          <td><strong>Instagram Content Agent</strong></td>
+          <td><span class="badge badge-content">content</span></td>
+          <td>Tue 11:00 AM</td>
+          <td><span class="badge badge-premium">GPT-5.4</span></td>
+          <td><span class="badge badge-warning"><span class="dot dot-yellow"></span>Warning</span></td>
+          <td><span class="badge badge-indirect">Indirect Rev</span></td>
+          <td>1d ago (error)</td>
+          <td>Tue 11 AM</td>
+        </tr>
+        <tr id="r9" class="expand-row"><td colspan="8"><div class="expand-inner">
+          <div class="expand-item"><strong>Issue</strong><span>🔴 1 consecutive error — investigate before next run</span></div>
+          <div class="expand-item"><strong>Model Note</strong><span>GPT-5.4 for Instagram — consider switching to Sonnet (creative, cheaper)</span></div>
+        </div></td></tr>
+
+        <tr class="clickable" onclick="toggleRow('r10')" data-cat="finance" data-status="HEALTHY">
+          <td><strong>Daily Cost Collector</strong></td>
+          <td><span class="badge badge-finance">finance</span></td>
+          <td>Daily 7:45 AM</td>
+          <td><span class="badge badge-local">Local (Qwen)</span></td>
+          <td><span class="badge badge-healthy"><span class="dot dot-green"></span>Healthy</span></td>
+          <td><span class="badge badge-supporting">Supporting</span></td>
+          <td>5h ago</td>
+          <td>Tomorrow 7:45 AM</td>
+        </tr>
+        <tr id="r10" class="expand-row"><td colspan="8"><div class="expand-inner">
+          <div class="expand-item"><strong>Purpose</strong><span>Collects daily spend CSV from OpenAI + Anthropic APIs</span></div>
+          <div class="expand-item"><strong>Outputs</strong><span>agents/daily-cost-sentinel/data/YYYY-MM-DD.csv</span></div>
+          <div class="expand-item"><strong>Downstream</strong><span>Daily Cost Sentinel (15 min later)</span></div>
+          <div class="expand-item"><strong>Fixed</strong><span>✅ Moved to 7:45 AM today for proper buffer</span></div>
+        </div></td></tr>
+
+        <tr class="clickable" onclick="toggleRow('r11')" data-cat="finance" data-status="HEALTHY">
+          <td><strong>Daily Cost Sentinel</strong></td>
+          <td><span class="badge badge-finance">finance</span></td>
+          <td>Daily 8:00 AM</td>
+          <td><span class="badge badge-haiku">Haiku</span></td>
+          <td><span class="badge badge-healthy"><span class="dot dot-green"></span>Healthy</span></td>
+          <td><span class="badge badge-supporting">Supporting</span></td>
+          <td>35m ago</td>
+          <td>Tomorrow 8 AM</td>
+        </tr>
+        <tr id="r11" class="expand-row"><td colspan="8"><div class="expand-inner">
+          <div class="expand-item"><strong>Purpose</strong><span>Analyzes daily spend, flags anomalies, updates ledger</span></div>
+          <div class="expand-item"><strong>Outputs</strong><span>Discord cost report + state/summary-YYYY-MM-DD.json</span></div>
+          <div class="expand-item"><strong>Fixed Today</strong><span>✅ Timeout doubled to 600s. Was timing out at 300s.</span></div>
+        </div></td></tr>
+
+        <tr class="clickable" onclick="toggleRow('r12')" data-cat="finance" data-status="HEALTHY">
+          <td><strong>Cost Sentinel Renewal Check</strong></td>
+          <td><span class="badge badge-finance">finance</span></td>
+          <td>Daily 8:30 AM</td>
+          <td><span class="badge badge-local">Local (Qwen)</span></td>
+          <td><span class="badge badge-healthy"><span class="dot dot-green"></span>Healthy</span></td>
+          <td><span class="badge badge-supporting">Supporting</span></td>
+          <td>4h ago</td>
+          <td>Tomorrow 8:30 AM</td>
+        </tr>
+        <tr id="r12" class="expand-row"><td colspan="8"><div class="expand-inner">
+          <div class="expand-item"><strong>Purpose</strong><span>Checks renewals within 14 days; sends decision prompts</span></div>
+          <div class="expand-item"><strong>Outputs</strong><span>Discord renewal alerts</span></div>
+        </div></td></tr>
+
+        <tr class="clickable" onclick="toggleRow('r13')" data-cat="system" data-status="WARNING">
+          <td><strong>Memory Governance Daily</strong></td>
+          <td><span class="badge badge-system">system</span></td>
+          <td>Daily 9:00 AM</td>
+          <td><span class="badge badge-haiku">Haiku</span></td>
+          <td><span class="badge badge-warning"><span class="dot dot-yellow"></span>Warning</span></td>
+          <td><span class="badge badge-supporting">Supporting</span></td>
+          <td>4h ago (error)</td>
+          <td>Tomorrow 9 AM</td>
+        </tr>
+        <tr id="r13" class="expand-row"><td colspan="8"><div class="expand-inner">
+          <div class="expand-item"><strong>Purpose</strong><span>Validates MEMORY.md, processes promotion queue</span></div>
+          <div class="expand-item"><strong>🔴 Critical</strong><span>MEMORY.md is upstream of ALL agents. This error needs immediate investigation.</span></div>
+          <div class="expand-item"><strong>Downstream</strong><span>Every agent that reads MEMORY.md (all content + revenue agents)</span></div>
+        </div></td></tr>
+
+        <tr class="clickable" onclick="toggleRow('r14')" data-cat="system" data-status="HEALTHY">
+          <td><strong>Backlog Intake Processor</strong></td>
+          <td><span class="badge badge-system">system</span></td>
+          <td>Daily 9:00 AM</td>
+          <td><span class="badge badge-haiku">Haiku</span></td>
+          <td><span class="badge badge-healthy"><span class="dot dot-green"></span>Healthy</span></td>
+          <td><span class="badge badge-supporting">Supporting</span></td>
+          <td>4h ago</td>
+          <td>Tomorrow 9 AM</td>
+        </tr>
+        <tr id="r14" class="expand-row"><td colspan="8"><div class="expand-inner">
+          <div class="expand-item"><strong>Purpose</strong><span>Scores + processes new backlog entries from Discord ideas</span></div>
+          <div class="expand-item"><strong>Outputs</strong><span>backlog.md updates</span></div>
+        </div></td></tr>
+
+        <tr class="clickable" onclick="toggleRow('r15')" data-cat="system" data-status="HEALTHY">
+          <td><strong>Weekly Metrics Digest</strong></td>
+          <td><span class="badge badge-system">system</span></td>
+          <td>Fri 6:00 PM</td>
+          <td><span class="badge badge-haiku">Haiku</span></td>
+          <td><span class="badge badge-healthy"><span class="dot dot-green"></span>Healthy</span></td>
+          <td><span class="badge badge-supporting">Supporting</span></td>
+          <td>5d ago</td>
+          <td>Fri 6 PM</td>
+        </tr>
+        <tr id="r15" class="expand-row"><td colspan="8"><div class="expand-inner">
+          <div class="expand-item"><strong>Purpose</strong><span>Weekly performance metrics across all agents</span></div>
+          <div class="expand-item"><strong>Downstream</strong><span>Weekly Executive Summary (30 min later)</span></div>
+          <div class="expand-item"><strong>Conflict</strong><span>⚠ Runs same time as Backlog Review Agent</span></div>
+        </div></td></tr>
+
+        <tr class="clickable" onclick="toggleRow('r16')" data-cat="system" data-status="HEALTHY">
+          <td><strong>Weekly Executive Summary</strong></td>
+          <td><span class="badge badge-system">system</span></td>
+          <td>Fri 6:30 PM</td>
+          <td><span class="badge badge-premium">Sonnet</span></td>
+          <td><span class="badge badge-healthy"><span class="dot dot-green"></span>Healthy</span></td>
+          <td><span class="badge badge-supporting">Supporting</span></td>
+          <td>5d ago</td>
+          <td>Fri 6:30 PM</td>
+        </tr>
+        <tr id="r16" class="expand-row"><td colspan="8"><div class="expand-inner">
+          <div class="expand-item"><strong>Purpose</strong><span>High-level weekly summary for Pol: revenue, content, health</span></div>
+          <div class="expand-item"><strong>Inputs</strong><span>Weekly Metrics Digest output, MEMORY.md</span></div>
+          <div class="expand-item"><strong>Sequencing</strong><span>✅ Correctly runs 30 min after Weekly Metrics Digest</span></div>
+        </div></td></tr>
+
+        <tr class="clickable" onclick="toggleRow('r17')" data-cat="system" data-status="HEALTHY">
+          <td><strong>System Health Sentinel</strong></td>
+          <td><span class="badge badge-system">system</span></td>
+          <td>Mon 8:00 AM</td>
+          <td><span class="badge badge-local">Local (Qwen)</span></td>
+          <td><span class="badge badge-healthy"><span class="dot dot-green"></span>Healthy</span></td>
+          <td><span class="badge badge-supporting">Supporting</span></td>
+          <td>2d ago</td>
+          <td>Mon 8 AM</td>
+        </tr>
+        <tr id="r17" class="expand-row"><td colspan="8"><div class="expand-inner">
+          <div class="expand-item"><strong>Purpose</strong><span>Weekly cron health, file integrity, exec status audit</span></div>
+          <div class="expand-item"><strong>Model Note</strong><span>✅ Local model correct — mechanical checks</span></div>
+        </div></td></tr>
+
+        <tr class="clickable" onclick="toggleRow('r18')" data-cat="system" data-status="HEALTHY">
+          <td><strong>Nightly Backup</strong></td>
+          <td><span class="badge badge-system">system</span></td>
+          <td>Daily 2:00 AM</td>
+          <td><span class="badge badge-local">Local (Qwen)</span></td>
+          <td><span class="badge badge-resolved"><span class="dot dot-green"></span>Fixed Today</span></td>
+          <td><span class="badge badge-supporting">Supporting</span></td>
+          <td>1h ago</td>
+          <td>Tomorrow 2 AM</td>
+        </tr>
+        <tr id="r18" class="expand-row"><td colspan="8"><div class="expand-inner">
+          <div class="expand-item"><strong>Purpose</strong><span>Full local backup + git-safe mirror push to GitHub</span></div>
+          <div class="expand-item"><strong>Fixed</strong><span>✅ Exec approvals unblocked + pre-commit secret leak check added + OpenAI key rotated</span></div>
+        </div></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="mobile-hint">📱 Tap any row to see full details including schedule, model, and timing</p>
+</section>
+
+<!-- WEEKLY CALENDAR -->
+<section id="calendar">
+  <div class="section-title">Weekly Schedule</div>
+  <p class="text-muted text-sm" style="margin-bottom:16px">Click any job to expand. <span style="color:#ef4444">Red border</span> = timing conflict. <span style="color:#eab308">Yellow border</span> = error/warning.</p>
+  <div class="calendar">
+    <div class="cal-day">
+      <div class="cal-header">Monday</div>
+      <button class="day-toggle" data-day="mon" onclick="toggleDay('mon')">▼ Monday (6 jobs)</button>
+      <div class="cal-jobs" id="day-mon">
+        <div class="cal-job cal-system"><span class="time">8:00 AM</span>System Health Sentinel</div>
+        <div class="cal-job cal-content cal-conflict"><span class="time">9:00 AM ⚠</span>Content Scout</div>
+        <div class="cal-job cal-system cal-conflict"><span class="time">9:00 AM ⚠</span>Memory Governance</div>
+        <div class="cal-job cal-system cal-conflict"><span class="time">9:00 AM ⚠</span>Backlog Intake</div>
+        <div class="cal-job cal-revenue"><span class="time">10:00 AM</span>LinkedIn Growth</div>
+        <div class="cal-job cal-revenue"><span class="time">2:00 PM</span>Lead Magnet Builder</div>
+      </div>
+    </div>
+    <div class="cal-day">
+      <div class="cal-header">Tuesday</div>
+      <button class="day-toggle" data-day="tue" onclick="toggleDay('tue')">▼ Tuesday (6 jobs)</button>
+      <div class="cal-jobs" id="day-tue">
+        <div class="cal-job cal-finance"><span class="time">7:45 AM</span>Cost Collector</div>
+        <div class="cal-job cal-finance"><span class="time">8:00 AM</span>Cost Sentinel</div>
+        <div class="cal-job cal-finance"><span class="time">8:30 AM</span>Renewal Check</div>
+        <div class="cal-job cal-system"><span class="time">9:00 AM</span>Memory Governance</div>
+        <div class="cal-job cal-system cal-conflict"><span class="time">9:00 AM ⚠</span>Backlog Intake</div>
+        <div class="cal-job cal-content cal-warning"><span class="time">11:00 AM ⚠</span>Instagram Content</div>
+      </div>
+    </div>
+    <div class="cal-day">
+      <div class="cal-header">Wednesday</div>
+      <button class="day-toggle" data-day="wed" onclick="toggleDay('wed')">▼ Wednesday (6 jobs)</button>
+      <div class="cal-jobs" id="day-wed">
+        <div class="cal-job cal-finance"><span class="time">7:45 AM</span>Cost Collector</div>
+        <div class="cal-job cal-finance"><span class="time">8:00 AM</span>Cost Sentinel</div>
+        <div class="cal-job cal-finance"><span class="time">8:30 AM</span>Renewal Check</div>
+        <div class="cal-job cal-system"><span class="time">9:00 AM</span>Memory Governance</div>
+        <div class="cal-job cal-revenue"><span class="time">10:00 AM</span>LinkedIn Growth</div>
+        <div class="cal-job cal-revenue cal-warning"><span class="time">6:00 PM ⚠</span>Consulting (Mid)</div>
+      </div>
+    </div>
+    <div class="cal-day">
+      <div class="cal-header">Thursday</div>
+      <button class="day-toggle" data-day="thu" onclick="toggleDay('thu')">▼ Thursday (4 jobs)</button>
+      <div class="cal-jobs" id="day-thu">
+        <div class="cal-job cal-finance"><span class="time">7:45 AM</span>Cost Collector</div>
+        <div class="cal-job cal-finance"><span class="time">8:00 AM</span>Cost Sentinel</div>
+        <div class="cal-job cal-finance"><span class="time">8:30 AM</span>Renewal Check</div>
+        <div class="cal-job cal-system"><span class="time">9:00 AM</span>Memory Governance</div>
+        <div class="cal-empty">↳ Light day</div>
+      </div>
+    </div>
+    <div class="cal-day">
+      <div class="cal-header">Friday</div>
+      <button class="day-toggle" data-day="fri" onclick="toggleDay('fri')">▼ Friday (9 jobs)</button>
+      <div class="cal-jobs" id="day-fri">
+        <div class="cal-job cal-finance"><span class="time">7:45 AM</span>Cost Collector</div>
+        <div class="cal-job cal-finance"><span class="time">8:00 AM</span>Cost Sentinel</div>
+        <div class="cal-job cal-finance"><span class="time">8:30 AM</span>Renewal Check</div>
+        <div class="cal-job cal-system"><span class="time">9:00 AM</span>Memory Governance</div>
+        <div class="cal-job cal-revenue"><span class="time">10:00 AM</span>LinkedIn Growth</div>
+        <div class="cal-job cal-revenue"><span class="time">4:00 PM</span>Network Outreach</div>
+        <div class="cal-job cal-system cal-conflict"><span class="time">6:00 PM ⚠</span>Weekly Metrics</div>
+        <div class="cal-job cal-system cal-conflict"><span class="time">6:00 PM ⚠</span>Backlog Review</div>
+        <div class="cal-job cal-system"><span class="time">6:30 PM</span>Exec Summary</div>
+      </div>
+    </div>
+    <div class="cal-day">
+      <div class="cal-header">Saturday</div>
+      <button class="day-toggle" data-day="sat" onclick="toggleDay('sat')">▶ Saturday (0 jobs)</button>
+      <div class="cal-jobs" id="day-sat" style="display:none">
+        <div class="cal-empty">No scheduled jobs</div>
+      </div>
+    </div>
+    <div class="cal-day">
+      <div class="cal-header">Sunday</div>
+      <button class="day-toggle" data-day="sun" onclick="toggleDay('sun')">▼ Sunday (2 jobs)</button>
+      <div class="cal-jobs" id="day-sun">
+        <div class="cal-job cal-content cal-conflict"><span class="time">7:00 PM ⚠</span>Book Writing</div>
+        <div class="cal-job cal-revenue cal-conflict cal-warning"><span class="time">7:30 PM</span>Consulting (Wknd)</div>
+      </div>
+    </div>
+  </div>
+  <p class="text-sm text-muted" style="margin-top:12px">+ Daily 2:00 AM: Nightly Backup &nbsp;|&nbsp; First Mon/mo 3:00 PM: Course Architect &nbsp;|&nbsp; Mon 8:30 AM: weekly-strategic-recap</p>
+</section>
+
+<!-- FLOW MAP -->
+<section id="flow">
+  <div class="section-title">System Flow Map</div>
+  <div class="flow-map">
+    <div class="flow-section">
+      <div class="flow-label">📥 DATA INPUTS</div>
+      <div class="flow-row">
+        <span class="flow-node">OpenAI API</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node finance">Cost Collector</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node file">data/YYYY-MM-DD.csv</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node finance">Cost Sentinel</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node file">ledger.json + summary.json</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-channel">Discord #cost-sentinel</span>
+      </div>
+      <div class="flow-row">
+        <span class="flow-node">Anthropic API</span>
+        <span class="flow-arrow">↗</span>
+      </div>
+    </div>
+    <div class="flow-section">
+      <div class="flow-label">🧠 MEMORY SYSTEM <span class="singlepoint">← SINGLE POINT OF FAILURE</span></div>
+      <div class="flow-row">
+        <span class="flow-node system broken">Memory Governance ⚠</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node file">MEMORY.md</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">Content Scout</span>
+        <span class="flow-arrow">+</span>
+        <span class="flow-node revenue">LinkedIn Growth</span>
+        <span class="flow-arrow">+</span>
+        <span class="flow-node revenue">Network Outreach</span>
+        <span class="flow-arrow">+</span>
+        <span class="flow-node">ALL AGENTS</span>
+      </div>
+      <div class="flow-row">
+        <span class="flow-node file">memory/YYYY-MM-DD.md</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node system broken">Memory Governance ⚠</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node file">memory/promotion-queue.jsonl</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node file">MEMORY.md (curated)</span>
+      </div>
+    </div>
+    <div class="flow-section">
+      <div class="flow-label">📝 CONTENT PIPELINE</div>
+      <div class="flow-row">
+        <span class="flow-node">Web Search</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">Content Scout</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-channel">Discord #content-scout</span>
+        <span class="flow-arrow">→ (manual review) →</span>
+        <span class="flow-node revenue">LinkedIn Growth</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node file">content/linkedin-post-*.txt</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">linkedin-post-* crons</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-channel">LinkedIn API</span>
+      </div>
+      <div class="flow-row">
+        <span class="flow-node">Content Scout</span>
+        <span class="flow-arrow">→ (loosely) →</span>
+        <span class="flow-node broken">Instagram Agent ⚠</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-channel">Discord #instagram</span>
+      </div>
+    </div>
+    <div class="flow-section">
+      <div class="flow-label">💰 REVENUE PIPELINE</div>
+      <div class="flow-row">
+        <span class="flow-node revenue">Lead Magnet Builder</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node file">content/*.pdf</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">Google Drive (public)</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">Linktree</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">ManyChat PROTOCOL keyword</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-channel">Instagram DM automation</span>
+      </div>
+      <div class="flow-row">
+        <span class="flow-node revenue">Network Outreach</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node broken">Consulting Outreach ⚠</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-channel">Discord #outreach</span>
+        <span class="flow-arrow">→ (manual send) →</span>
+        <span class="flow-node">Calendly 30-min call</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">$ Revenue</span>
+      </div>
+      <div class="flow-row">
+        <span class="flow-node revenue">Course Architect</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node file">projects/academy-*.md</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">Teachable</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">$249/$399 course sales</span>
+      </div>
+    </div>
+    <div class="flow-section">
+      <div class="flow-label">📊 WEEKLY REPORTING</div>
+      <div class="flow-row">
+        <span class="flow-node finance">Cost Sentinel (daily)</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node file">state/summary-*.json</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node system">Weekly Metrics Digest</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node system">Weekly Exec Summary</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-channel">Discord (Pol)</span>
+      </div>
+    </div>
+    <div class="flow-section">
+      <div class="flow-label">🔒 BACKUP &amp; SECURITY</div>
+      <div class="flow-row">
+        <span class="flow-node">~/.openclaw/</span>
+        <span class="flow-arrow">+</span>
+        <span class="flow-node">workspace/</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node system">Nightly Backup (2 AM)</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node file">~/openclaw-backup/ (local)</span>
+        <span class="flow-arrow">+</span>
+        <span class="flow-node">GitHub (git-safe mirror)</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-channel">Telegram alert</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HEALTH -->
+<section id="health">
+  <div class="section-title">System Health</div>
+  <div class="health-grid">
+    <div class="health-item warning">
+      <div class="health-name">⚠ Memory Governance Daily</div>
+      <div class="health-issue">1 consecutive error. MEMORY.md is upstream of ALL agents — this is the highest priority fix in the system.</div>
+    </div>
+    <div class="health-item warning">
+      <div class="health-name">⚠ Instagram Content Agent</div>
+      <div class="health-issue">1 consecutive error (last run: 1d ago). Content pipeline gap — Instagram audience growth stalled.</div>
+    </div>
+    <div class="health-item warning">
+      <div class="health-name">⚠ Consulting Outreach (Weekend)</div>
+      <div class="health-issue">1 consecutive error + no model configured. The highest-value revenue pipeline is broken. Runs same time as Book Writing (conflict).</div>
+    </div>
+    <div class="health-item warning">
+      <div class="health-name">⚠ Consulting Outreach (Midweek)</div>
+      <div class="health-issue">Has never run. Possibly missing outreach-tracker data or misconfigured trigger. Verify today — it runs tonight at 6 PM.</div>
+    </div>
+    <div class="health-item resolved">
+      <div class="health-name">✅ Nightly Backup — Fixed Today</div>
+      <div class="health-issue">Was failing (exec approval wall + secret leak). Fixed: sandbox off, exec policy full, pre-commit check, OpenAI key rotated.</div>
+    </div>
+    <div class="health-item resolved">
+      <div class="health-name">✅ Daily Cost Sentinel — Fixed Today</div>
+      <div class="health-issue">Was timing out. Fixed: timeout 300→600s, collector moved to 7:45 AM for 15-min buffer.</div>
+    </div>
+    <div class="health-item healthy">
+      <div class="health-name">✅ LinkedIn Growth</div>
+      <div class="health-issue">Running clean. 3×/week cadence. Posts scheduled for Apr 2, 3, 4.</div>
+    </div>
+    <div class="health-item healthy">
+      <div class="health-name">✅ Exec Approvals — Fixed Today</div>
+      <div class="health-issue">All sessions (main, isolated, cron) now have exec access. sandbox.mode=off, tools.exec.security=full.</div>
+    </div>
+  </div>
+
+  <h3 style="margin-top:24px;margin-bottom:12px;color:#94a3b8;font-size:14px">Timing Conflicts</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Time</th><th>Agents</th><th>Risk</th><th>Recommendation</th></tr></thead>
+      <tbody>
+        <tr><td>9:00 AM daily</td><td>Memory Governance + Backlog Intake</td><td><span class="badge badge-idle">LOW</span></td><td>Different outputs, no shared write conflict</td></tr>
+        <tr><td>6:00 PM Friday</td><td>Weekly Metrics Digest + Backlog Review Agent</td><td><span class="badge badge-idle">LOW</span></td><td>Different outputs — monitor for resource contention</td></tr>
+        <tr><td>7:00 PM Sunday</td><td>Book Writing + Consulting Outreach Weekend</td><td><span class="badge badge-warning">MEDIUM</span></td><td>Stagger by 30 min — move Consulting to 7:30 PM</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- VALUE ALIGNMENT -->
+<section id="value">
+  <div class="section-title">Value &amp; Revenue Alignment</div>
+  <div class="value-grid">
+    <div class="value-card direct">
+      <h4>🟢 Direct Revenue (5)</h4>
+      <ul>
+        <li>LinkedIn Growth</li>
+        <li>Lead Magnet Builder</li>
+        <li>Course Architect</li>
+        <li>Network Outreach</li>
+        <li>Consulting Outreach (x2) ⚠</li>
+      </ul>
+    </div>
+    <div class="value-card indirect">
+      <h4>🔵 Indirect Revenue (3)</h4>
+      <ul>
+        <li>Content Scout</li>
+        <li>Instagram Content Agent ⚠</li>
+        <li>Book Writing Session</li>
+      </ul>
+    </div>
+    <div class="value-card supporting">
+      <h4>🟣 Supporting System (9)</h4>
+      <ul>
+        <li>Daily Cost Collector</li>
+        <li>Daily Cost Sentinel</li>
+        <li>Renewal Check</li>
+        <li>Memory Governance ⚠</li>
+        <li>Backlog Intake</li>
+        <li>Backlog Review</li>
+        <li>Weekly Metrics Digest</li>
+        <li>Weekly Exec Summary</li>
+        <li>Nightly Backup</li>
+        <li>System Health Sentinel</li>
+      </ul>
+    </div>
+    <div class="value-card low">
+      <h4>🔴 Needs Review (1+)</h4>
+      <ul>
+        <li>Linktree Setup Reminder (completed?)</li>
+        <li>23× analytics one-time jobs (no model assigned)</li>
+        <li>weekly-strategic-recap (no model assigned)</li>
+      </ul>
+    </div>
+  </div>
+  <p class="text-sm text-muted" style="margin-top:16px">Revenue-aligned: <strong style="color:#22c55e">8 of 18 recurring agents (44%)</strong>. Supporting infra: 10 of 18 (56%). <strong>Current digital revenue: $0</strong> — all cost, no return yet. Launch date: May 12, 2026.</p>
+</section>
+
+<!-- MODEL OPTIMIZATION -->
+<section id="models">
+  <div class="section-title">Model Usage Optimization</div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Agent</th><th>Current Model</th><th>Recommendation</th><th>Reason</th><th>Est. Impact</th></tr></thead>
+      <tbody>
+        <tr class="model-row keep"><td>LinkedIn Growth</td><td>Sonnet</td><td style="color:#22c55e">✅ KEEP</td><td>Brand-facing content, public output</td><td>—</td></tr>
+        <tr class="model-row keep"><td>Book Writing Session</td><td>Sonnet</td><td style="color:#22c55e">✅ KEEP</td><td>Long-form creative writing</td><td>—</td></tr>
+        <tr class="model-row keep"><td>Weekly Exec Summary</td><td>Sonnet</td><td style="color:#22c55e">✅ KEEP</td><td>Strategic synthesis for Pol</td><td>—</td></tr>
+        <tr class="model-row keep"><td>Course Architect</td><td>GPT-5.4</td><td style="color:#22c55e">✅ KEEP</td><td>Complex structured content, revenue-direct</td><td>—</td></tr>
+        <tr class="model-row keep"><td>Lead Magnet Builder</td><td>GPT-5.4</td><td style="color:#22c55e">✅ KEEP</td><td>Revenue-direct asset creation</td><td>—</td></tr>
+        <tr class="model-row keep"><td>Network Outreach</td><td>GPT-5.4</td><td style="color:#22c55e">✅ KEEP</td><td>Personalized direct revenue outreach</td><td>—</td></tr>
+        <tr class="model-row downgrade"><td>Content Scout</td><td>GPT-5.4</td><td style="color:#eab308">⬇ DOWNGRADE → Haiku</td><td>Web search + topic scanning, no nuanced judgment needed</td><td>~$5–8/mo savings</td></tr>
+        <tr class="model-row downgrade"><td>Instagram Content Agent</td><td>GPT-5.4</td><td style="color:#eab308">⬇ SWITCH → Sonnet</td><td>Visual/creative content needs style, not GPT-5.4 power</td><td>Cheaper + better fit</td></tr>
+        <tr class="model-row upgrade"><td>Consulting Outreach (Mid)</td><td>Haiku</td><td style="color:#ef4444">⬆ UPGRADE → GPT-5.4</td><td>Direct revenue task — personalization quality matters</td><td>+Revenue potential</td></tr>
+        <tr class="model-row keep"><td>Daily Cost Sentinel</td><td>Haiku</td><td style="color:#22c55e">✅ KEEP</td><td>Rule-following structured analysis</td><td>—</td></tr>
+        <tr class="model-row keep"><td>Memory Governance</td><td>Haiku</td><td style="color:#22c55e">✅ KEEP</td><td>Validation + classification task</td><td>—</td></tr>
+        <tr class="model-row keep"><td>Nightly Backup</td><td>Local (Qwen)</td><td style="color:#22c55e">✅ KEEP</td><td>Mechanical execution, free</td><td>—</td></tr>
+        <tr class="model-row keep"><td>Cost Collector</td><td>Local (Qwen)</td><td style="color:#22c55e">✅ KEEP</td><td>Script execution, no reasoning needed</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- INSIGHTS -->
+<section id="insights">
+  <div class="section-title">System Intelligence</div>
+  <div class="insights">
+    <div class="insight-list">
+      <h3>🔴 Top 5 Weaknesses <span style="font-size:11px;color:#64748b;font-weight:400;margin-left:8px">Updated Apr 1, 2026</span></h3>
+      <div class="insight-item">
+        <div class="insight-num">1</div>
+        <div class="insight-text"><strong>Zero digital revenue generated.</strong> System costs $558/mo with $0 return. 41 days to May 12 launch. The pre-sell window is now — consulting outreach is the fastest path to cash before launch.</div>
+      </div>
+      <div class="insight-item">
+        <div class="insight-num">2</div>
+        <div class="insight-text"><strong>Course content still incomplete.</strong> 2 of 7 modules scripted (Modules 1 + 3). 5 remaining with 41 days to launch. Course Architect now weekly — but recording still needs to happen.</div>
+      </div>
+      <div class="insight-item">
+        <div class="insight-num">3</div>
+        <div class="insight-text"><strong>No pre-sell or waitlist system.</strong> Course launches cold on May 12 with no committed buyers. A simple waitlist page + early-bird offer could generate $2,000–5,000 before launch day.</div>
+      </div>
+      <div class="insight-item">
+        <div class="insight-num">4</div>
+        <div class="insight-text"><strong>Consulting Outreach has never converted a lead.</strong> Pipeline exists but Mitesh Patel call (Apr 9) is the first real conversation. Need 5 outreach messages sent per week to build real pipeline.</div>
+      </div>
+      <div class="insight-item">
+        <div class="insight-num">5</div>
+        <div class="insight-text"><strong>Stripe not connected to Teachable.</strong> Course is built, priced, and launching May 12 — but payments aren’t live yet. This blocks all revenue until connected.</div>
+      </div>
+    </div>
+    <div class="insight-list">
+      <h3>🟢 Top 5 Improvements <span style="font-size:11px;color:#22c55e;font-weight:400;margin-left:8px">✅ All completed Apr 1</span></h3>
+      <div class="insight-item">
+        <div class="insight-num" style="background:#22c55e">✓</div>
+        <div class="insight-text"><strong>Memory Governance fixed.</strong> Delivery channel misconfigured — resolved. Clean run confirmed. All agents reading MEMORY.md are unaffected.</div>
+      </div>
+      <div class="insight-item">
+        <div class="insight-num" style="background:#22c55e">✓</div>
+        <div class="insight-text"><strong>Course Architect moved to weekly.</strong> Now runs every Monday 3 PM. 5 sessions before May 12. Reverts to monthly automatically on May 13.</div>
+      </div>
+      <div class="insight-item">
+        <div class="insight-num" style="background:#22c55e">✓</div>
+        <div class="insight-text"><strong>Launch Countdown Agent added.</strong> Daily 9 AM Discord DM: days to launch, modules done, today’s priority. Starts tomorrow Apr 2.</div>
+      </div>
+      <div class="insight-item">
+        <div class="insight-num" style="background:#22c55e">✓</div>
+        <div class="insight-text"><strong>Consulting Outreach fixed &amp; activated.</strong> Model assigned (GPT-5.4), timeout fixed, staggered to 7:30 PM Sun. Runs tonight for the first time. Midweek also fixed.</div>
+      </div>
+      <div class="insight-item">
+        <div class="insight-num" style="background:#22c55e">✓</div>
+        <div class="insight-text"><strong>Shared content brief pipeline live.</strong> Content Scout writes <code>content/weekly-brief.md</code> every Monday. LinkedIn Growth + Instagram Agent read it → unified voice and theme across platforms.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bold-rec">
+    <div class="bold-rec-label">⚡ Bold Recommendation</div>
+    <div class="bold-rec-text">Connect Stripe to Teachable today — then send 5 personal outreach messages to PA program directors this week using the consulting one-pager. The course is built. The agents are running. The outreach pipeline is fixed. The only two things between you and revenue are a 10-minute Stripe setup and 5 LinkedIn DMs. Mitesh Patel calls Apr 9. That’s your first real pipeline test — treat it like a $10,000 opportunity because it might be.</div>
+    <div class="bold-rec-impact">💰 Immediate actions: (1) Connect Stripe → Teachable &nbsp;·&nbsp; (2) Send 5 outreach DMs this week &nbsp;·&nbsp; (3) Prep Mitesh Patel briefing before Apr 9 call</div>
+  </div>
+</section>
+
+</div><!-- /container -->
+
+<div style="padding:24px;text-align:center;color:#334155;font-size:12px;border-top:1px solid #1e2d45;margin-top:32px">
+  OpenClaw Ops Dashboard · <span id="footer-ts">Generated 2026-04-01</span> · <span id="refresh-status" style="color:#C9973A">Checking for updates...</span>
+  <br><button onclick="forceRefresh()" style="margin-top:8px;background:transparent;border:1px solid #334155;color:#64748b;padding:4px 12px;border-radius:4px;font-size:11px;cursor:pointer">↺ Refresh Now</button>
+</div>
+
+<script>
+function toggleRow(id) {
+  const row = document.getElementById(id);
+  row.style.display = row.style.display === 'table-row' ? 'none' : 'table-row';
+}
+
+function filterTable(filter) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  document.querySelectorAll('#agentTable tbody tr.clickable').forEach(row => {
+    const next = row.nextElementSibling;
+    if (filter === 'all') {
+      row.style.display = '';
+    } else {
+      const cat = row.dataset.cat || '';
+      const status = row.dataset.status || '';
+      const match = cat === filter || status === filter;
+      row.style.display = match ? '' : 'none';
+      if (next && next.classList.contains('expand-row')) {
+        next.style.display = 'none';
+      }
+    }
+  });
+}
+
+function toggleDay(dayId) {
+  const content = document.getElementById('day-' + dayId);
+  const btn = document.querySelector('[data-day="' + dayId + '"]');
+  if (content) {
+    const isHidden = content.style.display === 'none';
+    content.style.display = isHidden ? 'block' : 'none';
+    if (btn) btn.textContent = btn.textContent.replace(isHidden ? '▶' : '▼', isHidden ? '▼' : '▶');
+  }
+}
+
+window.addEventListener('scroll', () => {
+  const btn = document.getElementById('backToTop');
+  if (btn) btn.style.display = window.scrollY > 300 ? 'flex' : 'none';
+});
+
+// Auto-refresh: poll data.json every 60s, reload page if it changed
+let lastGenerated = null;
+async function checkForUpdates() {
+  try {
+    const res = await fetch('data.json?_=' + Date.now());
+    const data = await res.json();
+    const ts = data.generated;
+    if (lastGenerated === null) {
+      lastGenerated = ts;
+      document.getElementById('footer-ts').textContent = 'Generated ' + new Date(ts).toLocaleString();
+      document.getElementById('refresh-status').textContent = 'Auto-refresh on • checks every 60s';
+    } else if (ts !== lastGenerated) {
+      document.getElementById('refresh-status').textContent = '↺ New data detected — reloading...';
+      setTimeout(() => window.location.reload(), 1200);
+    }
+  } catch(e) {
+    document.getElementById('refresh-status').textContent = 'Offline — serving cached version';
+  }
+}
+function forceRefresh() {
+  document.getElementById('refresh-status').textContent = '↺ Reloading...';
+  setTimeout(() => window.location.reload(), 400);
+}
+checkForUpdates();
+setInterval(checkForUpdates, 60000);
+
+// Smooth scroll nav
+document.querySelectorAll('nav a').forEach(a => {
+  a.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelectorAll('nav a').forEach(x => x.classList.remove('active'));
+    this.classList.add('active');
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) target.scrollIntoView({behavior: 'smooth', block: 'start'});
+  });
+});
+
+// Highlight active nav on scroll
+const sections = document.querySelectorAll('section[id], div[id="summary"]');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 80) current = s.id;
+  });
+  document.querySelectorAll('nav a').forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+  });
+});
+</script>
+<button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:20px;right:16px;background:#C9973A;color:#0f1623;border:none;border-radius:50%;width:44px;height:44px;font-size:18px;cursor:pointer;z-index:200;display:none;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.4)">↑</button>
+</body>
+</html>

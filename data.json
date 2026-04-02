@@ -1,0 +1,1012 @@
+{
+  "generated": "2026-04-02T15:04:00Z",
+  "summary": {
+    "total_agents": 40,
+    "recurring_agents": 22,
+    "one_time_jobs": 18,
+    "healthy": 19,
+    "warning": 0,
+    "broken": 1,
+    "idle": 20,
+    "revenue_aligned": 8,
+    "est_monthly_ai_cost": 558.44,
+    "jobs_this_week": 14
+  },
+  "agents": [
+    {
+      "id": "efafceb4",
+      "name": "Content Scout",
+      "category": "content",
+      "purpose": "Scans web/feeds for trending topics relevant to cardiac surgery PA niche; outputs content ideas to Discord",
+      "schedule_cron": "0 9 * * 1",
+      "schedule_human": "Every Monday 9:00 AM ET",
+      "model": "openai/gpt-5.4",
+      "model_tier": "premium",
+      "delivery_channel": "discord",
+      "delivery_target": "channel:1485491233756549202",
+      "session_target": "isolated",
+      "timeout_seconds": 300,
+      "last_run": "2d ago",
+      "last_run_status": "ok",
+      "consecutive_errors": 0,
+      "status": "HEALTHY",
+      "inputs": [
+        "web search",
+        "MEMORY.md"
+      ],
+      "outputs": [
+        "Discord content ideas post"
+      ],
+      "dependencies": [],
+      "downstream": [
+        "LinkedIn Growth",
+        "Instagram Content Agent"
+      ],
+      "value": "INDIRECT REVENUE",
+      "notes": "Now writes content/weekly-brief.md after each run (added Apr 1). Feeds LinkedIn + Instagram with unified weekly theme."
+    },
+    {
+      "id": "c8519ff6",
+      "name": "LinkedIn Growth",
+      "category": "revenue",
+      "purpose": "Drafts and queues LinkedIn posts targeting PA audience to build audience and drive course/consulting leads",
+      "schedule_cron": "0 10 * * 1,3,5",
+      "schedule_human": "Mon/Wed/Fri 10:00 AM ET",
+      "model": "anthropic/claude-sonnet-4-6",
+      "model_tier": "premium",
+      "delivery_channel": "discord",
+      "delivery_target": "channel:1485491337095544963",
+      "session_target": "isolated",
+      "timeout_seconds": 300,
+      "last_run": "3h ago",
+      "last_run_status": "ok",
+      "consecutive_errors": 0,
+      "status": "HEALTHY",
+      "inputs": [
+        "MEMORY.md",
+        "content/linkedin-posts",
+        "Content Scout output"
+      ],
+      "outputs": [
+        "LinkedIn draft posts to Discord",
+        "scheduled linkedin-post-* crons"
+      ],
+      "dependencies": [
+        "Content Scout"
+      ],
+      "downstream": [
+        "linkedin-post-* one-time jobs",
+        "analytics reminders"
+      ],
+      "value": "DIRECT REVENUE",
+      "notes": "Brief-aware: reads content/weekly-brief.md first (added Apr 1)."
+    },
+    {
+      "id": "75378957",
+      "name": "Lead Magnet Builder",
+      "category": "revenue",
+      "purpose": "Creates and distributes lead magnets (PDFs, templates) to grow email list and Teachable pipeline",
+      "schedule_cron": "0 14 * * 1",
+      "schedule_human": "Every Monday 2:00 PM ET",
+      "model": "openai/gpt-5.4",
+      "model_tier": "premium",
+      "delivery_channel": "discord",
+      "delivery_target": "channel:1485491390304747550",
+      "session_target": "isolated",
+      "timeout_seconds": 300,
+      "last_run": "2d ago",
+      "last_run_status": "ok",
+      "consecutive_errors": 0,
+      "status": "HEALTHY",
+      "inputs": [
+        "MEMORY.md",
+        "content/lead-magnets"
+      ],
+      "outputs": [
+        "Lead magnet assets to Discord",
+        "Google Drive PDFs"
+      ],
+      "dependencies": [],
+      "downstream": [
+        "Linktree",
+        "ManyChat automation"
+      ],
+      "value": "DIRECT REVENUE",
+      "notes": "Directly feeds MBA PA Academy enrollment funnel"
+    },
+    {
+      "id": "5b0442e2",
+      "name": "Course Architect",
+      "category": "revenue",
+      "purpose": "Develops MBA PA Academy course content \u2014 scripts, lessons, curriculum refinements",
+      "schedule_cron": "0 15 * * 1",
+      "schedule_human": "Every Monday 3:00 PM ET (weekly until May 12)",
+      "model": "openai/gpt-5.4",
+      "model_tier": "premium",
+      "delivery_channel": "discord",
+      "delivery_target": "channel:1485491468683448451",
+      "session_target": "isolated",
+      "timeout_seconds": 600,
+      "last_run": "2d ago",
+      "last_run_status": "ok",
+      "consecutive_errors": 0,
+      "status": "HEALTHY",
+      "inputs": [
+        "projects/academy-curriculum-final.md",
+        "projects/academy-lesson-breakdown.md",
+        "MEMORY.md"
+      ],
+      "outputs": [
+        "Course scripts",
+        "lesson drafts to Discord"
+      ],
+      "dependencies": [],
+      "downstream": [
+        "Teachable course content"
+      ],
+      "value": "DIRECT REVENUE",
+      "notes": "Changed to weekly Apr 1 for May 12 launch prep. Reverts to monthly May 13."
+    },
+    {
+      "id": "46cefa69",
+      "name": "Consulting Outreach (Midweek)",
+      "category": "revenue",
+      "purpose": "Identifies and drafts outreach messages to potential consulting clients in cardiac surgery/PA space",
+      "schedule_cron": "0 18 * * 3",
+      "schedule_human": "Every Wednesday 6:00 PM ET",
+      "model": "anthropic/claude-haiku-4-5",
+      "model_tier": "haiku",
+      "delivery_channel": "discord",
+      "delivery_target": "channel:1485491529991589888",
+      "session_target": "isolated",
+      "timeout_seconds": 300,
+      "last_run": "never",
+      "last_run_status": "idle",
+      "consecutive_errors": 0,
+      "status": "WARNING",
+      "inputs": [
+        "agents/consulting-outreach/outreach-tracker.jsonl",
+        "MEMORY.md"
+      ],
+      "outputs": [
+        "Outreach drafts to Discord"
+      ],
+      "dependencies": [],
+      "downstream": [
+        "Calendly bookings"
+      ],
+      "value": "DIRECT REVENUE",
+      "notes": "Never run \u2014 needs review to confirm it's properly configured"
+    },
+    {
+      "id": "4f5053dc",
+      "name": "Consulting Outreach (Weekend)",
+      "category": "revenue",
+      "purpose": "Sunday batch run for consulting outreach pipeline",
+      "schedule_cron": "0 19 * * 0",
+      "schedule_human": "Every Sunday 7:00 PM ET",
+      "model": "UNKNOWN",
+      "model_tier": "unknown",
+      "delivery_channel": "UNKNOWN",
+      "delivery_target": "UNKNOWN",
+      "session_target": "isolated",
+      "timeout_seconds": 300,
+      "last_run": "3d ago",
+      "last_run_status": "error",
+      "consecutive_errors": 1,
+      "status": "WARNING",
+      "inputs": [
+        "agents/consulting-outreach/"
+      ],
+      "outputs": [
+        "UNKNOWN"
+      ],
+      "dependencies": [],
+      "downstream": [],
+      "value": "DIRECT REVENUE",
+      "notes": "1 consecutive error \u2014 needs investigation"
+    },
+    {
+      "id": "c4360b5a",
+      "name": "Network Outreach",
+      "category": "revenue",
+      "purpose": "Manages warm outreach to PA network contacts for consulting pipeline and course beta",
+      "schedule_cron": "0 16 * * 5",
+      "schedule_human": "Every Friday 4:00 PM ET",
+      "model": "openai/gpt-5.4",
+      "model_tier": "premium",
+      "delivery_channel": "discord",
+      "delivery_target": "channel:1485491529991589888",
+      "session_target": "isolated",
+      "timeout_seconds": 300,
+      "last_run": "5d ago",
+      "last_run_status": "ok",
+      "consecutive_errors": 0,
+      "status": "HEALTHY",
+      "inputs": [
+        "MEMORY.md",
+        "agents/consulting-outreach/outreach-tracker.jsonl"
+      ],
+      "outputs": [
+        "Outreach messages to Discord"
+      ],
+      "dependencies": [],
+      "downstream": [
+        "Calendly bookings"
+      ],
+      "value": "DIRECT REVENUE",
+      "notes": "GPT-5.4 appropriate \u2014 direct revenue impact"
+    },
+    {
+      "id": "70cd568c",
+      "name": "Book Writing Session",
+      "category": "content",
+      "purpose": "Structured book writing sessions for PA leadership/career book project",
+      "schedule_cron": "0 19 * * 0",
+      "schedule_human": "Every Sunday 7:00 PM ET",
+      "model": "anthropic/claude-sonnet-4-6",
+      "model_tier": "premium",
+      "delivery_channel": "discord",
+      "delivery_target": "channel:1485491588418240703",
+      "session_target": "isolated",
+      "timeout_seconds": 600,
+      "last_run": "3d ago",
+      "last_run_status": "ok",
+      "consecutive_errors": 0,
+      "status": "HEALTHY",
+      "inputs": [
+        "MEMORY.md",
+        "projects/"
+      ],
+      "outputs": [
+        "Book chapter drafts to Discord"
+      ],
+      "dependencies": [],
+      "downstream": [
+        "future book product"
+      ],
+      "value": "INDIRECT REVENUE",
+      "notes": "Long-term asset; runs same time as Consulting Outreach Weekend \u2014 timing conflict"
+    },
+    {
+      "id": "18bc0657",
+      "name": "Instagram Content Agent",
+      "category": "content",
+      "purpose": "Creates Instagram/Facebook content for MBA PA brand growth",
+      "schedule_cron": "0 11 * * 2",
+      "schedule_human": "Every Tuesday 11:00 AM ET",
+      "model": "openai/gpt-5.4",
+      "model_tier": "premium",
+      "delivery_channel": "discord",
+      "delivery_target": "channel:1485491233756549202",
+      "session_target": "isolated",
+      "timeout_seconds": 300,
+      "last_run": "1d ago",
+      "last_run_status": "ok",
+      "consecutive_errors": 0,
+      "status": "HEALTHY",
+      "inputs": [
+        "MEMORY.md",
+        "content/weekly-brief.md (new)",
+        "content/instagram-*"
+      ],
+      "outputs": [
+        "Instagram post drafts"
+      ],
+      "dependencies": [
+        "Content Scout"
+      ],
+      "downstream": [
+        "ManyChat automation"
+      ],
+      "value": "INDIRECT REVENUE",
+      "notes": "Fixed Apr 1 \u2014 delivery via openclaw CLI. Manually triggered Apr 1, confirmed working. Brief-aware: reads content/weekly-brief.md."
+    },
+    {
+      "id": "48881c4a",
+      "name": "Daily Cost Sentinel",
+      "category": "finance",
+      "purpose": "Analyzes daily spend, detects anomalies, updates ledger, delivers cost report to Discord",
+      "schedule_cron": "0 8 * * *",
+      "schedule_human": "Every day 8:00 AM ET",
+      "model": "anthropic/claude-haiku-4-5",
+      "model_tier": "haiku",
+      "delivery_channel": "discord",
+      "delivery_target": "channel:1487048489618641002",
+      "session_target": "isolated",
+      "timeout_seconds": 600,
+      "last_run": "35m ago",
+      "last_run_status": "ok",
+      "consecutive_errors": 0,
+      "status": "HEALTHY",
+      "inputs": [
+        "agents/daily-cost-sentinel/data/YYYY-MM-DD.csv",
+        "ledger.json",
+        "recurring-costs.json",
+        "changelog.jsonl"
+      ],
+      "outputs": [
+        "Discord cost report",
+        "state/summary-YYYY-MM-DD.json",
+        "ledger.json updates"
+      ],
+      "dependencies": [
+        "daily-cost-collector"
+      ],
+      "downstream": [
+        "cost-sentinel-renewal-check",
+        "Weekly Metrics Digest"
+      ],
+      "value": "SUPPORTING SYSTEM",
+      "notes": "Fixed Apr 1 \u2014 timeout 300\u2192600s, collector moved to 7:45 AM."
+    },
+    {
+      "id": "86ba05a1",
+      "name": "Daily Cost Collector",
+      "category": "finance",
+      "purpose": "Collects daily transaction data from OpenAI/Anthropic APIs and writes CSV for sentinel",
+      "schedule_cron": "45 7 * * *",
+      "schedule_human": "Every day 7:45 AM ET",
+      "model": "ollama/qwen2.5:7b",
+      "model_tier": "local",
+      "delivery_channel": "none",
+      "delivery_target": "none",
+      "session_target": "isolated",
+      "timeout_seconds": 120,
+      "last_run": "5h ago",
+      "last_run_status": "ok",
+      "consecutive_errors": 0,
+      "status": "HEALTHY",
+      "inputs": [
+        "OpenAI API",
+        "Anthropic API",
+        "~/.zshrc keys"
+      ],
+      "outputs": [
+        "agents/daily-cost-sentinel/data/YYYY-MM-DD.csv"
+      ],
+      "dependencies": [],
+      "downstream": [
+        "Daily Cost Sentinel"
+      ],
+      "value": "SUPPORTING SYSTEM",
+      "notes": "Runs 15 min before sentinel. Timing buffer fixed today."
+    },
+    {
+      "id": "0cb35065",
+      "name": "Cost Sentinel Renewal Check",
+      "category": "finance",
+      "purpose": "Checks for upcoming subscription renewals within 14 days and sends decision prompts",
+      "schedule_cron": "30 8 * * *",
+      "schedule_human": "Every day 8:30 AM ET",
+      "model": "ollama/qwen2.5:7b",
+      "model_tier": "local",
+      "delivery_channel": "discord",
+      "delivery_target": "channel:1487048489618641002",
+      "session_target": "isolated",
+      "timeout_seconds": 300,
+      "last_run": "4h ago",
+      "last_run_status": "ok",
+      "consecutive_errors": 0,
+      "status": "HEALTHY",
+      "inputs": [
+        "ledger.json"
+      ],
+      "outputs": [
+        "Discord renewal alerts"
+      ],
+      "dependencies": [
+        "Daily Cost Sentinel"
+      ],
+      "downstream": [],
+      "value": "SUPPORTING SYSTEM",
+      "notes": "Runs 30 min after sentinel \u2014 good timing"
+    },
+    {
+      "id": "94d0ad88",
+      "name": "Memory Governance Daily",
+      "category": "system",
+      "purpose": "Validates memory files, processes promotion queue, enforces memory health rules",
+      "schedule_cron": "0 9 * * *",
+      "schedule_human": "Every day 9:00 AM ET",
+      "model": "anthropic/claude-haiku-4-5",
+      "model_tier": "haiku",
+      "delivery_channel": "discord",
+      "delivery_target": "UNKNOWN",
+      "session_target": "isolated",
+      "timeout_seconds": 300,
+      "last_run": "4h ago",
+      "last_run_status": "ok",
+      "consecutive_errors": 0,
+      "status": "HEALTHY",
+      "inputs": [
+        "MEMORY.md",
+        "memory/YYYY-MM-DD.md",
+        "memory/promotion-queue.jsonl"
+      ],
+      "outputs": [
+        "MEMORY.md updates",
+        "health reports"
+      ],
+      "dependencies": [],
+      "downstream": [
+        "all agents that read MEMORY.md"
+      ],
+      "value": "SUPPORTING SYSTEM",
+      "notes": "Fixed Apr 1 \u2014 delivery channel misconfigured, now uses openclaw CLI. Confirmed clean run."
+    },
+    {
+      "id": "4f07ae9a",
+      "name": "Backlog Intake Processor",
+      "category": "system",
+      "purpose": "Processes new backlog entries, scores them, and updates backlog.md",
+      "schedule_cron": "0 9 * * *",
+      "schedule_human": "Every day 9:00 AM ET",
+      "model": "anthropic/claude-haiku-4-5",
+      "model_tier": "haiku",
+      "delivery_channel": "discord",
+      "delivery_target": "UNKNOWN",
+      "session_target": "isolated",
+      "timeout_seconds": 300,
+      "last_run": "4h ago",
+      "last_run_status": "ok",
+      "consecutive_errors": 0,
+      "status": "HEALTHY",
+      "inputs": [
+        "backlog.md",
+        "Discord ideas channel"
+      ],
+      "outputs": [
+        "backlog.md updates"
+      ],
+      "dependencies": [],
+      "downstream": [
+        "Weekly Metrics Digest",
+        "Backlog Review Agent"
+      ],
+      "value": "SUPPORTING SYSTEM",
+      "notes": "Runs same time as Memory Governance \u2014 no conflict since different tasks"
+    },
+    {
+      "id": "2f976eb0",
+      "name": "Weekly Metrics Digest",
+      "category": "system",
+      "purpose": "Compiles weekly performance metrics across all agents and delivers summary to Discord",
+      "schedule_cron": "0 18 * * 5",
+      "schedule_human": "Every Friday 6:00 PM ET",
+      "model": "anthropic/claude-haiku-4-5",
+      "model_tier": "haiku",
+      "delivery_channel": "discord",
+      "delivery_target": "UNKNOWN",
+      "session_target": "isolated",
+      "timeout_seconds": 300,
+      "last_run": "5d ago",
+      "last_run_status": "ok",
+      "consecutive_errors": 0,
+      "status": "HEALTHY",
+      "inputs": [
+        "state/summary-*.json",
+        "MEMORY.md",
+        "backlog.md"
+      ],
+      "outputs": [
+        "Weekly metrics Discord report"
+      ],
+      "dependencies": [
+        "Daily Cost Sentinel",
+        "all weekly agents"
+      ],
+      "downstream": [
+        "Weekly Executive Summary"
+      ],
+      "value": "SUPPORTING SYSTEM",
+      "notes": "Runs same time as Backlog Review \u2014 potential conflict"
+    },
+    {
+      "id": "b39ff404",
+      "name": "Weekly Executive Summary",
+      "category": "system",
+      "purpose": "High-level executive summary of the week: revenue progress, content output, system health",
+      "schedule_cron": "30 18 * * 5",
+      "schedule_human": "Every Friday 6:30 PM ET",
+      "model": "anthropic/claude-sonnet-4-6",
+      "model_tier": "premium",
+      "delivery_channel": "discord",
+      "delivery_target": "UNKNOWN",
+      "session_target": "isolated",
+      "timeout_seconds": 300,
+      "last_run": "5d ago",
+      "last_run_status": "ok",
+      "consecutive_errors": 0,
+      "status": "HEALTHY",
+      "inputs": [
+        "Weekly Metrics Digest output",
+        "MEMORY.md"
+      ],
+      "outputs": [
+        "Discord executive summary"
+      ],
+      "dependencies": [
+        "Weekly Metrics Digest"
+      ],
+      "downstream": [],
+      "value": "SUPPORTING SYSTEM",
+      "notes": "30 min after Weekly Metrics \u2014 correct sequencing"
+    },
+    {
+      "id": "55f1b746",
+      "name": "System Health Sentinel",
+      "category": "system",
+      "purpose": "Weekly system audit: checks cron health, file integrity, exec status",
+      "schedule_cron": "0 8 * * 1",
+      "schedule_human": "Every Monday 8:00 AM ET",
+      "model": "ollama/qwen2.5:7b",
+      "model_tier": "local",
+      "delivery_channel": "discord",
+      "delivery_target": "UNKNOWN",
+      "session_target": "isolated",
+      "timeout_seconds": 300,
+      "last_run": "2d ago",
+      "last_run_status": "ok",
+      "consecutive_errors": 0,
+      "status": "HEALTHY",
+      "inputs": [
+        "cron list",
+        "log files",
+        "state files"
+      ],
+      "outputs": [
+        "Discord health report"
+      ],
+      "dependencies": [],
+      "downstream": [],
+      "value": "SUPPORTING SYSTEM",
+      "notes": "Local model appropriate for mechanical checks"
+    },
+    {
+      "id": "4b0fd81e",
+      "name": "Nightly Backup",
+      "category": "system",
+      "purpose": "Full local backup + git-safe mirror push to GitHub",
+      "schedule_cron": "0 2 * * *",
+      "schedule_human": "Every day 2:00 AM ET",
+      "model": "ollama/qwen2.5:7b",
+      "model_tier": "local",
+      "delivery_channel": "telegram",
+      "delivery_target": "6394048111",
+      "session_target": "isolated",
+      "timeout_seconds": 300,
+      "last_run": "1h ago",
+      "last_run_status": "ok",
+      "consecutive_errors": 0,
+      "status": "HEALTHY",
+      "inputs": [
+        "~/.openclaw/",
+        "workspace/"
+      ],
+      "outputs": [
+        "~/openclaw-backup/",
+        "GitHub repo"
+      ],
+      "dependencies": [],
+      "downstream": [],
+      "value": "SUPPORTING SYSTEM",
+      "notes": "Fixed Apr 1 \u2014 exec unblocked, pre-commit secret leak check added, OpenAI key rotated."
+    },
+    {
+      "id": "fa2af3e2",
+      "name": "Launch Countdown Daily",
+      "category": "system",
+      "purpose": "Daily Discord briefing: days to May 12 launch, modules done, today's priority action",
+      "schedule_cron": "0 9 * * *",
+      "schedule_human": "Every day 9:00 AM ET",
+      "model": "anthropic/claude-haiku-4-5",
+      "model_tier": "haiku",
+      "delivery_channel": "discord",
+      "delivery_target": "user:1485377509578244207",
+      "session_target": "isolated",
+      "timeout_seconds": 120,
+      "last_run": "never (starts tomorrow)",
+      "last_run_status": "idle",
+      "consecutive_errors": 0,
+      "status": "HEALTHY",
+      "inputs": [
+        "MEMORY.md",
+        "projects/academy-lesson-breakdown.md"
+      ],
+      "outputs": [
+        "Discord DM to Pol \u2014 daily launch countdown briefing"
+      ],
+      "dependencies": [],
+      "downstream": [],
+      "value": "DIRECT REVENUE",
+      "notes": "Added Apr 1. Creates daily urgency. Disables automatically after May 12 launch."
+    }
+  ],
+  "weekly_calendar": {
+    "monday": [
+      {
+        "time": "8:00 AM",
+        "name": "System Health Sentinel",
+        "category": "system"
+      },
+      {
+        "time": "9:00 AM",
+        "name": "Content Scout",
+        "category": "content"
+      },
+      {
+        "time": "9:00 AM",
+        "name": "Memory Governance Daily",
+        "category": "system",
+        "conflict": true
+      },
+      {
+        "time": "9:00 AM",
+        "name": "Backlog Intake Processor",
+        "category": "system",
+        "conflict": true
+      },
+      {
+        "time": "10:00 AM",
+        "name": "LinkedIn Growth",
+        "category": "revenue"
+      },
+      {
+        "time": "2:00 PM",
+        "name": "Lead Magnet Builder",
+        "category": "revenue"
+      }
+    ],
+    "tuesday": [
+      {
+        "time": "7:45 AM",
+        "name": "Daily Cost Collector",
+        "category": "finance"
+      },
+      {
+        "time": "8:00 AM",
+        "name": "Daily Cost Sentinel",
+        "category": "finance"
+      },
+      {
+        "time": "8:30 AM",
+        "name": "Cost Sentinel Renewal Check",
+        "category": "finance"
+      },
+      {
+        "time": "9:00 AM",
+        "name": "Memory Governance Daily",
+        "category": "system"
+      },
+      {
+        "time": "9:00 AM",
+        "name": "Backlog Intake Processor",
+        "category": "system",
+        "conflict": true
+      },
+      {
+        "time": "11:00 AM",
+        "name": "Instagram Content Agent",
+        "category": "content",
+        "warning": true
+      }
+    ],
+    "wednesday": [
+      {
+        "time": "7:45 AM",
+        "name": "Daily Cost Collector",
+        "category": "finance"
+      },
+      {
+        "time": "8:00 AM",
+        "name": "Daily Cost Sentinel",
+        "category": "finance"
+      },
+      {
+        "time": "8:30 AM",
+        "name": "Cost Sentinel Renewal Check",
+        "category": "finance"
+      },
+      {
+        "time": "9:00 AM",
+        "name": "Memory Governance Daily",
+        "category": "system"
+      },
+      {
+        "time": "9:00 AM",
+        "name": "Backlog Intake Processor",
+        "category": "system",
+        "conflict": true
+      },
+      {
+        "time": "10:00 AM",
+        "name": "LinkedIn Growth",
+        "category": "revenue"
+      },
+      {
+        "time": "6:00 PM",
+        "name": "Consulting Outreach (Midweek)",
+        "category": "revenue",
+        "warning": true
+      }
+    ],
+    "thursday": [
+      {
+        "time": "7:45 AM",
+        "name": "Daily Cost Collector",
+        "category": "finance"
+      },
+      {
+        "time": "8:00 AM",
+        "name": "Daily Cost Sentinel",
+        "category": "finance"
+      },
+      {
+        "time": "8:30 AM",
+        "name": "Cost Sentinel Renewal Check",
+        "category": "finance"
+      },
+      {
+        "time": "9:00 AM",
+        "name": "Memory Governance Daily",
+        "category": "system"
+      },
+      {
+        "time": "9:00 AM",
+        "name": "Backlog Intake Processor",
+        "category": "system",
+        "conflict": true
+      }
+    ],
+    "friday": [
+      {
+        "time": "7:45 AM",
+        "name": "Daily Cost Collector",
+        "category": "finance"
+      },
+      {
+        "time": "8:00 AM",
+        "name": "Daily Cost Sentinel",
+        "category": "finance"
+      },
+      {
+        "time": "8:30 AM",
+        "name": "Cost Sentinel Renewal Check",
+        "category": "finance"
+      },
+      {
+        "time": "9:00 AM",
+        "name": "Memory Governance Daily",
+        "category": "system"
+      },
+      {
+        "time": "9:00 AM",
+        "name": "Backlog Intake Processor",
+        "category": "system",
+        "conflict": true
+      },
+      {
+        "time": "10:00 AM",
+        "name": "LinkedIn Growth",
+        "category": "revenue"
+      },
+      {
+        "time": "4:00 PM",
+        "name": "Network Outreach",
+        "category": "revenue"
+      },
+      {
+        "time": "6:00 PM",
+        "name": "Weekly Metrics Digest",
+        "category": "system"
+      },
+      {
+        "time": "6:30 PM",
+        "name": "Weekly Executive Summary",
+        "category": "system"
+      },
+      {
+        "time": "6:00 PM",
+        "name": "Backlog Review Agent",
+        "category": "system",
+        "conflict": true
+      }
+    ],
+    "saturday": [],
+    "sunday": [
+      {
+        "time": "7:00 PM",
+        "name": "Book Writing Session",
+        "category": "content"
+      },
+      {
+        "time": "7:00 PM",
+        "name": "Consulting Outreach (Weekend)",
+        "category": "revenue",
+        "conflict": true,
+        "warning": true
+      }
+    ]
+  },
+  "health_issues": [
+    {
+      "agent": "Instagram Content Agent",
+      "severity": "RESOLVED",
+      "issue": "Fixed Apr 1 \u2014 wrong delivery method. Now uses openclaw CLI. Manually triggered and confirmed working Apr 1."
+    },
+    {
+      "agent": "Memory Governance Daily",
+      "severity": "RESOLVED",
+      "issue": "Fixed Apr 1 \u2014 delivery channel misconfigured. Clean run confirmed."
+    },
+    {
+      "agent": "Consulting Outreach (Weekend)",
+      "severity": "RESOLVED",
+      "issue": "Fixed Apr 1 \u2014 model + delivery corrected. Runs Sunday 7 PM."
+    },
+    {
+      "agent": "Course Architect",
+      "severity": "RESOLVED",
+      "issue": "Fixed Apr 1 \u2014 OpenAI API key rotated. Now weekly cadence for May 12 launch."
+    },
+    {
+      "agent": "Nightly Backup",
+      "severity": "RESOLVED",
+      "issue": "Fixed Apr 1 \u2014 exec approvals, secret leak guard, key rotation."
+    },
+    {
+      "agent": "Daily Cost Sentinel",
+      "severity": "RESOLVED",
+      "issue": "Fixed Apr 1 \u2014 timeout doubled, timing buffer fixed."
+    }
+  ],
+  "timing_conflicts": [
+    {
+      "time": "9:00 AM daily",
+      "agents": [
+        "Memory Governance Daily",
+        "Backlog Intake Processor"
+      ],
+      "risk": "LOW \u2014 different tasks, no shared writes"
+    },
+    {
+      "time": "6:00 PM Friday",
+      "agents": [
+        "Weekly Metrics Digest",
+        "Backlog Review Agent"
+      ],
+      "risk": "LOW \u2014 different outputs"
+    },
+    {
+      "time": "7:00 PM Sunday",
+      "agents": [
+        "Book Writing Session",
+        "Consulting Outreach Weekend"
+      ],
+      "risk": "MEDIUM \u2014 both isolated sessions, resource contention possible"
+    }
+  ],
+  "model_optimization": [
+    {
+      "agent": "Weekly Executive Summary",
+      "current": "anthropic/claude-sonnet-4-6",
+      "recommended": "anthropic/claude-sonnet-4-6",
+      "action": "KEEP \u2014 public-facing synthesis"
+    },
+    {
+      "agent": "LinkedIn Growth",
+      "current": "anthropic/claude-sonnet-4-6",
+      "recommended": "anthropic/claude-sonnet-4-6",
+      "action": "KEEP \u2014 brand-facing content"
+    },
+    {
+      "agent": "Book Writing Session",
+      "current": "anthropic/claude-sonnet-4-6",
+      "recommended": "anthropic/claude-sonnet-4-6",
+      "action": "KEEP \u2014 long-form creative"
+    },
+    {
+      "agent": "Course Architect",
+      "current": "openai/gpt-5.4",
+      "recommended": "openai/gpt-5.4",
+      "action": "KEEP \u2014 complex structured output"
+    },
+    {
+      "agent": "Content Scout",
+      "current": "openai/gpt-5.4",
+      "recommended": "anthropic/claude-haiku-4-5",
+      "action": "DOWNGRADE CANDIDATE \u2014 web search + topic scanning doesn't need GPT-5.4. Est. savings: ~$5-8/mo"
+    },
+    {
+      "agent": "Lead Magnet Builder",
+      "current": "openai/gpt-5.4",
+      "recommended": "openai/gpt-5.4",
+      "action": "KEEP \u2014 revenue-direct asset creation"
+    },
+    {
+      "agent": "Network Outreach",
+      "current": "openai/gpt-5.4",
+      "recommended": "openai/gpt-5.4",
+      "action": "KEEP \u2014 direct revenue, personalization matters"
+    },
+    {
+      "agent": "Instagram Content Agent",
+      "current": "openai/gpt-5.4",
+      "recommended": "anthropic/claude-sonnet-4-6",
+      "action": "SWITCH to Sonnet \u2014 visual/creative content, fix error first"
+    },
+    {
+      "agent": "Consulting Outreach Midweek",
+      "current": "anthropic/claude-haiku-4-5",
+      "recommended": "openai/gpt-5.4",
+      "action": "UPGRADE \u2014 direct revenue task deserves better model"
+    },
+    {
+      "agent": "Daily Cost Sentinel",
+      "current": "anthropic/claude-haiku-4-5",
+      "recommended": "anthropic/claude-haiku-4-5",
+      "action": "KEEP \u2014 structured analysis, rule-following task"
+    }
+  ],
+  "top_weaknesses": [
+    "April 7 follow-ups with 23 leads are the #1 priority \u2014 momentum from the launch fades fast. No automated follow-up system exists yet.",
+    "Travel window Apr 11-26 has no LinkedIn posts queued beyond Apr 8 \u2014 content pipeline needs 4-6 posts drafted before departure.",
+    "Course recording hasn't started \u2014 May 12 launch is 40 days away and no video content exists yet. Module 1 script is done.",
+    "ManyChat trial ends April 12 \u2014 decision needed on whether Instagram engagement justifies $15/mo.",
+    "Linktree trial ends April 6 \u2014 $144/yr auto-charge. Confirm keep before departure."
+  ],
+  "top_improvements": [
+    {
+      "item": "Fix Memory Governance Daily",
+      "status": "\u2705 DONE",
+      "completed": "2026-04-01"
+    },
+    {
+      "item": "Fix Instagram Content Agent",
+      "status": "\u2705 DONE \u2014 confirmed working Apr 1",
+      "completed": "2026-04-01"
+    },
+    {
+      "item": "Fix all isolated cron Discord delivery",
+      "status": "\u2705 DONE \u2014 12 agents patched to use openclaw CLI",
+      "completed": "2026-03-30"
+    },
+    {
+      "item": "Move Course Architect to weekly",
+      "status": "\u2705 DONE \u2014 every Monday, reverts May 13",
+      "completed": "2026-04-01"
+    },
+    {
+      "item": "Add Launch Countdown Agent",
+      "status": "\u2705 DONE \u2014 daily 9 AM Discord DM",
+      "completed": "2026-04-01"
+    },
+    {
+      "item": "Connect Stripe to Teachable",
+      "status": "\u2705 DONE \u2014 Individual/sole proprietor, Bank of America payout",
+      "completed": "2026-04-01"
+    },
+    {
+      "item": "LinkedIn OAuth + auto-posting",
+      "status": "\u2705 DONE \u2014 token active, posting confirmed",
+      "completed": "2026-03-27"
+    },
+    {
+      "item": "Lead magnet launch",
+      "status": "\u2705 DONE \u2014 23 PROTOCOL leads day 1",
+      "completed": "2026-03-31"
+    },
+    {
+      "item": "Queue travel window posts (Apr 11-26)",
+      "status": "\ud83d\udd32 IN PROGRESS \u2014 drafting tomorrow",
+      "completed": null
+    },
+    {
+      "item": "Start course video recording",
+      "status": "\ud83d\udd32 PENDING \u2014 Module 1 script ready",
+      "completed": null
+    }
+  ],
+  "bold_recommendation": "You have 23 warm leads from the lead magnet launch (Apr 1), including healthcare executives, APP supervisors, and program directors. The highest-leverage move RIGHT NOW is converting these leads into consulting conversations before momentum fades. April 7 follow-ups are scheduled \u2014 make sure you personally reach out to the top 5: Heather James (Heart & Vascular APP Manager), Dawn Hughes (Healthcare CEO), Michael Sullivan (EVH Consulting LLC), Christian Trent (CT/Vascular Administrator), and Brian Fontenot (PharmD/MPAS/MBA). One call this week = $2,500. Five calls = $12,500. The Teachable course is on track for May 12 \u2014 Stripe is connected, course shell is built, 29 lessons live."
+}
