@@ -1,13 +1,13 @@
 {
-  "generated": "2026-04-02T16:04:00Z",
+  "generated": "2026-04-02T17:04:00Z",
   "summary": {
-    "total_agents": 36,
-    "recurring_agents": 17,
-    "one_time_jobs": 19,
+    "total_agents": 39,
+    "recurring_agents": 18,
+    "one_time_jobs": 21,
     "healthy": 16,
-    "warning": 0,
+    "warning": 2,
     "broken": 1,
-    "idle": 19,
+    "idle": 21,
     "revenue_aligned": 8,
     "est_monthly_ai_cost": 558.44,
     "jobs_this_week": 14
@@ -58,7 +58,7 @@
       "delivery_target": "channel:1485491337095544963",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "3h ago",
+      "last_run": "1d ago",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -154,16 +154,16 @@
       "purpose": "Identifies and drafts outreach messages to potential consulting clients in cardiac surgery/PA space",
       "schedule_cron": "0 18 * * 3",
       "schedule_human": "Every Wednesday 6:00 PM ET",
-      "model": "anthropic/claude-haiku-4-5",
-      "model_tier": "haiku",
+      "model": "openai/gpt-5.4",
+      "model_tier": "premium",
       "delivery_channel": "discord",
       "delivery_target": "channel:1485491529991589888",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "never",
-      "last_run_status": "idle",
+      "last_run": "19h ago",
+      "last_run_status": "ok",
       "consecutive_errors": 0,
-      "status": "WARNING",
+      "status": "HEALTHY",
       "inputs": [
         "agents/consulting-outreach/outreach-tracker.jsonl",
         "MEMORY.md"
@@ -176,7 +176,7 @@
         "Calendly bookings"
       ],
       "value": "DIRECT REVENUE",
-      "notes": "Never run \u2014 needs review to confirm it's properly configured"
+      "notes": "Upgraded Haiku\u2192GPT-5.4 on Apr 2 for warm lead judgment. Revenue-direct task justified premium model."
     },
     {
       "id": "4f5053dc",
@@ -185,16 +185,16 @@
       "purpose": "Sunday batch run for consulting outreach pipeline",
       "schedule_cron": "0 19 * * 0",
       "schedule_human": "Every Sunday 7:00 PM ET",
-      "model": "UNKNOWN",
-      "model_tier": "unknown",
-      "delivery_channel": "UNKNOWN",
-      "delivery_target": "UNKNOWN",
+      "model": "openai/gpt-5.4",
+      "model_tier": "premium",
+      "delivery_channel": "discord",
+      "delivery_target": "channel:1485491529991589888",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "3d ago",
-      "last_run_status": "error",
-      "consecutive_errors": 1,
-      "status": "WARNING",
+      "last_run": "20h ago",
+      "last_run_status": "ok",
+      "consecutive_errors": 0,
+      "status": "HEALTHY",
       "inputs": [
         "agents/consulting-outreach/"
       ],
@@ -204,7 +204,7 @@
       "dependencies": [],
       "downstream": [],
       "value": "DIRECT REVENUE",
-      "notes": "1 consecutive error \u2014 needs investigation"
+      "notes": "Fixed Apr 2. Model + delivery configured correctly. Timing conflict with Book Writing Session (both 7 PM Sun) but not blocking."
     },
     {
       "id": "c4360b5a",
@@ -606,10 +606,10 @@
       "delivery_target": "user:1485377509578244207",
       "session_target": "isolated",
       "timeout_seconds": 120,
-      "last_run": "never (starts tomorrow)",
-      "last_run_status": "idle",
-      "consecutive_errors": 0,
-      "status": "HEALTHY",
+      "last_run": "4h ago",
+      "last_run_status": "error",
+      "consecutive_errors": 1,
+      "status": "WARNING",
       "inputs": [
         "MEMORY.md",
         "projects/academy-lesson-breakdown.md"
