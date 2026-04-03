@@ -1,13 +1,13 @@
 {
-  "generated": "2026-04-02T23:04:00Z",
+  "generated": "2026-04-03T00:04:00Z",
   "summary": {
     "total_agents": 43,
     "recurring_agents": 18,
     "one_time_jobs": 25,
-    "healthy": 22,
+    "healthy": 21,
     "warning": 1,
     "broken": 0,
-    "idle": 20,
+    "idle": 21,
     "revenue_aligned": 8,
     "est_monthly_ai_cost": 558.44,
     "jobs_this_week": 16
@@ -58,7 +58,7 @@
       "delivery_target": "channel:1485491337095544963",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "1h ago",
+      "last_run": "1d ago",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -79,7 +79,7 @@
         "analytics reminders"
       ],
       "value": "DIRECT REVENUE",
-      "notes": "Brief-aware: reads content/weekly-brief.md first (added Apr 1)."
+      "notes": "Brief-aware: reads content/weekly-brief.md first (added Apr 1). Last run 1d ago (Apr 2 10 AM)."
     },
     {
       "id": "75378957",
@@ -160,7 +160,7 @@
       "delivery_target": "channel:1485491529991589888",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "43h ago",
+      "last_run": "1d ago",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -176,7 +176,7 @@
         "Calendly bookings"
       ],
       "value": "DIRECT REVENUE",
-      "notes": "Upgraded Haiku→GPT-5.4 on Apr 2 for warm lead judgment. Revenue-direct task justified premium model."
+      "notes": "Upgraded Haiku→GPT-5.4 on Apr 2 for warm lead judgment. Revenue-direct task justified premium model. Last run Apr 2 6 PM."
     },
     {
       "id": "4f5053dc",
@@ -191,7 +191,7 @@
       "delivery_target": "channel:1485491529991589888",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "22h ago",
+      "last_run": "1d ago",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -199,12 +199,12 @@
         "agents/consulting-outreach/"
       ],
       "outputs": [
-        "UNKNOWN"
+        "Outreach Discord post"
       ],
       "dependencies": [],
       "downstream": [],
       "value": "DIRECT REVENUE",
-      "notes": "Fixed Apr 2. Model + delivery configured correctly. Timing conflict with Book Writing Session (both 7 PM Sun) but not blocking."
+      "notes": "Fixed Apr 2. Model + delivery configured correctly. Timing conflict with Book Writing Session (both 7 PM Sun) but not blocking. Last run Apr 2 7 PM."
     },
     {
       "id": "c4360b5a",
@@ -235,7 +235,7 @@
         "Calendly bookings"
       ],
       "value": "DIRECT REVENUE",
-      "notes": "GPT-5.4 appropriate — direct revenue impact"
+      "notes": "GPT-5.4 appropriate — direct revenue impact. Last run Mar 28 4 PM."
     },
     {
       "id": "70cd568c",
@@ -266,7 +266,7 @@
         "future book product"
       ],
       "value": "INDIRECT REVENUE",
-      "notes": "Long-term asset; runs same time as Consulting Outreach Weekend — timing conflict"
+      "notes": "Long-term asset; runs same time as Consulting Outreach Weekend — timing conflict. Last run Mar 30 7 PM."
     },
     {
       "id": "18bc0657",
@@ -281,7 +281,7 @@
       "delivery_target": "channel:1485491233756549202",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "16h ago",
+      "last_run": "22h ago",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -300,7 +300,7 @@
         "ManyChat automation"
       ],
       "value": "INDIRECT REVENUE",
-      "notes": "Fixed Apr 1 — delivery via openclaw CLI. Manually triggered Apr 1, confirmed working. Brief-aware: reads content/weekly-brief.md."
+      "notes": "Fixed Apr 1 — delivery via openclaw CLI. Manually triggered Apr 1, confirmed working. Brief-aware: reads content/weekly-brief.md. Last run Apr 2 2 AM (scheduled Tue 11 AM)."
     },
     {
       "id": "48881c4a",
@@ -315,7 +315,7 @@
       "delivery_target": "channel:1487048489618641002",
       "session_target": "isolated",
       "timeout_seconds": 600,
-      "last_run": "10h ago",
+      "last_run": "16h ago",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -338,7 +338,7 @@
         "Weekly Metrics Digest"
       ],
       "value": "SUPPORTING SYSTEM",
-      "notes": "Fixed Apr 1 — timeout 300→600s, collector moved to 7:45 AM."
+      "notes": "Fixed Apr 1 — timeout 300→600s, collector moved to 7:45 AM. Last run Apr 2 8 AM."
     },
     {
       "id": "86ba05a1",
@@ -353,7 +353,7 @@
       "delivery_target": "none",
       "session_target": "isolated",
       "timeout_seconds": 120,
-      "last_run": "11h ago",
+      "last_run": "17h ago",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -370,7 +370,7 @@
         "Daily Cost Sentinel"
       ],
       "value": "SUPPORTING SYSTEM",
-      "notes": "Runs 15 min before sentinel. Timing buffer fixed today."
+      "notes": "Runs 15 min before sentinel. Timing buffer fixed today. Last run Apr 2 7:45 AM."
     },
     {
       "id": "0cb35065",
@@ -385,7 +385,7 @@
       "delivery_target": "channel:1487048489618641002",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "10h ago",
+      "last_run": "16h ago",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -400,7 +400,7 @@
       ],
       "downstream": [],
       "value": "SUPPORTING SYSTEM",
-      "notes": "Runs 30 min after sentinel — good timing"
+      "notes": "Runs 30 min after sentinel — good timing. Last run Apr 2 8:30 AM."
     },
     {
       "id": "94d0ad88",
@@ -415,7 +415,7 @@
       "delivery_target": "UNKNOWN",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "9h ago",
+      "last_run": "15h ago",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -433,7 +433,7 @@
         "all agents that read MEMORY.md"
       ],
       "value": "SUPPORTING SYSTEM",
-      "notes": "Fixed Apr 1 — delivery channel misconfigured, now uses openclaw CLI. Confirmed clean run."
+      "notes": "Fixed Apr 1 — delivery channel misconfigured, now uses openclaw CLI. Confirmed clean run. Last run Apr 2 9 AM."
     },
     {
       "id": "4f07ae9a",
@@ -448,7 +448,7 @@
       "delivery_target": "UNKNOWN",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "9h ago",
+      "last_run": "15h ago",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -465,7 +465,7 @@
         "Backlog Review Agent"
       ],
       "value": "SUPPORTING SYSTEM",
-      "notes": "Runs same time as Memory Governance — no conflict since different tasks"
+      "notes": "Runs same time as Memory Governance — no conflict since different tasks. Last run Apr 2 9 AM."
     },
     {
       "id": "2f976eb0",
@@ -500,7 +500,7 @@
         "Weekly Executive Summary"
       ],
       "value": "SUPPORTING SYSTEM",
-      "notes": "Runs same time as Backlog Review — potential conflict"
+      "notes": "Runs same time as Backlog Review — potential conflict. Last run Mar 28 6 PM."
     },
     {
       "id": "b39ff404",
@@ -531,7 +531,7 @@
       ],
       "downstream": [],
       "value": "SUPPORTING SYSTEM",
-      "notes": "30 min after Weekly Metrics — correct sequencing"
+      "notes": "30 min after Weekly Metrics — correct sequencing. Last run Mar 28 6:30 PM."
     },
     {
       "id": "55f1b746",
@@ -561,7 +561,7 @@
       "dependencies": [],
       "downstream": [],
       "value": "SUPPORTING SYSTEM",
-      "notes": "Local model appropriate for mechanical checks"
+      "notes": "Local model appropriate for mechanical checks. Last run Mar 31 8 AM."
     },
     {
       "id": "4b0fd81e",
@@ -576,7 +576,7 @@
       "delivery_target": "6394048111",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "16h ago",
+      "last_run": "18h ago",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -591,7 +591,7 @@
       "dependencies": [],
       "downstream": [],
       "value": "SUPPORTING SYSTEM",
-      "notes": "Fixed Apr 1 — exec unblocked, pre-commit secret leak check added, OpenAI key rotated."
+      "notes": "Fixed Apr 1 — exec unblocked, pre-commit secret leak check added, OpenAI key rotated. Last run Apr 2 2 AM."
     },
     {
       "id": "fa2af3e2",
@@ -606,7 +606,7 @@
       "delivery_target": "user:1485377509578244207",
       "session_target": "isolated",
       "timeout_seconds": 120,
-      "last_run": "6h ago",
+      "last_run": "12h ago",
       "last_run_status": "error",
       "consecutive_errors": 0,
       "status": "WARNING",
@@ -620,7 +620,7 @@
       "dependencies": [],
       "downstream": [],
       "value": "DIRECT REVENUE",
-      "notes": "Added Apr 1. Creates daily urgency. Disables automatically after May 12 launch."
+      "notes": "Added Apr 1. Creates daily urgency. Disables automatically after May 12 launch. Last failed Apr 2 12 PM — needs investigation."
     }
   ],
   "weekly_calendar": {
