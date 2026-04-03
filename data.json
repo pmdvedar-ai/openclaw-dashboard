@@ -118,7 +118,7 @@
       "id": "5b0442e2",
       "name": "Course Architect",
       "category": "revenue",
-      "purpose": "Develops MBA PA Academy course content — scripts, lessons, curriculum refinements",
+      "purpose": "Develops MBA PA Academy course content \u2014 scripts, lessons, curriculum refinements",
       "schedule_cron": "0 15 * * 1",
       "schedule_human": "Every Monday 3:00 PM ET (weekly until May 12)",
       "model": "openai/gpt-5.4",
@@ -176,7 +176,7 @@
         "Calendly bookings"
       ],
       "value": "DIRECT REVENUE",
-      "notes": "Upgraded Haiku→GPT-5.4 on Apr 2 for warm lead judgment. Revenue-direct task justified premium model. Last run Apr 2 6 PM."
+      "notes": "Upgraded Haiku\u2192GPT-5.4 on Apr 2 for warm lead judgment. Revenue-direct task justified premium model. Last run Apr 2 6 PM."
     },
     {
       "id": "4f5053dc",
@@ -235,7 +235,7 @@
         "Calendly bookings"
       ],
       "value": "DIRECT REVENUE",
-      "notes": "GPT-5.4 appropriate — direct revenue impact. Last run Mar 28 4 PM."
+      "notes": "GPT-5.4 appropriate \u2014 direct revenue impact. Last run Mar 28 4 PM."
     },
     {
       "id": "70cd568c",
@@ -266,7 +266,7 @@
         "future book product"
       ],
       "value": "INDIRECT REVENUE",
-      "notes": "Long-term asset; runs same time as Consulting Outreach Weekend — timing conflict. Last run Mar 30 7 PM."
+      "notes": "Long-term asset; runs same time as Consulting Outreach Weekend \u2014 timing conflict. Last run Mar 30 7 PM."
     },
     {
       "id": "18bc0657",
@@ -300,7 +300,7 @@
         "ManyChat automation"
       ],
       "value": "INDIRECT REVENUE",
-      "notes": "Fixed Apr 1 — delivery via openclaw CLI. Manually triggered Apr 1, confirmed working. Brief-aware: reads content/weekly-brief.md. Last run Apr 2 2 AM (scheduled Tue 11 AM)."
+      "notes": "Fixed Apr 1 \u2014 delivery via openclaw CLI. Manually triggered Apr 1, confirmed working. Brief-aware: reads content/weekly-brief.md. Last run Apr 2 2 AM (scheduled Tue 11 AM)."
     },
     {
       "id": "48881c4a",
@@ -338,7 +338,7 @@
         "Weekly Metrics Digest"
       ],
       "value": "SUPPORTING SYSTEM",
-      "notes": "Fixed Apr 1 — timeout 300→600s, collector moved to 7:45 AM. Last run Apr 2 8 AM."
+      "notes": "Fixed Apr 1 \u2014 timeout 300\u2192600s, collector moved to 7:45 AM. Last run Apr 2 8 AM."
     },
     {
       "id": "86ba05a1",
@@ -400,7 +400,7 @@
       ],
       "downstream": [],
       "value": "SUPPORTING SYSTEM",
-      "notes": "Runs 30 min after sentinel — good timing. Last run Apr 2 8:30 AM."
+      "notes": "Runs 30 min after sentinel \u2014 good timing. Last run Apr 2 8:30 AM."
     },
     {
       "id": "94d0ad88",
@@ -433,7 +433,7 @@
         "all agents that read MEMORY.md"
       ],
       "value": "SUPPORTING SYSTEM",
-      "notes": "Fixed Apr 1 — delivery channel misconfigured, now uses openclaw CLI. Confirmed clean run. Last run Apr 2 9 AM."
+      "notes": "Fixed Apr 1 \u2014 delivery channel misconfigured, now uses openclaw CLI. Confirmed clean run. Last run Apr 2 9 AM."
     },
     {
       "id": "4f07ae9a",
@@ -465,7 +465,7 @@
         "Backlog Review Agent"
       ],
       "value": "SUPPORTING SYSTEM",
-      "notes": "Runs same time as Memory Governance — no conflict since different tasks. Last run Apr 2 9 AM."
+      "notes": "Runs same time as Memory Governance \u2014 no conflict since different tasks. Last run Apr 2 9 AM."
     },
     {
       "id": "2f976eb0",
@@ -500,7 +500,7 @@
         "Weekly Executive Summary"
       ],
       "value": "SUPPORTING SYSTEM",
-      "notes": "Runs same time as Backlog Review — potential conflict. Last run Mar 28 6 PM."
+      "notes": "Runs same time as Backlog Review \u2014 potential conflict. Last run Mar 28 6 PM."
     },
     {
       "id": "b39ff404",
@@ -531,7 +531,7 @@
       ],
       "downstream": [],
       "value": "SUPPORTING SYSTEM",
-      "notes": "30 min after Weekly Metrics — correct sequencing. Last run Mar 28 6:30 PM."
+      "notes": "30 min after Weekly Metrics \u2014 correct sequencing. Last run Mar 28 6:30 PM."
     },
     {
       "id": "55f1b746",
@@ -591,7 +591,7 @@
       "dependencies": [],
       "downstream": [],
       "value": "SUPPORTING SYSTEM",
-      "notes": "Fixed Apr 1 — exec unblocked, pre-commit secret leak check added, OpenAI key rotated. Last run Apr 2 2 AM."
+      "notes": "Fixed Apr 1 \u2014 exec unblocked, pre-commit secret leak check added, OpenAI key rotated. Last run Apr 2 2 AM."
     },
     {
       "id": "fa2af3e2",
@@ -615,12 +615,12 @@
         "projects/academy-lesson-breakdown.md"
       ],
       "outputs": [
-        "Discord DM to Pol — daily launch countdown briefing"
+        "Discord DM to Pol \u2014 daily launch countdown briefing"
       ],
       "dependencies": [],
       "downstream": [],
       "value": "DIRECT REVENUE",
-      "notes": "Added Apr 1. Creates daily urgency. Disables automatically after May 12 launch. Last failed Apr 2 12 PM — needs investigation."
+      "notes": "Added Apr 1. Creates daily urgency. Disables automatically after May 12 launch. Last failed Apr 2 12 PM \u2014 needs investigation."
     }
   ],
   "weekly_calendar": {
@@ -821,44 +821,49 @@
   },
   "health_issues": [
     {
-      "name": "✅ Memory Governance Daily — Fixed Apr 1",
+      "name": "\u2705 Memory Governance Daily \u2014 Fixed Apr 1",
       "status": "resolved",
-      "description": "Delivery channel misconfigured — resolved. Clean run confirmed. 0 consecutive errors."
+      "description": "Delivery channel misconfigured \u2014 resolved. Clean run confirmed. 0 consecutive errors."
     },
     {
-      "name": "✅ Instagram Content Agent — Fixed Apr 2",
+      "name": "\u2705 Instagram Content Agent \u2014 Fixed Apr 2",
       "status": "resolved",
-      "description": "Model switched GPT-5.4 → Sonnet. 0 consecutive errors. Next run: Tuesday 11 AM ET."
+      "description": "Model switched GPT-5.4 \u2192 Sonnet. 0 consecutive errors. Next run: Tuesday 11 AM ET."
     },
     {
-      "name": "✅ Consulting Outreach Midweek — Upgraded Apr 2",
+      "name": "\u2705 Consulting Outreach Midweek \u2014 Upgraded Apr 2",
       "status": "resolved",
-      "description": "Model upgraded Haiku → GPT-5.4. Revenue-direct warm lead judgment. Next run: Wednesday 6 PM ET."
+      "description": "Model upgraded Haiku \u2192 GPT-5.4. Revenue-direct warm lead judgment. Next run: Wednesday 6 PM ET."
     },
     {
-      "name": "✅ launch-countdown-daily — Fixed Apr 2",
+      "name": "\u2705 launch-countdown-daily \u2014 Fixed Apr 2",
       "status": "resolved",
-      "description": "Delivery mode error fixed (announce → none). Agent sends DM via exec. Confirmed clean on Apr 2 9 AM. 0 consecutive errors."
+      "description": "Delivery mode error fixed (announce \u2192 none). Agent sends DM via exec. Confirmed clean on Apr 2 9 AM. 0 consecutive errors."
     },
     {
-      "name": "✅ Nightly Backup — Fixed Apr 1",
+      "name": "\u2705 Nightly Backup \u2014 Fixed Apr 1",
       "status": "resolved",
       "description": "Was failing (exec wall + secret leak). Fixed: sandbox off, exec policy full, pre-commit check, OpenAI key rotated."
     },
     {
-      "name": "✅ Daily Cost Sentinel — Fixed Apr 1",
+      "name": "\u2705 Daily Cost Sentinel \u2014 Fixed Apr 1",
       "status": "resolved",
-      "description": "Was timing out. Fixed: timeout 300→600s, collector moved to 7:45 AM for 15-min buffer."
+      "description": "Was timing out. Fixed: timeout 300\u2192600s, collector moved to 7:45 AM for 15-min buffer."
     },
     {
-      "name": "✅ LinkedIn Growth",
+      "name": "\u2705 LinkedIn Growth",
       "status": "healthy",
-      "description": "Running clean. 3×/week cadence. Posts scheduled through Apr 4."
+      "description": "Running clean. 3\u00d7/week cadence. Posts scheduled through Apr 4."
     },
     {
-      "name": "✅ Exec Approvals — Fixed Apr 1",
+      "name": "\u2705 Exec Approvals \u2014 Fixed Apr 1",
       "status": "healthy",
       "description": "All sessions (main, isolated, cron) now have exec access. sandbox.mode=off, tools.exec.security=full."
+    },
+    {
+      "name": "\u2705 Housekeeping \u2014 Apr 2",
+      "status": "resolved",
+      "description": "Linktree Setup Reminder deleted (task completed Mar 30). weekly-strategic-recalibration assigned GPT-5.4. Analytics one-time jobs confirmed healthy."
     }
   ],
   "timing_conflicts": [
@@ -868,7 +873,7 @@
         "Book Writing Session",
         "Consulting Outreach Weekend"
       ],
-      "risk": "MEDIUM — both isolated sessions, resource contention possible (no blocking observed)"
+      "risk": "MEDIUM \u2014 both isolated sessions, resource contention possible (no blocking observed)"
     }
   ],
   "model_optimization": [
@@ -876,132 +881,140 @@
       "agent": "Weekly Executive Summary",
       "current": "anthropic/claude-sonnet-4-6",
       "recommended": "anthropic/claude-sonnet-4-6",
-      "action": "KEEP — public-facing synthesis",
-      "impact": "—"
+      "action": "KEEP \u2014 public-facing synthesis",
+      "impact": "\u2014"
     },
     {
       "agent": "LinkedIn Growth",
       "current": "anthropic/claude-sonnet-4-6",
       "recommended": "anthropic/claude-sonnet-4-6",
-      "action": "KEEP — brand-facing content",
-      "impact": "—"
+      "action": "KEEP \u2014 brand-facing content",
+      "impact": "\u2014"
     },
     {
       "agent": "Book Writing Session",
       "current": "anthropic/claude-sonnet-4-6",
       "recommended": "anthropic/claude-sonnet-4-6",
-      "action": "KEEP — long-form creative",
-      "impact": "—"
+      "action": "KEEP \u2014 long-form creative",
+      "impact": "\u2014"
     },
     {
       "agent": "Course Architect",
       "current": "openai/gpt-5.4",
       "recommended": "openai/gpt-5.4",
-      "action": "KEEP — complex structured output",
-      "impact": "—"
+      "action": "KEEP \u2014 complex structured output",
+      "impact": "\u2014"
     },
     {
       "agent": "Content Scout",
       "current": "openai/gpt-5.4",
       "recommended": "openai/gpt-5.4",
-      "action": "KEEP — upstream pipeline brief, research+synthesis task. Haiku lacks judgment for multi-source topic scoring. Decision: 2026-04-02.",
-      "impact": "—"
+      "action": "KEEP \u2014 upstream pipeline brief, research+synthesis task. Haiku lacks judgment for multi-source topic scoring. Decision: 2026-04-02.",
+      "impact": "\u2014"
     },
     {
       "agent": "Lead Magnet Builder",
       "current": "openai/gpt-5.4",
       "recommended": "openai/gpt-5.4",
-      "action": "KEEP — revenue-direct asset creation",
-      "impact": "—"
+      "action": "KEEP \u2014 revenue-direct asset creation",
+      "impact": "\u2014"
     },
     {
       "agent": "Network Outreach",
       "current": "openai/gpt-5.4",
       "recommended": "openai/gpt-5.4",
-      "action": "KEEP — direct revenue, personalization matters",
-      "impact": "—"
+      "action": "KEEP \u2014 direct revenue, personalization matters",
+      "impact": "\u2014"
     },
     {
       "agent": "Instagram Content Agent",
       "current": "anthropic/claude-sonnet-4-6",
       "recommended": "anthropic/claude-sonnet-4-6",
-      "action": "DONE — switched GPT-5.4 → Sonnet on 2026-04-02 (writing lane)",
-      "impact": "—"
+      "action": "DONE \u2014 switched GPT-5.4 \u2192 Sonnet on 2026-04-02 (writing lane)",
+      "impact": "\u2014"
     },
     {
       "agent": "Consulting Outreach Midweek",
       "current": "openai/gpt-5.4",
       "recommended": "openai/gpt-5.4",
-      "action": "DONE — upgraded Haiku → GPT-5.4 on 2026-04-02 (revenue-direct, warm lead judgment)",
-      "impact": "—"
+      "action": "DONE \u2014 upgraded Haiku \u2192 GPT-5.4 on 2026-04-02 (revenue-direct, warm lead judgment)",
+      "impact": "\u2014"
     },
     {
       "agent": "Daily Cost Sentinel",
       "current": "anthropic/claude-haiku-4-5",
       "recommended": "anthropic/claude-haiku-4-5",
-      "action": "KEEP — structured analysis, rule-following task",
-      "impact": "—"
+      "action": "KEEP \u2014 structured analysis, rule-following task",
+      "impact": "\u2014"
+    },
+    {
+      "agent": "weekly-strategic-recalibration",
+      "current": "openai/gpt-5.4",
+      "recommended": "openai/gpt-5.4",
+      "action": "DONE \u2014 assigned GPT-5.4 on 2026-04-02 (was unset/default, multi-step reasoning task)",
+      "reason": "Memory health + ROI analysis + model routing decisions \u2014 requires judgment, not just execution",
+      "impact": "Risk reduced"
     }
   ],
   "top_weaknesses": [
-    "April 7 follow-ups with 23 leads are the #1 priority — momentum from the launch fades fast. No automated follow-up system exists yet.",
-    "Travel window Apr 11-26 has no LinkedIn posts queued beyond Apr 8 — content pipeline needs 4-6 posts drafted before departure.",
-    "Course recording hasn't started — May 12 launch is 40 days away and no video content exists yet. Module 1 script is done.",
-    "ManyChat trial ends April 12 — decision needed on whether Instagram engagement justifies $15/mo.",
-    "Linktree trial ends April 6 — $144/yr auto-charge. Confirm keep before departure."
+    "April 7 follow-ups with 23 leads are the #1 priority \u2014 momentum from the launch fades fast. No automated follow-up system exists yet.",
+    "Travel window Apr 11-26 has no LinkedIn posts queued beyond Apr 8 \u2014 content pipeline needs 4-6 posts drafted before departure.",
+    "Course recording hasn't started \u2014 May 12 launch is 40 days away and no video content exists yet. Module 1 script is done.",
+    "ManyChat trial ends April 12 \u2014 decision needed on whether Instagram engagement justifies $15/mo.",
+    "Linktree trial ends April 6 \u2014 $144/yr auto-charge. Confirm keep before departure."
   ],
   "top_improvements": [
     {
       "item": "Fix Memory Governance Daily",
-      "status": "✅ DONE",
+      "status": "\u2705 DONE",
       "completed": "2026-04-01"
     },
     {
       "item": "Fix Instagram Content Agent",
-      "status": "✅ DONE — confirmed working Apr 1",
+      "status": "\u2705 DONE \u2014 confirmed working Apr 1",
       "completed": "2026-04-01"
     },
     {
       "item": "Fix all isolated cron Discord delivery",
-      "status": "✅ DONE — 12 agents patched to use openclaw CLI",
+      "status": "\u2705 DONE \u2014 12 agents patched to use openclaw CLI",
       "completed": "2026-03-30"
     },
     {
       "item": "Move Course Architect to weekly",
-      "status": "✅ DONE — every Monday, reverts May 13",
+      "status": "\u2705 DONE \u2014 every Monday, reverts May 13",
       "completed": "2026-04-01"
     },
     {
       "item": "Add Launch Countdown Agent",
-      "status": "✅ DONE — daily 9 AM Discord DM",
+      "status": "\u2705 DONE \u2014 daily 9 AM Discord DM",
       "completed": "2026-04-01"
     },
     {
       "item": "Connect Stripe to Teachable",
-      "status": "✅ DONE — Individual/sole proprietor, Bank of America payout",
+      "status": "\u2705 DONE \u2014 Individual/sole proprietor, Bank of America payout",
       "completed": "2026-04-01"
     },
     {
       "item": "LinkedIn OAuth + auto-posting",
-      "status": "✅ DONE — token active, posting confirmed",
+      "status": "\u2705 DONE \u2014 token active, posting confirmed",
       "completed": "2026-03-27"
     },
     {
       "item": "Lead magnet launch",
-      "status": "✅ DONE — 23 PROTOCOL leads day 1",
+      "status": "\u2705 DONE \u2014 23 PROTOCOL leads day 1",
       "completed": "2026-03-31"
     },
     {
       "item": "Queue travel window posts (Apr 11-26)",
-      "status": "🔴 PENDING — highest priority before departure Apr 11",
+      "status": "\ud83d\udd34 PENDING \u2014 highest priority before departure Apr 11",
       "completed": null
     },
     {
       "item": "Start course video recording",
-      "status": "🔴 PENDING — Module 1 script ready, launch May 12",
+      "status": "\ud83d\udd34 PENDING \u2014 Module 1 script ready, launch May 12",
       "completed": null
     }
   ],
-  "bold_recommendation": "You have 23 warm leads from the lead magnet launch (Apr 1), including healthcare executives, APP supervisors, and program directors. The highest-leverage move RIGHT NOW is converting these leads into consulting conversations before momentum fades. April 7 follow-ups are scheduled — make sure you personally reach out to the top 5: Heather James (Heart & Vascular APP Manager), Dawn Hughes (Healthcare CEO), Michael Sullivan (EVH Consulting LLC), Christian Trent (CT/Vascular Administrator), and Brian Fontenot (PharmD/MPAS/MBA). One call this week = $2,500. Five calls = $12,500. The Teachable course is on track for May 12 — Stripe is connected, course shell is built, 29 lessons live.",
-  "bold_recommendation_impact": "💰 Immediate actions: (1) Send 5 personal outreach DMs this week · (2) Prep Mitesh Patel briefing before Apr 9 call · (3) Script Modules 4-5 before Apr 11 travel · (4) Queue LinkedIn posts for Apr 11-26 window"
+  "bold_recommendation": "You have 23 warm leads from the lead magnet launch (Apr 1), including healthcare executives, APP supervisors, and program directors. The highest-leverage move RIGHT NOW is converting these leads into consulting conversations before momentum fades. April 7 follow-ups are scheduled \u2014 make sure you personally reach out to the top 5: Heather James (Heart & Vascular APP Manager), Dawn Hughes (Healthcare CEO), Michael Sullivan (EVH Consulting LLC), Christian Trent (CT/Vascular Administrator), and Brian Fontenot (PharmD/MPAS/MBA). One call this week = $2,500. Five calls = $12,500. The Teachable course is on track for May 12 \u2014 Stripe is connected, course shell is built, 29 lessons live.",
+  "bold_recommendation_impact": "\ud83d\udcb0 Immediate actions: (1) Send 5 personal outreach DMs this week \u00b7 (2) Prep Mitesh Patel briefing before Apr 9 call \u00b7 (3) Script Modules 4-5 before Apr 11 travel \u00b7 (4) Queue LinkedIn posts for Apr 11-26 window"
 }
