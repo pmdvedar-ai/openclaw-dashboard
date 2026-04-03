@@ -868,12 +868,25 @@
   ],
   "timing_conflicts": [
     {
+      "time": "9:00 AM daily",
+      "agents": "Memory Governance + Backlog Intake + launch-countdown-daily",
+      "risk": "LOW",
+      "status": "resolved",
+      "note": "All isolated sessions, no shared write targets. Safe to run in parallel \u2014 no action needed."
+    },
+    {
+      "time": "6:00 PM Friday",
+      "agents": "Weekly Metrics Digest + Backlog Review Agent",
+      "risk": "LOW",
+      "status": "resolved",
+      "note": "Backlog Review staggered to 6:15 PM Apr 2. Exec Summary stays at 6:30 PM. Sequencing correct."
+    },
+    {
       "time": "7:00 PM Sunday",
-      "agents": [
-        "Book Writing Session",
-        "Consulting Outreach Weekend"
-      ],
-      "risk": "MEDIUM \u2014 both isolated sessions, resource contention possible (no blocking observed)"
+      "agents": "Book Writing + Consulting Outreach Weekend",
+      "risk": "LOW",
+      "status": "resolved",
+      "note": "Already staggered \u2014 Book Writing 7:00 PM, Consulting Outreach 7:30 PM. No conflict."
     }
   ],
   "model_optimization": [
