@@ -1,13 +1,13 @@
 {
-  "generated": "2026-04-02T23:26:15.764602-04:00",
+  "generated": "2026-04-03T03:30:42.707597+00:00",
   "summary": {
     "total_agents": 45,
     "recurring_agents": 18,
     "one_time_jobs": 25,
-    "healthy": 22,
+    "healthy": 0,
     "warning": 0,
-    "broken": 1,
-    "idle": 22,
+    "broken": 0,
+    "idle": 0,
     "revenue_aligned": 8,
     "est_monthly_ai_cost": 558.44,
     "jobs_this_week": 16
@@ -26,10 +26,10 @@
       "delivery_target": "channel:1485491233756549202",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "5d ago",
-      "last_run_status": "ok",
+      "last_run": "isolated",
+      "last_run_status": "main",
       "consecutive_errors": 0,
-      "status": "HEALTHY",
+      "status": "IDLE",
       "inputs": [
         "web search",
         "MEMORY.md"
@@ -58,10 +58,10 @@
       "delivery_target": "channel:1485491337095544963",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "3d ago",
-      "last_run_status": "ok",
+      "last_run": "isolated",
+      "last_run_status": "main",
       "consecutive_errors": 0,
-      "status": "HEALTHY",
+      "status": "IDLE",
       "inputs": [
         "MEMORY.md",
         "content/linkedin-posts",
@@ -94,10 +94,10 @@
       "delivery_target": "channel:1485491390304747550",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "5d ago",
-      "last_run_status": "ok",
+      "last_run": "isolated",
+      "last_run_status": "main",
       "consecutive_errors": 0,
-      "status": "HEALTHY",
+      "status": "IDLE",
       "inputs": [
         "MEMORY.md",
         "content/lead-magnets"
@@ -127,10 +127,10 @@
       "delivery_target": "channel:1485491468683448451",
       "session_target": "isolated",
       "timeout_seconds": 600,
-      "last_run": "6d ago",
-      "last_run_status": "ok",
+      "last_run": "isolated",
+      "last_run_status": "main",
       "consecutive_errors": 0,
-      "status": "HEALTHY",
+      "status": "IDLE",
       "inputs": [
         "projects/academy-curriculum-final.md",
         "projects/academy-lesson-breakdown.md",
@@ -160,10 +160,10 @@
       "delivery_target": "channel:1485491529991589888",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "3d ago",
-      "last_run_status": "ok",
+      "last_run": "-",
+      "last_run_status": "openai/gpt-5.4",
       "consecutive_errors": 0,
-      "status": "HEALTHY",
+      "status": "IDLE",
       "inputs": [
         "agents/consulting-outreach/outreach-tracker.jsonl",
         "MEMORY.md"
@@ -191,10 +191,10 @@
       "delivery_target": "channel:1485491529991589888",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "3d ago",
-      "last_run_status": "ok",
+      "last_run": "-",
+      "last_run_status": "openai/gpt-5.4",
       "consecutive_errors": 0,
-      "status": "HEALTHY",
+      "status": "IDLE",
       "inputs": [
         "agents/consulting-outreach/"
       ],
@@ -219,10 +219,10 @@
       "delivery_target": "channel:1485491529991589888",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "8d ago",
-      "last_run_status": "ok",
+      "last_run": "isolated",
+      "last_run_status": "main",
       "consecutive_errors": 0,
-      "status": "HEALTHY",
+      "status": "IDLE",
       "inputs": [
         "MEMORY.md",
         "agents/consulting-outreach/outreach-tracker.jsonl"
@@ -250,10 +250,10 @@
       "delivery_target": "channel:1485491588418240703",
       "session_target": "isolated",
       "timeout_seconds": 600,
-      "last_run": "6d ago",
-      "last_run_status": "ok",
+      "last_run": "isolated",
+      "last_run_status": "main",
       "consecutive_errors": 0,
-      "status": "HEALTHY",
+      "status": "IDLE",
       "inputs": [
         "MEMORY.md",
         "projects/"
@@ -281,10 +281,10 @@
       "delivery_target": "channel:1485491233756549202",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "2d ago",
-      "last_run_status": "ok",
+      "last_run": "isolated",
+      "last_run_status": "main",
       "consecutive_errors": 0,
-      "status": "HEALTHY",
+      "status": "IDLE",
       "inputs": [
         "MEMORY.md",
         "content/weekly-brief.md (new)",
@@ -315,10 +315,10 @@
       "delivery_target": "channel:1487048489618641002",
       "session_target": "isolated",
       "timeout_seconds": 600,
-      "last_run": "1d ago",
-      "last_run_status": "ok",
+      "last_run": "isolated",
+      "last_run_status": "-",
       "consecutive_errors": 0,
-      "status": "HEALTHY",
+      "status": "IDLE",
       "inputs": [
         "agents/daily-cost-sentinel/data/YYYY-MM-DD.csv",
         "ledger.json",
@@ -353,10 +353,10 @@
       "delivery_target": "none",
       "session_target": "isolated",
       "timeout_seconds": 120,
-      "last_run": "1d ago",
-      "last_run_status": "ok",
+      "last_run": "isolated",
+      "last_run_status": "-",
       "consecutive_errors": 0,
-      "status": "HEALTHY",
+      "status": "IDLE",
       "inputs": [
         "OpenAI API",
         "Anthropic API",
@@ -385,10 +385,10 @@
       "delivery_target": "channel:1487048489618641002",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "1d ago",
-      "last_run_status": "ok",
+      "last_run": "-",
+      "last_run_status": "ollama/qwen2.5:7b",
       "consecutive_errors": 0,
-      "status": "HEALTHY",
+      "status": "IDLE",
       "inputs": [
         "ledger.json"
       ],
@@ -415,10 +415,10 @@
       "delivery_target": "UNKNOWN",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "1d ago",
-      "last_run_status": "ok",
+      "last_run": "isolated",
+      "last_run_status": "main",
       "consecutive_errors": 0,
-      "status": "HEALTHY",
+      "status": "IDLE",
       "inputs": [
         "MEMORY.md",
         "memory/YYYY-MM-DD.md",
@@ -448,10 +448,10 @@
       "delivery_target": "UNKNOWN",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "1d ago",
-      "last_run_status": "ok",
+      "last_run": "main",
+      "last_run_status": "anthropic/claude-...",
       "consecutive_errors": 0,
-      "status": "HEALTHY",
+      "status": "IDLE",
       "inputs": [
         "backlog.md",
         "Discord ideas channel"
@@ -480,10 +480,10 @@
       "delivery_target": "UNKNOWN",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "9d ago",
-      "last_run_status": "ok",
+      "last_run": "isolated",
+      "last_run_status": "main",
       "consecutive_errors": 0,
-      "status": "HEALTHY",
+      "status": "IDLE",
       "inputs": [
         "state/summary-*.json",
         "MEMORY.md",
@@ -515,10 +515,10 @@
       "delivery_target": "UNKNOWN",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "9d ago",
-      "last_run_status": "ok",
+      "last_run": "main",
+      "last_run_status": "anthropic/claude-...",
       "consecutive_errors": 0,
-      "status": "HEALTHY",
+      "status": "IDLE",
       "inputs": [
         "Weekly Metrics Digest output",
         "MEMORY.md"
@@ -546,10 +546,10 @@
       "delivery_target": "UNKNOWN",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "6d ago",
-      "last_run_status": "ok",
+      "last_run": "isolated",
+      "last_run_status": "main",
       "consecutive_errors": 0,
-      "status": "HEALTHY",
+      "status": "IDLE",
       "inputs": [
         "cron list",
         "log files",
@@ -576,10 +576,10 @@
       "delivery_target": "6394048111",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "1d ago",
-      "last_run_status": "ok",
+      "last_run": "isolated",
+      "last_run_status": "-",
       "consecutive_errors": 0,
-      "status": "HEALTHY",
+      "status": "IDLE",
       "inputs": [
         "~/.openclaw/",
         "workspace/"
@@ -606,10 +606,10 @@
       "delivery_target": "user:1485377509578244207",
       "session_target": "isolated",
       "timeout_seconds": 120,
-      "last_run": "just now",
-      "last_run_status": "ok",
+      "last_run": "isolated",
+      "last_run_status": "main",
       "consecutive_errors": 0,
-      "status": "HEALTHY",
+      "status": "IDLE",
       "inputs": [
         "MEMORY.md",
         "projects/academy-lesson-breakdown.md"
@@ -859,11 +859,6 @@
       "name": "\u2705 Exec Approvals \u2014 Fixed Apr 1",
       "status": "healthy",
       "description": "All sessions (main, isolated, cron) now have exec access. sandbox.mode=off, tools.exec.security=full."
-    },
-    {
-      "name": "\u2705 Housekeeping \u2014 Apr 2",
-      "status": "resolved",
-      "description": "Linktree Setup Reminder deleted (task completed Mar 30). weekly-strategic-recalibration assigned GPT-5.4. Analytics one-time jobs confirmed healthy."
     }
   ],
   "timing_conflicts": [
