@@ -157,6 +157,7 @@ tr.clickable{cursor:pointer}
   <div class="container">
     <ul>
       <li><a href="#summary" class="active">Summary</a></li>
+      <li><a href="#ops-focus">Ops Focus</a></li>
       <li><a href="#registry">Agent Registry</a></li>
       <li><a href="#calendar">Weekly Calendar</a></li>
       <li><a href="#flow">Flow Map</a></li>
@@ -179,6 +180,20 @@ tr.clickable{cursor:pointer}
   <div class="card red"><div class="card-value" id="c-cost">&#8212;</div><div class="card-label">Est Monthly AI Cost</div><div class="card-sub" id="c-cost-sub">Validated from ledger / prior summary</div></div>
   <div class="card purple"><div class="card-value" id="c-next">&#8212;</div><div class="card-label">Next Job</div><div class="card-sub" id="c-next-sub">&#8212;</div></div>
 </div>
+
+<section id="ops-focus">
+  <div class="section-title">Ops Focus</div>
+  <div class="insights">
+    <div class="insight-list">
+      <h3>Action Queue — Next 72h</h3>
+      <div id="action-queue"><div style="color:#64748b;padding:8px 0">Loading action queue...</div></div>
+    </div>
+    <div class="insight-list">
+      <h3>Security Posture</h3>
+      <div id="security-posture"><div style="color:#64748b;padding:8px 0">Loading security posture...</div></div>
+    </div>
+  </div>
+</section>
 
 <!-- AGENT REGISTRY: rendered live from data.json -->
 <section id="registry">
@@ -547,6 +562,39 @@ function renderHealth(issues) {
   }).join('');
 }
 
+function renderActionQueue(items) {
+  var el = document.getElementById('action-queue');
+  if (!el) return;
+  if (!items || !items.length) {
+    el.innerHTML = '<div style="color:#64748b;padding:8px 0">No urgent items in next 72h.</div>';
+    return;
+  }
+  el.innerHTML = items.map(function(it, i) {
+    return '<div class="insight-item"><div class="insight-num">' + (i+1) + '</div><div class="insight-text"><strong>' + it.name + '</strong><br><span style="color:#94a3b8">' + it.when + ' (' + it.delta + ')</span><br>' + it.reason + '</div></div>';
+  }).join('');
+}
+
+function renderSecurity(posture) {
+  var el = document.getElementById('security-posture');
+  if (!el) return;
+  if (!posture) {
+    el.innerHTML = '<div style="color:#64748b;padding:8px 0">No security data.</div>';
+    return;
+  }
+  var audit = posture.audit_summary || {};
+  var items = [
+    ['OpenClaw', posture.openclaw_version || 'unknown'],
+    ['Audit', (audit.critical||0) + ' critical / ' + (audit.warn||0) + ' warn / ' + (audit.info||0) + ' info'],
+    ['Main exec', (posture.main_exec_security || 'unknown') + ' / ask=' + (posture.main_exec_ask || 'unknown')],
+    ['Allowlist', String(posture.main_allowlist_count || 0) + ' entries'],
+    ['Sandbox', posture.sandbox || 'unknown'],
+    ['Docker', posture.docker_available ? 'available' : 'not installed']
+  ];
+  el.innerHTML = items.map(function(row) {
+    return '<div class="insight-item"><div class="insight-num">•</div><div class="insight-text"><strong>' + row[0] + ':</strong> ' + row[1] + '</div></div>';
+  }).join('');
+}
+
 function renderModels(opts) {
   if (!opts || !opts.length) return;
   var tbody = document.getElementById('model-tbody');
@@ -668,6 +716,8 @@ function loadData(force) {
         renderSummary(data.summary || {});
         renderAgents(data.agents);
         renderHealth(data.health_issues);
+        renderActionQueue(data.action_queue);
+        renderSecurity(data.security_posture);
         renderModels(data.model_optimization);
         renderBoldRec(data);
         renderConflicts(data.timing_conflicts);
