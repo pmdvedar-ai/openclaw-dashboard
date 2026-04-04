@@ -1,16 +1,22 @@
 {
-  "generated": "2026-04-03T18:04:51.082329+00:00",
+  "generated": "2026-04-04T02:54:58.783446+00:00",
   "summary": {
-    "total_agents": 53,
-    "recurring_agents": 18,
-    "one_time_jobs": 25,
-    "healthy": 0,
+    "total_agents": 59,
+    "recurring_agents": 26,
+    "one_time_jobs": 28,
+    "healthy": 24,
     "warning": 0,
     "broken": 0,
-    "idle": 0,
-    "revenue_aligned": 8,
+    "idle": 30,
+    "revenue_aligned": 10,
     "est_monthly_ai_cost": 558.44,
-    "jobs_this_week": 16
+    "jobs_this_week": 42,
+    "disabled_jobs": 5,
+    "revenue_direct": 7,
+    "revenue_indirect": 3,
+    "next_job_name": "dashboard-regenerate-hourly",
+    "next_job_time": "Apr 3, 11:04 PM ET",
+    "next_job_delta": "~9m"
   },
   "agents": [
     {
@@ -26,10 +32,10 @@
       "delivery_target": "channel:1485491233756549202",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "isolated",
-      "last_run_status": "main",
+      "last_run": "Mar 30, 9:00 AM ET",
+      "last_run_status": "ok",
       "consecutive_errors": 0,
-      "status": "IDLE",
+      "status": "HEALTHY",
       "inputs": [
         "web search",
         "MEMORY.md"
@@ -43,7 +49,9 @@
         "Instagram Content Agent"
       ],
       "value": "INDIRECT REVENUE",
-      "notes": "Now writes content/weekly-brief.md after each run (added Apr 1). Feeds LinkedIn + Instagram with unified weekly theme."
+      "notes": "Now writes content/weekly-brief.md after each run (added Apr 1). Feeds LinkedIn + Instagram with unified weekly theme.",
+      "next_run": "Apr 6, 9:00 AM ET",
+      "enabled": true
     },
     {
       "id": "c8519ff6",
@@ -57,11 +65,11 @@
       "delivery_channel": "discord",
       "delivery_target": "channel:1485491337095544963",
       "session_target": "isolated",
-      "timeout_seconds": 300,
-      "last_run": "isolated",
-      "last_run_status": "main",
+      "timeout_seconds": 180,
+      "last_run": "Apr 3, 10:00 AM ET",
+      "last_run_status": "ok",
       "consecutive_errors": 0,
-      "status": "IDLE",
+      "status": "HEALTHY",
       "inputs": [
         "MEMORY.md",
         "content/linkedin-posts",
@@ -79,7 +87,9 @@
         "analytics reminders"
       ],
       "value": "DIRECT REVENUE",
-      "notes": "Brief-aware: reads content/weekly-brief.md first (added Apr 1). Last run 1d ago (Apr 2 10 AM)."
+      "notes": "Brief-aware: reads content/weekly-brief.md first (added Apr 1). Last run 1d ago (Apr 2 10 AM).",
+      "next_run": "Apr 6, 10:00 AM ET",
+      "enabled": true
     },
     {
       "id": "75378957",
@@ -93,11 +103,11 @@
       "delivery_channel": "discord",
       "delivery_target": "channel:1485491390304747550",
       "session_target": "isolated",
-      "timeout_seconds": 300,
-      "last_run": "isolated",
-      "last_run_status": "main",
+      "timeout_seconds": 600,
+      "last_run": "Mar 30, 2:00 PM ET",
+      "last_run_status": "ok",
       "consecutive_errors": 0,
-      "status": "IDLE",
+      "status": "HEALTHY",
       "inputs": [
         "MEMORY.md",
         "content/lead-magnets"
@@ -112,7 +122,9 @@
         "ManyChat automation"
       ],
       "value": "DIRECT REVENUE",
-      "notes": "Directly feeds MBA PA Academy enrollment funnel"
+      "notes": "Directly feeds MBA PA Academy enrollment funnel",
+      "next_run": "Apr 6, 2:00 PM ET",
+      "enabled": true
     },
     {
       "id": "5b0442e2",
@@ -126,11 +138,11 @@
       "delivery_channel": "discord",
       "delivery_target": "channel:1485491468683448451",
       "session_target": "isolated",
-      "timeout_seconds": 600,
-      "last_run": "isolated",
-      "last_run_status": "main",
+      "timeout_seconds": 900,
+      "last_run": "Apr 1, 3:38 PM ET",
+      "last_run_status": "ok",
       "consecutive_errors": 0,
-      "status": "IDLE",
+      "status": "HEALTHY",
       "inputs": [
         "projects/academy-curriculum-final.md",
         "projects/academy-lesson-breakdown.md",
@@ -145,7 +157,9 @@
         "Teachable course content"
       ],
       "value": "DIRECT REVENUE",
-      "notes": "Changed to weekly Apr 1 for May 12 launch prep. Reverts to monthly May 13."
+      "notes": "Changed to weekly Apr 1 for May 12 launch prep. Reverts to monthly May 13.",
+      "next_run": "Apr 6, 3:00 PM ET",
+      "enabled": true
     },
     {
       "id": "46cefa69",
@@ -159,11 +173,11 @@
       "delivery_channel": "discord",
       "delivery_target": "channel:1485491529991589888",
       "session_target": "isolated",
-      "timeout_seconds": 300,
-      "last_run": "-",
-      "last_run_status": "openai/gpt-5.4",
+      "timeout_seconds": 180,
+      "last_run": "Apr 1, 6:00 PM ET",
+      "last_run_status": "ok",
       "consecutive_errors": 0,
-      "status": "IDLE",
+      "status": "HEALTHY",
       "inputs": [
         "agents/consulting-outreach/outreach-tracker.jsonl",
         "MEMORY.md"
@@ -176,7 +190,9 @@
         "Calendly bookings"
       ],
       "value": "DIRECT REVENUE",
-      "notes": "Upgraded Haiku\u2192GPT-5.4 on Apr 2 for warm lead judgment. Revenue-direct task justified premium model. Last run Apr 2 6 PM."
+      "notes": "Upgraded Haiku\u2192GPT-5.4 on Apr 2 for warm lead judgment. Revenue-direct task justified premium model. Last run Apr 2 6 PM.",
+      "next_run": "Apr 8, 6:00 PM ET",
+      "enabled": true
     },
     {
       "id": "4f5053dc",
@@ -190,11 +206,11 @@
       "delivery_channel": "discord",
       "delivery_target": "channel:1485491529991589888",
       "session_target": "isolated",
-      "timeout_seconds": 300,
-      "last_run": "-",
-      "last_run_status": "openai/gpt-5.4",
+      "timeout_seconds": 600,
+      "last_run": "Apr 1, 5:05 PM ET",
+      "last_run_status": "ok",
       "consecutive_errors": 0,
-      "status": "IDLE",
+      "status": "HEALTHY",
       "inputs": [
         "agents/consulting-outreach/"
       ],
@@ -204,7 +220,9 @@
       "dependencies": [],
       "downstream": [],
       "value": "DIRECT REVENUE",
-      "notes": "Fixed Apr 2. Model + delivery configured correctly. Timing conflict with Book Writing Session (both 7 PM Sun) but not blocking. Last run Apr 2 7 PM."
+      "notes": "Fixed Apr 2. Model + delivery configured correctly. Timing conflict with Book Writing Session (both 7 PM Sun) but not blocking. Last run Apr 2 7 PM.",
+      "next_run": "Apr 5, 7:30 PM ET",
+      "enabled": true
     },
     {
       "id": "c4360b5a",
@@ -218,11 +236,11 @@
       "delivery_channel": "discord",
       "delivery_target": "channel:1485491529991589888",
       "session_target": "isolated",
-      "timeout_seconds": 300,
-      "last_run": "isolated",
-      "last_run_status": "main",
+      "timeout_seconds": 240,
+      "last_run": "Apr 3, 4:00 PM ET",
+      "last_run_status": "ok",
       "consecutive_errors": 0,
-      "status": "IDLE",
+      "status": "HEALTHY",
       "inputs": [
         "MEMORY.md",
         "agents/consulting-outreach/outreach-tracker.jsonl"
@@ -235,7 +253,9 @@
         "Calendly bookings"
       ],
       "value": "DIRECT REVENUE",
-      "notes": "GPT-5.4 appropriate \u2014 direct revenue impact. Last run Mar 28 4 PM."
+      "notes": "GPT-5.4 appropriate \u2014 direct revenue impact. Last run Mar 28 4 PM.",
+      "next_run": "Apr 10, 4:00 PM ET",
+      "enabled": true
     },
     {
       "id": "70cd568c",
@@ -249,11 +269,11 @@
       "delivery_channel": "discord",
       "delivery_target": "channel:1485491588418240703",
       "session_target": "isolated",
-      "timeout_seconds": 600,
-      "last_run": "isolated",
-      "last_run_status": "main",
+      "timeout_seconds": 900,
+      "last_run": "Mar 29, 7:00 PM ET",
+      "last_run_status": "ok",
       "consecutive_errors": 0,
-      "status": "IDLE",
+      "status": "HEALTHY",
       "inputs": [
         "MEMORY.md",
         "projects/"
@@ -266,7 +286,9 @@
         "future book product"
       ],
       "value": "INDIRECT REVENUE",
-      "notes": "Long-term asset; runs same time as Consulting Outreach Weekend \u2014 timing conflict. Last run Mar 30 7 PM."
+      "notes": "Long-term asset; runs same time as Consulting Outreach Weekend \u2014 timing conflict. Last run Mar 30 7 PM.",
+      "next_run": "Apr 5, 7:00 PM ET",
+      "enabled": true
     },
     {
       "id": "18bc0657",
@@ -281,10 +303,10 @@
       "delivery_target": "channel:1485491233756549202",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "isolated",
-      "last_run_status": "main",
+      "last_run": "Apr 1, 10:24 PM ET",
+      "last_run_status": "ok",
       "consecutive_errors": 0,
-      "status": "IDLE",
+      "status": "HEALTHY",
       "inputs": [
         "MEMORY.md",
         "content/weekly-brief.md (new)",
@@ -300,7 +322,9 @@
         "ManyChat automation"
       ],
       "value": "INDIRECT REVENUE",
-      "notes": "Fixed Apr 1 \u2014 delivery via openclaw CLI. Manually triggered Apr 1, confirmed working. Brief-aware: reads content/weekly-brief.md. Last run Apr 2 2 AM (scheduled Tue 11 AM)."
+      "notes": "Fixed Apr 1 \u2014 delivery via openclaw CLI. Manually triggered Apr 1, confirmed working. Brief-aware: reads content/weekly-brief.md. Last run Apr 2 2 AM (scheduled Tue 11 AM).",
+      "next_run": "Apr 7, 11:00 AM ET",
+      "enabled": true
     },
     {
       "id": "48881c4a",
@@ -311,14 +335,14 @@
       "schedule_human": "Every day 8:00 AM ET",
       "model": "anthropic/claude-haiku-4-5",
       "model_tier": "haiku",
-      "delivery_channel": "discord",
-      "delivery_target": "channel:1487048489618641002",
+      "delivery_channel": "telegram",
+      "delivery_target": "6394048111",
       "session_target": "isolated",
       "timeout_seconds": 600,
-      "last_run": "isolated",
-      "last_run_status": "-",
+      "last_run": "Apr 3, 8:00 AM ET",
+      "last_run_status": "ok",
       "consecutive_errors": 0,
-      "status": "IDLE",
+      "status": "HEALTHY",
       "inputs": [
         "agents/daily-cost-sentinel/data/YYYY-MM-DD.csv",
         "ledger.json",
@@ -338,7 +362,9 @@
         "Weekly Metrics Digest"
       ],
       "value": "SUPPORTING SYSTEM",
-      "notes": "Fixed Apr 1 \u2014 timeout 300\u2192600s, collector moved to 7:45 AM. Last run Apr 2 8 AM."
+      "notes": "Fixed Apr 1 \u2014 timeout 300\u2192600s, collector moved to 7:45 AM. Last run Apr 2 8 AM.",
+      "next_run": "Apr 4, 8:00 AM ET",
+      "enabled": true
     },
     {
       "id": "86ba05a1",
@@ -349,14 +375,14 @@
       "schedule_human": "Every day 7:45 AM ET",
       "model": "ollama/qwen2.5:7b",
       "model_tier": "local",
-      "delivery_channel": "none",
-      "delivery_target": "none",
+      "delivery_channel": "telegram",
+      "delivery_target": "6394048111",
       "session_target": "isolated",
       "timeout_seconds": 120,
-      "last_run": "isolated",
-      "last_run_status": "-",
+      "last_run": "Apr 3, 7:45 AM ET",
+      "last_run_status": "ok",
       "consecutive_errors": 0,
-      "status": "IDLE",
+      "status": "HEALTHY",
       "inputs": [
         "OpenAI API",
         "Anthropic API",
@@ -370,7 +396,9 @@
         "Daily Cost Sentinel"
       ],
       "value": "SUPPORTING SYSTEM",
-      "notes": "Runs 15 min before sentinel. Timing buffer fixed today. Last run Apr 2 7:45 AM."
+      "notes": "Runs 15 min before sentinel. Timing buffer fixed today. Last run Apr 2 7:45 AM.",
+      "next_run": "Apr 4, 7:45 AM ET",
+      "enabled": true
     },
     {
       "id": "0cb35065",
@@ -384,11 +412,11 @@
       "delivery_channel": "discord",
       "delivery_target": "channel:1487048489618641002",
       "session_target": "isolated",
-      "timeout_seconds": 300,
-      "last_run": "-",
-      "last_run_status": "ollama/qwen2.5:7b",
+      "timeout_seconds": 120,
+      "last_run": "Apr 3, 8:30 AM ET",
+      "last_run_status": "ok",
       "consecutive_errors": 0,
-      "status": "IDLE",
+      "status": "HEALTHY",
       "inputs": [
         "ledger.json"
       ],
@@ -400,7 +428,9 @@
       ],
       "downstream": [],
       "value": "SUPPORTING SYSTEM",
-      "notes": "Runs 30 min after sentinel \u2014 good timing. Last run Apr 2 8:30 AM."
+      "notes": "Runs 30 min after sentinel \u2014 good timing. Last run Apr 2 8:30 AM.",
+      "next_run": "Apr 4, 8:30 AM ET",
+      "enabled": true
     },
     {
       "id": "94d0ad88",
@@ -412,13 +442,13 @@
       "model": "anthropic/claude-haiku-4-5",
       "model_tier": "haiku",
       "delivery_channel": "discord",
-      "delivery_target": "UNKNOWN",
+      "delivery_target": "channel:1485490618636570805",
       "session_target": "isolated",
-      "timeout_seconds": 300,
-      "last_run": "isolated",
-      "last_run_status": "main",
+      "timeout_seconds": 120,
+      "last_run": "Apr 3, 9:00 AM ET",
+      "last_run_status": "ok",
       "consecutive_errors": 0,
-      "status": "IDLE",
+      "status": "HEALTHY",
       "inputs": [
         "MEMORY.md",
         "memory/YYYY-MM-DD.md",
@@ -433,7 +463,9 @@
         "all agents that read MEMORY.md"
       ],
       "value": "SUPPORTING SYSTEM",
-      "notes": "Fixed Apr 1 \u2014 delivery channel misconfigured, now uses openclaw CLI. Confirmed clean run. Last run Apr 2 9 AM."
+      "notes": "Fixed Apr 1 \u2014 delivery channel misconfigured, now uses openclaw CLI. Confirmed clean run. Last run Apr 2 9 AM.",
+      "next_run": "Apr 4, 9:00 AM ET",
+      "enabled": true
     },
     {
       "id": "4f07ae9a",
@@ -445,13 +477,13 @@
       "model": "anthropic/claude-haiku-4-5",
       "model_tier": "haiku",
       "delivery_channel": "discord",
-      "delivery_target": "UNKNOWN",
+      "delivery_target": "channel:1485492143584837633",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "main",
-      "last_run_status": "anthropic/claude-...",
+      "last_run": "Apr 3, 9:00 AM ET",
+      "last_run_status": "ok",
       "consecutive_errors": 0,
-      "status": "IDLE",
+      "status": "HEALTHY",
       "inputs": [
         "backlog.md",
         "Discord ideas channel"
@@ -465,7 +497,9 @@
         "Backlog Review Agent"
       ],
       "value": "SUPPORTING SYSTEM",
-      "notes": "Runs same time as Memory Governance \u2014 no conflict since different tasks. Last run Apr 2 9 AM."
+      "notes": "Runs same time as Memory Governance \u2014 no conflict since different tasks. Last run Apr 2 9 AM.",
+      "next_run": "Apr 4, 9:00 AM ET",
+      "enabled": true
     },
     {
       "id": "2f976eb0",
@@ -477,13 +511,13 @@
       "model": "anthropic/claude-haiku-4-5",
       "model_tier": "haiku",
       "delivery_channel": "discord",
-      "delivery_target": "UNKNOWN",
+      "delivery_target": "channel:1485491914986881115",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "isolated",
-      "last_run_status": "main",
+      "last_run": "Apr 3, 6:00 PM ET",
+      "last_run_status": "ok",
       "consecutive_errors": 0,
-      "status": "IDLE",
+      "status": "HEALTHY",
       "inputs": [
         "state/summary-*.json",
         "MEMORY.md",
@@ -500,7 +534,9 @@
         "Weekly Executive Summary"
       ],
       "value": "SUPPORTING SYSTEM",
-      "notes": "Runs same time as Backlog Review \u2014 potential conflict. Last run Mar 28 6 PM."
+      "notes": "Runs same time as Backlog Review \u2014 potential conflict. Last run Mar 28 6 PM.",
+      "next_run": "Apr 10, 6:00 PM ET",
+      "enabled": true
     },
     {
       "id": "b39ff404",
@@ -512,13 +548,13 @@
       "model": "anthropic/claude-sonnet-4-6",
       "model_tier": "premium",
       "delivery_channel": "discord",
-      "delivery_target": "UNKNOWN",
+      "delivery_target": "channel:1485378155878551626",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "main",
-      "last_run_status": "anthropic/claude-...",
+      "last_run": "Apr 3, 6:30 PM ET",
+      "last_run_status": "ok",
       "consecutive_errors": 0,
-      "status": "IDLE",
+      "status": "HEALTHY",
       "inputs": [
         "Weekly Metrics Digest output",
         "MEMORY.md"
@@ -531,7 +567,9 @@
       ],
       "downstream": [],
       "value": "SUPPORTING SYSTEM",
-      "notes": "30 min after Weekly Metrics \u2014 correct sequencing. Last run Mar 28 6:30 PM."
+      "notes": "30 min after Weekly Metrics \u2014 correct sequencing. Last run Mar 28 6:30 PM.",
+      "next_run": "Apr 10, 6:30 PM ET",
+      "enabled": true
     },
     {
       "id": "55f1b746",
@@ -543,13 +581,13 @@
       "model": "ollama/qwen2.5:7b",
       "model_tier": "local",
       "delivery_channel": "discord",
-      "delivery_target": "UNKNOWN",
+      "delivery_target": "channel:1485490618636570805",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "isolated",
-      "last_run_status": "main",
+      "last_run": "Mar 30, 8:05 AM ET",
+      "last_run_status": "ok",
       "consecutive_errors": 0,
-      "status": "IDLE",
+      "status": "HEALTHY",
       "inputs": [
         "cron list",
         "log files",
@@ -561,7 +599,9 @@
       "dependencies": [],
       "downstream": [],
       "value": "SUPPORTING SYSTEM",
-      "notes": "Local model appropriate for mechanical checks. Last run Mar 31 8 AM."
+      "notes": "Local model appropriate for mechanical checks. Last run Mar 31 8 AM.",
+      "next_run": "Apr 6, 8:00 AM ET",
+      "enabled": true
     },
     {
       "id": "4b0fd81e",
@@ -572,14 +612,14 @@
       "schedule_human": "Every day 2:00 AM ET",
       "model": "ollama/qwen2.5:7b",
       "model_tier": "local",
-      "delivery_channel": "telegram",
-      "delivery_target": "6394048111",
+      "delivery_channel": "discord",
+      "delivery_target": "channel:1485490618636570805",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "isolated",
-      "last_run_status": "-",
+      "last_run": "Apr 3, 2:00 AM ET",
+      "last_run_status": "ok",
       "consecutive_errors": 0,
-      "status": "IDLE",
+      "status": "HEALTHY",
       "inputs": [
         "~/.openclaw/",
         "workspace/"
@@ -591,7 +631,9 @@
       "dependencies": [],
       "downstream": [],
       "value": "SUPPORTING SYSTEM",
-      "notes": "Fixed Apr 1 \u2014 exec unblocked, pre-commit secret leak check added, OpenAI key rotated. Last run Apr 2 2 AM."
+      "notes": "Fixed Apr 1 \u2014 exec unblocked, pre-commit secret leak check added, OpenAI key rotated. Last run Apr 2 2 AM.",
+      "next_run": "Apr 4, 2:00 AM ET",
+      "enabled": true
     },
     {
       "id": "fa2af3e2",
@@ -606,10 +648,10 @@
       "delivery_target": "user:1485377509578244207",
       "session_target": "isolated",
       "timeout_seconds": 120,
-      "last_run": "isolated",
-      "last_run_status": "main",
+      "last_run": "Apr 3, 9:00 AM ET",
+      "last_run_status": "ok",
       "consecutive_errors": 0,
-      "status": "IDLE",
+      "status": "HEALTHY",
       "inputs": [
         "MEMORY.md",
         "projects/academy-lesson-breakdown.md"
@@ -620,7 +662,9 @@
       "dependencies": [],
       "downstream": [],
       "value": "DIRECT REVENUE",
-      "notes": "Fixed Apr 2 - delivery mode corrected from announce to none. Manual test run at 11:22 PM ET delivered cleanly to Discord."
+      "notes": "Fixed Apr 2 - delivery mode corrected from announce to none. Manual test run at 11:22 PM ET delivered cleanly to Discord.",
+      "next_run": "Apr 4, 9:00 AM ET",
+      "enabled": true
     }
   ],
   "weekly_calendar": {
@@ -821,6 +865,11 @@
   },
   "health_issues": [
     {
+      "name": "Security posture",
+      "status": "warning",
+      "description": "OpenClaw audit: 0 critical / 3 warn / 1 info"
+    },
+    {
       "name": "\u2705 Memory Governance Daily \u2014 Fixed Apr 1",
       "status": "resolved",
       "description": "Delivery channel misconfigured \u2014 resolved. Clean run confirmed. 0 consecutive errors."
@@ -849,16 +898,6 @@
       "name": "\u2705 Daily Cost Sentinel \u2014 Fixed Apr 1",
       "status": "resolved",
       "description": "Was timing out. Fixed: timeout 300\u2192600s, collector moved to 7:45 AM for 15-min buffer."
-    },
-    {
-      "name": "\u2705 LinkedIn Growth",
-      "status": "healthy",
-      "description": "Running clean. 3\u00d7/week cadence. Posts scheduled through Apr 4."
-    },
-    {
-      "name": "\u2705 Exec Approvals \u2014 Fixed Apr 1",
-      "status": "healthy",
-      "description": "All sessions (main, isolated, cron) now have exec access. sandbox.mode=off, tools.exec.security=full."
     }
   ],
   "timing_conflicts": [
@@ -1024,5 +1063,20 @@
     }
   ],
   "bold_recommendation": "You have 23 warm leads from the lead magnet launch (Apr 1), including healthcare executives, APP supervisors, and program directors. The highest-leverage move RIGHT NOW is converting these leads into consulting conversations before momentum fades. April 7 follow-ups are scheduled \u2014 make sure you personally reach out to the top 5: Heather James (Heart & Vascular APP Manager), Dawn Hughes (Healthcare CEO), Michael Sullivan (EVH Consulting LLC), Christian Trent (CT/Vascular Administrator), and Brian Fontenot (PharmD/MPAS/MBA). One call this week = $2,500. Five calls = $12,500. The Teachable course is on track for May 12 \u2014 Stripe is connected, course shell is built, 29 lessons live.",
-  "bold_recommendation_impact": "\ud83d\udcb0 Immediate actions: (1) Send 5 personal outreach DMs this week \u00b7 (2) Prep Mitesh Patel briefing before Apr 9 call \u00b7 (3) Script Modules 4-5 before Apr 11 travel \u00b7 (4) Queue LinkedIn posts for Apr 11-26 window"
+  "bold_recommendation_impact": "\ud83d\udcb0 Immediate actions: (1) Send 5 personal outreach DMs this week \u00b7 (2) Prep Mitesh Patel briefing before Apr 9 call \u00b7 (3) Script Modules 4-5 before Apr 11 travel \u00b7 (4) Queue LinkedIn posts for Apr 11-26 window",
+  "meta": {
+    "generated_local": "Fri Apr 3, 2026, 10:54 PM ET",
+    "audit_summary": {
+      "critical": 0,
+      "warn": 3,
+      "info": 1
+    },
+    "validation": {
+      "ok": true,
+      "issues": [],
+      "source": "openclaw cron list --all --json",
+      "checked_at": "2026-04-04T02:54:58.784190+00:00"
+    },
+    "data_trust": "validated"
+  }
 }

@@ -174,10 +174,10 @@ tr.clickable{cursor:pointer}
 <div id="summary" class="cards">
   <div class="card"><div class="card-value" id="c-total">&#8212;</div><div class="card-label">Total Jobs</div><div class="card-sub" id="c-total-sub">&#8212;</div></div>
   <div class="card green"><div class="card-value" id="c-health">&#8212;</div><div class="card-label">Healthy / Warning / Broken</div><div class="card-sub" id="c-health-sub">&#8212;</div></div>
-  <div class="card"><div class="card-value">8</div><div class="card-label">Revenue-Aligned Agents</div><div class="card-sub">5 direct &middot; 3 indirect</div></div>
-  <div class="card yellow"><div class="card-value" id="c-weekly">&#8212;</div><div class="card-label">Jobs This Week</div><div class="card-sub">4 content &middot; 4 finance &middot; 4 system</div></div>
-  <div class="card red"><div class="card-value" id="c-cost">&#8212;</div><div class="card-label">Est Monthly AI Cost</div><div class="card-sub">+$27 if trials convert</div></div>
-  <div class="card purple"><div class="card-value">~3h</div><div class="card-label">Next Job</div><div class="card-sub">Agent Commands Watcher &middot; 4:00 PM</div></div>
+  <div class="card"><div class="card-value" id="c-revenue">&#8212;</div><div class="card-label">Revenue-Aligned Agents</div><div class="card-sub" id="c-revenue-sub">&#8212;</div></div>
+  <div class="card yellow"><div class="card-value" id="c-weekly">&#8212;</div><div class="card-label">Jobs This Week</div><div class="card-sub" id="c-weekly-sub">Next 7 days</div></div>
+  <div class="card red"><div class="card-value" id="c-cost">&#8212;</div><div class="card-label">Est Monthly AI Cost</div><div class="card-sub" id="c-cost-sub">Validated from ledger / prior summary</div></div>
+  <div class="card purple"><div class="card-value" id="c-next">&#8212;</div><div class="card-label">Next Job</div><div class="card-sub" id="c-next-sub">&#8212;</div></div>
 </div>
 
 <!-- AGENT REGISTRY: rendered live from data.json -->
@@ -559,13 +559,19 @@ function renderModels(opts) {
 }
 
 function renderSummary(s) {
-  document.getElementById('c-total').textContent = s.total_agents || '&mdash;';
-  document.getElementById('c-total-sub').textContent = (s.recurring_agents||'?') + ' recurring \u00b7 ' + (s.one_time_jobs||'?') + ' one-time';
+  document.getElementById('c-total').textContent = s.total_agents || '—';
+  document.getElementById('c-total-sub').textContent = (s.recurring_agents||0) + ' recurring · ' + (s.one_time_jobs||0) + ' one-time · ' + (s.disabled_jobs||0) + ' disabled';
   document.getElementById('c-health').innerHTML = (s.healthy||0) + ' <span style="font-size:16px;color:#64748b">/ ' + (s.warning||0) + ' / ' + (s.broken||0) + '</span>';
   document.getElementById('c-health-sub').textContent = (s.idle||0) + ' idle';
-  document.getElementById('c-weekly').textContent = s.jobs_this_week || '&mdash;';
+  document.getElementById('c-revenue').textContent = s.revenue_aligned || '—';
+  document.getElementById('c-revenue-sub').textContent = (s.revenue_direct||0) + ' direct · ' + (s.revenue_indirect||0) + ' indirect';
+  document.getElementById('c-weekly').textContent = s.jobs_this_week || '—';
+  document.getElementById('c-weekly-sub').textContent = 'Enabled runs in next 7 days';
   var cost = s.est_monthly_ai_cost;
-  document.getElementById('c-cost').textContent = cost ? '$' + Math.round(cost) : '&mdash;';
+  document.getElementById('c-cost').textContent = cost ? '$' + Math.round(cost) : '—';
+  document.getElementById('c-cost-sub').textContent = 'Ledger-backed estimate';
+  document.getElementById('c-next').textContent = s.next_job_delta || '—';
+  document.getElementById('c-next-sub').textContent = (s.next_job_name || '—') + ' · ' + (s.next_job_time || '—');
 }
 
 function renderBoldRec(data) {
@@ -578,11 +584,26 @@ function renderBoldRec(data) {
 function renderTimestamp(ts) {
   var d = new Date(ts);
   var fmt = d.toLocaleString('en-US', {weekday:'short',month:'short',day:'numeric',year:'numeric',hour:'numeric',minute:'2-digit',timeZone:'America/New_York'});
-  var display = 'Generated: Fri Apr 3, 2026, 2:04 PM ET';
+  var display = 'Generated: ' + fmt + ' ET';
   var el = document.getElementById('ts-display');
   var ft = document.getElementById('footer-ts');
   if (el) el.textContent = display;
   if (ft) ft.textContent = display;
+}
+
+function renderDataTrust(data) {
+  var rs = document.getElementById('refresh-status');
+  if (!rs) return;
+  var meta = data.meta || {};
+  var validation = meta.validation || {};
+  var trust = meta.data_trust || 'unknown';
+  if (trust === 'validated' && validation.ok) {
+    rs.textContent = 'Validated · live refresh every 60s';
+    rs.style.color = '#22c55e';
+  } else {
+    rs.textContent = 'Warning · ' + ((validation.issues || []).join('; ') || 'dashboard validation issue');
+    rs.style.color = '#eab308';
+  }
 }
 
 function renderConflicts(conflicts) {
@@ -650,16 +671,15 @@ function loadData(force) {
         renderModels(data.model_optimization);
         renderBoldRec(data);
         renderConflicts(data.timing_conflicts);
-        var rs = document.getElementById('refresh-status');
+        renderDataTrust(data);
         var lb = document.getElementById('live-badge');
-        if (rs) rs.textContent = 'Live \u00b7 updates every 60s';
         if (lb) lb.style.display = 'inline-block';
       }
     })
     .catch(function() {
       var rs = document.getElementById('refresh-status');
       var lb = document.getElementById('live-badge');
-      if (rs) rs.textContent = 'Offline \u2014 serving cached version';
+      if (rs) { rs.textContent = 'Offline — serving cached version'; rs.style.color = '#eab308'; }
       if (lb) lb.style.display = 'none';
     });
 }
