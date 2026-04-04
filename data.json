@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-04T12:04:59.120420+00:00",
+  "generated": "2026-04-04T13:05:03.259130+00:00",
   "summary": {
     "total_agents": 61,
     "recurring_agents": 26,
@@ -15,7 +15,7 @@
     "revenue_direct": 7,
     "revenue_indirect": 3,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "Apr 4, 8:04 AM ET",
+    "next_job_time": "Apr 4, 9:04 AM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -413,7 +413,7 @@
       "delivery_target": "channel:1487048489618641002",
       "session_target": "isolated",
       "timeout_seconds": 120,
-      "last_run": "Apr 3, 8:30 AM ET",
+      "last_run": "Apr 4, 8:30 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -429,7 +429,7 @@
       "downstream": [],
       "value": "SUPPORTING SYSTEM",
       "notes": "Runs 30 min after sentinel \u2014 good timing. Last run Apr 2 8:30 AM.",
-      "next_run": "Apr 4, 8:30 AM ET",
+      "next_run": "Apr 5, 8:30 AM ET",
       "enabled": true
     },
     {
@@ -445,7 +445,7 @@
       "delivery_target": "channel:1485490618636570805",
       "session_target": "isolated",
       "timeout_seconds": 120,
-      "last_run": "Apr 3, 9:00 AM ET",
+      "last_run": "Apr 4, 9:00 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -464,7 +464,7 @@
       ],
       "value": "SUPPORTING SYSTEM",
       "notes": "Fixed Apr 1 \u2014 delivery channel misconfigured, now uses openclaw CLI. Confirmed clean run. Last run Apr 2 9 AM.",
-      "next_run": "Apr 4, 9:00 AM ET",
+      "next_run": "Apr 5, 9:00 AM ET",
       "enabled": true
     },
     {
@@ -480,7 +480,7 @@
       "delivery_target": "channel:1485492143584837633",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "Apr 3, 9:00 AM ET",
+      "last_run": "Apr 4, 9:00 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -498,7 +498,7 @@
       ],
       "value": "SUPPORTING SYSTEM",
       "notes": "Runs same time as Memory Governance \u2014 no conflict since different tasks. Last run Apr 2 9 AM.",
-      "next_run": "Apr 4, 9:00 AM ET",
+      "next_run": "Apr 5, 9:00 AM ET",
       "enabled": true
     },
     {
@@ -648,7 +648,7 @@
       "delivery_target": "user:1485377509578244207",
       "session_target": "isolated",
       "timeout_seconds": 120,
-      "last_run": "Apr 3, 9:00 AM ET",
+      "last_run": "Apr 4, 9:00 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -663,7 +663,7 @@
       "downstream": [],
       "value": "DIRECT REVENUE",
       "notes": "Fixed Apr 2 - delivery mode corrected from announce to none. Manual test run at 11:22 PM ET delivered cleanly to Discord.",
-      "next_run": "Apr 4, 9:00 AM ET",
+      "next_run": "Apr 5, 9:00 AM ET",
       "enabled": true
     }
   ],
@@ -907,15 +907,15 @@
   ],
   "timing_conflicts": [
     {
-      "time": "Sat Apr 4, 9:00 AM ET",
-      "agents": "Backlog Intake Processor + memory-governance-daily + launch-countdown-daily",
+      "time": "Sun Apr 5, 8:00 AM ET",
+      "agents": "morning-draft-briefing + daily-cost-sentinel + analytics-48h-thu-apr3",
       "risk": "HIGH",
       "note": "Concurrent scheduled runs",
       "status": "active"
     },
     {
-      "time": "Sun Apr 5, 8:00 AM ET",
-      "agents": "morning-draft-briefing + daily-cost-sentinel + analytics-48h-thu-apr3",
+      "time": "Sun Apr 5, 9:00 AM ET",
+      "agents": "Backlog Intake Processor + memory-governance-daily + launch-countdown-daily",
       "risk": "HIGH",
       "note": "Concurrent scheduled runs",
       "status": "active"
@@ -1077,7 +1077,7 @@
   "bold_recommendation": "You have 23 warm leads from the lead magnet launch (Apr 1), including healthcare executives, APP supervisors, and program directors. The highest-leverage move RIGHT NOW is converting these leads into consulting conversations before momentum fades. April 7 follow-ups are scheduled \u2014 make sure you personally reach out to the top 5: Heather James (Heart & Vascular APP Manager), Dawn Hughes (Healthcare CEO), Michael Sullivan (EVH Consulting LLC), Christian Trent (CT/Vascular Administrator), and Brian Fontenot (PharmD/MPAS/MBA). One call this week = $2,500. Five calls = $12,500. The Teachable course is on track for May 12 \u2014 Stripe is connected, course shell is built, 29 lessons live.",
   "bold_recommendation_impact": "\ud83d\udcb0 Immediate actions: (1) Send 5 personal outreach DMs this week \u00b7 (2) Prep Mitesh Patel briefing before Apr 9 call \u00b7 (3) Script Modules 4-5 before Apr 11 travel \u00b7 (4) Queue LinkedIn posts for Apr 11-26 window",
   "meta": {
-    "generated_local": "Sat Apr 4, 2026, 8:04 AM ET",
+    "generated_local": "Sat Apr 4, 2026, 9:05 AM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 3,
@@ -1087,7 +1087,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-04T12:04:59.120925+00:00"
+      "checked_at": "2026-04-04T13:05:03.259659+00:00"
     },
     "data_trust": "validated"
   },
@@ -1108,31 +1108,31 @@
     {
       "name": "analytics-48h-thu-apr3",
       "when": "Apr 5, 8:00 AM ET",
-      "delta": "~23h 55m",
+      "delta": "~22h 54m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-48h-fri-apr4",
       "when": "Apr 6, 7:45 AM ET",
-      "delta": "~1d 23h",
+      "delta": "~1d 22h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "linkedin-analytics-48h-linkedin-post-fri-apr4",
       "when": "Apr 6, 7:46 AM ET",
-      "delta": "~1d 23h",
+      "delta": "~1d 22h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "linktree-downgrade-reminder",
       "when": "Apr 6, 12:00 PM ET",
-      "delta": "~2d 3h",
+      "delta": "~2d 2h",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "linkedin-lead-magnet-analytics-7d",
       "when": "Apr 7, 8:00 AM ET",
-      "delta": "~2d 23h",
+      "delta": "~2d 22h",
       "reason": "Human follow-up / export likely needed"
     }
   ],
@@ -1141,30 +1141,6 @@
       "label": "Saturday",
       "date": "Apr 4",
       "items": [
-        {
-          "time": "8:30 AM",
-          "name": "cost-sentinel-renewal-check",
-          "category": "finance",
-          "conflict": false
-        },
-        {
-          "time": "9:00 AM",
-          "name": "Backlog Intake Processor",
-          "category": "system",
-          "conflict": true
-        },
-        {
-          "time": "9:00 AM",
-          "name": "memory-governance-daily",
-          "category": "system",
-          "conflict": true
-        },
-        {
-          "time": "9:00 AM",
-          "name": "launch-countdown-daily",
-          "category": "system",
-          "conflict": true
-        },
         {
           "time": "9:15 AM",
           "name": "security-sentinel",
@@ -1218,6 +1194,30 @@
           "name": "linkedin-analytics-48h-thu-apr3",
           "category": "revenue",
           "conflict": false
+        },
+        {
+          "time": "8:30 AM",
+          "name": "cost-sentinel-renewal-check",
+          "category": "finance",
+          "conflict": false
+        },
+        {
+          "time": "9:00 AM",
+          "name": "Backlog Intake Processor",
+          "category": "system",
+          "conflict": true
+        },
+        {
+          "time": "9:00 AM",
+          "name": "memory-governance-daily",
+          "category": "system",
+          "conflict": true
+        },
+        {
+          "time": "9:00 AM",
+          "name": "launch-countdown-daily",
+          "category": "system",
+          "conflict": true
         },
         {
           "time": "7:00 PM",
