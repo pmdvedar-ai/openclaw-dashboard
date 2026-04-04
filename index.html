@@ -222,88 +222,13 @@ tr.clickable{cursor:pointer}
   <p class="mobile-hint">&#128241; Tap any row to see full details</p>
 </section>
 
-<!-- WEEKLY CALENDAR: static (schedules rarely change) -->
+<!-- UPCOMING CALENDAR: rendered live from data.json -->
 <section id="calendar">
-  <div class="section-title">Weekly Schedule</div>
-  <p class="text-muted text-sm" style="margin-bottom:16px">Click any job to expand. <span style="color:#ef4444">Red border</span> = timing conflict.</p>
-  <div class="calendar">
-    <div class="cal-day">
-      <div class="cal-header">Monday</div>
-      <button class="day-toggle" data-day="mon" onclick="toggleDay('mon')">&#9660; Monday (6 jobs)</button>
-      <div class="cal-jobs" id="day-mon">
-        <div class="cal-job cal-system"><span class="time">8:00 AM</span>System Health Sentinel</div>
-        <div class="cal-job cal-content" data-conflict-key="9am-daily"><span class="time">9:00 AM</span>Content Scout</div>
-        <div class="cal-job cal-system" data-conflict-key="9am-daily"><span class="time">9:00 AM</span>Memory Governance</div>
-        <div class="cal-job cal-system" data-conflict-key="9am-daily"><span class="time">9:00 AM</span>Backlog Intake</div>
-        <div class="cal-job cal-revenue"><span class="time">10:00 AM</span>LinkedIn Growth</div>
-        <div class="cal-job cal-revenue"><span class="time">2:00 PM</span>Lead Magnet Builder</div>
-      </div>
-    </div>
-    <div class="cal-day">
-      <div class="cal-header">Tuesday</div>
-      <button class="day-toggle" data-day="tue" onclick="toggleDay('tue')">&#9660; Tuesday (6 jobs)</button>
-      <div class="cal-jobs" id="day-tue">
-        <div class="cal-job cal-finance"><span class="time">7:45 AM</span>Cost Collector</div>
-        <div class="cal-job cal-finance"><span class="time">8:00 AM</span>Cost Sentinel</div>
-        <div class="cal-job cal-finance"><span class="time">8:30 AM</span>Renewal Check</div>
-        <div class="cal-job cal-system"><span class="time">9:00 AM</span>Memory Governance</div>
-        <div class="cal-job cal-system" data-conflict-key="9am-daily"><span class="time">9:00 AM</span>Backlog Intake</div>
-        <div class="cal-job cal-content"><span class="time">11:00 AM</span>Instagram Content</div>
-      </div>
-    </div>
-    <div class="cal-day">
-      <div class="cal-header">Wednesday</div>
-      <button class="day-toggle" data-day="wed" onclick="toggleDay('wed')">&#9660; Wednesday (6 jobs)</button>
-      <div class="cal-jobs" id="day-wed">
-        <div class="cal-job cal-finance"><span class="time">7:45 AM</span>Cost Collector</div>
-        <div class="cal-job cal-finance"><span class="time">8:00 AM</span>Cost Sentinel</div>
-        <div class="cal-job cal-finance"><span class="time">8:30 AM</span>Renewal Check</div>
-        <div class="cal-job cal-system"><span class="time">9:00 AM</span>Memory Governance</div>
-        <div class="cal-job cal-revenue"><span class="time">10:00 AM</span>LinkedIn Growth</div>
-        <div class="cal-job cal-revenue"><span class="time">6:00 PM</span>Consulting (Mid)</div>
-      </div>
-    </div>
-    <div class="cal-day">
-      <div class="cal-header">Thursday</div>
-      <button class="day-toggle" data-day="thu" onclick="toggleDay('thu')">&#9660; Thursday (4 jobs)</button>
-      <div class="cal-jobs" id="day-thu">
-        <div class="cal-job cal-finance"><span class="time">7:45 AM</span>Cost Collector</div>
-        <div class="cal-job cal-finance"><span class="time">8:00 AM</span>Cost Sentinel</div>
-        <div class="cal-job cal-finance"><span class="time">8:30 AM</span>Renewal Check</div>
-        <div class="cal-job cal-system"><span class="time">9:00 AM</span>Memory Governance</div>
-        <div class="cal-empty">&#8627; Light day</div>
-      </div>
-    </div>
-    <div class="cal-day">
-      <div class="cal-header">Friday</div>
-      <button class="day-toggle" data-day="fri" onclick="toggleDay('fri')">&#9660; Friday (9 jobs)</button>
-      <div class="cal-jobs" id="day-fri">
-        <div class="cal-job cal-finance"><span class="time">7:45 AM</span>Cost Collector</div>
-        <div class="cal-job cal-finance"><span class="time">8:00 AM</span>Cost Sentinel</div>
-        <div class="cal-job cal-finance"><span class="time">8:30 AM</span>Renewal Check</div>
-        <div class="cal-job cal-system"><span class="time">9:00 AM</span>Memory Governance</div>
-        <div class="cal-job cal-revenue"><span class="time">10:00 AM</span>LinkedIn Growth</div>
-        <div class="cal-job cal-revenue"><span class="time">4:00 PM</span>Network Outreach</div>
-        <div class="cal-job cal-system" data-conflict-key="6pm-friday"><span class="time">6:00 PM</span>Weekly Metrics</div>
-        <div class="cal-job cal-system" data-conflict-key="6pm-friday"><span class="time">6:15 PM</span>Backlog Review</div>
-        <div class="cal-job cal-system"><span class="time">6:30 PM</span>Exec Summary</div>
-      </div>
-    </div>
-    <div class="cal-day">
-      <div class="cal-header">Saturday</div>
-      <button class="day-toggle" data-day="sat" onclick="toggleDay('sat')">&#9654; Saturday (0 jobs)</button>
-      <div class="cal-jobs" id="day-sat" style="display:none"><div class="cal-empty">No scheduled jobs</div></div>
-    </div>
-    <div class="cal-day">
-      <div class="cal-header">Sunday</div>
-      <button class="day-toggle" data-day="sun" onclick="toggleDay('sun')">&#9660; Sunday (2 jobs)</button>
-      <div class="cal-jobs" id="day-sun">
-        <div class="cal-job cal-content" data-conflict-key="7pm-sunday"><span class="time">7:00 PM</span>Book Writing</div>
-        <div class="cal-job cal-revenue"><span class="time">7:30 PM</span>Consulting (Wknd)</div>
-      </div>
-    </div>
+  <div class="section-title">Upcoming Schedule</div>
+  <p class="text-muted text-sm" style="margin-bottom:16px">Next scheduled run per enabled job over the next 7 days. <span style="color:#ef4444">Red border</span> = same-time collision.</p>
+  <div class="calendar" id="calendar-grid">
+    <div class="cal-day"><div class="cal-header">Loading...</div><div class="cal-jobs"><div class="cal-empty">Building live schedule…</div></div></div>
   </div>
-  <p class="text-sm text-muted" style="margin-top:12px">+ Daily 2:00 AM: Nightly Backup &nbsp;&middot;&nbsp; First Mon/mo 3:00 PM: Course Architect &nbsp;&middot;&nbsp; Mon 8:30 AM: weekly-strategic-recap</p>
 </section>
 
 <!-- FLOW MAP: static (architecture changes infrequently) -->
@@ -654,52 +579,37 @@ function renderDataTrust(data) {
   }
 }
 
+function renderCalendar(days) {
+  var grid = document.getElementById('calendar-grid');
+  if (!grid) return;
+  if (!days || !days.length) {
+    grid.innerHTML = '<div class="cal-day"><div class="cal-header">No upcoming jobs</div><div class="cal-jobs"><div class="cal-empty">Nothing scheduled in next 7 days.</div></div></div>';
+    return;
+  }
+  grid.innerHTML = days.map(function(day) {
+    var items = (day.items || []).map(function(item) {
+      var cls = 'cal-job cal-' + (item.category || 'system') + (item.conflict ? ' cal-conflict' : '');
+      return '<div class="' + cls + '"><span class="time">' + item.time + '</span>' + item.name + '</div>';
+    }).join('');
+    return '<div class="cal-day"><div class="cal-header">' + day.label + ' · ' + day.date + '</div><div class="cal-jobs">' + items + '</div></div>';
+  }).join('');
+}
+
 function renderConflicts(conflicts) {
-  if (!conflicts) return;
-  // Build a map of key -> status
-  var statusMap = {
-    '9am-daily': 'resolved',
-    '6pm-friday': 'resolved',
-    '7pm-sunday': 'resolved'
-  };
-  conflicts.forEach(function(c) {
-    var key = c.time.indexOf('9:00') >= 0 ? '9am-daily'
-             : c.time.indexOf('6:00') >= 0 || c.time.indexOf('6 PM') >= 0 ? '6pm-friday'
-             : c.time.indexOf('7:00') >= 0 || c.time.indexOf('7 PM') >= 0 ? '7pm-sunday'
-             : null;
-    if (key) statusMap[key] = c.status || 'active';
-  });
-
-  // Update timing conflicts table
-  renderTimingTable(conflicts);
-
-  // Update calendar job classes
-  document.querySelectorAll('[data-conflict-key]').forEach(function(el) {
-    var key = el.dataset.conflictKey;
-    var status = statusMap[key] || 'active';
-    el.classList.remove('cal-conflict', 'cal-warning');
-    if (status === 'active') el.classList.add('cal-conflict');
-    else if (status === 'warning') el.classList.add('cal-warning');
-    // resolved = no border class added
-    // Also update the time label — remove warning emoji if resolved
-    var timeEl = el.querySelector('.time');
-    if (timeEl && status === 'resolved') {
-      timeEl.textContent = timeEl.textContent.replace(' ⚠', '').replace('⚠', '');
-    }
-  });
+  renderTimingTable(conflicts || []);
 }
 
 function renderTimingTable(conflicts) {
-  var heading = document.getElementById('timing-conflicts-heading');
-  var tbody = heading ? heading.nextElementSibling.querySelector('table tbody') : null;
-  if (!tbody || !conflicts || !conflicts.length) return;
+  var tbody = document.getElementById('timing-conflicts-body');
+  if (!tbody) return;
+  if (!conflicts || !conflicts.length) {
+    tbody.innerHTML = '<tr><td colspan="4" style="color:#64748b;padding:16px">No upcoming same-time collisions in next 7 days.</td></tr>';
+    return;
+  }
   tbody.innerHTML = conflicts.map(function(c) {
-    var resolved = c.status === 'resolved';
-    var badge = resolved
-      ? '<span class="badge badge-healthy">RESOLVED</span>'
-      : c.risk === 'MEDIUM' || c.risk === 'HIGH'
-        ? '<span class="badge badge-warning">' + c.risk + '</span>'
-        : '<span class="badge badge-idle">' + (c.risk||'LOW') + '</span>';
+    var badge = c.risk === 'HIGH'
+      ? '<span class="badge badge-broken">HIGH</span>'
+      : '<span class="badge badge-warning">' + (c.risk||'MEDIUM') + '</span>';
     return '<tr><td>' + c.time + '</td><td>' + c.agents + '</td><td>' + badge + '</td><td>' + (c.note||'') + '</td></tr>';
   }).join('');
 }
@@ -718,6 +628,7 @@ function loadData(force) {
         renderHealth(data.health_issues);
         renderActionQueue(data.action_queue);
         renderSecurity(data.security_posture);
+        renderCalendar(data.calendar_days);
         renderModels(data.model_optimization);
         renderBoldRec(data);
         renderConflicts(data.timing_conflicts);

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-04T02:58:06.866423+00:00",
+  "generated": "2026-04-04T03:02:06.415570+00:00",
   "summary": {
     "total_agents": 59,
     "recurring_agents": 26,
@@ -16,7 +16,7 @@
     "revenue_indirect": 3,
     "next_job_name": "dashboard-regenerate-hourly",
     "next_job_time": "Apr 3, 11:04 PM ET",
-    "next_job_delta": "~6m"
+    "next_job_delta": "~2m"
   },
   "agents": [
     {
@@ -902,25 +902,39 @@
   ],
   "timing_conflicts": [
     {
-      "time": "9:00 AM daily",
-      "agents": "Memory Governance + Backlog Intake + launch-countdown-daily",
-      "risk": "LOW",
-      "status": "resolved",
-      "note": "All isolated sessions, no shared write targets. Safe to run in parallel \u2014 no action needed."
+      "time": "Sat Apr 4, 7:30 AM ET",
+      "agents": "linkedin-analytics-48h-wed-apr2 + analytics-48h-wed-apr2",
+      "risk": "MEDIUM",
+      "note": "Concurrent scheduled runs",
+      "status": "active"
     },
     {
-      "time": "6:00 PM Friday",
-      "agents": "Weekly Metrics Digest + Backlog Review Agent",
-      "risk": "LOW",
-      "status": "resolved",
-      "note": "Backlog Review staggered to 6:15 PM Apr 2. Exec Summary stays at 6:30 PM. Sequencing correct."
+      "time": "Sat Apr 4, 7:45 AM ET",
+      "agents": "daily-cost-collector + linkedin-post-fri-apr4",
+      "risk": "MEDIUM",
+      "note": "Concurrent scheduled runs",
+      "status": "active"
     },
     {
-      "time": "7:00 PM Sunday",
-      "agents": "Book Writing + Consulting Outreach Weekend",
-      "risk": "LOW",
-      "status": "resolved",
-      "note": "Already staggered \u2014 Book Writing 7:00 PM, Consulting Outreach 7:30 PM. No conflict."
+      "time": "Sat Apr 4, 8:00 AM ET",
+      "agents": "morning-draft-briefing + daily-cost-sentinel + Agent Commands Watcher",
+      "risk": "HIGH",
+      "note": "Concurrent scheduled runs",
+      "status": "active"
+    },
+    {
+      "time": "Sat Apr 4, 9:00 AM ET",
+      "agents": "Backlog Intake Processor + memory-governance-daily + launch-countdown-daily",
+      "risk": "HIGH",
+      "note": "Concurrent scheduled runs",
+      "status": "active"
+    },
+    {
+      "time": "Thu Apr 9, 7:30 AM ET",
+      "agents": "linkedin-analytics-7d-wed-apr2 + linkedin-post-wed-apr9-nobody + analytics-7d-wed-apr2",
+      "risk": "HIGH",
+      "note": "Concurrent scheduled runs",
+      "status": "active"
     }
   ],
   "model_optimization": [
@@ -1065,7 +1079,7 @@
   "bold_recommendation": "You have 23 warm leads from the lead magnet launch (Apr 1), including healthcare executives, APP supervisors, and program directors. The highest-leverage move RIGHT NOW is converting these leads into consulting conversations before momentum fades. April 7 follow-ups are scheduled \u2014 make sure you personally reach out to the top 5: Heather James (Heart & Vascular APP Manager), Dawn Hughes (Healthcare CEO), Michael Sullivan (EVH Consulting LLC), Christian Trent (CT/Vascular Administrator), and Brian Fontenot (PharmD/MPAS/MBA). One call this week = $2,500. Five calls = $12,500. The Teachable course is on track for May 12 \u2014 Stripe is connected, course shell is built, 29 lessons live.",
   "bold_recommendation_impact": "\ud83d\udcb0 Immediate actions: (1) Send 5 personal outreach DMs this week \u00b7 (2) Prep Mitesh Patel briefing before Apr 9 call \u00b7 (3) Script Modules 4-5 before Apr 11 travel \u00b7 (4) Queue LinkedIn posts for Apr 11-26 window",
   "meta": {
-    "generated_local": "Fri Apr 3, 2026, 10:58 PM ET",
+    "generated_local": "Fri Apr 3, 2026, 11:02 PM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 3,
@@ -1075,7 +1089,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-04T02:58:06.866742+00:00"
+      "checked_at": "2026-04-04T03:02:06.415932+00:00"
     },
     "data_trust": "validated"
   },
@@ -1096,13 +1110,13 @@
     {
       "name": "linkedin-analytics-48h-wed-apr2",
       "when": "Apr 4, 7:30 AM ET",
-      "delta": "~8h 31m",
+      "delta": "~8h 27m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-48h-thu-apr3",
       "when": "Apr 5, 8:00 AM ET",
-      "delta": "~1d 9h",
+      "delta": "~1d 8h",
       "reason": "Human follow-up / export likely needed"
     },
     {
@@ -1114,14 +1128,268 @@
     {
       "name": "linktree-downgrade-reminder",
       "when": "Apr 6, 12:00 PM ET",
-      "delta": "~2d 13h",
+      "delta": "~2d 12h",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "launch-countdown-daily",
       "when": "Apr 4, 9:00 AM ET",
-      "delta": "~10h 1m",
+      "delta": "~9h 57m",
       "reason": "Upcoming scheduled work"
+    }
+  ],
+  "calendar_days": [
+    {
+      "label": "Friday",
+      "date": "Apr 3",
+      "items": [
+        {
+          "time": "11:04 PM",
+          "name": "dashboard-regenerate-hourly",
+          "category": "system",
+          "conflict": false
+        }
+      ]
+    },
+    {
+      "label": "Saturday",
+      "date": "Apr 4",
+      "items": [
+        {
+          "time": "2:00 AM",
+          "name": "nightly-backup",
+          "category": "system",
+          "conflict": false
+        },
+        {
+          "time": "7:30 AM",
+          "name": "linkedin-analytics-48h-wed-apr2",
+          "category": "revenue",
+          "conflict": true
+        },
+        {
+          "time": "7:30 AM",
+          "name": "analytics-48h-wed-apr2",
+          "category": "revenue",
+          "conflict": true
+        },
+        {
+          "time": "7:45 AM",
+          "name": "daily-cost-collector",
+          "category": "finance",
+          "conflict": true
+        },
+        {
+          "time": "7:45 AM",
+          "name": "linkedin-post-fri-apr4",
+          "category": "revenue",
+          "conflict": true
+        },
+        {
+          "time": "8:00 AM",
+          "name": "morning-draft-briefing",
+          "category": "revenue",
+          "conflict": true
+        },
+        {
+          "time": "8:00 AM",
+          "name": "daily-cost-sentinel",
+          "category": "finance",
+          "conflict": true
+        },
+        {
+          "time": "8:00 AM",
+          "name": "Agent Commands Watcher",
+          "category": "system",
+          "conflict": true
+        },
+        {
+          "time": "8:30 AM",
+          "name": "cost-sentinel-renewal-check",
+          "category": "finance",
+          "conflict": false
+        },
+        {
+          "time": "9:00 AM",
+          "name": "Backlog Intake Processor",
+          "category": "system",
+          "conflict": true
+        },
+        {
+          "time": "9:00 AM",
+          "name": "memory-governance-daily",
+          "category": "system",
+          "conflict": true
+        },
+        {
+          "time": "9:00 AM",
+          "name": "launch-countdown-daily",
+          "category": "system",
+          "conflict": true
+        },
+        {
+          "time": "9:15 AM",
+          "name": "security-sentinel",
+          "category": "system",
+          "conflict": false
+        }
+      ]
+    },
+    {
+      "label": "Sunday",
+      "date": "Apr 5",
+      "items": [
+        {
+          "time": "8:00 AM",
+          "name": "analytics-48h-thu-apr3",
+          "category": "revenue",
+          "conflict": false
+        },
+        {
+          "time": "8:01 AM",
+          "name": "linkedin-analytics-48h-thu-apr3",
+          "category": "revenue",
+          "conflict": false
+        },
+        {
+          "time": "7:00 PM",
+          "name": "Book Writing Session",
+          "category": "content",
+          "conflict": false
+        },
+        {
+          "time": "7:30 PM",
+          "name": "consulting-outreach-weekly",
+          "category": "revenue",
+          "conflict": false
+        }
+      ]
+    },
+    {
+      "label": "Monday",
+      "date": "Apr 6",
+      "items": [
+        {
+          "time": "7:45 AM",
+          "name": "analytics-48h-fri-apr4",
+          "category": "revenue",
+          "conflict": false
+        },
+        {
+          "time": "8:00 AM",
+          "name": "System Health Sentinel",
+          "category": "system",
+          "conflict": false
+        },
+        {
+          "time": "8:30 AM",
+          "name": "weekly-strategic-recalibration",
+          "category": "content",
+          "conflict": false
+        },
+        {
+          "time": "9:00 AM",
+          "name": "Content Scout",
+          "category": "content",
+          "conflict": false
+        },
+        {
+          "time": "10:00 AM",
+          "name": "LinkedIn Growth",
+          "category": "revenue",
+          "conflict": false
+        },
+        {
+          "time": "12:00 PM",
+          "name": "linktree-downgrade-reminder",
+          "category": "content",
+          "conflict": false
+        },
+        {
+          "time": "2:00 PM",
+          "name": "Lead Magnet Builder",
+          "category": "revenue",
+          "conflict": false
+        },
+        {
+          "time": "3:00 PM",
+          "name": "Course Architect",
+          "category": "revenue",
+          "conflict": false
+        }
+      ]
+    },
+    {
+      "label": "Tuesday",
+      "date": "Apr 7",
+      "items": [
+        {
+          "time": "8:00 AM",
+          "name": "linkedin-lead-magnet-analytics-7d",
+          "category": "revenue",
+          "conflict": false
+        },
+        {
+          "time": "11:00 AM",
+          "name": "Instagram Content Agent",
+          "category": "content",
+          "conflict": false
+        }
+      ]
+    },
+    {
+      "label": "Wednesday",
+      "date": "Apr 8",
+      "items": [
+        {
+          "time": "7:30 AM",
+          "name": "linkedin-post-tue-apr8-calm",
+          "category": "revenue",
+          "conflict": false
+        },
+        {
+          "time": "6:00 PM",
+          "name": "consulting-outreach-midweek",
+          "category": "revenue",
+          "conflict": false
+        },
+        {
+          "time": "7:00 PM",
+          "name": "Mitesh Patel Call Briefing Reminder",
+          "category": "revenue",
+          "conflict": false
+        }
+      ]
+    },
+    {
+      "label": "Thursday",
+      "date": "Apr 9",
+      "items": [
+        {
+          "time": "7:30 AM",
+          "name": "linkedin-analytics-7d-wed-apr2",
+          "category": "revenue",
+          "conflict": true
+        },
+        {
+          "time": "7:30 AM",
+          "name": "linkedin-post-wed-apr9-nobody",
+          "category": "revenue",
+          "conflict": true
+        },
+        {
+          "time": "7:30 AM",
+          "name": "analytics-7d-wed-apr2",
+          "category": "revenue",
+          "conflict": true
+        },
+        {
+          "time": "8:00 AM",
+          "name": "follow-up-ryan-ramales-paula-slacum",
+          "category": "content",
+          "conflict": false
+        }
+      ]
     }
   ]
 }
