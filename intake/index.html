@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>APP Program Intake — The MBA PA</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #2D2D2D;
+    background: #f4f5f7;
+    min-height: 100vh;
+  }
+
+  /* HEADER */
+  .page-header {
+    background: #1B2A4A;
+    color: #fff;
+    padding: 28px 32px 24px;
+  }
+  .brand { font-size: 18px; font-weight: 700; letter-spacing: -0.2px; }
+  .brand-tag { font-size: 11px; color: rgba(255,255,255,0.6); margin-top: 2px; }
+  .doc-title { font-size: 26px; font-weight: 700; margin-top: 14px; line-height: 1.2; }
+  .doc-sub { font-size: 13px; color: rgba(255,255,255,0.7); margin-top: 6px; }
+  .gold-bar { width: 40px; height: 3px; background: #C9973A; margin-top: 12px; }
+
+  /* FORM CONTAINER */
+  .form-wrap {
+    max-width: 700px;
+    margin: 32px auto;
+    padding: 0 20px 60px;
+  }
+
+  /* NOTE BOX */
+  .note-box {
+    background: #fffbf2;
+    border: 1px solid #f0d9a0;
+    border-radius: 7px;
+    padding: 12px 16px;
+    font-size: 13px;
+    color: #7a5f1a;
+    margin-bottom: 24px;
+  }
+
+  /* SECTION CARD */
+  .section-card {
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  .section-header {
+    background: #f8f9fb;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-num {
+    background: #1B2A4A;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .section-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1B2A4A;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+  }
+  .section-body { padding: 20px; }
+
+  /* FIELDS */
+  .field-group { margin-bottom: 18px; }
+  .field-group:last-child { margin-bottom: 0; }
+  label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 6px;
+  }
+  label .req { color: #C9973A; margin-left: 2px; }
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  textarea,
+  select {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: #2D2D2D;
+    background: #fff;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    appearance: none;
+  }
+  input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #1B2A4A;
+    box-shadow: 0 0 0 3px rgba(27,42,74,0.08);
+  }
+  textarea { resize: vertical; min-height: 80px; }
+
+  /* GRID */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+  .grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 10px; }
+
+  /* RADIO / CHECKBOX */
+  .options-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 4px;
+  }
+  .opt-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 12px;
+    color: #444;
+    background: #fff;
+    transition: all 0.12s;
+    user-select: none;
+  }
+  .opt-btn input { display: none; }
+  .opt-btn:hover { border-color: #1B2A4A; color: #1B2A4A; }
+  .opt-btn.selected {
+    background: #1B2A4A;
+    border-color: #1B2A4A;
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .checklist-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 4px;
+  }
+  .check-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 12px;
+    color: #444;
+    background: #fff;
+    transition: all 0.12s;
+    user-select: none;
+  }
+  .check-btn input { display: none; }
+  .check-btn .check-icon {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.12s;
+  }
+  .check-btn.selected { border-color: #1B2A4A; background: #f0f3f8; color: #1B2A4A; font-weight: 600; }
+  .check-btn.selected .check-icon { background: #1B2A4A; border-color: #1B2A4A; }
+  .check-btn.selected .check-icon::after { content: '✓'; color: #fff; font-size: 10px; font-weight: 700; }
+
+  /* TENURE GRID */
+  .tenure-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 4px;
+  }
+  .tenure-item label {
+    font-size: 11px;
+    color: #888;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  /* PROGRESS */
+  .progress-bar {
+    background: #e5e7eb;
+    border-radius: 4px;
+    height: 4px;
+    margin-bottom: 28px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    background: linear-gradient(90deg, #1B2A4A, #C9973A);
+    height: 100%;
+    border-radius: 4px;
+    width: 0%;
+    transition: width 0.3s ease;
+  }
+
+  /* SUBMIT */
+  .submit-section {
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    padding: 24px 20px;
+    text-align: center;
+  }
+  .submit-section p {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 16px;
+  }
+  .btn-submit {
+    background: #1B2A4A;
+    color: #fff;
+    border: none;
+    padding: 14px 36px;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.1s;
+    letter-spacing: 0.2px;
+  }
+  .btn-submit:hover { background: #243a65; }
+  .btn-submit:active { transform: scale(0.98); }
+  .btn-submit:disabled { background: #9ca3af; cursor: not-allowed; }
+
+  /* SUCCESS */
+  .success-screen {
+    display: none;
+    text-align: center;
+    padding: 48px 20px;
+  }
+  .success-icon {
+    width: 60px;
+    height: 60px;
+    background: #1B2A4A;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 28px;
+  }
+  .success-screen h2 { font-size: 22px; color: #1B2A4A; margin-bottom: 10px; }
+  .success-screen p { font-size: 14px; color: #666; max-width: 420px; margin: 0 auto; }
+
+  /* ERROR */
+  .error-msg {
+    display: none;
+    background: #fde8e8;
+    border: 1px solid #f5c6c6;
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-size: 13px;
+    color: #c0392b;
+    margin-top: 12px;
+    text-align: left;
+  }
+
+  /* FOOTER */
+  .page-footer {
+    text-align: center;
+    font-size: 11px;
+    color: #9ca3af;
+    padding: 20px;
+  }
+
+  @media (max-width: 600px) {
+    .grid-2, .grid-3, .grid-4, .tenure-grid, .checklist-grid { grid-template-columns: 1fr; }
+    .page-header { padding: 20px; }
+    .form-wrap { padding: 0 12px 40px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <div class="brand">The MBA PA</div>
+  <div class="brand-tag">APP Leadership · Cardiothoracic Surgery · Quality Improvement</div>
+  <div class="doc-title">APP Program Intake</div>
+  <div class="doc-sub">Please complete before your intake call. Takes about 10 minutes.</div>
+  <div class="gold-bar"></div>
+</div>
+
+<div class="form-wrap">
+
+  <div class="note-box">
+    📋 &nbsp;Submit at least <strong>48 hours before your scheduled intake call</strong> so we can use your 2 hours well. Questions? <a href="mailto:pol@themba-pa.com" style="color:#7a5f1a;">pol@themba-pa.com</a>
+  </div>
+
+  <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+
+  <form id="intakeForm">
+
+    <!-- SECTION 1: CONTACT -->
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-num">1</div>
+        <div class="section-title">Your Contact Info</div>
+      </div>
+      <div class="section-body">
+        <div class="grid-2">
+          <div class="field-group">
+            <label>Full Name <span class="req">*</span></label>
+            <input type="text" name="contact_name" required placeholder="Dr. Jane Smith">
+          </div>
+          <div class="field-group">
+            <label>Title / Role <span class="req">*</span></label>
+            <input type="text" name="contact_title" required placeholder="APP Director, Division Chief...">
+          </div>
+          <div class="field-group">
+            <label>Email <span class="req">*</span></label>
+            <input type="email" name="contact_email" required placeholder="you@institution.edu">
+          </div>
+          <div class="field-group">
+            <label>Phone</label>
+            <input type="tel" name="contact_phone" placeholder="(555) 000-0000">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 2: PROGRAM -->
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-num">2</div>
+        <div class="section-title">Your Program</div>
+      </div>
+      <div class="section-body">
+        <div class="field-group">
+          <label>Institution name <span class="req">*</span></label>
+          <input type="text" name="institution" required placeholder="Wake Forest Baptist Medical Center">
+        </div>
+        <div class="field-group">
+          <label>Service line(s) covered by APPs</label>
+          <input type="text" name="service_lines" placeholder="e.g., cardiac surgery, thoracic, hybrid OR">
+        </div>
+        <div class="grid-4">
+          <div class="field-group">
+            <label>Total APPs</label>
+            <input type="number" name="total_apps" min="0" placeholder="0">
+          </div>
+          <div class="field-group">
+            <label>OR-based</label>
+            <input type="number" name="apps_or" min="0" placeholder="0">
+          </div>
+          <div class="field-group">
+            <label>Floor / step-down</label>
+            <input type="number" name="apps_floor" min="0" placeholder="0">
+          </div>
+          <div class="field-group">
+            <label>Outpatient</label>
+            <input type="number" name="apps_outpt" min="0" placeholder="0">
+          </div>
+        </div>
+        <div class="field-group">
+          <label>Team tenure breakdown (approximate headcount)</label>
+          <div class="tenure-grid">
+            <div><label>&lt;1 year</label><input type="number" name="tenure_under1" min="0" placeholder="0"></div>
+            <div><label>1–3 years</label><input type="number" name="tenure_1_3" min="0" placeholder="0"></div>
+            <div><label>3–5 years</label><input type="number" name="tenure_3_5" min="0" placeholder="0"></div>
+            <div><label>5+ years</label><input type="number" name="tenure_5plus" min="0" placeholder="0"></div>
+          </div>
+        </div>
+        <div class="grid-2">
+          <div class="field-group">
+            <label>APP team reports to (title/role)</label>
+            <input type="text" name="reports_to" placeholder="Chief of CT Surgery, APP Director...">
+          </div>
+          <div class="field-group">
+            <label>Dedicated APP director or lead?</label>
+            <div class="options-wrap" data-type="radio" data-name="has_app_director">
+              <label class="opt-btn"><input type="radio" name="has_app_director" value="Yes"> Yes</label>
+              <label class="opt-btn"><input type="radio" name="has_app_director" value="No"> No</label>
+              <label class="opt-btn"><input type="radio" name="has_app_director" value="In transition"> In transition</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 3: ONBOARDING -->
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-num">3</div>
+        <div class="section-title">Onboarding</div>
+      </div>
+      <div class="section-body">
+        <div class="grid-2">
+          <div class="field-group">
+            <label>Written onboarding protocol?</label>
+            <div class="options-wrap" data-type="radio" data-name="has_protocol">
+              <label class="opt-btn"><input type="radio" name="has_protocol" value="Yes"> Yes</label>
+              <label class="opt-btn"><input type="radio" name="has_protocol" value="No"> No</label>
+              <label class="opt-btn"><input type="radio" name="has_protocol" value="Informal"> Informal</label>
+            </div>
+          </div>
+          <div class="field-group">
+            <label>Typical time to independent function</label>
+            <div class="options-wrap" data-type="radio" data-name="onboard_duration">
+              <label class="opt-btn"><input type="radio" name="onboard_duration" value="<4 weeks"> &lt;4 wks</label>
+              <label class="opt-btn"><input type="radio" name="onboard_duration" value="4-8 weeks"> 4–8 wks</label>
+              <label class="opt-btn"><input type="radio" name="onboard_duration" value="8-12 weeks"> 8–12 wks</label>
+              <label class="opt-btn"><input type="radio" name="onboard_duration" value="3-6 months"> 3–6 mo</label>
+              <label class="opt-btn"><input type="radio" name="onboard_duration" value="6+ months"> 6+ mo</label>
+              <label class="opt-btn"><input type="radio" name="onboard_duration" value="No standard"> No standard</label>
+            </div>
+          </div>
+        </div>
+        <div class="field-group">
+          <label>What does onboarding look like day-to-day?</label>
+          <textarea name="onboard_description" placeholder="e.g., 2 weeks shadowing, then paired with a senior APP, then independent... or depends on who's working that day"></textarea>
+        </div>
+        <div class="field-group">
+          <label>Biggest gap or pain point in your current onboarding</label>
+          <textarea name="onboard_gap" placeholder="What frustrates you most about how new APPs come on board?"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 4: RETENTION -->
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-num">4</div>
+        <div class="section-title">Retention &amp; Turnover</div>
+      </div>
+      <div class="section-body">
+        <div class="grid-2">
+          <div class="field-group">
+            <label>APPs who left in the last 18 months</label>
+            <input type="number" name="turnover_count" min="0" placeholder="0">
+          </div>
+          <div class="field-group">
+            <label>Exit interviews conducted?</label>
+            <div class="options-wrap" data-type="radio" data-name="exit_interviews">
+              <label class="opt-btn"><input type="radio" name="exit_interviews" value="Yes"> Yes</label>
+              <label class="opt-btn"><input type="radio" name="exit_interviews" value="No"> No</label>
+              <label class="opt-btn"><input type="radio" name="exit_interviews" value="Informal"> Informal</label>
+            </div>
+          </div>
+        </div>
+        <div class="field-group">
+          <label>Primary reasons for departures (if known)</label>
+          <textarea name="departure_reasons" placeholder="Compensation, workload, lack of growth, culture, relocation..."></textarea>
+        </div>
+        <div class="field-group">
+          <label>Any APPs currently at risk of leaving?</label>
+          <div class="options-wrap" data-type="radio" data-name="at_risk">
+            <label class="opt-btn"><input type="radio" name="at_risk" value="Yes"> Yes</label>
+            <label class="opt-btn"><input type="radio" name="at_risk" value="No"> No</label>
+            <label class="opt-btn"><input type="radio" name="at_risk" value="Not sure"> Not sure</label>
+          </div>
+        </div>
+        <div class="field-group">
+          <label>Top sources of frustration or dissatisfaction</label>
+          <textarea name="frustrations" placeholder="What does your team complain about most?"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 5: PERFORMANCE -->
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-num">5</div>
+        <div class="section-title">Performance &amp; Quality</div>
+      </div>
+      <div class="section-body">
+        <div class="grid-2">
+          <div class="field-group">
+            <label>APP-specific quality or performance metrics tracked?</label>
+            <div class="options-wrap" data-type="radio" data-name="tracks_metrics">
+              <label class="opt-btn"><input type="radio" name="tracks_metrics" value="Yes"> Yes</label>
+              <label class="opt-btn"><input type="radio" name="tracks_metrics" value="No"> No</label>
+              <label class="opt-btn"><input type="radio" name="tracks_metrics" value="In progress"> In progress</label>
+            </div>
+          </div>
+          <div class="field-group">
+            <label>STS Adult Cardiac Surgery Database participation?</label>
+            <div class="options-wrap" data-type="radio" data-name="sts">
+              <label class="opt-btn"><input type="radio" name="sts" value="Yes"> Yes</label>
+              <label class="opt-btn"><input type="radio" name="sts" value="No"> No</label>
+            </div>
+          </div>
+        </div>
+        <div class="field-group">
+          <label>Metrics currently tracked (if any)</label>
+          <input type="text" name="metrics_list" placeholder="e.g., case volume, EVH time, STS data, complication rates, patient satisfaction">
+        </div>
+        <div class="field-group">
+          <label>Any specific clinical performance concerns driving this engagement?</label>
+          <textarea name="performance_concerns" style="min-height:60px;" placeholder="Optional — leave blank if not applicable"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 6: WHAT YOU'RE SOLVING -->
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-num">6</div>
+        <div class="section-title">What You're Trying to Solve</div>
+      </div>
+      <div class="section-body">
+        <div class="field-group">
+          <label>What triggered you to reach out now? (select all that apply)</label>
+          <div class="checklist-grid">
+            <label class="check-btn"><input type="checkbox" name="triggers" value="Recent turnover"><span class="check-icon"></span>Recent turnover</label>
+            <label class="check-btn"><input type="checkbox" name="triggers" value="Expanding the team"><span class="check-icon"></span>Expanding the team</label>
+            <label class="check-btn"><input type="checkbox" name="triggers" value="New APP director or leadership change"><span class="check-icon"></span>New APP director / leadership change</label>
+            <label class="check-btn"><input type="checkbox" name="triggers" value="Admin pressure to demonstrate ROI"><span class="check-icon"></span>Admin pressure to demonstrate ROI</label>
+            <label class="check-btn"><input type="checkbox" name="triggers" value="Inconsistent onboarding or training"><span class="check-icon"></span>Inconsistent onboarding / training</label>
+            <label class="check-btn"><input type="checkbox" name="triggers" value="Team culture or morale issues"><span class="check-icon"></span>Team culture or morale issues</label>
+          </div>
+          <input type="text" name="triggers_other" placeholder="Other (describe)..." style="margin-top:10px;">
+        </div>
+        <div class="field-group">
+          <label>What does success look like at the end of this engagement? <span class="req">*</span></label>
+          <textarea name="success_definition" required placeholder="In your own words — what would have to be true for this to be worth it?"></textarea>
+        </div>
+        <div class="grid-2">
+          <div class="field-group">
+            <label>Is leadership aligned on making changes?</label>
+            <div class="options-wrap" data-type="radio" data-name="leadership_aligned">
+              <label class="opt-btn"><input type="radio" name="leadership_aligned" value="Yes, fully"> Fully</label>
+              <label class="opt-btn"><input type="radio" name="leadership_aligned" value="Mostly"> Mostly</label>
+              <label class="opt-btn"><input type="radio" name="leadership_aligned" value="Working on it"> Working on it</label>
+              <label class="opt-btn"><input type="radio" name="leadership_aligned" value="Not sure"> Not sure</label>
+            </div>
+          </div>
+          <div class="field-group">
+            <label>Timeline urgency</label>
+            <div class="options-wrap" data-type="radio" data-name="urgency">
+              <label class="opt-btn"><input type="radio" name="urgency" value="Move quickly (weeks)"> Move quickly</label>
+              <label class="opt-btn"><input type="radio" name="urgency" value="1-3 months"> 1–3 months</label>
+              <label class="opt-btn"><input type="radio" name="urgency" value="No hard deadline"> No deadline</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 7: ANYTHING ELSE -->
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-num">7</div>
+        <div class="section-title">Anything Else?</div>
+      </div>
+      <div class="section-body">
+        <div class="field-group">
+          <label>Is there anything important about your program, team, or situation not captured above?</label>
+          <textarea name="anything_else" style="min-height:90px;" placeholder="Anything you want me to know before we talk..."></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUBMIT -->
+    <div class="submit-section">
+      <p>Your responses will be sent directly to <strong>pol@themba-pa.com</strong>. We'll review before your intake call.</p>
+      <button type="submit" class="btn-submit" id="submitBtn">Submit Intake Form →</button>
+      <div class="error-msg" id="errorMsg"></div>
+    </div>
+
+  </form>
+
+  <!-- SUCCESS -->
+  <div class="success-screen" id="successScreen">
+    <div class="success-icon">✓</div>
+    <h2>You're all set.</h2>
+    <p>Your intake form has been submitted. Pol will review it before your call. If you have questions in the meantime, reach out at <a href="mailto:pol@themba-pa.com" style="color:#1B2A4A;">pol@themba-pa.com</a> or (240) 377-1114.</p>
+  </div>
+
+</div><!-- /.form-wrap -->
+
+<div class="page-footer">
+  The MBA PA &nbsp;·&nbsp; pol@themba-pa.com &nbsp;·&nbsp; (240) 377-1114 &nbsp;·&nbsp; themba-pa.com
+</div>
+
+<script>
+  // ── Toggle pill buttons ─────────────────────────────────────────────────
+  document.querySelectorAll('.opt-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const name = btn.querySelector('input').name;
+      document.querySelectorAll(`.opt-btn input[name="${name}"]`).forEach(i => {
+        i.closest('.opt-btn').classList.remove('selected');
+      });
+      btn.classList.add('selected');
+    });
+  });
+
+  document.querySelectorAll('.check-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('selected');
+      btn.querySelector('input').checked = btn.classList.contains('selected');
+    });
+  });
+
+  // ── Progress bar ────────────────────────────────────────────────────────
+  function updateProgress() {
+    const required = document.querySelectorAll('[required]');
+    let filled = 0;
+    required.forEach(f => { if (f.value.trim()) filled++; });
+    document.getElementById('progressFill').style.width =
+      (required.length ? Math.round((filled / required.length) * 100) : 0) + '%';
+  }
+  document.getElementById('intakeForm').addEventListener('input', updateProgress);
+  document.getElementById('intakeForm').addEventListener('change', updateProgress);
+
+  // ── Collect checkboxes ──────────────────────────────────────────────────
+  function collectCheckboxGroup(name) {
+    return Array.from(document.querySelectorAll(`input[name="${name}"]:checked`))
+      .map(i => i.value).join(', ');
+  }
+
+  // ── Format submission as readable email body ────────────────────────────
+  function buildEmailBody(data) {
+    const f = k => data[k] || '—';
+    return `APP PROGRAM INTAKE SUBMISSION
+Submitted: ${new Date().toLocaleString('en-US', {timeZone: 'America/New_York'})}
+
+━━ CONTACT ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Name: ${f('contact_name')}
+Title: ${f('contact_title')}
+Email: ${f('contact_email')}
+Phone: ${f('contact_phone')}
+
+━━ PROGRAM ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Institution: ${f('institution')}
+Service lines: ${f('service_lines')}
+Total APPs: ${f('total_apps')} (OR: ${f('apps_or')} / Floor: ${f('apps_floor')} / Outpt: ${f('apps_outpt')})
+Tenure: <1yr: ${f('tenure_under1')} | 1-3yr: ${f('tenure_1_3')} | 3-5yr: ${f('tenure_3_5')} | 5+yr: ${f('tenure_5plus')}
+Reports to: ${f('reports_to')}
+APP director: ${f('has_app_director')}
+
+━━ ONBOARDING ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Protocol: ${f('has_protocol')}
+Time to independent function: ${f('onboard_duration')}
+Day-to-day: ${f('onboard_description')}
+Biggest gap: ${f('onboard_gap')}
+
+━━ RETENTION & TURNOVER ━━━━━━━━━━━━━━━━━━━━━━━━
+Departures (18mo): ${f('turnover_count')}
+Exit interviews: ${f('exit_interviews')}
+Departure reasons: ${f('departure_reasons')}
+At-risk APPs: ${f('at_risk')}
+Frustrations: ${f('frustrations')}
+
+━━ PERFORMANCE & QUALITY ━━━━━━━━━━━━━━━━━━━━━━━
+Tracks metrics: ${f('tracks_metrics')}
+STS participation: ${f('sts')}
+Metrics: ${f('metrics_list')}
+Performance concerns: ${f('performance_concerns')}
+
+━━ WHAT THEY'RE SOLVING ━━━━━━━━━━━━━━━━━━━━━━━━
+Triggers: ${f('triggers')}${data['triggers_other'] ? ' / ' + data['triggers_other'] : ''}
+Success definition: ${f('success_definition')}
+Leadership aligned: ${f('leadership_aligned')}
+Urgency: ${f('urgency')}
+
+━━ ANYTHING ELSE ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+${f('anything_else')}`;
+  }
+
+  // ── Submit via Formspree ────────────────────────────────────────────────
+  document.getElementById('intakeForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = document.getElementById('submitBtn');
+    const err = document.getElementById('errorMsg');
+    btn.disabled = true;
+    btn.textContent = 'Submitting…';
+    err.style.display = 'none';
+
+    const form = e.target;
+    const fd = new FormData(form);
+    const data = {};
+    fd.forEach((v, k) => { data[k] = v; });
+    data['triggers'] = collectCheckboxGroup('triggers');
+
+    // Submit to Formspree — replace FORMSPREE_ID with your actual endpoint
+    try {
+      const res = await fetch('https://formspree.io/f/mdapynnq', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          _subject: `APP Intake: ${data['contact_name'] || 'New submission'} — ${data['institution'] || ''}`,
+          _replyto: data['contact_email'] || '',
+          message: buildEmailBody(data),
+          ...data
+        })
+      });
+
+      if (res.ok) {
+        document.getElementById('intakeForm').style.display = 'none';
+        document.getElementById('successScreen').style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        throw new Error('Submission failed');
+      }
+    } catch {
+      err.textContent = 'Something went wrong. Please email pol@themba-pa.com directly or try again.';
+      err.style.display = 'block';
+      btn.disabled = false;
+      btn.textContent = 'Submit Intake Form →';
+    }
+  });
+</script>
+
+</body>
+</html>
