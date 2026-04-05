@@ -723,8 +723,14 @@ function renderRoadmap(phases) {
       + '</div>'
       + '<div class="roadmap-bar-wrap">'
       + '<div class="roadmap-bar-bg"><div class="roadmap-bar-fill" style="width:' + pct + '%;background:' + p.color + '"></div></div>'
-      + '<div class="roadmap-pct">' + (p.status === 'planned' ? 'Starts ' + fmtDate(start) : pct + '% through timeline · Milestone: ' + p.milestone) + '</div>'
+      + '<div class="roadmap-pct">' + (p.status === 'planned' ? 'Starts ' + fmtDate(start) : pct + '% through timeline \u00b7 Milestone: ' + p.milestone) + '</div>'
       + '</div>'
+      + (p.cost_estimate ? '<div style="padding:8px 20px 12px;display:flex;gap:20px;flex-wrap:wrap;background:#131e30;border-bottom:1px solid #1e3a5f">'
+        + '<div style="font-size:11px;color:#64748b">&#128176; Est. Build Cost&nbsp;<strong style="color:#C9973A">$' + (p.cost_estimate.build_cost_low||0).toLocaleString() + '\u2013$' + (p.cost_estimate.build_cost_high||0).toLocaleString() + '</strong></div>'
+        + '<div style="font-size:11px;color:#64748b">&#128197; Ongoing&nbsp;<strong style="color:#94a3b8">$' + (p.cost_estimate.ongoing_monthly_low||0) + '\u2013$' + (p.cost_estimate.ongoing_monthly_high||0) + '/mo</strong></div>'
+        + '<div style="font-size:11px;color:#64748b">&#9203; Timeline&nbsp;<strong style="color:#94a3b8">' + (p.cost_estimate.timeline_weeks||'') + '</strong></div>'
+        + '<div style="font-size:11px;color:#64748b">&#11088; Approach&nbsp;<strong style="color:#60a5fa">' + (p.cost_estimate.recommended_tier||'') + '</strong></div>'
+        + '</div>' : '')
       + '<div class="roadmap-items">' + items + '</div>'
       + '</div>';
   }).join('');
