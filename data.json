@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-05T03:04:51.101453+00:00",
+  "generated": "2026-04-05T03:05:16.245832+00:00",
   "roadmap": {
     "phases": [
       {
@@ -123,7 +123,16 @@
         "end": "2027-06-01",
         "color": "#a855f7",
         "status": "planned",
-        "milestone": "MVP after 3 consulting clients",
+        "milestone": "SaaS MVP after 3 consulting clients",
+        "cost_estimate": {
+          "recommended_tier": "Manual consulting first, then AI-assisted SaaS",
+          "build_cost_low": 3000,
+          "build_cost_high": 8000,
+          "ongoing_monthly_low": 100,
+          "ongoing_monthly_high": 300,
+          "timeline_weeks": "4\u20136 months post-validation",
+          "notes": "Tier 1 manual (Notion+Airtable): $0\u2013500, deliver as consulting first. Tier 2 AI-assisted SaaS (recommended): $3,000\u20138,000 + 120\u2013200 hrs. Tier 3 hired agency: $75,000\u2013200,000. Do NOT build until 3 consulting clients validate the framework. Revenue potential: $200\u2013500/mo per institution \u00d7 20 institutions = $4,000\u201310,000/mo."
+        },
         "items": [
           {
             "done": false,
@@ -131,7 +140,15 @@
           },
           {
             "done": false,
-            "text": "Scope SaaS MVP"
+            "text": "Manual delivery via Notion + Airtable"
+          },
+          {
+            "done": false,
+            "text": "Scope SaaS MVP (multi-tenant, role-based)"
+          },
+          {
+            "done": false,
+            "text": "Bidirectional competency sign-offs"
           },
           {
             "done": false,
@@ -139,7 +156,7 @@
           },
           {
             "done": false,
-            "text": "Expand beyond cardiac surgery"
+            "text": "Est. build cost: $3,000\u20138,000 (post-validation)"
           }
         ]
       }
@@ -155,13 +172,13 @@
     "idle": 28,
     "revenue_aligned": 10,
     "est_monthly_ai_cost": 558.44,
-    "jobs_this_week": 44,
+    "jobs_this_week": 45,
     "disabled_jobs": 8,
     "revenue_direct": 7,
     "revenue_indirect": 3,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "Apr 4, 11:04 PM ET",
-    "next_job_delta": "now"
+    "next_job_time": "Apr 5, 12:04 AM ET",
+    "next_job_delta": "~59m"
   },
   "agents": [
     {
@@ -1224,7 +1241,7 @@
   "bold_recommendation": "You have 23 warm leads from the lead magnet launch (Apr 1), including healthcare executives, APP supervisors, and program directors. The highest-leverage move RIGHT NOW is converting these leads into consulting conversations before momentum fades. April 7 follow-ups are scheduled \u2014 make sure you personally reach out to the top 5: Heather James (Heart & Vascular APP Manager), Dawn Hughes (Healthcare CEO), Michael Sullivan (EVH Consulting LLC), Christian Trent (CT/Vascular Administrator), and Brian Fontenot (PharmD/MPAS/MBA). One call this week = $2,500. Five calls = $12,500. The Teachable course is on track for May 12 \u2014 Stripe is connected, course shell is built, 29 lessons live.",
   "bold_recommendation_impact": "\ud83d\udcb0 Immediate actions: (1) Send 5 personal outreach DMs this week \u00b7 (2) Prep Mitesh Patel briefing before Apr 9 call \u00b7 (3) Script Modules 4-5 before Apr 11 travel \u00b7 (4) Queue LinkedIn posts for Apr 11-26 window",
   "meta": {
-    "generated_local": "Sat Apr 4, 2026, 11:04 PM ET",
+    "generated_local": "Sat Apr 4, 2026, 11:05 PM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 4,
@@ -1234,7 +1251,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-05T03:04:51.101792+00:00"
+      "checked_at": "2026-04-05T03:05:16.246166+00:00"
     },
     "data_trust": "validated"
   },
@@ -1255,7 +1272,7 @@
     {
       "name": "analytics-48h-thu-apr3",
       "when": "Apr 5, 8:00 AM ET",
-      "delta": "~8h 55m",
+      "delta": "~8h 54m",
       "reason": "Human follow-up / export likely needed"
     },
     {
@@ -1288,6 +1305,12 @@
       "label": "Sunday",
       "date": "Apr 5",
       "items": [
+        {
+          "time": "12:04 AM",
+          "name": "dashboard-regenerate-hourly",
+          "category": "system",
+          "conflict": false
+        },
         {
           "time": "2:00 AM",
           "name": "nightly-backup",
