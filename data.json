@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-05T03:05:16.245832+00:00",
+  "generated": "2026-04-05T03:10:25.397074+00:00",
   "roadmap": {
     "phases": [
       {
@@ -10,6 +10,15 @@
         "color": "#C9973A",
         "status": "in_progress",
         "milestone": "May 12 Launch",
+        "cost_estimate": {
+          "recommended_tier": "Already underway",
+          "build_cost_low": 1200,
+          "build_cost_high": 1800,
+          "ongoing_monthly_low": 22,
+          "ongoing_monthly_high": 50,
+          "timeline_weeks": "Launch May 12, 2026",
+          "notes": "Teachable Builder $828/yr (paid). ElevenLabs $22/mo. AI build costs ~$300\u2013500. Most cost already incurred. Revenue target: $249 early bird \u2192 $399 standard."
+        },
         "items": [
           {
             "done": true,
@@ -49,6 +58,15 @@
         "color": "#22c55e",
         "status": "in_progress",
         "milestone": "First paid client",
+        "cost_estimate": {
+          "recommended_tier": "Near-zero cost, highest ROI",
+          "build_cost_low": 0,
+          "build_cost_high": 500,
+          "ongoing_monthly_low": 0,
+          "ongoing_monthly_high": 50,
+          "timeline_weeks": "Ongoing \u2014 first client target Q2 2026",
+          "notes": "One-pager + Calendly already live ($0). Outreach is time only. Optional CRM tool $0\u201350/mo. Revenue target: $3,000\u201310,000 per engagement. Highest ROI of any phase."
+        },
         "items": [
           {
             "done": true,
@@ -159,6 +177,50 @@
             "text": "Est. build cost: $3,000\u20138,000 (post-validation)"
           }
         ]
+      },
+      {
+        "label": "Phase 5",
+        "title": "Book",
+        "start": "2026-03-27",
+        "end": "2027-09-01",
+        "color": "#f472b6",
+        "status": "in_progress",
+        "milestone": "Published (self or traditional)",
+        "cost_estimate": {
+          "recommended_tier": "Self-publish (KDP)",
+          "build_cost_low": 4000,
+          "build_cost_high": 12000,
+          "ongoing_monthly_low": 0,
+          "ongoing_monthly_high": 100,
+          "timeline_weeks": "18\u201330 months total",
+          "notes": "Writing: Pol time + Book Writing Agent (already running, $0 incremental). Dev editor: $2,000\u20135,000. Copy editor: $1,000\u20133,000. Cover design: $300\u20131,500. Formatting + ISBN: $200\u2013500. Launch marketing: $500\u20132,000. Traditional publishing: free to query but 12\u201324 months longer \u2014 publisher covers editing/design. Self-publish total: $4,000\u201312,000."
+        },
+        "items": [
+          {
+            "done": true,
+            "text": "Book Writing Agent live (Sundays 7 PM)"
+          },
+          {
+            "done": false,
+            "text": "Complete first draft"
+          },
+          {
+            "done": false,
+            "text": "Developmental edit ($2,000\u20135,000)"
+          },
+          {
+            "done": false,
+            "text": "Copy edit + proofread ($1,000\u20133,000)"
+          },
+          {
+            "done": false,
+            "text": "Cover design + formatting ($500\u20132,000)"
+          },
+          {
+            "done": false,
+            "text": "Publish (KDP self or traditional query)"
+          }
+        ]
       }
     ]
   },
@@ -178,7 +240,7 @@
     "revenue_indirect": 3,
     "next_job_name": "dashboard-regenerate-hourly",
     "next_job_time": "Apr 5, 12:04 AM ET",
-    "next_job_delta": "~59m"
+    "next_job_delta": "~54m"
   },
   "agents": [
     {
@@ -1241,7 +1303,7 @@
   "bold_recommendation": "You have 23 warm leads from the lead magnet launch (Apr 1), including healthcare executives, APP supervisors, and program directors. The highest-leverage move RIGHT NOW is converting these leads into consulting conversations before momentum fades. April 7 follow-ups are scheduled \u2014 make sure you personally reach out to the top 5: Heather James (Heart & Vascular APP Manager), Dawn Hughes (Healthcare CEO), Michael Sullivan (EVH Consulting LLC), Christian Trent (CT/Vascular Administrator), and Brian Fontenot (PharmD/MPAS/MBA). One call this week = $2,500. Five calls = $12,500. The Teachable course is on track for May 12 \u2014 Stripe is connected, course shell is built, 29 lessons live.",
   "bold_recommendation_impact": "\ud83d\udcb0 Immediate actions: (1) Send 5 personal outreach DMs this week \u00b7 (2) Prep Mitesh Patel briefing before Apr 9 call \u00b7 (3) Script Modules 4-5 before Apr 11 travel \u00b7 (4) Queue LinkedIn posts for Apr 11-26 window",
   "meta": {
-    "generated_local": "Sat Apr 4, 2026, 11:05 PM ET",
+    "generated_local": "Sat Apr 4, 2026, 11:10 PM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 4,
@@ -1251,7 +1313,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-05T03:05:16.246166+00:00"
+      "checked_at": "2026-04-05T03:10:25.397451+00:00"
     },
     "data_trust": "validated"
   },
@@ -1272,7 +1334,7 @@
     {
       "name": "analytics-48h-thu-apr3",
       "when": "Apr 5, 8:00 AM ET",
-      "delta": "~8h 54m",
+      "delta": "~8h 49m",
       "reason": "Human follow-up / export likely needed"
     },
     {
