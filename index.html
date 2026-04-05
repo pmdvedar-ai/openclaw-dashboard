@@ -116,6 +116,32 @@ tr.clickable{cursor:pointer}
 .bold-rec-label{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:#C9973A;margin-bottom:8px}
 .bold-rec-text{font-size:16px;color:#f8fafc;line-height:1.6}
 .bold-rec-impact{margin-top:12px;font-size:13px;color:#22c55e;font-weight:600}
+.roadmap-wrap{display:flex;flex-direction:column;gap:24px}
+.roadmap-phase{background:#1e2d45;border-radius:10px;overflow:hidden;border:1px solid #1e3a5f}
+.roadmap-header{display:flex;align-items:center;gap:14px;padding:16px 20px;border-bottom:1px solid #1e3a5f}
+.roadmap-badge{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:3px 10px;border-radius:20px;background:#1B2A4A;flex-shrink:0}
+.roadmap-title{font-size:15px;font-weight:600;color:#f8fafc;flex:1}
+.roadmap-dates{font-size:11px;color:#64748b;flex-shrink:0}
+.roadmap-milestone{font-size:11px;color:#94a3b8;margin-left:auto;flex-shrink:0}
+.roadmap-bar-wrap{padding:10px 20px 6px}
+.roadmap-bar-bg{background:#1a2540;border-radius:20px;height:8px;overflow:hidden;position:relative}
+.roadmap-bar-fill{height:100%;border-radius:20px;transition:width .6s}
+.roadmap-pct{font-size:10px;color:#64748b;margin-top:4px;text-align:right}
+.roadmap-items{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:6px;padding:12px 20px 18px}
+.roadmap-item{display:flex;align-items:flex-start;gap:8px;font-size:12px;color:#94a3b8;line-height:1.4}
+.roadmap-item.done{color:#cbd5e1}
+.roadmap-check{flex-shrink:0;width:16px;height:16px;border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:10px;margin-top:1px}
+.roadmap-check.done{background:#14532d;color:#22c55e}
+.roadmap-check.todo{background:#1a2540;color:#4b5563;border:1px solid #2d3a4e}
+.roadmap-status-inprogress{color:#C9973A;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.roadmap-status-planned{color:#60a5fa;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.roadmap-status-done{color:#22c55e;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.roadmap-timeline{position:relative;padding:0 20px 20px;overflow-x:auto}
+.roadmap-tl-bar{display:flex;gap:0;border-radius:6px;overflow:hidden;height:28px;margin:10px 0 6px}
+.roadmap-tl-seg{display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;color:#0f1623;letter-spacing:.03em;min-width:40px}
+.roadmap-months{display:flex;font-size:10px;color:#4b5563;margin-top:2px}
+.roadmap-month{flex:1;text-align:center}
+@media(max-width:768px){.roadmap-items{grid-template-columns:1fr}.roadmap-header{flex-wrap:wrap}.roadmap-dates,.roadmap-milestone{font-size:10px}}
 .value-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
 .value-card{background:#1e2d45;border-radius:8px;padding:16px}
 .value-card h4{font-size:12px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px}
@@ -164,6 +190,7 @@ tr.clickable{cursor:pointer}
       <li><a href="#health">Health</a></li>
       <li><a href="#value">Value Alignment</a></li>
       <li><a href="#models">Model Optimization</a></li>
+      <li><a href="#roadmap">Roadmap</a></li>
       <li><a href="#insights">Insights</a></li>
     </ul>
   </div>
@@ -371,6 +398,14 @@ tr.clickable{cursor:pointer}
       <thead><tr><th>Agent</th><th>Current Model</th><th>Recommendation</th><th>Reason</th><th>Est. Impact</th></tr></thead>
       <tbody id="model-tbody"><tr><td colspan="5" style="text-align:center;color:#64748b;padding:24px">Loading...</td></tr></tbody>
     </table>
+  </div>
+</section>
+
+<!-- ROADMAP: rendered live from data.json:roadmap -->
+<section id="roadmap">
+  <div class="section-title">Project Roadmap</div>
+  <div class="roadmap-wrap" id="roadmap-phases">
+    <div style="color:#64748b;padding:24px">Loading roadmap...</div>
   </div>
 </section>
 
@@ -633,6 +668,7 @@ function loadData(force) {
         renderBoldRec(data);
         renderConflicts(data.timing_conflicts);
         renderDataTrust(data);
+        renderRoadmap((data.roadmap || {}).phases || []);
         var lb = document.getElementById('live-badge');
         if (lb) lb.style.display = 'inline-block';
       }
@@ -657,6 +693,41 @@ setInterval(function() { loadData(false); }, 60000);
 function toggleRow(id) {
   var row = document.getElementById(id);
   if (row) row.style.display = row.style.display === 'table-row' ? 'none' : 'table-row';
+}
+
+function renderRoadmap(phases) {
+  var wrap = document.getElementById('roadmap-phases');
+  if (!wrap || !phases.length) return;
+  var now = new Date();
+  wrap.innerHTML = phases.map(function(p) {
+    var start = new Date(p.start);
+    var end = new Date(p.end);
+    var total = end - start;
+    var elapsed = Math.min(Math.max(now - start, 0), total);
+    var pct = total > 0 ? Math.round((elapsed / total) * 100) : 0;
+    var statusLabel = p.status === 'in_progress' ? 'In Progress' : p.status === 'done' ? 'Done' : 'Planned';
+    var statusCls = 'roadmap-status-' + (p.status === 'in_progress' ? 'inprogress' : p.status === 'done' ? 'done' : 'planned');
+    var fmtDate = function(d) { return d.toLocaleDateString('en-US',{month:'short',year:'numeric'}); };
+    var items = (p.items || []).map(function(item) {
+      var cls = item.done ? 'roadmap-item done' : 'roadmap-item';
+      var chkCls = item.done ? 'roadmap-check done' : 'roadmap-check todo';
+      var chk = item.done ? '&#10003;' : '';
+      return '<div class="' + cls + '"><div class="' + chkCls + '">' + chk + '</div><span>' + item.text + '</span></div>';
+    }).join('');
+    return '<div class="roadmap-phase">'
+      + '<div class="roadmap-header">'
+      + '<div class="roadmap-badge" style="color:' + p.color + ';border:1px solid ' + p.color + '33">' + p.label + '</div>'
+      + '<div class="roadmap-title">' + p.title + '</div>'
+      + '<span class="' + statusCls + '">' + statusLabel + '</span>'
+      + '<div class="roadmap-dates" style="margin-left:16px">' + fmtDate(start) + ' &rarr; ' + fmtDate(end) + '</div>'
+      + '</div>'
+      + '<div class="roadmap-bar-wrap">'
+      + '<div class="roadmap-bar-bg"><div class="roadmap-bar-fill" style="width:' + pct + '%;background:' + p.color + '"></div></div>'
+      + '<div class="roadmap-pct">' + (p.status === 'planned' ? 'Starts ' + fmtDate(start) : pct + '% through timeline · Milestone: ' + p.milestone) + '</div>'
+      + '</div>'
+      + '<div class="roadmap-items">' + items + '</div>'
+      + '</div>';
+  }).join('');
 }
 
 function filterTable(filter) {

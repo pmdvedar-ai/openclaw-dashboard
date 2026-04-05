@@ -1,5 +1,133 @@
 {
-  "generated": "2026-04-05T02:04:51.904478+00:00",
+  "generated": "2026-04-05T02:42:10.762630+00:00",
+  "roadmap": {
+    "phases": [
+      {
+        "label": "Phase 1",
+        "title": "Course Launch",
+        "start": "2026-03-28",
+        "end": "2026-05-12",
+        "color": "#C9973A",
+        "status": "in_progress",
+        "milestone": "May 12 Launch",
+        "items": [
+          {
+            "done": true,
+            "text": "Course shell + 29 lessons built"
+          },
+          {
+            "done": true,
+            "text": "Stripe + Builder plan connected"
+          },
+          {
+            "done": true,
+            "text": "Modules 1, 3 recorded (on-camera)"
+          },
+          {
+            "done": false,
+            "text": "Modules 2, 4, 5, 6, Bonus recorded"
+          },
+          {
+            "done": false,
+            "text": "All 25 videos uploaded to Teachable"
+          },
+          {
+            "done": false,
+            "text": "Pre-launch window May 5\u201311"
+          },
+          {
+            "done": false,
+            "text": "Course goes live May 12"
+          }
+        ]
+      },
+      {
+        "label": "Phase 2",
+        "title": "Consulting Pipeline",
+        "start": "2026-03-27",
+        "end": "2026-07-01",
+        "color": "#22c55e",
+        "status": "in_progress",
+        "milestone": "First paid client",
+        "items": [
+          {
+            "done": true,
+            "text": "One-pager + Calendly live"
+          },
+          {
+            "done": true,
+            "text": "6 warm outreach DMs sent"
+          },
+          {
+            "done": false,
+            "text": "Mitesh call Apr 9"
+          },
+          {
+            "done": false,
+            "text": "First paid engagement signed"
+          },
+          {
+            "done": false,
+            "text": "3 clients \u2014 validate framework"
+          }
+        ]
+      },
+      {
+        "label": "Phase 3",
+        "title": "Question Bank",
+        "start": "2026-06-01",
+        "end": "2026-10-01",
+        "color": "#60a5fa",
+        "status": "planned",
+        "milestone": "Beta launch",
+        "items": [
+          {
+            "done": false,
+            "text": "Validate demand with course audience"
+          },
+          {
+            "done": false,
+            "text": "Content spec + 100 seed questions"
+          },
+          {
+            "done": false,
+            "text": "Web app MVP (waitlist \u2192 paid)"
+          },
+          {
+            "done": false,
+            "text": "$99/yr recurring revenue live"
+          }
+        ]
+      },
+      {
+        "label": "Phase 4",
+        "title": "APP Leadership OS",
+        "start": "2026-11-01",
+        "end": "2027-06-01",
+        "color": "#a855f7",
+        "status": "planned",
+        "milestone": "MVP after 3 consulting clients",
+        "items": [
+          {
+            "done": false,
+            "text": "3 consulting clients validate framework"
+          },
+          {
+            "done": false,
+            "text": "Scope SaaS MVP"
+          },
+          {
+            "done": false,
+            "text": "$200\u2013500/mo per institution"
+          },
+          {
+            "done": false,
+            "text": "Expand beyond cardiac surgery"
+          }
+        ]
+      }
+    ]
+  },
   "summary": {
     "total_agents": 62,
     "recurring_agents": 26,
@@ -10,13 +138,13 @@
     "idle": 28,
     "revenue_aligned": 10,
     "est_monthly_ai_cost": 558.44,
-    "jobs_this_week": 44,
+    "jobs_this_week": 45,
     "disabled_jobs": 8,
     "revenue_direct": 7,
     "revenue_indirect": 3,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "Apr 4, 10:04 PM ET",
-    "next_job_delta": "now"
+    "next_job_time": "Apr 4, 11:04 PM ET",
+    "next_job_delta": "~22m"
   },
   "agents": [
     {
@@ -1079,7 +1207,7 @@
   "bold_recommendation": "You have 23 warm leads from the lead magnet launch (Apr 1), including healthcare executives, APP supervisors, and program directors. The highest-leverage move RIGHT NOW is converting these leads into consulting conversations before momentum fades. April 7 follow-ups are scheduled \u2014 make sure you personally reach out to the top 5: Heather James (Heart & Vascular APP Manager), Dawn Hughes (Healthcare CEO), Michael Sullivan (EVH Consulting LLC), Christian Trent (CT/Vascular Administrator), and Brian Fontenot (PharmD/MPAS/MBA). One call this week = $2,500. Five calls = $12,500. The Teachable course is on track for May 12 \u2014 Stripe is connected, course shell is built, 29 lessons live.",
   "bold_recommendation_impact": "\ud83d\udcb0 Immediate actions: (1) Send 5 personal outreach DMs this week \u00b7 (2) Prep Mitesh Patel briefing before Apr 9 call \u00b7 (3) Script Modules 4-5 before Apr 11 travel \u00b7 (4) Queue LinkedIn posts for Apr 11-26 window",
   "meta": {
-    "generated_local": "Sat Apr 4, 2026, 10:04 PM ET",
+    "generated_local": "Sat Apr 4, 2026, 10:42 PM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 4,
@@ -1089,7 +1217,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-05T02:04:51.904804+00:00"
+      "checked_at": "2026-04-05T02:42:10.762974+00:00"
     },
     "data_trust": "validated"
   },
@@ -1102,7 +1230,7 @@
     },
     "main_exec_security": "allowlist",
     "main_exec_ask": "on-miss",
-    "main_allowlist_count": 56,
+    "main_allowlist_count": 62,
     "sandbox": "mode: off scope: agent perSession: false",
     "docker_available": false
   },
@@ -1110,7 +1238,7 @@
     {
       "name": "analytics-48h-thu-apr3",
       "when": "Apr 5, 8:00 AM ET",
-      "delta": "~9h 55m",
+      "delta": "~9h 17m",
       "reason": "Human follow-up / export likely needed"
     },
     {
@@ -1139,6 +1267,18 @@
     }
   ],
   "calendar_days": [
+    {
+      "label": "Saturday",
+      "date": "Apr 4",
+      "items": [
+        {
+          "time": "11:04 PM",
+          "name": "dashboard-regenerate-hourly",
+          "category": "system",
+          "conflict": false
+        }
+      ]
+    },
     {
       "label": "Sunday",
       "date": "Apr 5",
@@ -1411,36 +1551,6 @@
           "time": "6:30 PM",
           "name": "Weekly Executive Summary",
           "category": "system",
-          "conflict": false
-        }
-      ]
-    },
-    {
-      "label": "Saturday",
-      "date": "Apr 11",
-      "items": [
-        {
-          "time": "7:30 AM",
-          "name": "linkedin-post-fri-apr11-conduit",
-          "category": "revenue",
-          "conflict": true
-        },
-        {
-          "time": "7:30 AM",
-          "name": "analytics-48h-wed-apr9",
-          "category": "revenue",
-          "conflict": true
-        },
-        {
-          "time": "7:45 AM",
-          "name": "analytics-7d-fri-apr4",
-          "category": "revenue",
-          "conflict": false
-        },
-        {
-          "time": "7:46 AM",
-          "name": "linkedin-analytics-7d-linkedin-post-fri-apr4",
-          "category": "revenue",
           "conflict": false
         }
       ]
