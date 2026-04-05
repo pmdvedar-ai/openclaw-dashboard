@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-05T11:04:52.159445+00:00",
+  "generated": "2026-04-05T12:04:52.603523+00:00",
   "roadmap": {
     "phases": [
       {
@@ -227,19 +227,19 @@
   "summary": {
     "total_agents": 62,
     "recurring_agents": 26,
-    "one_time_jobs": 28,
+    "one_time_jobs": 26,
     "healthy": 26,
     "warning": 0,
     "broken": 0,
-    "idle": 28,
+    "idle": 26,
     "revenue_aligned": 10,
     "est_monthly_ai_cost": 558.44,
-    "jobs_this_week": 44,
-    "disabled_jobs": 8,
+    "jobs_this_week": 42,
+    "disabled_jobs": 10,
     "revenue_direct": 7,
     "revenue_indirect": 3,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "Apr 5, 7:04 AM ET",
+    "next_job_time": "Apr 5, 8:04 AM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -563,7 +563,7 @@
       "delivery_target": "6394048111",
       "session_target": "isolated",
       "timeout_seconds": 600,
-      "last_run": "Apr 4, 8:00 AM ET",
+      "last_run": "Apr 5, 8:00 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -587,7 +587,7 @@
       ],
       "value": "SUPPORTING SYSTEM",
       "notes": "Fixed Apr 1 \u2014 timeout 300\u2192600s, collector moved to 7:45 AM. Last run Apr 2 8 AM.",
-      "next_run": "Apr 5, 8:00 AM ET",
+      "next_run": "Apr 6, 8:00 AM ET",
       "enabled": true
     },
     {
@@ -603,7 +603,7 @@
       "delivery_target": "6394048111",
       "session_target": "isolated",
       "timeout_seconds": 120,
-      "last_run": "Apr 4, 7:45 AM ET",
+      "last_run": "Apr 5, 7:45 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -621,7 +621,7 @@
       ],
       "value": "SUPPORTING SYSTEM",
       "notes": "Runs 15 min before sentinel. Timing buffer fixed today. Last run Apr 2 7:45 AM.",
-      "next_run": "Apr 5, 7:45 AM ET",
+      "next_run": "Apr 6, 7:45 AM ET",
       "enabled": true
     },
     {
@@ -1126,15 +1126,22 @@
   ],
   "timing_conflicts": [
     {
-      "time": "Sun Apr 5, 8:00 AM ET",
-      "agents": "morning-draft-briefing + daily-cost-sentinel + analytics-48h-thu-apr3 +",
+      "time": "Sun Apr 5, 9:00 AM ET",
+      "agents": "Backlog Intake Processor + memory-governance-daily + launch-countdown-daily",
       "risk": "HIGH",
       "note": "Concurrent scheduled runs",
       "status": "active"
     },
     {
-      "time": "Sun Apr 5, 9:00 AM ET",
-      "agents": "Backlog Intake Processor + memory-governance-daily + launch-countdown-daily",
+      "time": "Mon Apr 6, 7:45 AM ET",
+      "agents": "analytics-48h-fri-apr4 + daily-cost-collector",
+      "risk": "MEDIUM",
+      "note": "Concurrent scheduled runs",
+      "status": "active"
+    },
+    {
+      "time": "Mon Apr 6, 8:00 AM ET",
+      "agents": "morning-draft-briefing + daily-cost-sentinel + System Health Sentinel",
       "risk": "HIGH",
       "note": "Concurrent scheduled runs",
       "status": "active"
@@ -1303,7 +1310,7 @@
   "bold_recommendation": "You have 23 warm leads from the lead magnet launch (Apr 1), including healthcare executives, APP supervisors, and program directors. The highest-leverage move RIGHT NOW is converting these leads into consulting conversations before momentum fades. April 7 follow-ups are scheduled \u2014 make sure you personally reach out to the top 5: Heather James (Heart & Vascular APP Manager), Dawn Hughes (Healthcare CEO), Michael Sullivan (EVH Consulting LLC), Christian Trent (CT/Vascular Administrator), and Brian Fontenot (PharmD/MPAS/MBA). One call this week = $2,500. Five calls = $12,500. The Teachable course is on track for May 12 \u2014 Stripe is connected, course shell is built, 29 lessons live.",
   "bold_recommendation_impact": "\ud83d\udcb0 Immediate actions: (1) Send 5 personal outreach DMs this week \u00b7 (2) Prep Mitesh Patel briefing before Apr 9 call \u00b7 (3) Script Modules 4-5 before Apr 11 travel \u00b7 (4) Queue LinkedIn posts for Apr 11-26 window",
   "meta": {
-    "generated_local": "Sun Apr 5, 2026, 7:04 AM ET",
+    "generated_local": "Sun Apr 5, 2026, 8:04 AM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 4,
@@ -1313,7 +1320,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-05T11:04:52.159773+00:00"
+      "checked_at": "2026-04-05T12:04:52.603863+00:00"
     },
     "data_trust": "validated"
   },
@@ -1332,34 +1339,34 @@
   },
   "action_queue": [
     {
-      "name": "analytics-48h-thu-apr3",
-      "when": "Apr 5, 8:00 AM ET",
-      "delta": "~55m",
-      "reason": "Human follow-up / export likely needed"
-    },
-    {
       "name": "analytics-48h-fri-apr4",
       "when": "Apr 6, 7:45 AM ET",
-      "delta": "~1d",
+      "delta": "~23h 40m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "linkedin-analytics-48h-linkedin-post-fri-apr4",
       "when": "Apr 6, 7:46 AM ET",
-      "delta": "~1d",
+      "delta": "~23h 41m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "Reminder: post onboarding carousel Monday morning",
       "when": "Apr 6, 9:00 AM ET",
-      "delta": "~1d 1h",
+      "delta": "~1d",
       "reason": "Content / audience growth revenue lever"
     },
     {
       "name": "linktree-downgrade-reminder",
       "when": "Apr 6, 12:00 PM ET",
-      "delta": "~1d 4h",
+      "delta": "~1d 3h",
       "reason": "Upcoming scheduled work"
+    },
+    {
+      "name": "linkedin-lead-magnet-analytics-7d",
+      "when": "Apr 7, 8:00 AM ET",
+      "delta": "~1d 23h",
+      "reason": "Human follow-up / export likely needed"
     }
   ],
   "calendar_days": [
@@ -1367,42 +1374,6 @@
       "label": "Sunday",
       "date": "Apr 5",
       "items": [
-        {
-          "time": "7:45 AM",
-          "name": "daily-cost-collector",
-          "category": "finance",
-          "conflict": false
-        },
-        {
-          "time": "8:00 AM",
-          "name": "morning-draft-briefing",
-          "category": "revenue",
-          "conflict": true
-        },
-        {
-          "time": "8:00 AM",
-          "name": "daily-cost-sentinel",
-          "category": "finance",
-          "conflict": true
-        },
-        {
-          "time": "8:00 AM",
-          "name": "analytics-48h-thu-apr3",
-          "category": "revenue",
-          "conflict": true
-        },
-        {
-          "time": "8:00 AM",
-          "name": "Agent Commands Watcher",
-          "category": "system",
-          "conflict": true
-        },
-        {
-          "time": "8:01 AM",
-          "name": "linkedin-analytics-48h-thu-apr3",
-          "category": "revenue",
-          "conflict": false
-        },
         {
           "time": "8:30 AM",
           "name": "cost-sentinel-renewal-check",
@@ -1434,6 +1405,12 @@
           "conflict": false
         },
         {
+          "time": "4:00 PM",
+          "name": "Agent Commands Watcher",
+          "category": "system",
+          "conflict": false
+        },
+        {
           "time": "7:00 PM",
           "name": "Book Writing Session",
           "category": "content",
@@ -1461,7 +1438,13 @@
           "time": "7:45 AM",
           "name": "analytics-48h-fri-apr4",
           "category": "revenue",
-          "conflict": false
+          "conflict": true
+        },
+        {
+          "time": "7:45 AM",
+          "name": "daily-cost-collector",
+          "category": "finance",
+          "conflict": true
         },
         {
           "time": "7:46 AM",
@@ -1471,9 +1454,21 @@
         },
         {
           "time": "8:00 AM",
+          "name": "morning-draft-briefing",
+          "category": "revenue",
+          "conflict": true
+        },
+        {
+          "time": "8:00 AM",
+          "name": "daily-cost-sentinel",
+          "category": "finance",
+          "conflict": true
+        },
+        {
+          "time": "8:00 AM",
           "name": "System Health Sentinel",
           "category": "system",
-          "conflict": false
+          "conflict": true
         },
         {
           "time": "8:30 AM",
