@@ -615,9 +615,17 @@
   });
 
   document.querySelectorAll('.check-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      btn.classList.toggle('selected');
-      btn.querySelector('input').checked = btn.classList.contains('selected');
+    const input = btn.querySelector('input[type="checkbox"]');
+    btn.addEventListener('click', (e) => {
+      // If the input itself was clicked, just sync the visual state
+      if (e.target === input) {
+        btn.classList.toggle('selected', input.checked);
+        return;
+      }
+      // Otherwise prevent default (stops double-fire), toggle manually
+      e.preventDefault();
+      input.checked = !input.checked;
+      btn.classList.toggle('selected', input.checked);
     });
   });
 
