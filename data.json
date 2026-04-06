@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-06T16:05:07.873382+00:00",
+  "generated": "2026-04-06T20:05:08.471633+00:00",
   "roadmap": {
     "phases": [
       {
@@ -225,21 +225,21 @@
     ]
   },
   "summary": {
-    "total_agents": 71,
-    "recurring_agents": 27,
+    "total_agents": 72,
+    "recurring_agents": 28,
     "one_time_jobs": 32,
     "healthy": 27,
     "warning": 0,
     "broken": 0,
-    "idle": 32,
+    "idle": 33,
     "revenue_aligned": 10,
     "est_monthly_ai_cost": 558.44,
-    "jobs_this_week": 39,
+    "jobs_this_week": 40,
     "disabled_jobs": 12,
     "revenue_direct": 7,
     "revenue_indirect": 3,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "Apr 6, 12:04 PM ET",
+    "next_job_time": "Apr 6, 4:04 PM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -328,7 +328,7 @@
       "delivery_target": "channel:1485491390304747550",
       "session_target": "isolated",
       "timeout_seconds": 600,
-      "last_run": "Mar 30, 2:00 PM ET",
+      "last_run": "Apr 6, 2:00 PM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -347,7 +347,7 @@
       ],
       "value": "DIRECT REVENUE",
       "notes": "Directly feeds MBA PA Academy enrollment funnel",
-      "next_run": "Apr 6, 2:00 PM ET",
+      "next_run": "Apr 13, 2:00 PM ET",
       "enabled": true
     },
     {
@@ -363,7 +363,7 @@
       "delivery_target": "channel:1485491468683448451",
       "session_target": "isolated",
       "timeout_seconds": 900,
-      "last_run": "Apr 1, 3:38 PM ET",
+      "last_run": "Apr 6, 3:00 PM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -382,7 +382,7 @@
       ],
       "value": "DIRECT REVENUE",
       "notes": "Changed to weekly Apr 1 for May 12 launch prep. Reverts to monthly May 13.",
-      "next_run": "Apr 6, 3:00 PM ET",
+      "next_run": "Apr 13, 3:00 PM ET",
       "enabled": true
     },
     {
@@ -524,7 +524,7 @@
       "model": "ollama/qwen3:30b-a3b",
       "model_tier": "premium",
       "delivery_channel": "discord",
-      "delivery_target": "channel:1485491233756549202",
+      "delivery_target": "channel:1487280071059439696",
       "session_target": "isolated",
       "timeout_seconds": 300,
       "last_run": "Apr 1, 10:24 PM ET",
@@ -1126,8 +1126,15 @@
   ],
   "timing_conflicts": [
     {
+      "time": "Tue Apr 7, 2:00 AM ET",
+      "agents": "nightly-backup + self-learning-daily-cycle",
+      "risk": "MEDIUM",
+      "note": "Concurrent scheduled runs",
+      "status": "active"
+    },
+    {
       "time": "Tue Apr 7, 8:00 AM ET",
-      "agents": "morning-draft-briefing + daily-cost-sentinel + linkedin-lead-magnet-analytics-7d",
+      "agents": "morning-draft-briefing + daily-cost-sentinel + linkedin-lead-magnet-analytics-7d +",
       "risk": "HIGH",
       "note": "Concurrent scheduled runs",
       "status": "active"
@@ -1296,7 +1303,7 @@
   "bold_recommendation": "You have 23 warm leads from the lead magnet launch (Apr 1), including healthcare executives, APP supervisors, and program directors. The highest-leverage move RIGHT NOW is converting these leads into consulting conversations before momentum fades. April 7 follow-ups are scheduled \u2014 make sure you personally reach out to the top 5: Heather James (Heart & Vascular APP Manager), Dawn Hughes (Healthcare CEO), Michael Sullivan (EVH Consulting LLC), Christian Trent (CT/Vascular Administrator), and Brian Fontenot (PharmD/MPAS/MBA). One call this week = $2,500. Five calls = $12,500. The Teachable course is on track for May 12 \u2014 Stripe is connected, course shell is built, 29 lessons live.",
   "bold_recommendation_impact": "\ud83d\udcb0 Immediate actions: (1) Send 5 personal outreach DMs this week \u00b7 (2) Prep Mitesh Patel briefing before Apr 9 call \u00b7 (3) Script Modules 4-5 before Apr 11 travel \u00b7 (4) Queue LinkedIn posts for Apr 11-26 window",
   "meta": {
-    "generated_local": "Mon Apr 6, 2026, 12:05 PM ET",
+    "generated_local": "Mon Apr 6, 2026, 4:05 PM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 4,
@@ -1306,7 +1313,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-06T16:05:07.873993+00:00"
+      "checked_at": "2026-04-06T20:05:08.472450+00:00"
     },
     "data_trust": "validated"
   },
@@ -1319,7 +1326,7 @@
     },
     "main_exec_security": "allowlist",
     "main_exec_ask": "off",
-    "main_allowlist_count": 107,
+    "main_allowlist_count": 108,
     "sandbox": "mode: off scope: agent",
     "docker_available": false
   },
@@ -1327,32 +1334,32 @@
     {
       "name": "linkedin-lead-magnet-analytics-7d",
       "when": "Apr 7, 8:00 AM ET",
-      "delta": "~19h 54m",
+      "delta": "~15h 54m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "Mitesh Patel Call Briefing Reminder",
       "when": "Apr 8, 7:00 PM ET",
-      "delta": "~2d 6h",
+      "delta": "~2d 2h",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "linkedin-analytics-7d-wed-apr2",
       "when": "Apr 9, 7:30 AM ET",
-      "delta": "~2d 19h",
+      "delta": "~2d 15h",
       "reason": "Human follow-up / export likely needed"
     },
     {
-      "name": "Lead Magnet Builder",
-      "when": "Apr 6, 2:00 PM ET",
-      "delta": "~1h 54m",
+      "name": "launch-countdown-daily",
+      "when": "Apr 7, 9:00 AM ET",
+      "delta": "~16h 54m",
       "reason": "Upcoming scheduled work"
     },
     {
-      "name": "Course Architect",
-      "when": "Apr 6, 3:00 PM ET",
-      "delta": "~2h 54m",
-      "reason": "Upcoming scheduled work"
+      "name": "LinkedIn Growth",
+      "when": "Apr 8, 10:00 AM ET",
+      "delta": "~1d 17h",
+      "reason": "Content / audience growth revenue lever"
     }
   ],
   "calendar_days": [
@@ -1361,27 +1368,9 @@
       "date": "Apr 6",
       "items": [
         {
-          "time": "12:07 PM",
-          "name": "consulting-pipeline-check",
+          "time": "4:07 PM",
+          "name": "consulting-pipeline-and-bookings-check",
           "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "2:00 PM",
-          "name": "Lead Magnet Builder",
-          "category": "revenue",
-          "conflict": false
-        },
-        {
-          "time": "3:00 PM",
-          "name": "Course Architect",
-          "category": "revenue",
-          "conflict": false
-        },
-        {
-          "time": "4:00 PM",
-          "name": "Agent Commands Watcher",
-          "category": "system",
           "conflict": false
         }
       ]
@@ -1394,7 +1383,13 @@
           "time": "2:00 AM",
           "name": "nightly-backup",
           "category": "system",
-          "conflict": false
+          "conflict": true
+        },
+        {
+          "time": "2:00 AM",
+          "name": "self-learning-daily-cycle",
+          "category": "content",
+          "conflict": true
         },
         {
           "time": "7:45 AM",
@@ -1418,6 +1413,12 @@
           "time": "8:00 AM",
           "name": "linkedin-lead-magnet-analytics-7d",
           "category": "revenue",
+          "conflict": true
+        },
+        {
+          "time": "8:00 AM",
+          "name": "Agent Commands Watcher",
+          "category": "system",
           "conflict": true
         },
         {
@@ -1542,7 +1543,7 @@
         },
         {
           "time": "4:00 PM",
-          "name": "Network Outreach",
+          "name": "Consulting Outreach",
           "category": "revenue",
           "conflict": false
         },
