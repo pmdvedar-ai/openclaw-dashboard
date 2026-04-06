@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-06T14:05:04.664381+00:00",
+  "generated": "2026-04-06T16:05:07.873382+00:00",
   "roadmap": {
     "phases": [
       {
@@ -225,21 +225,21 @@
     ]
   },
   "summary": {
-    "total_agents": 72,
+    "total_agents": 71,
     "recurring_agents": 27,
-    "one_time_jobs": 33,
+    "one_time_jobs": 32,
     "healthy": 27,
     "warning": 0,
     "broken": 0,
-    "idle": 33,
+    "idle": 32,
     "revenue_aligned": 10,
     "est_monthly_ai_cost": 558.44,
-    "jobs_this_week": 42,
+    "jobs_this_week": 39,
     "disabled_jobs": 12,
     "revenue_direct": 7,
     "revenue_indirect": 3,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "Apr 6, 10:04 AM ET",
+    "next_job_time": "Apr 6, 12:04 PM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -521,7 +521,7 @@
       "purpose": "Creates Instagram/Facebook content for MBA PA brand growth",
       "schedule_cron": "0 11 * * 2",
       "schedule_human": "Every Tuesday 11:00 AM ET",
-      "model": "anthropic/claude-sonnet-4-6",
+      "model": "ollama/qwen3:30b-a3b",
       "model_tier": "premium",
       "delivery_channel": "discord",
       "delivery_target": "channel:1485491233756549202",
@@ -1147,9 +1147,9 @@
       "status": "active"
     },
     {
-      "time": "Fri Apr 10, 7:30 AM ET",
-      "agents": "analytics-48h-apr8-metrics + analytics-48h-tue-apr8",
-      "risk": "MEDIUM",
+      "time": "Fri Apr 10, 8:00 AM ET",
+      "agents": "analytics-7d-thu-apr3 + Analytics 48h \u2014 Conduit Quality post + LinkedIn \u2014 Nobody Teaches You",
+      "risk": "HIGH",
       "note": "Concurrent scheduled runs",
       "status": "active"
     }
@@ -1206,7 +1206,7 @@
     },
     {
       "agent": "Instagram Content Agent",
-      "current": "anthropic/claude-sonnet-4-6",
+      "current": "ollama/qwen3:30b-a3b",
       "recommended": "anthropic/claude-sonnet-4-6",
       "action": "DONE \u2014 switched GPT-5.4 \u2192 Sonnet on 2026-04-02 (writing lane)",
       "impact": "\u2014"
@@ -1296,7 +1296,7 @@
   "bold_recommendation": "You have 23 warm leads from the lead magnet launch (Apr 1), including healthcare executives, APP supervisors, and program directors. The highest-leverage move RIGHT NOW is converting these leads into consulting conversations before momentum fades. April 7 follow-ups are scheduled \u2014 make sure you personally reach out to the top 5: Heather James (Heart & Vascular APP Manager), Dawn Hughes (Healthcare CEO), Michael Sullivan (EVH Consulting LLC), Christian Trent (CT/Vascular Administrator), and Brian Fontenot (PharmD/MPAS/MBA). One call this week = $2,500. Five calls = $12,500. The Teachable course is on track for May 12 \u2014 Stripe is connected, course shell is built, 29 lessons live.",
   "bold_recommendation_impact": "\ud83d\udcb0 Immediate actions: (1) Send 5 personal outreach DMs this week \u00b7 (2) Prep Mitesh Patel briefing before Apr 9 call \u00b7 (3) Script Modules 4-5 before Apr 11 travel \u00b7 (4) Queue LinkedIn posts for Apr 11-26 window",
   "meta": {
-    "generated_local": "Mon Apr 6, 2026, 10:05 AM ET",
+    "generated_local": "Mon Apr 6, 2026, 12:05 PM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 4,
@@ -1306,7 +1306,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-06T14:05:04.664985+00:00"
+      "checked_at": "2026-04-06T16:05:07.873993+00:00"
     },
     "data_trust": "validated"
   },
@@ -1325,33 +1325,33 @@
   },
   "action_queue": [
     {
-      "name": "linktree-downgrade-reminder",
-      "when": "Apr 6, 12:00 PM ET",
-      "delta": "~1h 54m",
-      "reason": "Upcoming scheduled work"
-    },
-    {
       "name": "linkedin-lead-magnet-analytics-7d",
       "when": "Apr 7, 8:00 AM ET",
-      "delta": "~21h 54m",
+      "delta": "~19h 54m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "Mitesh Patel Call Briefing Reminder",
       "when": "Apr 8, 7:00 PM ET",
-      "delta": "~2d 8h",
+      "delta": "~2d 6h",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "linkedin-analytics-7d-wed-apr2",
       "when": "Apr 9, 7:30 AM ET",
-      "delta": "~2d 21h",
+      "delta": "~2d 19h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "Lead Magnet Builder",
       "when": "Apr 6, 2:00 PM ET",
-      "delta": "~3h 54m",
+      "delta": "~1h 54m",
+      "reason": "Upcoming scheduled work"
+    },
+    {
+      "name": "Course Architect",
+      "when": "Apr 6, 3:00 PM ET",
+      "delta": "~2h 54m",
       "reason": "Upcoming scheduled work"
     }
   ],
@@ -1361,14 +1361,8 @@
       "date": "Apr 6",
       "items": [
         {
-          "time": "10:07 AM",
+          "time": "12:07 PM",
           "name": "consulting-pipeline-check",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "12:00 PM",
-          "name": "linktree-downgrade-reminder",
           "category": "content",
           "conflict": false
         },
@@ -1469,8 +1463,8 @@
       "date": "Apr 8",
       "items": [
         {
-          "time": "7:30 AM",
-          "name": "linkedin-metrics-rewrite-tue-apr8",
+          "time": "8:00 AM",
+          "name": "LinkedIn \u2014 Conduit Quality Is a Leadership Problem",
           "category": "content",
           "conflict": false
         },
@@ -1523,33 +1517,27 @@
       "date": "Apr 10",
       "items": [
         {
-          "time": "7:30 AM",
-          "name": "analytics-48h-apr8-metrics",
-          "category": "revenue",
-          "conflict": true
-        },
-        {
-          "time": "7:30 AM",
-          "name": "analytics-48h-tue-apr8",
+          "time": "8:00 AM",
+          "name": "analytics-7d-thu-apr3",
           "category": "revenue",
           "conflict": true
         },
         {
           "time": "8:00 AM",
-          "name": "analytics-7d-thu-apr3",
+          "name": "Analytics 48h \u2014 Conduit Quality post",
           "category": "revenue",
-          "conflict": false
+          "conflict": true
+        },
+        {
+          "time": "8:00 AM",
+          "name": "LinkedIn \u2014 Nobody Teaches You",
+          "category": "content",
+          "conflict": true
         },
         {
           "time": "8:01 AM",
           "name": "linkedin-analytics-7day-thu-apr3",
           "category": "revenue",
-          "conflict": false
-        },
-        {
-          "time": "12:00 PM",
-          "name": "linkedin-evh-story-fri-apr10",
-          "category": "content",
           "conflict": false
         },
         {
@@ -1583,12 +1571,6 @@
       "date": "Apr 11",
       "items": [
         {
-          "time": "7:30 AM",
-          "name": "analytics-48h-wed-apr9",
-          "category": "revenue",
-          "conflict": false
-        },
-        {
           "time": "7:45 AM",
           "name": "analytics-7d-fri-apr4",
           "category": "revenue",
@@ -1606,6 +1588,12 @@
       "label": "Sunday",
       "date": "Apr 12",
       "items": [
+        {
+          "time": "8:00 AM",
+          "name": "Analytics 48h \u2014 Nobody Teaches You",
+          "category": "revenue",
+          "conflict": false
+        },
         {
           "time": "12:00 PM",
           "name": "analytics-48h-apr10-evh",
