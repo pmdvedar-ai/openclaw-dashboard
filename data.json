@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-06T10:04:53.534098+00:00",
+  "generated": "2026-04-06T11:04:53.984391+00:00",
   "roadmap": {
     "phases": [
       {
@@ -239,7 +239,7 @@
     "revenue_direct": 7,
     "revenue_indirect": 3,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "Apr 6, 6:04 AM ET",
+    "next_job_time": "Apr 6, 7:04 AM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -1310,7 +1310,7 @@
   "bold_recommendation": "You have 23 warm leads from the lead magnet launch (Apr 1), including healthcare executives, APP supervisors, and program directors. The highest-leverage move RIGHT NOW is converting these leads into consulting conversations before momentum fades. April 7 follow-ups are scheduled \u2014 make sure you personally reach out to the top 5: Heather James (Heart & Vascular APP Manager), Dawn Hughes (Healthcare CEO), Michael Sullivan (EVH Consulting LLC), Christian Trent (CT/Vascular Administrator), and Brian Fontenot (PharmD/MPAS/MBA). One call this week = $2,500. Five calls = $12,500. The Teachable course is on track for May 12 \u2014 Stripe is connected, course shell is built, 29 lessons live.",
   "bold_recommendation_impact": "\ud83d\udcb0 Immediate actions: (1) Send 5 personal outreach DMs this week \u00b7 (2) Prep Mitesh Patel briefing before Apr 9 call \u00b7 (3) Script Modules 4-5 before Apr 11 travel \u00b7 (4) Queue LinkedIn posts for Apr 11-26 window",
   "meta": {
-    "generated_local": "Mon Apr 6, 2026, 6:04 AM ET",
+    "generated_local": "Mon Apr 6, 2026, 7:04 AM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 4,
@@ -1320,7 +1320,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-06T10:04:53.534671+00:00"
+      "checked_at": "2026-04-06T11:04:53.985045+00:00"
     },
     "data_trust": "validated"
   },
@@ -1341,31 +1341,31 @@
     {
       "name": "analytics-48h-fri-apr4",
       "when": "Apr 6, 7:45 AM ET",
-      "delta": "~1h 40m",
+      "delta": "~40m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "linkedin-analytics-48h-linkedin-post-fri-apr4",
       "when": "Apr 6, 7:46 AM ET",
-      "delta": "~1h 41m",
+      "delta": "~41m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "Reminder: post onboarding carousel Monday morning",
       "when": "Apr 6, 9:00 AM ET",
-      "delta": "~2h 55m",
+      "delta": "~1h 55m",
       "reason": "Content / audience growth revenue lever"
     },
     {
       "name": "linktree-downgrade-reminder",
       "when": "Apr 6, 12:00 PM ET",
-      "delta": "~5h 55m",
+      "delta": "~4h 55m",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "linkedin-lead-magnet-analytics-7d",
       "when": "Apr 7, 8:00 AM ET",
-      "delta": "~1d 1h",
+      "delta": "~1d",
       "reason": "Human follow-up / export likely needed"
     }
   ],
@@ -1375,7 +1375,7 @@
       "date": "Apr 6",
       "items": [
         {
-          "time": "6:06 AM",
+          "time": "7:06 AM",
           "name": "consulting-pipeline-check",
           "category": "content",
           "conflict": false
