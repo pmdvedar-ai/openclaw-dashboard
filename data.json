@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-07T04:05:07.749837+00:00",
+  "generated": "2026-04-07T08:05:05.698492+00:00",
   "roadmap": {
     "phases": [
       {
@@ -225,10 +225,10 @@
     ]
   },
   "summary": {
-    "total_agents": 73,
+    "total_agents": 74,
     "recurring_agents": 29,
-    "one_time_jobs": 32,
-    "healthy": 27,
+    "one_time_jobs": 33,
+    "healthy": 28,
     "warning": 0,
     "broken": 0,
     "idle": 34,
@@ -239,7 +239,7 @@
     "revenue_direct": 7,
     "revenue_indirect": 3,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "Apr 7, 12:04 AM ET",
+    "next_job_time": "Apr 7, 4:04 AM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -840,7 +840,7 @@
       "delivery_target": "channel:1485490618636570805",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "Apr 6, 2:00 AM ET",
+      "last_run": "Apr 7, 2:00 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -856,7 +856,7 @@
       "downstream": [],
       "value": "SUPPORTING SYSTEM",
       "notes": "Fixed Apr 1 \u2014 exec unblocked, pre-commit secret leak check added, OpenAI key rotated. Last run Apr 2 2 AM.",
-      "next_run": "Apr 7, 2:00 AM ET",
+      "next_run": "Apr 8, 2:00 AM ET",
       "enabled": true
     },
     {
@@ -1126,13 +1126,6 @@
   ],
   "timing_conflicts": [
     {
-      "time": "Tue Apr 7, 2:00 AM ET",
-      "agents": "nightly-backup + self-learning-daily-cycle",
-      "risk": "MEDIUM",
-      "note": "Concurrent scheduled runs",
-      "status": "active"
-    },
-    {
       "time": "Tue Apr 7, 8:00 AM ET",
       "agents": "morning-draft-briefing + daily-cost-sentinel + linkedin-lead-magnet-analytics-7d +",
       "risk": "HIGH",
@@ -1143,6 +1136,13 @@
       "time": "Tue Apr 7, 9:00 AM ET",
       "agents": "Backlog Intake Processor + memory-governance-daily + launch-countdown-daily",
       "risk": "HIGH",
+      "note": "Concurrent scheduled runs",
+      "status": "active"
+    },
+    {
+      "time": "Wed Apr 8, 2:00 AM ET",
+      "agents": "nightly-backup + self-learning-daily-cycle",
+      "risk": "MEDIUM",
       "note": "Concurrent scheduled runs",
       "status": "active"
     },
@@ -1310,7 +1310,7 @@
   "bold_recommendation": "You have 23 warm leads from the lead magnet launch (Apr 1), including healthcare executives, APP supervisors, and program directors. The highest-leverage move RIGHT NOW is converting these leads into consulting conversations before momentum fades. April 7 follow-ups are scheduled \u2014 make sure you personally reach out to the top 5: Heather James (Heart & Vascular APP Manager), Dawn Hughes (Healthcare CEO), Michael Sullivan (EVH Consulting LLC), Christian Trent (CT/Vascular Administrator), and Brian Fontenot (PharmD/MPAS/MBA). One call this week = $2,500. Five calls = $12,500. The Teachable course is on track for May 12 \u2014 Stripe is connected, course shell is built, 29 lessons live.",
   "bold_recommendation_impact": "\ud83d\udcb0 Immediate actions: (1) Send 5 personal outreach DMs this week \u00b7 (2) Prep Mitesh Patel briefing before Apr 9 call \u00b7 (3) Script Modules 4-5 before Apr 11 travel \u00b7 (4) Queue LinkedIn posts for Apr 11-26 window",
   "meta": {
-    "generated_local": "Tue Apr 7, 2026, 12:05 AM ET",
+    "generated_local": "Tue Apr 7, 2026, 4:05 AM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 4,
@@ -1320,7 +1320,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-07T04:05:07.750805+00:00"
+      "checked_at": "2026-04-07T08:05:05.699308+00:00"
     },
     "data_trust": "validated"
   },
@@ -1341,31 +1341,31 @@
     {
       "name": "linkedin-lead-magnet-analytics-7d",
       "when": "Apr 7, 8:00 AM ET",
-      "delta": "~7h 54m",
+      "delta": "~3h 54m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "Mitesh Patel Call Briefing Reminder",
       "when": "Apr 8, 7:00 PM ET",
-      "delta": "~1d 18h",
+      "delta": "~1d 14h",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "linkedin-analytics-7d-wed-apr2",
       "when": "Apr 9, 7:30 AM ET",
-      "delta": "~2d 7h",
+      "delta": "~2d 3h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "launch-countdown-daily",
       "when": "Apr 7, 9:00 AM ET",
-      "delta": "~8h 54m",
+      "delta": "~4h 54m",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "LinkedIn Growth",
       "when": "Apr 8, 10:00 AM ET",
-      "delta": "~1d 9h",
+      "delta": "~1d 5h",
       "reason": "Content / audience growth revenue lever"
     }
   ],
@@ -1375,22 +1375,10 @@
       "date": "Apr 7",
       "items": [
         {
-          "time": "12:07 AM",
+          "time": "4:07 AM",
           "name": "consulting-pipeline-and-bookings-check",
           "category": "content",
           "conflict": false
-        },
-        {
-          "time": "2:00 AM",
-          "name": "nightly-backup",
-          "category": "system",
-          "conflict": true
-        },
-        {
-          "time": "2:00 AM",
-          "name": "self-learning-daily-cycle",
-          "category": "content",
-          "conflict": true
         },
         {
           "time": "7:45 AM",
@@ -1464,6 +1452,18 @@
       "label": "Wednesday",
       "date": "Apr 8",
       "items": [
+        {
+          "time": "2:00 AM",
+          "name": "nightly-backup",
+          "category": "system",
+          "conflict": true
+        },
+        {
+          "time": "2:00 AM",
+          "name": "self-learning-daily-cycle",
+          "category": "content",
+          "conflict": true
+        },
         {
           "time": "8:00 AM",
           "name": "LinkedIn \u2014 Conduit Quality Is a Leadership Problem",
