@@ -18,24 +18,40 @@ h1,h2,h3{color:#f8fafc;font-weight:600}
 .logo span{font-size:13px;color:#64748b}
 .header-meta{font-size:12px;color:#64748b;text-align:right}
 .header-meta strong{color:#94a3b8}
+
+/* Travel Banner */
+.travel-banner{background:linear-gradient(135deg,#1a3a2a,#0f2218);border-bottom:2px solid #22c55e44;padding:10px 0;display:none}
+.travel-banner.active{display:block}
+.travel-banner-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.travel-banner-text{font-size:13px;color:#86efac;font-weight:600}
+.travel-banner-sub{font-size:11px;color:#4ade80;margin-top:2px}
+.travel-checklist{display:flex;gap:8px;flex-wrap:wrap}
+.travel-check{font-size:11px;padding:3px 10px;border-radius:20px;background:#1a2a1e;color:#86efac;border:1px solid #22c55e33}
+.travel-check.done{background:#14532d;color:#22c55e}
+.travel-check.pending{background:#7f1d1d33;color:#fca5a5;border-color:#ef444433}
+
 nav{background:#1B2A4A;border-bottom:1px solid #1e3a5f;padding:0;position:sticky;top:0;z-index:100;padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right)}
 nav ul{display:flex;list-style:none;overflow-x:auto;-webkit-overflow-scrolling:touch}
-nav ul li a{display:block;padding:12px 18px;color:#94a3b8;font-size:13px;white-space:nowrap;border-bottom:2px solid transparent;transition:all .2s}
+nav ul li a{display:block;padding:12px 16px;color:#94a3b8;font-size:12px;white-space:nowrap;border-bottom:2px solid transparent;transition:all .2s}
 nav ul li a:hover,nav ul li a.active{color:#C9973A;border-bottom-color:#C9973A}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;padding:24px 0}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:16px;padding:24px 0}
 .card{background:#1e2d45;border:1px solid #1e3a5f;border-radius:10px;padding:20px;position:relative;overflow:hidden}
 .card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:#C9973A}
 .card.green::before{background:#22c55e}
 .card.red::before{background:#ef4444}
 .card.yellow::before{background:#eab308}
 .card.purple::before{background:#a855f7}
+.card.blue::before{background:#60a5fa}
+.card.teal::before{background:#2dd4bf}
 .card-value{font-size:32px;font-weight:700;color:#f8fafc;line-height:1}
 .card-label{font-size:12px;color:#64748b;margin-top:6px;text-transform:uppercase;letter-spacing:.05em}
 .card-sub{font-size:11px;color:#94a3b8;margin-top:4px}
-.day-toggle{display:none;width:100%;background:#1B2A4A;color:#94a3b8;border:none;padding:10px 12px;font-size:13px;text-align:left;cursor:pointer;border-radius:6px;margin-bottom:4px}
+
 section{padding:32px 0;border-bottom:1px solid #1e2d45}
 .section-title{font-size:18px;font-weight:600;color:#C9973A;margin-bottom:16px;display:flex;align-items:center;gap:8px}
 .section-title::before{content:'';display:inline-block;width:4px;height:20px;background:#C9973A;border-radius:2px}
+.section-subtitle{font-size:13px;color:#64748b;margin-bottom:16px}
 .table-wrap{overflow-x:auto;border-radius:10px;border:1px solid #1e3a5f}
 table{width:100%;border-collapse:collapse}
 th{background:#1B2A4A;color:#94a3b8;font-size:11px;text-transform:uppercase;letter-spacing:.05em;padding:12px 16px;text-align:left;border-bottom:1px solid #1e3a5f;white-space:nowrap}
@@ -49,6 +65,7 @@ tr:hover td{background:#1a2a40}
 .expand-item strong{font-size:11px;color:#64748b;display:block;margin-bottom:4px;text-transform:uppercase}
 .expand-item span{font-size:12px;color:#cbd5e1}
 tr.clickable{cursor:pointer}
+
 .badge{display:inline-flex;align-items:center;gap:4px;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:600;letter-spacing:.03em}
 .badge-healthy{background:#14532d;color:#22c55e}
 .badge-warning{background:#713f12;color:#eab308}
@@ -66,21 +83,60 @@ tr.clickable{cursor:pointer}
 .badge-indirect{background:#1e3a5f;color:#60a5fa}
 .badge-supporting{background:#2d1b69;color:#a78bfa}
 .badge-low{background:#7f1d1d;color:#f87171}
+.badge-hot{background:#7f1d1d;color:#fca5a5;border:1px solid #ef4444}
+.badge-tonight{background:#422006;color:#fde68a;border:1px solid #eab30866}
+.badge-tomorrow{background:#713f12;color:#fed7aa}
+.badge-complete{background:#14532d;color:#86efac}
+.badge-partner{background:#2d1b69;color:#c4b5fd}
 .dot{width:8px;height:8px;border-radius:50%;display:inline-block}
 .dot-green{background:#22c55e}.dot-yellow{background:#eab308}.dot-red{background:#ef4444}.dot-gray{background:#64748b}
-.calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:8px}
-.cal-day{background:#1e2d45;border-radius:8px;overflow:hidden;min-height:200px}
-.cal-header{background:#1B2A4A;padding:10px 12px;font-size:12px;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em}
-.cal-jobs{padding:8px}
-.cal-job{padding:6px 8px;border-radius:5px;margin-bottom:5px;font-size:11px;font-weight:500;line-height:1.3}
-.cal-job .time{font-size:10px;opacity:.7;display:block}
-.cal-content{background:#1e3a5f;color:#93c5fd}
-.cal-revenue{background:#14532d;color:#86efac}
-.cal-finance{background:#422006;color:#fde68a}
-.cal-system{background:#1a1a2e;color:#c4b5fd;border:1px solid #2d1b69}
-.cal-conflict{border:2px solid #ef4444!important}
-.cal-warning{border:2px solid #eab308!important}
-.cal-empty{color:#4b5563;font-size:11px;padding:12px;text-align:center}
+
+/* Consulting Pipeline */
+.pipeline-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-bottom:24px}
+.pipeline-call{background:#1e2d45;border-radius:10px;padding:18px;border-left:4px solid #1e3a5f;position:relative}
+.pipeline-call.tonight{border-left-color:#eab308}
+.pipeline-call.tomorrow{border-left-color:#ef4444}
+.pipeline-call.complete{border-left-color:#22c55e}
+.pipeline-call-name{font-size:14px;font-weight:700;color:#f8fafc;margin-bottom:2px}
+.pipeline-call-role{font-size:11px;color:#64748b;margin-bottom:8px}
+.pipeline-call-date{font-size:12px;color:#94a3b8;margin-bottom:6px}
+.pipeline-call-action{font-size:12px;color:#cbd5e1;margin-top:8px;padding-top:8px;border-top:1px solid #1a2540;font-style:italic}
+.pipeline-leads-table td:first-child{font-weight:600}
+.pipeline-value{color:#22c55e;font-weight:700}
+.pipeline-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px;margin-bottom:20px}
+.pipeline-stat{background:#131e30;border:1px solid #1e3a5f;border-radius:8px;padding:14px;text-align:center}
+.pipeline-stat-num{font-size:24px;font-weight:700;color:#f8fafc}
+.pipeline-stat-label{font-size:11px;color:#64748b;text-transform:uppercase;letter-spacing:.04em;margin-top:4px}
+
+/* Course Build Progress */
+.course-build-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-bottom:24px}
+.course-build-card{background:#1e2d45;border-radius:10px;padding:18px;border:1px solid #1e3a5f}
+.course-build-title{font-size:13px;font-weight:700;color:#C9973A;margin-bottom:12px}
+.progress-bar-wrap{background:#1a2540;border-radius:20px;height:10px;overflow:hidden;margin:8px 0}
+.progress-bar-fill{height:100%;border-radius:20px;transition:width .6s}
+.progress-label{font-size:11px;color:#64748b;display:flex;justify-content:space-between;margin-top:4px}
+.build-stat{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #1a2540;font-size:12px}
+.build-stat:last-child{border-bottom:none}
+.build-stat-key{color:#64748b}
+.build-stat-val{color:#cbd5e1;font-weight:600}
+.build-stat-val.blocked{color:#ef4444}
+.build-stat-val.ok{color:#22c55e}
+.build-stat-val.warn{color:#eab308}
+
+/* Strategy Office */
+.strategy-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:16px}
+.strategy-agent{background:#1e2d45;border-radius:8px;padding:14px;border-left:4px solid #a855f7}
+.strategy-agent-name{font-size:13px;font-weight:700;color:#f8fafc;margin-bottom:4px}
+.strategy-agent-sched{font-size:11px;color:#64748b;margin-bottom:6px}
+.strategy-agent-first{font-size:11px;color:#a855f7;font-weight:600}
+.thesis-box{background:linear-gradient(135deg,#1B2A4A,#0f1a2e);border:2px solid #a855f733;border-radius:10px;padding:20px;margin-bottom:20px}
+.thesis-label{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#a855f7;margin-bottom:6px}
+.thesis-text{font-size:14px;color:#f8fafc;line-height:1.6;font-style:italic}
+.thesis-meta{margin-top:10px;font-size:11px;color:#64748b}
+.nonneg-box{background:#131e30;border:1px solid #C9973A44;border-radius:8px;padding:14px;margin-bottom:16px}
+.nonneg-label{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#C9973A;margin-bottom:6px}
+.nonneg-text{font-size:13px;color:#f8fafc}
+
 .flow-map{background:#131e30;border:1px solid #1e3a5f;border-radius:10px;padding:24px;font-family:monospace;font-size:12px;overflow-x:auto;line-height:2}
 .flow-section{margin-bottom:16px}
 .flow-label{color:#C9973A;font-weight:700;font-size:13px;margin-bottom:8px}
@@ -88,12 +144,14 @@ tr.clickable{cursor:pointer}
 .flow-node.revenue{border-color:#22c55e;color:#4ade80}
 .flow-node.finance{border-color:#eab308;color:#fbbf24}
 .flow-node.system{border-color:#a855f7;color:#c4b5fd}
+.flow-node.strategy{border-color:#a855f7;color:#c4b5fd;background:#1a1a2e}
 .flow-node.broken{border-color:#ef4444;color:#f87171}
 .flow-arrow{color:#C9973A;margin:0 6px}
 .flow-channel{display:inline-block;background:#1e3a5f;border:1px solid #3b82f6;border-radius:6px;padding:4px 10px;margin:2px;font-size:11px;color:#93c5fd}
 .flow-file{background:#1a2540;border-color:#334155;color:#94a3b8;font-style:italic}
 .flow-row{display:flex;align-items:center;flex-wrap:wrap;gap:4px;margin:4px 0}
 .singlepoint{color:#ef4444;font-weight:700}
+
 .health-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
 .health-item{background:#1e2d45;border-radius:8px;padding:16px;border-left:4px solid #1e3a5f}
 .health-item.warning{border-left-color:#eab308}
@@ -102,9 +160,7 @@ tr.clickable{cursor:pointer}
 .health-item.resolved{border-left-color:#3b82f6}
 .health-name{font-weight:600;margin-bottom:4px}
 .health-issue{font-size:12px;color:#94a3b8}
-.model-row.keep td:nth-child(3){color:#22c55e}
-.model-row.upgrade td:nth-child(3){color:#ef4444}
-.model-row.downgrade td:nth-child(3){color:#eab308}
+
 .insights{display:grid;grid-template-columns:1fr 1fr;gap:24px}
 .insight-list{background:#1e2d45;border-radius:10px;padding:20px}
 .insight-list h3{color:#C9973A;margin-bottom:16px;font-size:15px}
@@ -116,9 +172,10 @@ tr.clickable{cursor:pointer}
 .bold-rec-label{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:#C9973A;margin-bottom:8px}
 .bold-rec-text{font-size:16px;color:#f8fafc;line-height:1.6}
 .bold-rec-impact{margin-top:12px;font-size:13px;color:#22c55e;font-weight:600}
+
 .roadmap-wrap{display:flex;flex-direction:column;gap:24px}
 .roadmap-phase{background:#1e2d45;border-radius:10px;overflow:hidden;border:1px solid #1e3a5f}
-.roadmap-header{display:flex;align-items:center;gap:14px;padding:16px 20px;border-bottom:1px solid #1e3a5f}
+.roadmap-header{display:flex;align-items:center;gap:14px;padding:16px 20px;border-bottom:1px solid #1e3a5f;flex-wrap:wrap}
 .roadmap-badge{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:3px 10px;border-radius:20px;background:#1B2A4A;flex-shrink:0}
 .roadmap-title{font-size:15px;font-weight:600;color:#f8fafc;flex:1}
 .roadmap-dates{font-size:11px;color:#64748b;flex-shrink:0}
@@ -136,29 +193,43 @@ tr.clickable{cursor:pointer}
 .roadmap-status-inprogress{color:#C9973A;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
 .roadmap-status-planned{color:#60a5fa;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
 .roadmap-status-done{color:#22c55e;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
-.roadmap-timeline{position:relative;padding:0 20px 20px;overflow-x:auto}
-.roadmap-tl-bar{display:flex;gap:0;border-radius:6px;overflow:hidden;height:28px;margin:10px 0 6px}
-.roadmap-tl-seg{display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;color:#0f1623;letter-spacing:.03em;min-width:40px}
-.roadmap-months{display:flex;font-size:10px;color:#4b5563;margin-top:2px}
-.roadmap-month{flex:1;text-align:center}
-@media(max-width:768px){.roadmap-items{grid-template-columns:1fr}.roadmap-header{flex-wrap:wrap}.roadmap-dates,.roadmap-milestone{font-size:10px}}
+
 .value-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
 .value-card{background:#1e2d45;border-radius:8px;padding:16px}
 .value-card h4{font-size:12px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px}
 .value-card.direct h4{color:#22c55e}
 .value-card.indirect h4{color:#60a5fa}
 .value-card.supporting h4{color:#a855f7}
-.value-card.low h4{color:#ef4444}
+.value-card.strategy h4{color:#c4b5fd}
 .value-card ul{list-style:none}
 .value-card ul li{font-size:12px;color:#94a3b8;padding:4px 0;border-bottom:1px solid #1a2540}
 .value-card ul li:last-child{border-bottom:none}
+
 .filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
 .filter-btn{padding:6px 14px;border-radius:20px;border:1px solid #1e3a5f;background:transparent;color:#94a3b8;font-size:12px;cursor:pointer;transition:all .2s}
 .filter-btn:hover,.filter-btn.active{background:#1B2A4A;border-color:#C9973A;color:#C9973A}
 .text-muted{color:#64748b}.text-sm{font-size:12px}
 .live-badge{display:inline-block;background:#14532d;color:#22c55e;border-radius:4px;padding:2px 8px;font-size:10px;font-weight:700;letter-spacing:.05em;margin-left:8px;vertical-align:middle}
+
+.calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:8px}
+.cal-day{background:#1e2d45;border-radius:8px;overflow:hidden;min-height:180px}
+.cal-header{background:#1B2A4A;padding:10px 12px;font-size:12px;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em}
+.cal-jobs{padding:8px}
+.cal-job{padding:6px 8px;border-radius:5px;margin-bottom:5px;font-size:11px;font-weight:500;line-height:1.3}
+.cal-job .time{font-size:10px;opacity:.7;display:block}
+.cal-content{background:#1e3a5f;color:#93c5fd}
+.cal-revenue{background:#14532d;color:#86efac}
+.cal-finance{background:#422006;color:#fde68a}
+.cal-system{background:#1a1a2e;color:#c4b5fd;border:1px solid #2d1b69}
+.cal-conflict{border:2px solid #ef4444!important}
+.cal-empty{color:#4b5563;font-size:11px;padding:12px;text-align:center}
+.model-row.keep td:nth-child(3){color:#22c55e}
+.model-row.upgrade td:nth-child(3){color:#ef4444}
+.model-row.downgrade td:nth-child(3){color:#eab308}
+.day-toggle{display:none;width:100%;background:#1B2A4A;color:#94a3b8;border:none;padding:10px 12px;font-size:13px;text-align:left;cursor:pointer;border-radius:6px;margin-bottom:4px}
+
 @media(max-width:900px){.insights{grid-template-columns:1fr}.calendar{grid-template-columns:repeat(4,1fr)}.cards{grid-template-columns:repeat(2,1fr)}.health-grid{grid-template-columns:1fr}}
-@media(max-width:768px){.container{padding:0 16px}section{padding:20px 0}.header-inner{flex-direction:column;align-items:flex-start;gap:8px}.header-meta{font-size:11px}.logo h1{font-size:18px}th.hide-mobile,td.hide-mobile{display:none}.mobile-hint{display:block}.filter-btn{min-height:40px;padding:8px 14px}.clickable{min-height:48px}.section-title{font-size:16px}body{font-size:13px}.bold-rec{padding:18px}.bold-rec-text{font-size:14px}.insight-list{padding:14px}.flow-map{font-size:11px;-webkit-overflow-scrolling:touch}.flow-row{flex-wrap:wrap}}
+@media(max-width:768px){.container{padding:0 16px}section{padding:20px 0}.header-inner{flex-direction:column;align-items:flex-start;gap:8px}.header-meta{font-size:11px}.logo h1{font-size:18px}th.hide-mobile,td.hide-mobile{display:none}.mobile-hint{display:block}.filter-btn{min-height:40px;padding:8px 14px}.clickable{min-height:48px}.section-title{font-size:16px}body{font-size:13px}.bold-rec{padding:18px}.bold-rec-text{font-size:14px}.insight-list{padding:14px}.flow-map{font-size:11px;-webkit-overflow-scrolling:touch}.flow-row{flex-wrap:wrap}.pipeline-grid{grid-template-columns:1fr}.strategy-grid{grid-template-columns:1fr}}
 @media(max-width:600px){.calendar{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,1fr)}.card{padding:14px}.card-value{font-size:24px}.value-grid{grid-template-columns:repeat(2,1fr)}.day-toggle{display:block}}
 </style>
 </head>
@@ -169,7 +240,7 @@ tr.clickable{cursor:pointer}
     <div class="header-inner">
       <div class="logo">
         <h1>&#9889; OpenClaw Ops</h1>
-        <span>MBA PA System &mdash; Pol Vedar</span>
+        <span>The MBA PA — Pol Vedar</span>
       </div>
       <div class="header-meta">
         <strong id="ts-display">Loading...</strong><span class="live-badge" id="live-badge">LIVE</span><br>
@@ -179,35 +250,54 @@ tr.clickable{cursor:pointer}
   </div>
 </div>
 
+<!-- Travel Window Banner (shown when travel.active or departure within 5 days) -->
+<div class="travel-banner" id="travel-banner">
+  <div class="container">
+    <div class="travel-banner-inner">
+      <div>
+        <div class="travel-banner-text" id="travel-banner-text">✈️ Travel Window</div>
+        <div class="travel-banner-sub" id="travel-banner-sub"></div>
+      </div>
+      <div class="travel-checklist" id="travel-checklist"></div>
+    </div>
+  </div>
+</div>
+
 <nav>
   <div class="container">
     <ul>
       <li><a href="#summary" class="active">Summary</a></li>
       <li><a href="#ops-focus">Ops Focus</a></li>
-      <li><a href="#registry">Agent Registry</a></li>
-      <li><a href="#calendar">Weekly Calendar</a></li>
-      <li><a href="#flow">Flow Map</a></li>
+      <li><a href="#pipeline">Pipeline</a></li>
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#strategy">Strategy</a></li>
+      <li><a href="#registry">Agents</a></li>
+      <li><a href="#calendar">Calendar</a></li>
+      <li><a href="#flow">Flow</a></li>
       <li><a href="#health">Health</a></li>
-      <li><a href="#value">Value Alignment</a></li>
-      <li><a href="#models">Model Optimization</a></li>
+      <li><a href="#value">Value</a></li>
+      <li><a href="#models">Models</a></li>
       <li><a href="#roadmap">Roadmap</a></li>
-      <li><a href="#insights">Insights</a></li>
+      <li><a href="#insights">Intelligence</a></li>
     </ul>
   </div>
 </nav>
 
 <div class="container">
 
-<!-- SUMMARY CARDS: rendered live from data.json -->
+<!-- SUMMARY CARDS -->
 <div id="summary" class="cards">
-  <div class="card"><div class="card-value" id="c-total">&#8212;</div><div class="card-label">Total Jobs</div><div class="card-sub" id="c-total-sub">&#8212;</div></div>
-  <div class="card green"><div class="card-value" id="c-health">&#8212;</div><div class="card-label">Healthy / Warning / Broken</div><div class="card-sub" id="c-health-sub">&#8212;</div></div>
-  <div class="card"><div class="card-value" id="c-revenue">&#8212;</div><div class="card-label">Revenue-Aligned Agents</div><div class="card-sub" id="c-revenue-sub">&#8212;</div></div>
-  <div class="card yellow"><div class="card-value" id="c-weekly">&#8212;</div><div class="card-label">Jobs This Week</div><div class="card-sub" id="c-weekly-sub">Next 7 days</div></div>
-  <div class="card red"><div class="card-value" id="c-cost">&#8212;</div><div class="card-label">Est Monthly AI Cost</div><div class="card-sub" id="c-cost-sub">Validated from ledger / prior summary</div></div>
-  <div class="card purple"><div class="card-value" id="c-next">&#8212;</div><div class="card-label">Next Job</div><div class="card-sub" id="c-next-sub">&#8212;</div></div>
+  <div class="card green"><div class="card-value" id="c-revenue-closed">$0</div><div class="card-label">Revenue Closed</div><div class="card-sub" id="c-revenue-sub">MTD · Pipeline: loading...</div></div>
+  <div class="card"><div class="card-value" id="c-total">—</div><div class="card-label">Total Agents</div><div class="card-sub" id="c-total-sub">—</div></div>
+  <div class="card green"><div class="card-value" id="c-health">—</div><div class="card-label">Healthy / Warn / Broken</div><div class="card-sub" id="c-health-sub">—</div></div>
+  <div class="card teal"><div class="card-value" id="c-pipeline">—</div><div class="card-label">Pipeline Calls</div><div class="card-sub" id="c-pipeline-sub">—</div></div>
+  <div class="card yellow"><div class="card-value" id="c-weekly">—</div><div class="card-label">Jobs This Week</div><div class="card-sub">Enabled runs in next 7 days</div></div>
+  <div class="card red"><div class="card-value" id="c-cost">—</div><div class="card-label">Est Monthly AI Cost</div><div class="card-sub">Ledger-backed estimate</div></div>
+  <div class="card purple"><div class="card-value" id="c-next">—</div><div class="card-label">Next Job</div><div class="card-sub" id="c-next-sub">—</div></div>
+  <div class="card blue"><div class="card-value" id="c-course2">—</div><div class="card-label">Course 2 Videos</div><div class="card-sub" id="c-course2-sub">of 25 lessons built</div></div>
 </div>
 
+<!-- OPS FOCUS -->
 <section id="ops-focus">
   <div class="section-title">Ops Focus</div>
   <div class="insights">
@@ -222,16 +312,88 @@ tr.clickable{cursor:pointer}
   </div>
 </section>
 
-<!-- AGENT REGISTRY: rendered live from data.json -->
+<!-- CONSULTING PIPELINE -->
+<section id="pipeline">
+  <div class="section-title">Consulting Pipeline</div>
+  <div class="section-subtitle" id="pipeline-subtitle">Loading pipeline...</div>
+
+  <div class="pipeline-stats" id="pipeline-stats"></div>
+
+  <h3 style="color:#94a3b8;font-size:14px;margin-bottom:12px">Active Calls</h3>
+  <div class="pipeline-grid" id="pipeline-calls"></div>
+
+  <h3 style="color:#94a3b8;font-size:14px;margin-bottom:12px;margin-top:20px">Lead Pipeline</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr>
+        <th>Name</th><th>Company</th><th>Stage</th><th>Tier</th>
+        <th class="hide-mobile">Est. Value</th>
+      </tr></thead>
+      <tbody id="pipeline-leads-tbody"><tr><td colspan="5" style="text-align:center;color:#64748b;padding:24px">Loading leads...</td></tr></tbody>
+    </table>
+  </div>
+
+  <div id="follow-ups-due" style="margin-top:20px;background:#131e30;border:1px solid #1e3a5f;border-radius:8px;padding:16px">
+    <div style="font-size:12px;font-weight:700;color:#eab308;margin-bottom:8px">⏰ FOLLOW-UPS DUE APR 15</div>
+    <div id="follow-ups-list" style="font-size:12px;color:#94a3b8">Loading...</div>
+  </div>
+</section>
+
+<!-- COURSE BUILD PROGRESS -->
+<section id="courses">
+  <div class="section-title">Course Build Progress</div>
+  <div class="course-build-grid" id="course-build-grid">
+    <div style="color:#64748b;padding:16px">Loading course data...</div>
+  </div>
+</section>
+
+<!-- STRATEGY OFFICE -->
+<section id="strategy">
+  <div class="section-title">Strategy Office</div>
+
+  <div class="thesis-box">
+    <div class="thesis-label">🔒 Positioning Thesis — v1 (Locked)</div>
+    <div class="thesis-text" id="strategy-thesis">Loading...</div>
+    <div class="thesis-meta" id="strategy-thesis-meta"></div>
+  </div>
+
+  <div class="nonneg-box">
+    <div class="nonneg-label">⚡ Current Non-Negotiable</div>
+    <div class="nonneg-text" id="strategy-nonneg">Loading...</div>
+  </div>
+
+  <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:20px">
+    <div style="background:#1e2d45;border-radius:8px;padding:14px;flex:1;min-width:160px">
+      <div style="font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:#64748b;margin-bottom:4px">Enforcer Level</div>
+      <div id="enforcer-level" style="font-size:28px;font-weight:700;color:#22c55e">0</div>
+      <div style="font-size:11px;color:#4ade80">Standard (no blocks)</div>
+    </div>
+    <div style="background:#1e2d45;border-radius:8px;padding:14px;flex:1;min-width:160px">
+      <div style="font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:#64748b;margin-bottom:4px">First Enforcer Run</div>
+      <div id="enforcer-first-run" style="font-size:15px;font-weight:700;color:#C9973A">Loading...</div>
+      <div style="font-size:11px;color:#94a3b8">Evaluates Mitesh call completion</div>
+    </div>
+    <div style="background:#1e2d45;border-radius:8px;padding:14px;flex:1;min-width:160px">
+      <div style="font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:#64748b;margin-bottom:4px">Board First Run</div>
+      <div style="font-size:15px;font-weight:700;color:#a855f7">May 4, 2026</div>
+      <div style="font-size:11px;color:#94a3b8">Skeptic · Investor · Offer Audit</div>
+    </div>
+  </div>
+
+  <h3 style="color:#94a3b8;font-size:14px;margin-bottom:12px">Strategy Agents</h3>
+  <div class="strategy-grid" id="strategy-agents-grid"></div>
+</section>
+
+<!-- AGENT REGISTRY -->
 <section id="registry">
   <div class="section-title">Agent Registry</div>
   <div class="filters">
-    <button class="filter-btn active" onclick="filterTable('all')">All</button>
-    <button class="filter-btn" onclick="filterTable('content')">Content</button>
-    <button class="filter-btn" onclick="filterTable('revenue')">Revenue</button>
-    <button class="filter-btn" onclick="filterTable('finance')">Finance</button>
-    <button class="filter-btn" onclick="filterTable('system')">System</button>
-    <button class="filter-btn" onclick="filterTable('WARNING')">&#9888; Issues</button>
+    <button class="filter-btn active" onclick="filterTable('all',event)">All</button>
+    <button class="filter-btn" onclick="filterTable('content',event)">Content</button>
+    <button class="filter-btn" onclick="filterTable('revenue',event)">Revenue</button>
+    <button class="filter-btn" onclick="filterTable('finance',event)">Finance</button>
+    <button class="filter-btn" onclick="filterTable('system',event)">System</button>
+    <button class="filter-btn" onclick="filterTable('WARNING',event)">⚠ Issues</button>
   </div>
   <div class="table-wrap">
     <table id="agentTable">
@@ -246,19 +408,19 @@ tr.clickable{cursor:pointer}
       <tbody id="agent-tbody"><tr><td colspan="8" style="text-align:center;color:#64748b;padding:24px">Loading agents...</td></tr></tbody>
     </table>
   </div>
-  <p class="mobile-hint">&#128241; Tap any row to see full details</p>
+  <p class="mobile-hint">📱 Tap any row to see full details</p>
 </section>
 
-<!-- UPCOMING CALENDAR: rendered live from data.json -->
+<!-- UPCOMING CALENDAR -->
 <section id="calendar">
   <div class="section-title">Upcoming Schedule</div>
-  <p class="text-muted text-sm" style="margin-bottom:16px">Next scheduled run per enabled job over the next 7 days. <span style="color:#ef4444">Red border</span> = same-time collision.</p>
+  <p class="text-muted text-sm" style="margin-bottom:16px">Next scheduled run per enabled job over the next 7 days. <span style="color:#ef4444">Red border</span> = same-time collision. ⭐ = priority item.</p>
   <div class="calendar" id="calendar-grid">
     <div class="cal-day"><div class="cal-header">Loading...</div><div class="cal-jobs"><div class="cal-empty">Building live schedule…</div></div></div>
   </div>
 </section>
 
-<!-- FLOW MAP: static (architecture changes infrequently) -->
+<!-- FLOW MAP -->
 <section id="flow">
   <div class="section-title">System Flow Map</div>
   <div class="flow-map">
@@ -270,7 +432,7 @@ tr.clickable{cursor:pointer}
         <span class="flow-node flow-file">data/YYYY-MM-DD.csv</span><span class="flow-arrow">&rarr;</span>
         <span class="flow-node finance">Cost Sentinel</span><span class="flow-arrow">&rarr;</span>
         <span class="flow-node flow-file">ledger.json + summary.json</span><span class="flow-arrow">&rarr;</span>
-        <span class="flow-channel">Discord #cost-sentinel</span>
+        <span class="flow-channel">Telegram daily</span>
       </div>
       <div class="flow-row"><span class="flow-node">Anthropic API</span><span class="flow-arrow">&#8599;</span></div>
     </div>
@@ -278,8 +440,7 @@ tr.clickable{cursor:pointer}
       <div class="flow-label">MEMORY SYSTEM <span class="singlepoint">&larr; SINGLE POINT OF FAILURE</span></div>
       <div class="flow-row">
         <span class="flow-node system">Memory Governance &#10003;</span><span class="flow-arrow">&rarr;</span>
-        <span class="flow-node flow-file">MEMORY.md</span><span class="flow-arrow">&rarr;</span>
-        <span class="flow-node">Content Scout</span><span class="flow-arrow">+</span>
+        <span class="flow-node flow-file">MEMORY.md (13.1k)</span><span class="flow-arrow">&rarr;</span>
         <span class="flow-node revenue">LinkedIn Growth</span><span class="flow-arrow">+</span>
         <span class="flow-node revenue">Network Outreach</span><span class="flow-arrow">+</span>
         <span class="flow-node">ALL AGENTS</span>
@@ -316,20 +477,39 @@ tr.clickable{cursor:pointer}
         <span class="flow-node">Google Drive</span><span class="flow-arrow">&rarr;</span>
         <span class="flow-node">Linktree</span><span class="flow-arrow">&rarr;</span>
         <span class="flow-node">ManyChat keyword</span><span class="flow-arrow">&rarr;</span>
-        <span class="flow-channel">Instagram DM automation</span>
+        <span class="flow-channel">Instagram DM</span>
       </div>
       <div class="flow-row">
-        <span class="flow-node revenue">Network Outreach</span><span class="flow-arrow">&rarr;</span>
-        <span class="flow-node">Consulting Outreach &#10003;</span><span class="flow-arrow">&rarr;</span>
+        <span class="flow-node revenue">Consulting Outreach</span><span class="flow-arrow">&rarr;</span>
         <span class="flow-channel">Discord #outreach</span><span class="flow-arrow">&rarr; (manual) &rarr;</span>
         <span class="flow-node">Calendly call</span><span class="flow-arrow">&rarr;</span>
-        <span class="flow-node">$ Revenue</span>
+        <span class="flow-node revenue">$ Revenue</span>
       </div>
       <div class="flow-row">
         <span class="flow-node revenue">Course Architect</span><span class="flow-arrow">&rarr;</span>
         <span class="flow-node flow-file">academy-*.md</span><span class="flow-arrow">&rarr;</span>
         <span class="flow-node">Teachable</span><span class="flow-arrow">&rarr;</span>
-        <span class="flow-node">$249/$399 course sales</span>
+        <span class="flow-node revenue">$249–$499 course sales</span>
+      </div>
+    </div>
+    <div class="flow-section">
+      <div class="flow-label">STRATEGY LAYER (NEW — Apr 8)</div>
+      <div class="flow-row">
+        <span class="flow-node strategy">Competitive Monitor</span><span class="flow-arrow">&rarr;</span>
+        <span class="flow-node flow-file">strategy/competitive-intel/</span><span class="flow-arrow">&rarr;</span>
+        <span class="flow-node strategy">CSO</span><span class="flow-arrow">&rarr;</span>
+        <span class="flow-node flow-file">strategy/YYYY-MM-DD-review.md</span>
+      </div>
+      <div class="flow-row">
+        <span class="flow-node strategy">Execution Enforcer</span><span class="flow-arrow">&rarr;</span>
+        <span class="flow-node flow-file">enforcer-state.json</span><span class="flow-arrow">&rarr;</span>
+        <span class="flow-channel">Discord #strategy (blocking verdicts)</span>
+      </div>
+      <div class="flow-row">
+        <span class="flow-node strategy">Skeptic</span><span class="flow-arrow">+</span>
+        <span class="flow-node strategy">Investor</span><span class="flow-arrow">+</span>
+        <span class="flow-node strategy">Offer Audit</span><span class="flow-arrow">&rarr;</span>
+        <span class="flow-channel">Discord board reports (monthly)</span>
       </div>
     </div>
     <div class="flow-section">
@@ -345,7 +525,7 @@ tr.clickable{cursor:pointer}
   </div>
 </section>
 
-<!-- HEALTH: rendered live from data.json:health_issues -->
+<!-- SYSTEM HEALTH -->
 <section id="health">
   <div class="section-title">System Health</div>
   <div class="health-grid" id="health-grid">
@@ -354,26 +534,29 @@ tr.clickable{cursor:pointer}
   <h3 id="timing-conflicts-heading" style="margin-top:24px;margin-bottom:12px;color:#94a3b8;font-size:14px">Timing Conflicts</h3>
   <div class="table-wrap">
     <table>
-      <thead><tr><th>Time</th><th>Agents</th><th>Risk</th><th>Recommendation</th></tr></thead>
-      <tbody>
-        <tr><td>9:00 AM daily</td><td>Memory Governance + Backlog Intake + launch-countdown</td><td><span class="badge badge-healthy">RESOLVED</span></td><td>All isolated sessions, no shared write targets &mdash; safe in parallel</td></tr>
-        <tr><td>6:00 PM Friday</td><td>Weekly Metrics Digest + Backlog Review Agent</td><td><span class="badge badge-healthy">RESOLVED</span></td><td>Backlog Review staggered to 6:15 PM Apr 2 &mdash; Exec Summary at 6:30 PM</td></tr>
-        <tr><td>7:00 PM Sunday</td><td>Book Writing + Consulting Outreach Weekend</td><td><span class="badge badge-healthy">RESOLVED</span></td><td>Already staggered &mdash; Book Writing 7:00 PM, Consulting 7:30 PM</td></tr>
-      </tbody>
+      <thead><tr><th>Time</th><th>Agents</th><th>Risk</th><th>Note</th></tr></thead>
+      <tbody id="timing-conflicts-body"><tr><td colspan="4" style="color:#64748b;padding:16px">Loading...</td></tr></tbody>
     </table>
   </div>
 </section>
 
-<!-- VALUE ALIGNMENT: static -->
+<!-- VALUE ALIGNMENT -->
 <section id="value">
   <div class="section-title">Value &amp; Revenue Alignment</div>
-  <div class="value-grid">
-    <div class="value-card direct"><h4>Direct Revenue (5)</h4><ul>
+  <div class="value-grid" id="value-grid">
+    <div class="value-card direct"><h4>Direct Revenue (9)</h4><ul>
       <li>LinkedIn Growth</li><li>Lead Magnet Builder</li><li>Course Architect</li>
-      <li>Network Outreach</li><li>Consulting Outreach (x2)</li>
+      <li>Network Outreach</li><li>Consulting Outreach (×2)</li>
+      <li>Launch Countdown Daily</li><li>Morning Draft Briefing</li><li>Course 2 Build Pipeline</li>
     </ul></div>
-    <div class="value-card indirect"><h4>Indirect Revenue (3)</h4><ul>
+    <div class="value-card indirect"><h4>Indirect Revenue (5)</h4><ul>
       <li>Content Scout</li><li>Instagram Content Agent</li><li>Book Writing Session</li>
+      <li>Behavioral Learning</li><li>Competitive Monitor</li>
+    </ul></div>
+    <div class="value-card strategy"><h4>Strategy Layer (6)</h4><ul>
+      <li>CSO (Chief Strategy Officer)</li><li>Execution Enforcer</li>
+      <li>The Skeptic (Board)</li><li>The Investor (Board)</li><li>Offer Audit (Board)</li>
+      <li>Thesis: v1 locked Apr 8</li>
     </ul></div>
     <div class="value-card supporting"><h4>Supporting System (9)</h4><ul>
       <li>Daily Cost Collector</li><li>Daily Cost Sentinel</li><li>Renewal Check</li>
@@ -381,16 +564,11 @@ tr.clickable{cursor:pointer}
       <li>Weekly Metrics Digest</li><li>Weekly Exec Summary</li>
       <li>Nightly Backup</li>
     </ul></div>
-    <div class="value-card low"><h4>Needs Review</h4><ul>
-      <li style="color:#22c55e">&#10003; Linktree Setup Reminder &mdash; deleted Apr 2</li>
-      <li style="color:#22c55e">&#10003; Analytics jobs &mdash; healthy, Qwen local model</li>
-      <li style="color:#22c55e">&#10003; weekly-strategic-recalibration &mdash; GPT-5.4 assigned Apr 2</li>
-    </ul></div>
   </div>
-  <p class="text-sm text-muted" style="margin-top:16px">Revenue-aligned: <strong style="color:#22c55e">8 of 18 recurring agents (44%)</strong>. <strong>Current digital revenue: $0</strong> &mdash; Launch date: May 12, 2026.</p>
+  <p class="text-sm text-muted" style="margin-top:16px" id="value-summary">Loading...</p>
 </section>
 
-<!-- MODEL OPTIMIZATION: rendered live from data.json:model_optimization -->
+<!-- MODEL OPTIMIZATION -->
 <section id="models">
   <div class="section-title">Model Usage Optimization</div>
   <div class="table-wrap">
@@ -401,7 +579,7 @@ tr.clickable{cursor:pointer}
   </div>
 </section>
 
-<!-- ROADMAP: rendered live from data.json:roadmap -->
+<!-- ROADMAP -->
 <section id="roadmap">
   <div class="section-title">Project Roadmap</div>
   <div class="roadmap-wrap" id="roadmap-phases">
@@ -409,28 +587,19 @@ tr.clickable{cursor:pointer}
   </div>
 </section>
 
-<!-- INSIGHTS: bold rec rendered live from data.json -->
+<!-- INTELLIGENCE -->
 <section id="insights">
   <div class="section-title">System Intelligence</div>
   <div class="insights">
     <div class="insight-list">
       <h3>Top 5 Weaknesses</h3>
-      <div class="insight-item"><div class="insight-num">1</div><div class="insight-text"><strong>Zero digital revenue generated.</strong> System costs $558/mo with $0 return. 40 days to May 12 launch. Consulting outreach is the fastest path to cash before launch.</div></div>
-      <div class="insight-item"><div class="insight-num">2</div><div class="insight-text"><strong>Course content still incomplete.</strong> 2 of 7 modules scripted. 5 remaining with 40 days to launch. Recording still needs to happen.</div></div>
-      <div class="insight-item"><div class="insight-num">3</div><div class="insight-text"><strong>No pre-sell or waitlist system.</strong> Course launches cold on May 12. A simple waitlist + early-bird offer could generate $2,000&ndash;5,000 before launch day.</div></div>
-      <div class="insight-item"><div class="insight-num">4</div><div class="insight-text"><strong>Consulting pipeline untested.</strong> Mitesh Patel call (Apr 9) is the first real conversation. Need 5 outreach messages per week to build real pipeline.</div></div>
-      <div class="insight-item"><div class="insight-num">5</div><div class="insight-text"><strong>Travel window Apr 11&ndash;26.</strong> 9 working days before Pol leaves for Portugal/Spain. Module 4 script + at least 3 more outreach messages must happen before Apr 11.</div></div>
+      <div id="weaknesses-list"><div style="color:#64748b;padding:8px">Loading...</div></div>
     </div>
     <div class="insight-list">
-      <h3>Top 5 Improvements</h3>
-      <div class="insight-item"><div class="insight-num" style="background:#22c55e">&#10003;</div><div class="insight-text"><strong>Memory Governance fixed Apr 1.</strong> Delivery channel misconfigured &mdash; resolved. Clean run confirmed. All agents reading MEMORY.md unaffected.</div></div>
-      <div class="insight-item"><div class="insight-num" style="background:#22c55e">&#10003;</div><div class="insight-text"><strong>Model optimization complete Apr 2.</strong> Instagram &rarr; Sonnet. Consulting Outreach Mid &rarr; GPT-5.4. Content Scout kept on GPT-5.4 (upstream pipeline judgment).</div></div>
-      <div class="insight-item"><div class="insight-num" style="background:#22c55e">&#10003;</div><div class="insight-text"><strong>Dashboard now fully data-driven.</strong> Health, model optimization, bold rec, and summary counts all render live from data.json. No more stale hardcoded HTML.</div></div>
-      <div class="insight-item"><div class="insight-num" style="background:#22c55e">&#10003;</div><div class="insight-text"><strong>GitHub Pages pipeline live.</strong> Auto-publishes to pmdvedar-ai.github.io/openclaw-dashboard on every hourly regen. Accessible from any device or network.</div></div>
-      <div class="insight-item"><div class="insight-num" style="background:#22c55e">&#10003;</div><div class="insight-text"><strong>launch-countdown-daily fixed Apr 2.</strong> Delivery mode error resolved. Daily 9 AM briefing now fires correctly: days to launch, modules done, priority.</div></div>
+      <h3>Top Improvements</h3>
+      <div id="improvements-list"><div style="color:#64748b;padding:8px">Loading...</div></div>
     </div>
   </div>
-
   <div class="bold-rec">
     <div class="bold-rec-label">&#9889; Bold Recommendation</div>
     <div class="bold-rec-text" id="bold-rec-text">Loading...</div>
@@ -438,7 +607,7 @@ tr.clickable{cursor:pointer}
   </div>
 </section>
 
-</div>
+</div><!-- /container -->
 
 <div style="padding:24px;text-align:center;color:#334155;font-size:12px;border-top:1px solid #1e2d45;margin-top:32px">
   OpenClaw Ops Dashboard &middot; <span id="footer-ts">&mdash;</span> &middot; <span id="refresh-status" style="color:#C9973A">Checking for updates...</span>
@@ -450,6 +619,7 @@ tr.clickable{cursor:pointer}
 <script>
 var lastGenerated = null;
 
+// ── Badge helpers ──────────────────────────────────────────────────────────
 function modelBadge(m) {
   if (!m) return '<span class="badge badge-idle">Unknown</span>';
   var ml = m.toLowerCase();
@@ -459,19 +629,16 @@ function modelBadge(m) {
   if (ml.indexOf('ollama') >= 0 || ml.indexOf('qwen') >= 0) return '<span class="badge badge-local">Local (Qwen)</span>';
   return '<span class="badge badge-idle">' + m.split('/').pop() + '</span>';
 }
-
 function statusBadge(status, errors) {
   if (errors > 0 || status === 'ERROR') return '<span class="badge badge-broken"><span class="dot dot-red"></span>Error</span>';
   if (status === 'WARNING') return '<span class="badge badge-warning"><span class="dot dot-yellow"></span>Warning</span>';
   if (!status || status === 'IDLE') return '<span class="badge badge-idle"><span class="dot dot-gray"></span>Idle</span>';
   return '<span class="badge badge-healthy"><span class="dot dot-green"></span>Healthy</span>';
 }
-
 function catBadge(cat) {
   var map = {content:'badge-content',revenue:'badge-revenue',finance:'badge-finance',system:'badge-system'};
   return '<span class="badge ' + (map[cat] || 'badge-idle') + '">' + (cat || '&mdash;') + '</span>';
 }
-
 function valueBadge(val) {
   if (!val) return '&mdash;';
   var v = val.toLowerCase();
@@ -479,7 +646,229 @@ function valueBadge(val) {
   if (v.indexOf('indirect') >= 0) return '<span class="badge badge-indirect">Indirect Rev</span>';
   return '<span class="badge badge-supporting">Supporting</span>';
 }
+function tierBadge(tier) {
+  var map = {
+    'hot': 'badge-hot', 'hot-prospect': 'badge-hot',
+    'tonight': 'badge-tonight',
+    'tomorrow': 'badge-tomorrow',
+    'complete': 'badge-complete',
+    'peer': 'badge-resolved', 'peer-validator': 'badge-resolved', 'peer-early-stage': 'badge-resolved',
+    'warm': 'badge-indirect',
+    'partnership': 'badge-partner'
+  };
+  var cls = map[tier] || 'badge-idle';
+  return '<span class="badge ' + cls + '">' + (tier || '—') + '</span>';
+}
 
+// ── Summary cards ──────────────────────────────────────────────────────────
+function renderSummary(data) {
+  var s = data.summary || {};
+  var rev = data.revenue || {};
+  var pipe = data.consulting_pipeline || {};
+  var c2 = data.course2_progress || {};
+
+  // Revenue
+  var closed = rev.closed_total || 0;
+  document.getElementById('c-revenue-closed').textContent = '$' + closed.toLocaleString();
+  document.getElementById('c-revenue-sub').textContent = 'MTD: $' + (rev.mtd || 0) + ' · Pipeline: $' + ((rev.pipeline_value || 0) / 1000).toFixed(0) + 'k est.';
+
+  // Agents
+  document.getElementById('c-total').textContent = s.total_agents || '—';
+  document.getElementById('c-total-sub').textContent = (s.recurring_agents||0) + ' recurring · ' + (s.one_time_jobs||0) + ' one-time · ' + (s.disabled_jobs||0) + ' disabled';
+  document.getElementById('c-health').innerHTML = (s.healthy||0) + ' <span style="font-size:16px;color:#64748b">/ ' + (s.warning||0) + ' / ' + (s.broken||0) + '</span>';
+  document.getElementById('c-health-sub').textContent = (s.idle||0) + ' idle';
+
+  // Pipeline
+  var callsTotal = (pipe.calls_completed||0) + (pipe.calls_scheduled||0);
+  document.getElementById('c-pipeline').textContent = callsTotal;
+  document.getElementById('c-pipeline-sub').textContent = pipe.calls_completed + ' done · ' + pipe.calls_scheduled + ' scheduled';
+
+  // Weekly + cost + next
+  document.getElementById('c-weekly').textContent = s.jobs_this_week || '—';
+  var cost = s.est_monthly_ai_cost;
+  document.getElementById('c-cost').textContent = cost ? '$' + Math.round(cost) : '—';
+  document.getElementById('c-next').textContent = s.next_job_delta || '—';
+  document.getElementById('c-next-sub').textContent = (s.next_job_name || '—') + ' · ' + (s.next_job_time || '—');
+
+  // Course 2
+  var built = c2.videos_built || 0;
+  var total = c2.total_lessons || 25;
+  document.getElementById('c-course2').textContent = built + '/' + total;
+  document.getElementById('c-course2-sub').textContent = c2.videos_uploaded + ' uploaded · EL resets ' + (c2.elevenlabs_quota_resets || 'TBD');
+}
+
+// ── Travel banner ──────────────────────────────────────────────────────────
+function renderTravelBanner(travel) {
+  if (!travel) return;
+  var banner = document.getElementById('travel-banner');
+  var now = new Date();
+  var dep = new Date(travel.departure);
+  var ret = new Date(travel.return);
+  var daysUntil = Math.ceil((dep - now) / 86400000);
+  var isActive = now >= dep && now <= ret;
+  var isUpcoming = daysUntil > 0 && daysUntil <= 5;
+
+  if (!isActive && !isUpcoming) return;
+  banner.classList.add('active');
+
+  var textEl = document.getElementById('travel-banner-text');
+  var subEl = document.getElementById('travel-banner-sub');
+  if (isActive) {
+    textEl.textContent = '✈️ Pol is traveling — ' + travel.itinerary;
+    subEl.textContent = 'Returns ' + travel.return + '. Agents are running autonomously.';
+  } else {
+    textEl.textContent = '✈️ Departing in ' + daysUntil + ' day' + (daysUntil > 1 ? 's' : '') + ' — ' + travel.itinerary;
+    subEl.textContent = 'Complete pre-travel checklist before Apr 11.';
+  }
+
+  var cl = document.getElementById('travel-checklist');
+  (travel.pre_travel_checklist || []).forEach(function(item) {
+    var d = document.createElement('div');
+    d.className = 'travel-check ' + (item.done ? 'done' : 'pending');
+    d.textContent = (item.done ? '✓ ' : '⏳ ') + item.text;
+    cl.appendChild(d);
+  });
+}
+
+// ── Consulting Pipeline ────────────────────────────────────────────────────
+function renderPipeline(pipe) {
+  if (!pipe) return;
+  var sub = document.getElementById('pipeline-subtitle');
+  if (sub) sub.textContent = pipe.dms_sent_total + ' DMs sent · ' + pipe.dms_replied + ' replied · ' + pipe.calls_completed + ' calls complete · $' + (pipe.revenue_closed || 0) + ' closed';
+
+  // Stats
+  var statsEl = document.getElementById('pipeline-stats');
+  if (statsEl) {
+    var stats = [
+      { num: pipe.dms_sent_total, label: 'DMs Sent' },
+      { num: pipe.dms_replied, label: 'Replied' },
+      { num: pipe.calls_completed, label: 'Calls Done' },
+      { num: pipe.calls_scheduled, label: 'Scheduled' },
+      { num: '$' + (pipe.revenue_closed || 0), label: 'Closed' }
+    ];
+    statsEl.innerHTML = stats.map(function(s) {
+      return '<div class="pipeline-stat"><div class="pipeline-stat-num">' + s.num + '</div><div class="pipeline-stat-label">' + s.label + '</div></div>';
+    }).join('');
+  }
+
+  // Active calls
+  var callsEl = document.getElementById('pipeline-calls');
+  if (callsEl && pipe.calls) {
+    callsEl.innerHTML = pipe.calls.map(function(c) {
+      var statusMap = { tonight: 'tonight', tomorrow: 'tomorrow', complete: 'complete', 'call-scheduled': 'tomorrow' };
+      var cls = statusMap[c.status] || '';
+      var badge = tierBadge(c.status === 'complete' ? 'complete' : c.tier || c.status);
+      var valueHtml = c.estimated_value ? '<div style="font-size:12px;color:#22c55e;font-weight:700;margin-top:6px">Est. value: $' + c.estimated_value.toLocaleString() + '</div>' : '';
+      return '<div class="pipeline-call ' + cls + '">'
+        + '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px">'
+        + '<div class="pipeline-call-name">' + c.name + '</div>' + badge + '</div>'
+        + '<div class="pipeline-call-role">' + (c.role || '') + '</div>'
+        + '<div class="pipeline-call-date">📅 ' + c.date + '</div>'
+        + valueHtml
+        + (c.outcome ? '<div class="pipeline-call-action">✅ ' + c.outcome + '</div>' : '')
+        + (c.next_action ? '<div class="pipeline-call-action">→ ' + c.next_action + '</div>' : '')
+        + '</div>';
+    }).join('');
+  }
+
+  // Pipeline leads table
+  var leadsTbody = document.getElementById('pipeline-leads-tbody');
+  if (leadsTbody && pipe.pipeline_leads) {
+    leadsTbody.innerHTML = pipe.pipeline_leads.map(function(l) {
+      var stageColors = {
+        'call-tomorrow': '#ef4444', 'call-scheduled': '#C9973A',
+        'dm-sent': '#60a5fa', 'replied': '#22c55e',
+        'comment-replied': '#a855f7', 'follow-up-sent': '#22c55e'
+      };
+      var col = stageColors[l.stage] || '#64748b';
+      var val = l.est_value > 0 ? '<span class="pipeline-value">$' + l.est_value.toLocaleString() + '</span>' : '<span style="color:#4b5563">—</span>';
+      return '<tr><td><strong>' + l.name + '</strong></td>'
+        + '<td style="color:#94a3b8">' + l.company + '</td>'
+        + '<td><span style="color:' + col + ';font-size:11px;font-weight:700">' + l.stage + '</span></td>'
+        + '<td>' + tierBadge(l.tier) + '</td>'
+        + '<td class="hide-mobile">' + val + '</td></tr>';
+    }).join('');
+  }
+
+  // Follow-ups
+  var fuEl = document.getElementById('follow-ups-list');
+  if (fuEl && pipe.follow_ups_due_apr15) {
+    fuEl.textContent = pipe.follow_ups_due_apr15.join(' · ');
+  }
+}
+
+// ── Course Build Progress ──────────────────────────────────────────────────
+function renderCourses(c2) {
+  var grid = document.getElementById('course-build-grid');
+  if (!grid || !c2) return;
+  var built = c2.videos_built || 0;
+  var total = c2.total_lessons || 25;
+  var pct = Math.round((built / total) * 100);
+  var blocked = (c2.blocked_lessons || []).length;
+  var onCam = (c2.on_camera_remaining || []).length;
+
+  grid.innerHTML = '<div class="course-build-card">'
+    + '<div class="course-build-title">Course 2 — First-Assist Fundamentals</div>'
+    + '<div style="font-size:11px;color:#64748b;margin-bottom:8px">Launch: ' + (c2.launch_date || 'TBD') + ' · ' + (c2.days_to_launch || '—') + ' days away</div>'
+    + '<div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:' + pct + '%;background:#C9973A"></div></div>'
+    + '<div class="progress-label"><span>' + built + '/' + total + ' videos built</span><span>' + pct + '%</span></div>'
+    + '<div style="margin-top:12px">'
+    + '<div class="build-stat"><span class="build-stat-key">AI videos built + uploaded</span><span class="build-stat-val ok">' + built + ' / ' + total + '</span></div>'
+    + '<div class="build-stat"><span class="build-stat-key">Blocked (ElevenLabs quota)</span><span class="build-stat-val blocked">' + blocked + ' lessons</span></div>'
+    + '<div class="build-stat"><span class="build-stat-key">ElevenLabs quota resets</span><span class="build-stat-val warn">' + (c2.elevenlabs_quota_resets || 'TBD') + '</span></div>'
+    + '<div class="build-stat"><span class="build-stat-key">On-camera modules (Pol)</span><span class="build-stat-val">' + onCam + ' remaining (post-travel)</span></div>'
+    + '<div class="build-stat"><span class="build-stat-key">Scripts ready</span><span class="build-stat-val ok">✓ All modules scripted</span></div>'
+    + '</div>'
+    + '<div style="margin-top:10px;font-size:11px;color:#64748b"><strong style="color:#94a3b8">Blocked:</strong> ' + (c2.blocked_lessons || []).join(', ') + '</div>'
+    + '</div>'
+    + '<div class="course-build-card">'
+    + '<div class="course-build-title">Course 1 — MBA PA Academy (APP Leadership)</div>'
+    + '<div style="font-size:11px;color:#64748b;margin-bottom:8px">Launch: May 12, 2026 · 34 days away</div>'
+    + '<div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:42%;background:#C9973A"></div></div>'
+    + '<div class="progress-label"><span>3/7 modules recorded</span><span>42%</span></div>'
+    + '<div style="margin-top:12px">'
+    + '<div class="build-stat"><span class="build-stat-key">Shell + lessons</span><span class="build-stat-val ok">✓ 29 lessons live</span></div>'
+    + '<div class="build-stat"><span class="build-stat-key">On-camera recorded</span><span class="build-stat-val ok">Modules 1, 3 ✓</span></div>'
+    + '<div class="build-stat"><span class="build-stat-key">Remaining recording</span><span class="build-stat-val warn">Modules 2, 4, 5, 6, Bonus</span></div>'
+    + '<div class="build-stat"><span class="build-stat-key">Stripe + Builder plan</span><span class="build-stat-val ok">✓ Connected</span></div>'
+    + '<div class="build-stat"><span class="build-stat-key">Pre-launch window</span><span class="build-stat-val">May 5–11</span></div>'
+    + '</div>'
+    + '</div>';
+}
+
+// ── Strategy Office ────────────────────────────────────────────────────────
+function renderStrategy(strat) {
+  if (!strat) return;
+  var thesisEl = document.getElementById('strategy-thesis');
+  var metaEl = document.getElementById('strategy-thesis-meta');
+  var nonnegEl = document.getElementById('strategy-nonneg');
+  var levelEl = document.getElementById('enforcer-level');
+  var firstRunEl = document.getElementById('enforcer-first-run');
+  var grid = document.getElementById('strategy-agents-grid');
+
+  if (thesisEl) thesisEl.textContent = strat.thesis || '';
+  if (metaEl) metaEl.textContent = 'Version: ' + (strat.thesis_version || 'v1') + ' · Locked: ' + (strat.thesis_locked ? 'Yes' : 'No');
+  if (nonnegEl) nonnegEl.textContent = strat.current_nonnegotiable || '';
+  if (levelEl) {
+    levelEl.textContent = strat.enforcer_level || 0;
+    levelEl.style.color = strat.enforcer_level > 0 ? '#ef4444' : '#22c55e';
+  }
+  if (firstRunEl) firstRunEl.textContent = strat.first_enforcer_run || '—';
+
+  if (grid && strat.agents) {
+    grid.innerHTML = strat.agents.map(function(a) {
+      return '<div class="strategy-agent">'
+        + '<div class="strategy-agent-name">' + a.name + '</div>'
+        + '<div class="strategy-agent-sched">' + a.schedule + '</div>'
+        + '<div style="display:flex;align-items:center;justify-content:space-between">'
+        + '<div class="strategy-agent-first">First run: ' + a.first_run + '</div>'
+        + modelBadge(a.model)
+        + '</div></div>';
+    }).join('');
+  }
+}
+
+// ── Agent Registry ─────────────────────────────────────────────────────────
 function renderAgents(agents) {
   if (!agents || !agents.length) return;
   var tbody = document.getElementById('agent-tbody');
@@ -513,6 +902,7 @@ function renderAgents(agents) {
   tbody.innerHTML = html;
 }
 
+// ── Health ─────────────────────────────────────────────────────────────────
 function renderHealth(issues) {
   if (!issues || !issues.length) return;
   var grid = document.getElementById('health-grid');
@@ -522,6 +912,25 @@ function renderHealth(issues) {
   }).join('');
 }
 
+// ── Timing Conflicts ───────────────────────────────────────────────────────
+function renderConflicts(conflicts) {
+  var tbody = document.getElementById('timing-conflicts-body');
+  if (!tbody) return;
+  if (!conflicts || !conflicts.length) {
+    tbody.innerHTML = '<tr><td colspan="4" style="color:#64748b;padding:16px">No active timing collisions.</td></tr>';
+    return;
+  }
+  tbody.innerHTML = conflicts.map(function(c) {
+    var badge = c.risk === 'HIGH'
+      ? '<span class="badge badge-broken">HIGH</span>'
+      : c.risk === 'LOW'
+      ? '<span class="badge badge-healthy">LOW</span>'
+      : '<span class="badge badge-warning">' + (c.risk||'MEDIUM') + '</span>';
+    return '<tr><td>' + c.time + '</td><td>' + c.agents + '</td><td>' + badge + '</td><td>' + (c.note||'') + '</td></tr>';
+  }).join('');
+}
+
+// ── Action Queue ───────────────────────────────────────────────────────────
 function renderActionQueue(items) {
   var el = document.getElementById('action-queue');
   if (!el) return;
@@ -530,17 +939,15 @@ function renderActionQueue(items) {
     return;
   }
   el.innerHTML = items.map(function(it, i) {
-    return '<div class="insight-item"><div class="insight-num">' + (i+1) + '</div><div class="insight-text"><strong>' + it.name + '</strong><br><span style="color:#94a3b8">' + it.when + ' (' + it.delta + ')</span><br>' + it.reason + '</div></div>';
+    return '<div class="insight-item"><div class="insight-num">' + (i+1) + '</div><div class="insight-text"><strong>' + it.name + '</strong><br><span style="color:#94a3b8">' + it.when + ' (' + it.delta + ')</span><br><span style="color:#64748b">' + it.reason + '</span></div></div>';
   }).join('');
 }
 
+// ── Security ───────────────────────────────────────────────────────────────
 function renderSecurity(posture) {
   var el = document.getElementById('security-posture');
   if (!el) return;
-  if (!posture) {
-    el.innerHTML = '<div style="color:#64748b;padding:8px 0">No security data.</div>';
-    return;
-  }
+  if (!posture) { el.innerHTML = '<div style="color:#64748b;padding:8px 0">No security data.</div>'; return; }
   var audit = posture.audit_summary || {};
   var items = [
     ['OpenClaw', posture.openclaw_version || 'unknown'],
@@ -555,6 +962,7 @@ function renderSecurity(posture) {
   }).join('');
 }
 
+// ── Model optimization ─────────────────────────────────────────────────────
 function renderModels(opts) {
   if (!opts || !opts.length) return;
   var tbody = document.getElementById('model-tbody');
@@ -566,22 +974,27 @@ function renderModels(opts) {
   }).join('');
 }
 
-function renderSummary(s) {
-  document.getElementById('c-total').textContent = s.total_agents || '—';
-  document.getElementById('c-total-sub').textContent = (s.recurring_agents||0) + ' recurring · ' + (s.one_time_jobs||0) + ' one-time · ' + (s.disabled_jobs||0) + ' disabled';
-  document.getElementById('c-health').innerHTML = (s.healthy||0) + ' <span style="font-size:16px;color:#64748b">/ ' + (s.warning||0) + ' / ' + (s.broken||0) + '</span>';
-  document.getElementById('c-health-sub').textContent = (s.idle||0) + ' idle';
-  document.getElementById('c-revenue').textContent = s.revenue_aligned || '—';
-  document.getElementById('c-revenue-sub').textContent = (s.revenue_direct||0) + ' direct · ' + (s.revenue_indirect||0) + ' indirect';
-  document.getElementById('c-weekly').textContent = s.jobs_this_week || '—';
-  document.getElementById('c-weekly-sub').textContent = 'Enabled runs in next 7 days';
-  var cost = s.est_monthly_ai_cost;
-  document.getElementById('c-cost').textContent = cost ? '$' + Math.round(cost) : '—';
-  document.getElementById('c-cost-sub').textContent = 'Ledger-backed estimate';
-  document.getElementById('c-next').textContent = s.next_job_delta || '—';
-  document.getElementById('c-next-sub').textContent = (s.next_job_name || '—') + ' · ' + (s.next_job_time || '—');
+// ── Weaknesses + Improvements ──────────────────────────────────────────────
+function renderInsights(data) {
+  var wEl = document.getElementById('weaknesses-list');
+  if (wEl && data.top_weaknesses) {
+    wEl.innerHTML = data.top_weaknesses.map(function(w, i) {
+      return '<div class="insight-item"><div class="insight-num">' + (i+1) + '</div><div class="insight-text">' + w + '</div></div>';
+    }).join('');
+  }
+  var iEl = document.getElementById('improvements-list');
+  if (iEl && data.top_improvements) {
+    iEl.innerHTML = data.top_improvements.map(function(it) {
+      var isDone = it.status && it.status.indexOf('✅') >= 0;
+      var isPending = it.status && it.status.indexOf('🔴') >= 0;
+      var bg = isDone ? '#22c55e' : isPending ? '#ef4444' : '#C9973A';
+      var sym = isDone ? '✓' : isPending ? '!' : '→';
+      return '<div class="insight-item"><div class="insight-num" style="background:' + bg + '">' + sym + '</div><div class="insight-text"><strong>' + it.item + '</strong><br><span style="color:#64748b">' + (it.status||'') + '</span></div></div>';
+    }).join('');
+  }
 }
 
+// ── Bold Rec ───────────────────────────────────────────────────────────────
 function renderBoldRec(data) {
   var el = document.getElementById('bold-rec-text');
   var elImp = document.getElementById('bold-rec-impact');
@@ -589,36 +1002,21 @@ function renderBoldRec(data) {
   if (data.bold_recommendation_impact && elImp) elImp.innerHTML = data.bold_recommendation_impact;
 }
 
-function renderTimestamp(ts) {
-  var d = new Date(ts);
-  var fmt = d.toLocaleString('en-US', {weekday:'short',month:'short',day:'numeric',year:'numeric',hour:'numeric',minute:'2-digit',timeZone:'America/New_York'});
-  var display = 'Generated: ' + fmt + ' ET';
-  var el = document.getElementById('ts-display');
-  var ft = document.getElementById('footer-ts');
-  if (el) el.textContent = display;
-  if (ft) ft.textContent = display;
+// ── Value summary ──────────────────────────────────────────────────────────
+function renderValueSummary(data) {
+  var el = document.getElementById('value-summary');
+  if (!el) return;
+  var s = data.summary || {};
+  var rev = data.revenue || {};
+  el.innerHTML = 'Revenue-aligned: <strong style="color:#22c55e">' + (s.revenue_aligned||0) + ' of ' + (s.recurring_agents||0) + ' recurring agents</strong>. <strong>Current digital revenue: $' + (rev.closed_total||0) + '</strong> &mdash; Pipeline value: <strong style="color:#22c55e">$' + ((rev.pipeline_value||0)/1000).toFixed(0) + 'k</strong> &mdash; Launch date: May 12, 2026.';
 }
 
-function renderDataTrust(data) {
-  var rs = document.getElementById('refresh-status');
-  if (!rs) return;
-  var meta = data.meta || {};
-  var validation = meta.validation || {};
-  var trust = meta.data_trust || 'unknown';
-  if (trust === 'validated' && validation.ok) {
-    rs.textContent = 'Validated · live refresh every 60s';
-    rs.style.color = '#22c55e';
-  } else {
-    rs.textContent = 'Warning · ' + ((validation.issues || []).join('; ') || 'dashboard validation issue');
-    rs.style.color = '#eab308';
-  }
-}
-
+// ── Calendar ───────────────────────────────────────────────────────────────
 function renderCalendar(days) {
   var grid = document.getElementById('calendar-grid');
   if (!grid) return;
   if (!days || !days.length) {
-    grid.innerHTML = '<div class="cal-day"><div class="cal-header">No upcoming jobs</div><div class="cal-jobs"><div class="cal-empty">Nothing scheduled in next 7 days.</div></div></div>';
+    grid.innerHTML = '<div class="cal-day"><div class="cal-header">No upcoming jobs</div><div class="cal-jobs"><div class="cal-empty">Nothing scheduled.</div></div></div>';
     return;
   }
   grid.innerHTML = days.map(function(day) {
@@ -626,75 +1024,11 @@ function renderCalendar(days) {
       var cls = 'cal-job cal-' + (item.category || 'system') + (item.conflict ? ' cal-conflict' : '');
       return '<div class="' + cls + '"><span class="time">' + item.time + '</span>' + item.name + '</div>';
     }).join('');
-    return '<div class="cal-day"><div class="cal-header">' + day.label + ' · ' + day.date + '</div><div class="cal-jobs">' + items + '</div></div>';
+    return '<div class="cal-day"><div class="cal-header">' + day.label + ' · ' + day.date + '</div><div class="cal-jobs">' + (items || '<div class="cal-empty">—</div>') + '</div></div>';
   }).join('');
 }
 
-function renderConflicts(conflicts) {
-  renderTimingTable(conflicts || []);
-}
-
-function renderTimingTable(conflicts) {
-  var tbody = document.getElementById('timing-conflicts-body');
-  if (!tbody) return;
-  if (!conflicts || !conflicts.length) {
-    tbody.innerHTML = '<tr><td colspan="4" style="color:#64748b;padding:16px">No upcoming same-time collisions in next 7 days.</td></tr>';
-    return;
-  }
-  tbody.innerHTML = conflicts.map(function(c) {
-    var badge = c.risk === 'HIGH'
-      ? '<span class="badge badge-broken">HIGH</span>'
-      : '<span class="badge badge-warning">' + (c.risk||'MEDIUM') + '</span>';
-    return '<tr><td>' + c.time + '</td><td>' + c.agents + '</td><td>' + badge + '</td><td>' + (c.note||'') + '</td></tr>';
-  }).join('');
-}
-
-
-function loadData(force) {
-  fetch('data.json?_=' + Date.now())
-    .then(function(r) { return r.json(); })
-    .then(function(data) {
-      var ts = data.generated;
-      if (force || lastGenerated === null || ts !== lastGenerated) {
-        lastGenerated = ts;
-        renderTimestamp(ts);
-        renderSummary(data.summary || {});
-        renderAgents(data.agents);
-        renderHealth(data.health_issues);
-        renderActionQueue(data.action_queue);
-        renderSecurity(data.security_posture);
-        renderCalendar(data.calendar_days);
-        renderModels(data.model_optimization);
-        renderBoldRec(data);
-        renderConflicts(data.timing_conflicts);
-        renderDataTrust(data);
-        renderRoadmap((data.roadmap || {}).phases || []);
-        var lb = document.getElementById('live-badge');
-        if (lb) lb.style.display = 'inline-block';
-      }
-    })
-    .catch(function() {
-      var rs = document.getElementById('refresh-status');
-      var lb = document.getElementById('live-badge');
-      if (rs) { rs.textContent = 'Offline — serving cached version'; rs.style.color = '#eab308'; }
-      if (lb) lb.style.display = 'none';
-    });
-}
-
-function forceRefresh() {
-  var rs = document.getElementById('refresh-status');
-  if (rs) rs.textContent = '\u21ba Refreshing...';
-  loadData(true);
-}
-
-loadData(true);
-setInterval(function() { loadData(false); }, 60000);
-
-function toggleRow(id) {
-  var row = document.getElementById(id);
-  if (row) row.style.display = row.style.display === 'table-row' ? 'none' : 'table-row';
-}
-
+// ── Roadmap ────────────────────────────────────────────────────────────────
 function renderRoadmap(phases) {
   var wrap = document.getElementById('roadmap-phases');
   if (!wrap || !phases.length) return;
@@ -723,11 +1057,11 @@ function renderRoadmap(phases) {
       + '</div>'
       + '<div class="roadmap-bar-wrap">'
       + '<div class="roadmap-bar-bg"><div class="roadmap-bar-fill" style="width:' + pct + '%;background:' + p.color + '"></div></div>'
-      + '<div class="roadmap-pct">' + (p.status === 'planned' ? 'Starts ' + fmtDate(start) : pct + '% through timeline \u00b7 Milestone: ' + p.milestone) + '</div>'
+      + '<div class="roadmap-pct">' + (p.status === 'planned' ? 'Starts ' + fmtDate(start) : pct + '% through timeline &middot; Milestone: ' + p.milestone) + '</div>'
       + '</div>'
       + (p.cost_estimate ? '<div style="padding:8px 20px 12px;display:flex;gap:20px;flex-wrap:wrap;background:#131e30;border-bottom:1px solid #1e3a5f">'
-        + '<div style="font-size:11px;color:#64748b">&#128176; Est. Build Cost&nbsp;<strong style="color:#C9973A">$' + (p.cost_estimate.build_cost_low||0).toLocaleString() + '\u2013$' + (p.cost_estimate.build_cost_high||0).toLocaleString() + '</strong></div>'
-        + '<div style="font-size:11px;color:#64748b">&#128197; Ongoing&nbsp;<strong style="color:#94a3b8">$' + (p.cost_estimate.ongoing_monthly_low||0) + '\u2013$' + (p.cost_estimate.ongoing_monthly_high||0) + '/mo</strong></div>'
+        + '<div style="font-size:11px;color:#64748b">&#128176; Est. Build Cost&nbsp;<strong style="color:#C9973A">$' + (p.cost_estimate.build_cost_low||0).toLocaleString() + '&ndash;$' + (p.cost_estimate.build_cost_high||0).toLocaleString() + '</strong></div>'
+        + '<div style="font-size:11px;color:#64748b">&#128197; Ongoing&nbsp;<strong style="color:#94a3b8">$' + (p.cost_estimate.ongoing_monthly_low||0) + '&ndash;$' + (p.cost_estimate.ongoing_monthly_high||0) + '/mo</strong></div>'
         + '<div style="font-size:11px;color:#64748b">&#9203; Timeline&nbsp;<strong style="color:#94a3b8">' + (p.cost_estimate.timeline_weeks||'') + '</strong></div>'
         + '<div style="font-size:11px;color:#64748b">&#11088; Approach&nbsp;<strong style="color:#60a5fa">' + (p.cost_estimate.recommended_tier||'') + '</strong></div>'
         + '</div>' : '')
@@ -736,9 +1070,84 @@ function renderRoadmap(phases) {
   }).join('');
 }
 
-function filterTable(filter) {
+// ── Timestamp + refresh ────────────────────────────────────────────────────
+function renderTimestamp(ts) {
+  var d = new Date(ts);
+  var fmt = d.toLocaleString('en-US', {weekday:'short',month:'short',day:'numeric',year:'numeric',hour:'numeric',minute:'2-digit',timeZone:'America/New_York'});
+  var display = 'Generated: ' + fmt + ' ET';
+  var el = document.getElementById('ts-display');
+  var ft = document.getElementById('footer-ts');
+  if (el) el.textContent = display;
+  if (ft) ft.textContent = display;
+}
+function renderDataTrust(data) {
+  var rs = document.getElementById('refresh-status');
+  if (!rs) return;
+  var meta = data.meta || {};
+  var validation = meta.validation || {};
+  var trust = meta.data_trust || 'unknown';
+  if (trust === 'validated' && validation.ok) {
+    rs.textContent = 'Validated · live refresh every 60s';
+    rs.style.color = '#22c55e';
+  } else {
+    rs.textContent = 'Warning · ' + ((validation.issues || []).join('; ') || 'dashboard validation issue');
+    rs.style.color = '#eab308';
+  }
+}
+
+// ── Master load ────────────────────────────────────────────────────────────
+function loadData(force) {
+  fetch('data.json?_=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      var ts = data.generated;
+      if (force || lastGenerated === null || ts !== lastGenerated) {
+        lastGenerated = ts;
+        renderTimestamp(ts);
+        renderSummary(data);
+        renderTravelBanner(data.travel_window);
+        renderPipeline(data.consulting_pipeline);
+        renderCourses(data.course2_progress);
+        renderStrategy(data.strategy_office);
+        renderAgents(data.agents);
+        renderHealth(data.health_issues);
+        renderActionQueue(data.action_queue);
+        renderSecurity(data.security_posture);
+        renderCalendar(data.calendar_days);
+        renderModels(data.model_optimization);
+        renderBoldRec(data);
+        renderInsights(data);
+        renderConflicts(data.timing_conflicts);
+        renderValueSummary(data);
+        renderDataTrust(data);
+        renderRoadmap((data.roadmap || {}).phases || []);
+        var lb = document.getElementById('live-badge');
+        if (lb) lb.style.display = 'inline-block';
+      }
+    })
+    .catch(function() {
+      var rs = document.getElementById('refresh-status');
+      var lb = document.getElementById('live-badge');
+      if (rs) { rs.textContent = 'Offline — serving cached version'; rs.style.color = '#eab308'; }
+      if (lb) lb.style.display = 'none';
+    });
+}
+function forceRefresh() {
+  var rs = document.getElementById('refresh-status');
+  if (rs) rs.textContent = '\u21ba Refreshing...';
+  loadData(true);
+}
+loadData(true);
+setInterval(function() { loadData(false); }, 60000);
+
+// ── UI helpers ─────────────────────────────────────────────────────────────
+function toggleRow(id) {
+  var row = document.getElementById(id);
+  if (row) row.style.display = row.style.display === 'table-row' ? 'none' : 'table-row';
+}
+function filterTable(filter, event) {
   document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
-  event.target.classList.add('active');
+  if (event && event.target) event.target.classList.add('active');
   document.querySelectorAll('#agentTable tbody tr.clickable').forEach(function(row) {
     var next = row.nextElementSibling;
     if (filter === 'all') { row.style.display = ''; return; }
@@ -750,20 +1159,10 @@ function filterTable(filter) {
   });
 }
 
-function toggleDay(dayId) {
-  var content = document.getElementById('day-' + dayId);
-  var btn = document.querySelector('[data-day="' + dayId + '"]');
-  if (!content) return;
-  var isHidden = content.style.display === 'none';
-  content.style.display = isHidden ? 'block' : 'none';
-  if (btn) btn.textContent = btn.textContent.replace(isHidden ? '\u25b6' : '\u25bc', isHidden ? '\u25bc' : '\u25b6');
-}
-
 window.addEventListener('scroll', function() {
   var btn = document.getElementById('backToTop');
   if (btn) btn.style.display = window.scrollY > 300 ? 'flex' : 'none';
 });
-
 document.querySelectorAll('nav a').forEach(function(a) {
   a.addEventListener('click', function(e) {
     e.preventDefault();
@@ -773,7 +1172,6 @@ document.querySelectorAll('nav a').forEach(function(a) {
     if (target) target.scrollIntoView({behavior:'smooth',block:'start'});
   });
 });
-
 var sections = document.querySelectorAll('section[id], div[id="summary"]');
 window.addEventListener('scroll', function() {
   var current = '';
