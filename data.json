@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-08T23:20:00.000000+00:00",
+  "generated": "2026-04-08T23:45:00.000000+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -123,9 +123,8 @@
         "items": [
           { "done": true, "text": "Course shell + 29 lessons built" },
           { "done": true, "text": "Stripe + Builder plan connected" },
-          { "done": true, "text": "Modules 1, 3 recorded (on-camera)" },
-          { "done": false, "text": "Modules 2, 4, 5, 6, Bonus recorded" },
-          { "done": false, "text": "All 25 videos uploaded to Teachable" },
+          { "done": true, "text": "All modules recorded (on-camera + ElevenLabs) ✅" },
+          { "done": true, "text": "All 26 videos uploaded to Teachable ✅" },
           { "done": false, "text": "Pre-launch window May 5–11" },
           { "done": false, "text": "Course goes live May 12" }
         ]
@@ -277,9 +276,9 @@
     "disabled_jobs": 14,
     "revenue_direct": 9,
     "revenue_indirect": 5,
-    "next_job_name": "Kaci Hardsock call",
-    "next_job_time": "Apr 8, 8:00 PM ET",
-    "next_job_delta": "~45m"
+    "next_job_name": "Mitesh Patel call",
+    "next_job_time": "Apr 9, 7:30 PM ET",
+    "next_job_delta": "~20h"
   },
   "agents": [
     {
@@ -1018,14 +1017,14 @@
   },
   "health_issues": [
     {
-      "name": "⚠️ ERROR — launch-countdown-daily",
-      "status": "broken",
-      "description": "1 consecutive error · Last run: Apr 8, 9:15 AM ET · Likely delivery config issue. Investigate before Apr 9."
+      "name": "✅ launch-countdown-daily — Fixed Apr 8",
+      "status": "resolved",
+      "description": "Root cause: delivery.mode=announce conflicting with exec send. Fixed: delivery.mode=none, payload updated with dynamic day calc + Course 1 completion status."
     },
     {
-      "name": "⚠️ ERROR — morning-draft-briefing",
-      "status": "broken",
-      "description": "2 consecutive errors · Last run: Apr 8, 8:05 AM ET · Delivery target misconfigured. Investigate."
+      "name": "✅ morning-draft-briefing — Fixed Apr 8",
+      "status": "resolved",
+      "description": "Root cause: delivery.mode=announce conflicting with exec send. Fixed: delivery.mode=none."
     },
     {
       "name": "Security posture",
@@ -1222,7 +1221,7 @@
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Wed Apr 8, 2026, 7:20 PM ET",
+    "generated_local": "Wed Apr 8, 2026, 7:45 PM ET",
     "audit_summary": { "critical": 0, "warn": 4, "info": 1 },
     "validation": { "ok": true, "issues": [], "source": "manual-update-2026-04-08", "checked_at": "2026-04-08T23:20:00.000000+00:00" },
     "data_trust": "validated"
