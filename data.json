@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-08T16:05:07.153869+00:00",
+  "generated": "2026-04-08T20:05:04.082595+00:00",
   "roadmap": {
     "phases": [
       {
@@ -225,21 +225,21 @@
     ]
   },
   "summary": {
-    "total_agents": 74,
+    "total_agents": 73,
     "recurring_agents": 29,
-    "one_time_jobs": 31,
+    "one_time_jobs": 30,
     "healthy": 26,
     "warning": 0,
     "broken": 2,
-    "idle": 32,
+    "idle": 31,
     "revenue_aligned": 10,
     "est_monthly_ai_cost": 558.44,
-    "jobs_this_week": 42,
+    "jobs_this_week": 39,
     "disabled_jobs": 14,
     "revenue_direct": 7,
     "revenue_indirect": 3,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "Apr 8, 12:04 PM ET",
+    "next_job_time": "Apr 8, 4:04 PM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -1143,13 +1143,6 @@
       "status": "active"
     },
     {
-      "time": "Thu Apr 9, 7:30 AM ET",
-      "agents": "linkedin-analytics-7d-wed-apr2 + analytics-7d-wed-apr2",
-      "risk": "MEDIUM",
-      "note": "Concurrent scheduled runs",
-      "status": "active"
-    },
-    {
       "time": "Thu Apr 9, 8:00 AM ET",
       "agents": "daily-cost-sentinel + follow-up-ryan-ramales-paula-slacum",
       "risk": "MEDIUM",
@@ -1165,8 +1158,8 @@
     },
     {
       "time": "Fri Apr 10, 8:00 AM ET",
-      "agents": "analytics-7d-thu-apr3 + Analytics 48h \u2014 Conduit Quality post + LinkedIn \u2014 Nobody Teaches You",
-      "risk": "HIGH",
+      "agents": "analytics-7d-thu-apr3 + LinkedIn \u2014 Nobody Teaches You",
+      "risk": "MEDIUM",
       "note": "Concurrent scheduled runs",
       "status": "active"
     }
@@ -1313,7 +1306,7 @@
   "bold_recommendation": "You have 23 warm leads from the lead magnet launch (Apr 1), including healthcare executives, APP supervisors, and program directors. The highest-leverage move RIGHT NOW is converting these leads into consulting conversations before momentum fades. April 7 follow-ups are scheduled \u2014 make sure you personally reach out to the top 5: Heather James (Heart & Vascular APP Manager), Dawn Hughes (Healthcare CEO), Michael Sullivan (EVH Consulting LLC), Christian Trent (CT/Vascular Administrator), and Brian Fontenot (PharmD/MPAS/MBA). One call this week = $2,500. Five calls = $12,500. The Teachable course is on track for May 12 \u2014 Stripe is connected, course shell is built, 29 lessons live.",
   "bold_recommendation_impact": "\ud83d\udcb0 Immediate actions: (1) Send 5 personal outreach DMs this week \u00b7 (2) Prep Mitesh Patel briefing before Apr 9 call \u00b7 (3) Script Modules 4-5 before Apr 11 travel \u00b7 (4) Queue LinkedIn posts for Apr 11-26 window",
   "meta": {
-    "generated_local": "Wed Apr 8, 2026, 12:05 PM ET",
+    "generated_local": "Wed Apr 8, 2026, 4:05 PM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 4,
@@ -1323,7 +1316,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-08T16:05:07.154614+00:00"
+      "checked_at": "2026-04-08T20:05:04.083351+00:00"
     },
     "data_trust": "validated"
   },
@@ -1344,31 +1337,31 @@
     {
       "name": "Mitesh Patel Call Briefing Reminder",
       "when": "Apr 8, 7:00 PM ET",
-      "delta": "~6h 54m",
+      "delta": "~2h 54m",
       "reason": "Upcoming scheduled work"
     },
     {
-      "name": "linkedin-analytics-7d-wed-apr2",
+      "name": "analytics-7d-wed-apr2",
       "when": "Apr 9, 7:30 AM ET",
-      "delta": "~19h 24m",
+      "delta": "~15h 24m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-7d-thu-apr3",
       "when": "Apr 10, 8:00 AM ET",
-      "delta": "~1d 19h",
-      "reason": "Human follow-up / export likely needed"
-    },
-    {
-      "name": "Analytics 48h \u2014 Conduit Quality post",
-      "when": "Apr 10, 8:00 AM ET",
-      "delta": "~1d 19h",
+      "delta": "~1d 15h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "linkedin-analytics-7day-thu-apr3",
       "when": "Apr 10, 8:01 AM ET",
-      "delta": "~1d 19h",
+      "delta": "~1d 15h",
+      "reason": "Human follow-up / export likely needed"
+    },
+    {
+      "name": "analytics-7d-fri-apr4",
+      "when": "Apr 11, 7:45 AM ET",
+      "delta": "~2d 15h",
       "reason": "Human follow-up / export likely needed"
     }
   ],
@@ -1378,7 +1371,7 @@
       "date": "Apr 8",
       "items": [
         {
-          "time": "12:07 PM",
+          "time": "4:07 PM",
           "name": "consulting-pipeline-and-bookings-check",
           "category": "content",
           "conflict": false
@@ -1421,15 +1414,9 @@
         },
         {
           "time": "7:30 AM",
-          "name": "linkedin-analytics-7d-wed-apr2",
-          "category": "revenue",
-          "conflict": true
-        },
-        {
-          "time": "7:30 AM",
           "name": "analytics-7d-wed-apr2",
           "category": "revenue",
-          "conflict": true
+          "conflict": false
         },
         {
           "time": "7:45 AM",
@@ -1494,12 +1481,6 @@
         {
           "time": "8:00 AM",
           "name": "analytics-7d-thu-apr3",
-          "category": "revenue",
-          "conflict": true
-        },
-        {
-          "time": "8:00 AM",
-          "name": "Analytics 48h \u2014 Conduit Quality post",
           "category": "revenue",
           "conflict": true
         },
