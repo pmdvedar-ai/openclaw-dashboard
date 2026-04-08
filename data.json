@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-08T00:05:08.883067+00:00",
+  "generated": "2026-04-08T04:05:04.988796+00:00",
   "roadmap": {
     "phases": [
       {
@@ -239,7 +239,7 @@
     "revenue_direct": 7,
     "revenue_indirect": 3,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "Apr 7, 8:04 PM ET",
+    "next_job_time": "Apr 8, 12:04 AM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -1308,7 +1308,7 @@
   "bold_recommendation": "You have 23 warm leads from the lead magnet launch (Apr 1), including healthcare executives, APP supervisors, and program directors. The highest-leverage move RIGHT NOW is converting these leads into consulting conversations before momentum fades. April 7 follow-ups are scheduled \u2014 make sure you personally reach out to the top 5: Heather James (Heart & Vascular APP Manager), Dawn Hughes (Healthcare CEO), Michael Sullivan (EVH Consulting LLC), Christian Trent (CT/Vascular Administrator), and Brian Fontenot (PharmD/MPAS/MBA). One call this week = $2,500. Five calls = $12,500. The Teachable course is on track for May 12 \u2014 Stripe is connected, course shell is built, 29 lessons live.",
   "bold_recommendation_impact": "\ud83d\udcb0 Immediate actions: (1) Send 5 personal outreach DMs this week \u00b7 (2) Prep Mitesh Patel briefing before Apr 9 call \u00b7 (3) Script Modules 4-5 before Apr 11 travel \u00b7 (4) Queue LinkedIn posts for Apr 11-26 window",
   "meta": {
-    "generated_local": "Tue Apr 7, 2026, 8:05 PM ET",
+    "generated_local": "Wed Apr 8, 2026, 12:05 AM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 4,
@@ -1318,7 +1318,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-08T00:05:08.884045+00:00"
+      "checked_at": "2026-04-08T04:05:04.989763+00:00"
     },
     "data_trust": "validated"
   },
@@ -1339,51 +1339,45 @@
     {
       "name": "Mitesh Patel Call Briefing Reminder",
       "when": "Apr 8, 7:00 PM ET",
-      "delta": "~22h 54m",
+      "delta": "~18h 54m",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "linkedin-analytics-7d-wed-apr2",
       "when": "Apr 9, 7:30 AM ET",
-      "delta": "~1d 11h",
+      "delta": "~1d 7h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-7d-thu-apr3",
       "when": "Apr 10, 8:00 AM ET",
-      "delta": "~2d 11h",
+      "delta": "~2d 7h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "Analytics 48h \u2014 Conduit Quality post",
       "when": "Apr 10, 8:00 AM ET",
-      "delta": "~2d 11h",
+      "delta": "~2d 7h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "linkedin-analytics-7day-thu-apr3",
       "when": "Apr 10, 8:01 AM ET",
-      "delta": "~2d 11h",
+      "delta": "~2d 7h",
       "reason": "Human follow-up / export likely needed"
     }
   ],
   "calendar_days": [
     {
-      "label": "Tuesday",
-      "date": "Apr 7",
-      "items": [
-        {
-          "time": "8:07 PM",
-          "name": "consulting-pipeline-and-bookings-check",
-          "category": "content",
-          "conflict": false
-        }
-      ]
-    },
-    {
       "label": "Wednesday",
       "date": "Apr 8",
       "items": [
+        {
+          "time": "12:07 AM",
+          "name": "consulting-pipeline-and-bookings-check",
+          "category": "content",
+          "conflict": false
+        },
         {
           "time": "2:00 AM",
           "name": "nightly-backup",
@@ -1640,6 +1634,24 @@
           "time": "3:00 PM",
           "name": "Course Architect",
           "category": "revenue",
+          "conflict": false
+        }
+      ]
+    },
+    {
+      "label": "Tuesday",
+      "date": "Apr 14",
+      "items": [
+        {
+          "time": "11:00 AM",
+          "name": "Instagram Content Agent",
+          "category": "content",
+          "conflict": false
+        },
+        {
+          "time": "12:00 PM",
+          "name": "linkedin-peer-to-leader-tue-apr14",
+          "category": "content",
           "conflict": false
         }
       ]
