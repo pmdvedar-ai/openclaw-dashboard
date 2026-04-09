@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-09T01:30:29.885520+00:00",
+  "generated": "2026-04-09T04:05:08.358418+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -494,22 +494,22 @@
     ]
   },
   "summary": {
-    "total_agents": 77,
+    "total_agents": 86,
     "recurring_agents": 35,
-    "one_time_jobs": 28,
-    "healthy": 26,
+    "one_time_jobs": 37,
+    "healthy": 27,
     "warning": 0,
-    "broken": 2,
-    "idle": 35,
+    "broken": 1,
+    "idle": 44,
     "revenue_aligned": 17,
     "est_monthly_ai_cost": 558.44,
-    "jobs_this_week": 46,
+    "jobs_this_week": 45,
     "disabled_jobs": 14,
     "revenue_direct": 7,
     "revenue_indirect": 10,
-    "next_job_name": "consulting-pipeline-and-bookings-check",
-    "next_job_time": "Apr 8, 9:37 PM ET",
-    "next_job_delta": "~6m"
+    "next_job_name": "dashboard-regenerate-hourly",
+    "next_job_time": "Apr 9, 12:04 AM ET",
+    "next_job_delta": "now"
   },
   "agents": [
     {
@@ -1140,10 +1140,10 @@
       "delivery_target": "user:1485377509578244207",
       "session_target": "isolated",
       "timeout_seconds": 120,
-      "last_run": "Apr 8, 9:15 AM ET",
-      "last_run_status": "error",
-      "consecutive_errors": 1,
-      "status": "ERROR",
+      "last_run": "Apr 8, 11:35 PM ET",
+      "last_run_status": "ok",
+      "consecutive_errors": 0,
+      "status": "HEALTHY",
       "inputs": [
         "MEMORY.md",
         "projects/academy-lesson-breakdown.md"
@@ -1631,12 +1631,7 @@
     {
       "name": "ERROR - morning-draft-briefing",
       "status": "broken",
-      "description": "Consecutive errors: 2 | Last run: Apr 8, 8:05 AM ET | Next: Apr 9, 8:05 AM ET"
-    },
-    {
-      "name": "ERROR - launch-countdown-daily",
-      "status": "broken",
-      "description": "Consecutive errors: 1 | Last run: Apr 8, 9:15 AM ET | Next: Apr 9, 9:20 AM ET"
+      "description": "Consecutive errors: 3 | Last run: Apr 8, 11:27 PM ET | Next: Apr 9, 8:05 AM ET"
     },
     {
       "name": "Security posture",
@@ -1834,55 +1829,43 @@
     {
       "name": "analytics-7d-wed-apr2",
       "when": "Apr 9, 7:30 AM ET",
-      "delta": "~9h 59m",
+      "delta": "~7h 24m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-7d-thu-apr3",
       "when": "Apr 10, 8:05 AM ET",
-      "delta": "~1d 10h",
+      "delta": "~1d 7h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "linkedin-analytics-7day-thu-apr3",
       "when": "Apr 10, 8:10 AM ET",
-      "delta": "~1d 10h",
+      "delta": "~1d 8h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-7d-fri-apr4",
       "when": "Apr 11, 7:45 AM ET",
-      "delta": "~2d 10h",
+      "delta": "~2d 7h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "linkedin-analytics-7d-linkedin-post-fri-apr4",
       "when": "Apr 11, 7:46 AM ET",
-      "delta": "~2d 10h",
+      "delta": "~2d 7h",
       "reason": "Human follow-up / export likely needed"
     }
   ],
   "calendar_days": [
     {
-      "label": "Wednesday",
-      "date": "Apr 8",
-      "items": [
-        {
-          "time": "9:37 PM",
-          "name": "consulting-pipeline-and-bookings-check",
-          "category": "content",
-          "conflict": false
-        }
-      ]
-    },
-    {
       "label": "Thursday",
       "date": "Apr 9",
       "items": [
         {
-          "time": "12:04 AM",
-          "name": "dashboard-regenerate-hourly",
-          "category": "system",
+          "time": "12:09 AM",
+          "name": "consulting-pipeline-and-bookings-check",
+          "category": "content",
           "conflict": false
         },
         {
@@ -2162,6 +2145,30 @@
           "conflict": false
         }
       ]
+    },
+    {
+      "label": "Wednesday",
+      "date": "Apr 15",
+      "items": [
+        {
+          "time": "7:30 AM",
+          "name": "analytics-7d-tue-apr8",
+          "category": "revenue",
+          "conflict": false
+        },
+        {
+          "time": "8:15 AM",
+          "name": "execution-enforcer-midweek",
+          "category": "content",
+          "conflict": false
+        },
+        {
+          "time": "6:00 PM",
+          "name": "consulting-outreach-midweek",
+          "category": "revenue",
+          "conflict": false
+        }
+      ]
     }
   ],
   "security_posture": {
@@ -2173,12 +2180,12 @@
     },
     "main_exec_security": "allowlist",
     "main_exec_ask": "off",
-    "main_allowlist_count": 111,
+    "main_allowlist_count": 112,
     "sandbox": "mode: off scope: agent",
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Wed Apr 8, 2026, 9:30 PM ET",
+    "generated_local": "Thu Apr 9, 2026, 12:05 AM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 4,
@@ -2188,7 +2195,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-09T01:30:29.886488+00:00"
+      "checked_at": "2026-04-09T04:05:08.359219+00:00"
     },
     "data_trust": "validated"
   }
