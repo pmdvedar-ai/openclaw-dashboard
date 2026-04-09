@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-09T18:27:29.844743+00:00",
+  "generated": "2026-04-09T20:05:09.484434+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -497,19 +497,19 @@
     "total_agents": 95,
     "recurring_agents": 39,
     "one_time_jobs": 39,
-    "healthy": 27,
+    "healthy": 28,
     "warning": 0,
-    "broken": 1,
+    "broken": 0,
     "idle": 50,
     "revenue_aligned": 17,
     "est_monthly_ai_cost": 558.44,
-    "jobs_this_week": 51,
+    "jobs_this_week": 50,
     "disabled_jobs": 17,
     "revenue_direct": 7,
     "revenue_indirect": 10,
-    "next_job_name": "consulting-pipeline-and-bookings-check",
-    "next_job_time": "Apr 9, 2:39 PM ET",
-    "next_job_delta": "~11m"
+    "next_job_name": "dashboard-regenerate-hourly",
+    "next_job_time": "Apr 9, 4:04 PM ET",
+    "next_job_delta": "now"
   },
   "agents": [
     {
@@ -1629,11 +1629,6 @@
   },
   "health_issues": [
     {
-      "name": "ERROR - morning-draft-briefing",
-      "status": "broken",
-      "description": "Consecutive errors: 5 | Last run: Apr 9, 10:21 AM ET | Next: Apr 10, 8:05 AM ET"
-    },
-    {
       "name": "Security posture",
       "status": "warning",
       "description": "OpenClaw audit: 0 critical / 4 warn / 1 info"
@@ -1850,31 +1845,31 @@
     {
       "name": "pre-call-reminder-mitesh",
       "when": "Apr 9, 7:20 PM ET",
-      "delta": "~4h 52m",
+      "delta": "~3h 14m",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "analytics-7d-thu-apr3",
       "when": "Apr 10, 8:05 AM ET",
-      "delta": "~17h 37m",
+      "delta": "~15h 59m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "linkedin-analytics-7day-thu-apr3",
       "when": "Apr 10, 8:10 AM ET",
-      "delta": "~17h 42m",
+      "delta": "~16h 4m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-7d-fri-apr4",
       "when": "Apr 11, 7:45 AM ET",
-      "delta": "~1d 17h",
+      "delta": "~1d 15h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "linkedin-analytics-7d-linkedin-post-fri-apr4",
       "when": "Apr 11, 7:46 AM ET",
-      "delta": "~1d 17h",
+      "delta": "~1d 15h",
       "reason": "Human follow-up / export likely needed"
     }
   ],
@@ -1884,15 +1879,9 @@
       "date": "Apr 9",
       "items": [
         {
-          "time": "2:39 PM",
+          "time": "4:09 PM",
           "name": "consulting-pipeline-and-bookings-check",
           "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "4:04 PM",
-          "name": "dashboard-regenerate-hourly",
-          "category": "system",
           "conflict": false
         },
         {
@@ -2224,7 +2213,7 @@
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Thu Apr 9, 2026, 2:27 PM ET",
+    "generated_local": "Thu Apr 9, 2026, 4:05 PM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 4,
@@ -2234,7 +2223,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-09T18:27:29.845610+00:00"
+      "checked_at": "2026-04-09T20:05:09.485404+00:00"
     },
     "data_trust": "validated"
   }
