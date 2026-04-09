@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-09T08:05:09.672108+00:00",
+  "generated": "2026-04-09T12:05:28.336603+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -496,19 +496,19 @@
   "summary": {
     "total_agents": 89,
     "recurring_agents": 37,
-    "one_time_jobs": 38,
+    "one_time_jobs": 36,
     "healthy": 27,
     "warning": 0,
     "broken": 1,
-    "idle": 47,
+    "idle": 45,
     "revenue_aligned": 17,
     "est_monthly_ai_cost": 558.44,
-    "jobs_this_week": 47,
-    "disabled_jobs": 14,
+    "jobs_this_week": 46,
+    "disabled_jobs": 16,
     "revenue_direct": 7,
     "revenue_indirect": 10,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "Apr 9, 4:04 AM ET",
+    "next_job_time": "Apr 9, 8:04 AM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -833,7 +833,7 @@
       "delivery_target": "6394048111",
       "session_target": "isolated",
       "timeout_seconds": 600,
-      "last_run": "Apr 8, 8:00 AM ET",
+      "last_run": "Apr 9, 8:00 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -856,7 +856,7 @@
       ],
       "value": "SUPPORTING SYSTEM",
       "notes": "Timeout 300\u2192600s fixed Apr 1. Collector runs at 7:45 AM for 15-min buffer.",
-      "next_run": "Apr 9, 8:00 AM ET",
+      "next_run": "Apr 10, 8:00 AM ET",
       "enabled": true
     },
     {
@@ -872,7 +872,7 @@
       "delivery_target": "6394048111",
       "session_target": "isolated",
       "timeout_seconds": 120,
-      "last_run": "Apr 8, 7:45 AM ET",
+      "last_run": "Apr 9, 7:45 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -889,7 +889,7 @@
       ],
       "value": "SUPPORTING SYSTEM",
       "notes": "Runs 15 min before sentinel.",
-      "next_run": "Apr 9, 7:45 AM ET",
+      "next_run": "Apr 10, 7:45 AM ET",
       "enabled": true
     },
     {
@@ -1671,8 +1671,15 @@
   ],
   "timing_conflicts": [
     {
-      "time": "Thu Apr 9, 8:00 AM ET",
-      "agents": "daily-cost-sentinel + follow-up-ryan-ramales-paula-slacum",
+      "time": "Fri Apr 10, 8:00 AM ET",
+      "agents": "daily-cost-sentinel + LinkedIn \u2014 Nobody Teaches You",
+      "risk": "MEDIUM",
+      "note": "Concurrent scheduled runs",
+      "status": "active"
+    },
+    {
+      "time": "Thu Apr 16, 8:00 AM ET",
+      "agents": "LinkedIn \u2014 Institutional Knowledge Walks Out + Analytics 48h \u2014 Conduit Quality Is a Training System Problem",
       "risk": "MEDIUM",
       "note": "Concurrent scheduled runs",
       "status": "active"
@@ -1827,33 +1834,33 @@
   "bold_recommendation_impact": "\ud83d\udcb0 Gate: (1) Call executed \u00b7 (2) Case seed filed with verbatim language \u00b7 (3) Artifact passes decision-impact check A/B/C \u00b7 (4) Buyer-visible integration on one surface \u00b7 (5) Enforcer evaluates Apr 15",
   "action_queue": [
     {
-      "name": "analytics-7d-wed-apr2",
-      "when": "Apr 9, 7:30 AM ET",
-      "delta": "~3h 24m",
-      "reason": "Human follow-up / export likely needed"
-    },
-    {
       "name": "analytics-7d-thu-apr3",
       "when": "Apr 10, 8:05 AM ET",
-      "delta": "~1d 3h",
+      "delta": "~23h 59m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "linkedin-analytics-7day-thu-apr3",
       "when": "Apr 10, 8:10 AM ET",
-      "delta": "~1d 4h",
+      "delta": "~1d",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-7d-fri-apr4",
       "when": "Apr 11, 7:45 AM ET",
-      "delta": "~2d 3h",
+      "delta": "~1d 23h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "linkedin-analytics-7d-linkedin-post-fri-apr4",
       "when": "Apr 11, 7:46 AM ET",
-      "delta": "~2d 3h",
+      "delta": "~1d 23h",
+      "reason": "Human follow-up / export likely needed"
+    },
+    {
+      "name": "Analytics 48h \u2014 Nobody Teaches You",
+      "when": "Apr 12, 8:00 AM ET",
+      "delta": "~2d 23h",
       "reason": "Human follow-up / export likely needed"
     }
   ],
@@ -1863,39 +1870,9 @@
       "date": "Apr 9",
       "items": [
         {
-          "time": "4:09 AM",
+          "time": "8:09 AM",
           "name": "consulting-pipeline-and-bookings-check",
           "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "7:30 AM",
-          "name": "analytics-7d-wed-apr2",
-          "category": "revenue",
-          "conflict": false
-        },
-        {
-          "time": "7:45 AM",
-          "name": "daily-cost-collector",
-          "category": "finance",
-          "conflict": false
-        },
-        {
-          "time": "8:00 AM",
-          "name": "daily-cost-sentinel",
-          "category": "finance",
-          "conflict": true
-        },
-        {
-          "time": "8:00 AM",
-          "name": "follow-up-ryan-ramales-paula-slacum",
-          "category": "content",
-          "conflict": true
-        },
-        {
-          "time": "8:05 AM",
-          "name": "morning-draft-briefing",
-          "category": "revenue",
           "conflict": false
         },
         {
@@ -1965,10 +1942,22 @@
           "conflict": false
         },
         {
+          "time": "7:45 AM",
+          "name": "daily-cost-collector",
+          "category": "finance",
+          "conflict": false
+        },
+        {
+          "time": "8:00 AM",
+          "name": "daily-cost-sentinel",
+          "category": "finance",
+          "conflict": true
+        },
+        {
           "time": "8:00 AM",
           "name": "LinkedIn \u2014 Nobody Teaches You",
           "category": "content",
-          "conflict": false
+          "conflict": true
         },
         {
           "time": "8:05 AM",
@@ -2192,12 +2181,12 @@
     },
     "main_exec_security": "allowlist",
     "main_exec_ask": "off",
-    "main_allowlist_count": 112,
+    "main_allowlist_count": 123,
     "sandbox": "mode: off scope: agent",
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Thu Apr 9, 2026, 4:05 AM ET",
+    "generated_local": "Thu Apr 9, 2026, 8:05 AM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 4,
@@ -2207,7 +2196,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-09T08:05:09.672943+00:00"
+      "checked_at": "2026-04-09T12:05:28.337455+00:00"
     },
     "data_trust": "validated"
   }
