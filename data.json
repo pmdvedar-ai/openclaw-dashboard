@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-09T00:05:06.645907+00:00",
+  "generated": "2026-04-09T01:30:29.885520+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -24,17 +24,17 @@
         "name": "Kaci Hardsock, PA-C",
         "role": "CT Surgery PA / National Student Advisor",
         "date": "Apr 8, 8:00 PM ET",
-        "status": "tonight",
-        "outcome": null,
+        "status": "complete",
+        "outcome": "Strong peer connection. Beta reviewer for Course 1 confirmed. Key pain: tribal knowledge leaves with the lead APP. Differentiation flag: Course 2 sounded like APACVS content \u2014 need stronger sales copy angle.",
         "tier": "peer-validator",
-        "next_action": "Tonight. Open: 'Tell me what it looked like when those mentees left.'",
-        "next_due": "2026-04-08"
+        "next_action": "Send Course 1 outline before Apr 11 departure.",
+        "next_due": "2026-04-11"
       },
       {
         "name": "Mitesh J. Patel, MBA, MSHS, PA-C",
         "role": "CV & Thoracic Surgery PA \u2014 Baylor Scott & White",
         "date": "Apr 9, 7:30 PM ET",
-        "status": "tomorrow",
+        "status": "tonight",
         "outcome": null,
         "tier": "hot-prospect",
         "next_action": "Prep done. Gate: admin wants APP efficiency KPIs + STS attribution. 5-gate completion.",
@@ -503,13 +503,13 @@
     "idle": 35,
     "revenue_aligned": 17,
     "est_monthly_ai_cost": 558.44,
-    "jobs_this_week": 45,
+    "jobs_this_week": 46,
     "disabled_jobs": 14,
     "revenue_direct": 7,
     "revenue_indirect": 10,
-    "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "Apr 8, 8:04 PM ET",
-    "next_job_delta": "now"
+    "next_job_name": "consulting-pipeline-and-bookings-check",
+    "next_job_time": "Apr 8, 9:37 PM ET",
+    "next_job_delta": "~6m"
   },
   "agents": [
     {
@@ -1155,7 +1155,7 @@
       "downstream": [],
       "value": "DIRECT REVENUE",
       "notes": "\u26a0\ufe0f 1 consecutive error Apr 8. Needs diagnosis \u2014 likely delivery config.",
-      "next_run": "Apr 9, 9:15 AM ET",
+      "next_run": "Apr 9, 9:20 AM ET",
       "enabled": true
     },
     {
@@ -1398,7 +1398,7 @@
       "downstream": [],
       "value": "INDIRECT REVENUE",
       "notes": "13 posts registered. Read-only \u2014 prompt changes require Pol approval.",
-      "next_run": "Apr 13, 8:15 AM ET",
+      "next_run": "Apr 13, 8:25 AM ET",
       "enabled": true
     }
   ],
@@ -1636,7 +1636,7 @@
     {
       "name": "ERROR - launch-countdown-daily",
       "status": "broken",
-      "description": "Consecutive errors: 1 | Last run: Apr 8, 9:15 AM ET | Next: Apr 9, 9:15 AM ET"
+      "description": "Consecutive errors: 1 | Last run: Apr 8, 9:15 AM ET | Next: Apr 9, 9:20 AM ET"
     },
     {
       "name": "Security posture",
@@ -1644,14 +1644,19 @@
       "description": "OpenClaw audit: 0 critical / 4 warn / 1 info"
     },
     {
-      "name": "\u2705 launch-countdown-daily \u2014 Fixed Apr 8",
+      "name": "\u2705 launch-countdown-daily \u2014 Fixed Apr 8 + rescheduled 9:20 AM",
       "status": "resolved",
-      "description": "Root cause: delivery.mode=announce conflicting with exec send. Fixed: delivery.mode=none, payload updated with dynamic day calc + Course 1 completion status."
+      "description": "Root cause: delivery.mode=announce conflicting with exec send. Fixed Apr 8. Moved 9:15\u21929:20 AM to eliminate collision with security-sentinel. Error counter clears tomorrow morning."
     },
     {
       "name": "\u2705 morning-draft-briefing \u2014 Fixed Apr 8",
       "status": "resolved",
-      "description": "Root cause: delivery.mode=announce conflicting with exec send. Fixed: delivery.mode=none."
+      "description": "Root cause: delivery.mode=announce conflicting with exec send. Fixed: delivery.mode=none. Error counter clears on next successful run Apr 9, 8:05 AM."
+    },
+    {
+      "name": "\u2705 Mon 8:15 AM collision \u2014 Fixed Apr 8",
+      "status": "resolved",
+      "description": "behavioral-learning-weekly-patterns shifted to 8:25 AM. competitive-monitor-weekly stays 8:15 AM. No more simultaneous Monday runs."
     },
     {
       "name": "\u2705 Memory Governance Daily \u2014 Fixed Apr 1",
@@ -1667,31 +1672,12 @@
       "name": "\u2705 Strategy Office \u2014 Built Apr 8",
       "status": "resolved",
       "description": "6 agents live. Thesis locked v1. Execution Enforcer first run Apr 15. Board (Skeptic/Investor/Offer Audit) first run May 4."
-    },
-    {
-      "name": "\u2705 Instagram Content Agent \u2014 Fixed Apr 2",
-      "status": "resolved",
-      "description": "Model switched GPT-5.4 \u2192 Sonnet. 0 consecutive errors."
     }
   ],
   "timing_conflicts": [
     {
       "time": "Thu Apr 9, 8:00 AM ET",
       "agents": "daily-cost-sentinel + follow-up-ryan-ramales-paula-slacum",
-      "risk": "MEDIUM",
-      "note": "Concurrent scheduled runs",
-      "status": "active"
-    },
-    {
-      "time": "Thu Apr 9, 9:15 AM ET",
-      "agents": "security-sentinel + launch-countdown-daily",
-      "risk": "MEDIUM",
-      "note": "Concurrent scheduled runs",
-      "status": "active"
-    },
-    {
-      "time": "Mon Apr 13, 8:15 AM ET",
-      "agents": "behavioral-learning-weekly-patterns + competitive-monitor-weekly",
       "risk": "MEDIUM",
       "note": "Concurrent scheduled runs",
       "status": "active"
@@ -1786,7 +1772,7 @@
   "top_weaknesses": [
     "Revenue is still $0. System costs $558/mo. Mitesh Patel tomorrow (Apr 9) is the single highest-leverage move \u2014 one signed Tier 1 = $2,500, Tier 2 likely = $6\u201310k.",
     "Travel window Apr 11\u201326 is 3 days away. 6 pre-travel checklist items \u2014 3 still open. LinkedIn posts need to be queued for the full 15-day window.",
-    "Launch Countdown Daily throwing errors (1 consecutive). Needs diagnosis before Apr 9 morning.",
+    "Course 2 \u2014 Module scripts reviewed, but on-camera modules (1, 6.3, 7.3+7.4, 8) still need Pol post-travel. ElevenLabs quota resets Apr 24 for the 15 blocked AI lessons.",
     "ElevenLabs quota blocks 15 of 25 Course 2 videos until Apr 24. On-camera modules (1, 6.3, 7.3+7.4, 8) still need Pol on camera post-travel.",
     "8 follow-ups due Apr 15 \u2014 Erin Switzer MacMillan (VCU), Jonathan Kiemel (Amelia), Claire Cavatorta (Brigham), Eddie Kazlauskas (Wellstar), Ryan Ramales, Kimberly Kim, Erika Francis, Robert Arledge."
   ],
@@ -1837,9 +1823,9 @@
       "completed": null
     },
     {
-      "item": "Diagnose + fix launch-countdown-daily errors",
-      "status": "\ud83d\udd34 PENDING",
-      "completed": null
+      "item": "Diagnose + fix launch-countdown-daily + morning-draft-briefing errors",
+      "status": "\u2705 DONE \u2014 Apr 8 (delivery.mode fixed, launch-countdown rescheduled 9:20 AM, Mon 8:15 collision fixed)",
+      "completed": "2026-04-08"
     }
   ],
   "bold_recommendation": "Mitesh Patel calls tomorrow at 7:30 PM ET. This is your first real consulting conversation with a prospect whose admin is already asking for APP efficiency KPIs and STS attribution. Let him set the scene for the first 5 minutes \u2014 don't pitch, don't over-explain. Walk through the 4-category framework. The case seed at consulting/case-seeds/mitesh-patel.md must contain his verbatim pain language \u2014 that language becomes your next offer page, your next LinkedIn post, your next sales script. One good call doesn't close a deal. One good call with rigorous documentation compounds forever.",
@@ -1848,31 +1834,31 @@
     {
       "name": "analytics-7d-wed-apr2",
       "when": "Apr 9, 7:30 AM ET",
-      "delta": "~11h 24m",
+      "delta": "~9h 59m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-7d-thu-apr3",
       "when": "Apr 10, 8:05 AM ET",
-      "delta": "~1d 11h",
+      "delta": "~1d 10h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "linkedin-analytics-7day-thu-apr3",
       "when": "Apr 10, 8:10 AM ET",
-      "delta": "~1d 12h",
+      "delta": "~1d 10h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-7d-fri-apr4",
       "when": "Apr 11, 7:45 AM ET",
-      "delta": "~2d 11h",
+      "delta": "~2d 10h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "linkedin-analytics-7d-linkedin-post-fri-apr4",
       "when": "Apr 11, 7:46 AM ET",
-      "delta": "~2d 11h",
+      "delta": "~2d 10h",
       "reason": "Human follow-up / export likely needed"
     }
   ],
@@ -1882,7 +1868,7 @@
       "date": "Apr 8",
       "items": [
         {
-          "time": "8:07 PM",
+          "time": "9:37 PM",
           "name": "consulting-pipeline-and-bookings-check",
           "category": "content",
           "conflict": false
@@ -1893,6 +1879,12 @@
       "label": "Thursday",
       "date": "Apr 9",
       "items": [
+        {
+          "time": "12:04 AM",
+          "name": "dashboard-regenerate-hourly",
+          "category": "system",
+          "conflict": false
+        },
         {
           "time": "2:00 AM",
           "name": "nightly-backup",
@@ -1963,13 +1955,13 @@
           "time": "9:15 AM",
           "name": "security-sentinel",
           "category": "system",
-          "conflict": true
+          "conflict": false
         },
         {
-          "time": "9:15 AM",
+          "time": "9:20 AM",
           "name": "launch-countdown-daily",
           "category": "system",
-          "conflict": true
+          "conflict": false
         }
       ]
     },
@@ -2087,15 +2079,15 @@
         },
         {
           "time": "8:15 AM",
-          "name": "behavioral-learning-weekly-patterns",
-          "category": "system",
-          "conflict": true
-        },
-        {
-          "time": "8:15 AM",
           "name": "competitive-monitor-weekly",
           "category": "content",
-          "conflict": true
+          "conflict": false
+        },
+        {
+          "time": "8:25 AM",
+          "name": "behavioral-learning-weekly-patterns",
+          "category": "system",
+          "conflict": false
         },
         {
           "time": "8:30 AM",
@@ -2186,7 +2178,7 @@
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Wed Apr 8, 2026, 8:05 PM ET",
+    "generated_local": "Wed Apr 8, 2026, 9:30 PM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 4,
@@ -2196,7 +2188,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-09T00:05:06.646692+00:00"
+      "checked_at": "2026-04-09T01:30:29.886488+00:00"
     },
     "data_trust": "validated"
   }
