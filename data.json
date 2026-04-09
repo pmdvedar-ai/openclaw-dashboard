@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-09T16:05:06.178621+00:00",
+  "generated": "2026-04-09T18:27:29.844743+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -494,22 +494,22 @@
     ]
   },
   "summary": {
-    "total_agents": 92,
+    "total_agents": 95,
     "recurring_agents": 39,
-    "one_time_jobs": 37,
+    "one_time_jobs": 39,
     "healthy": 27,
     "warning": 0,
     "broken": 1,
-    "idle": 48,
+    "idle": 50,
     "revenue_aligned": 17,
     "est_monthly_ai_cost": 558.44,
-    "jobs_this_week": 49,
-    "disabled_jobs": 16,
+    "jobs_this_week": 51,
+    "disabled_jobs": 17,
     "revenue_direct": 7,
     "revenue_indirect": 10,
-    "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "Apr 9, 12:04 PM ET",
-    "next_job_delta": "now"
+    "next_job_name": "consulting-pipeline-and-bookings-check",
+    "next_job_time": "Apr 9, 2:39 PM ET",
+    "next_job_delta": "~11m"
   },
   "agents": [
     {
@@ -1848,33 +1848,33 @@
   "bold_recommendation_impact": "\ud83d\udcb0 Gate: (1) Call executed \u00b7 (2) Case seed filed with verbatim language \u00b7 (3) Artifact passes decision-impact check A/B/C \u00b7 (4) Buyer-visible integration on one surface \u00b7 (5) Enforcer evaluates Apr 15",
   "action_queue": [
     {
-      "name": "Erin MacMillan call reminder",
-      "when": "Apr 9, 12:45 PM ET",
-      "delta": "~39m",
+      "name": "pre-call-reminder-mitesh",
+      "when": "Apr 9, 7:20 PM ET",
+      "delta": "~4h 52m",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "analytics-7d-thu-apr3",
       "when": "Apr 10, 8:05 AM ET",
-      "delta": "~19h 59m",
+      "delta": "~17h 37m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "linkedin-analytics-7day-thu-apr3",
       "when": "Apr 10, 8:10 AM ET",
-      "delta": "~20h 4m",
+      "delta": "~17h 42m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-7d-fri-apr4",
       "when": "Apr 11, 7:45 AM ET",
-      "delta": "~1d 19h",
+      "delta": "~1d 17h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "linkedin-analytics-7d-linkedin-post-fri-apr4",
       "when": "Apr 11, 7:46 AM ET",
-      "delta": "~1d 19h",
+      "delta": "~1d 17h",
       "reason": "Human follow-up / export likely needed"
     }
   ],
@@ -1884,21 +1884,27 @@
       "date": "Apr 9",
       "items": [
         {
-          "time": "12:09 PM",
+          "time": "2:39 PM",
           "name": "consulting-pipeline-and-bookings-check",
           "category": "content",
           "conflict": false
         },
         {
-          "time": "12:45 PM",
-          "name": "Erin MacMillan call reminder",
-          "category": "revenue",
+          "time": "4:04 PM",
+          "name": "dashboard-regenerate-hourly",
+          "category": "system",
           "conflict": false
         },
         {
           "time": "4:10 PM",
           "name": "Agent Commands Watcher",
           "category": "system",
+          "conflict": false
+        },
+        {
+          "time": "7:20 PM",
+          "name": "pre-call-reminder-mitesh",
+          "category": "revenue",
           "conflict": false
         }
       ]
@@ -2213,12 +2219,12 @@
     },
     "main_exec_security": "allowlist",
     "main_exec_ask": "off",
-    "main_allowlist_count": 123,
+    "main_allowlist_count": 126,
     "sandbox": "mode: off scope: agent",
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Thu Apr 9, 2026, 12:05 PM ET",
+    "generated_local": "Thu Apr 9, 2026, 2:27 PM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 4,
@@ -2228,7 +2234,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-09T16:05:06.179467+00:00"
+      "checked_at": "2026-04-09T18:27:29.845610+00:00"
     },
     "data_trust": "validated"
   }
