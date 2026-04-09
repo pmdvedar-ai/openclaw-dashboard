@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-09T04:05:08.358418+00:00",
+  "generated": "2026-04-09T08:05:09.672108+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -494,21 +494,21 @@
     ]
   },
   "summary": {
-    "total_agents": 86,
-    "recurring_agents": 35,
-    "one_time_jobs": 37,
+    "total_agents": 89,
+    "recurring_agents": 37,
+    "one_time_jobs": 38,
     "healthy": 27,
     "warning": 0,
     "broken": 1,
-    "idle": 44,
+    "idle": 47,
     "revenue_aligned": 17,
     "est_monthly_ai_cost": 558.44,
-    "jobs_this_week": 45,
+    "jobs_this_week": 47,
     "disabled_jobs": 14,
     "revenue_direct": 7,
     "revenue_indirect": 10,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "Apr 9, 12:04 AM ET",
+    "next_job_time": "Apr 9, 4:04 AM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -1108,7 +1108,7 @@
       "delivery_target": "channel:1485490618636570805",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "Apr 8, 2:00 AM ET",
+      "last_run": "Apr 9, 2:00 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -1124,7 +1124,7 @@
       "downstream": [],
       "value": "SUPPORTING SYSTEM",
       "notes": "Fixed Apr 1 \u2014 pre-commit secret leak check added.",
-      "next_run": "Apr 9, 2:00 AM ET",
+      "next_run": "Apr 10, 2:00 AM ET",
       "enabled": true
     },
     {
@@ -1829,31 +1829,31 @@
     {
       "name": "analytics-7d-wed-apr2",
       "when": "Apr 9, 7:30 AM ET",
-      "delta": "~7h 24m",
+      "delta": "~3h 24m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-7d-thu-apr3",
       "when": "Apr 10, 8:05 AM ET",
-      "delta": "~1d 7h",
+      "delta": "~1d 3h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "linkedin-analytics-7day-thu-apr3",
       "when": "Apr 10, 8:10 AM ET",
-      "delta": "~1d 8h",
+      "delta": "~1d 4h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-7d-fri-apr4",
       "when": "Apr 11, 7:45 AM ET",
-      "delta": "~2d 7h",
+      "delta": "~2d 3h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "linkedin-analytics-7d-linkedin-post-fri-apr4",
       "when": "Apr 11, 7:46 AM ET",
-      "delta": "~2d 7h",
+      "delta": "~2d 3h",
       "reason": "Human follow-up / export likely needed"
     }
   ],
@@ -1863,20 +1863,8 @@
       "date": "Apr 9",
       "items": [
         {
-          "time": "12:09 AM",
+          "time": "4:09 AM",
           "name": "consulting-pipeline-and-bookings-check",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "2:00 AM",
-          "name": "nightly-backup",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "2:15 AM",
-          "name": "self-learning-daily-cycle",
           "category": "content",
           "conflict": false
         },
@@ -1952,6 +1940,30 @@
       "label": "Friday",
       "date": "Apr 10",
       "items": [
+        {
+          "time": "1:16 AM",
+          "name": "Pending Review Auto-Archive",
+          "category": "content",
+          "conflict": false
+        },
+        {
+          "time": "1:50 AM",
+          "name": "daily-exception-report",
+          "category": "content",
+          "conflict": false
+        },
+        {
+          "time": "2:00 AM",
+          "name": "nightly-backup-test",
+          "category": "system",
+          "conflict": false
+        },
+        {
+          "time": "2:15 AM",
+          "name": "self-learning-daily-cycle",
+          "category": "content",
+          "conflict": false
+        },
         {
           "time": "8:00 AM",
           "name": "LinkedIn \u2014 Nobody Teaches You",
@@ -2185,7 +2197,7 @@
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Thu Apr 9, 2026, 12:05 AM ET",
+    "generated_local": "Thu Apr 9, 2026, 4:05 AM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 4,
@@ -2195,7 +2207,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-09T04:05:08.359219+00:00"
+      "checked_at": "2026-04-09T08:05:09.672943+00:00"
     },
     "data_trust": "validated"
   }
