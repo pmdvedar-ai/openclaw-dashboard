@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-10T00:05:07.334859+00:00",
+  "generated": "2026-04-10T04:05:10.272595+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -494,21 +494,21 @@
     ]
   },
   "summary": {
-    "total_agents": 94,
-    "recurring_agents": 39,
-    "one_time_jobs": 38,
-    "healthy": 28,
+    "total_agents": 96,
+    "recurring_agents": 40,
+    "one_time_jobs": 39,
+    "healthy": 29,
     "warning": 0,
     "broken": 0,
-    "idle": 49,
+    "idle": 50,
     "revenue_aligned": 17,
     "est_monthly_ai_cost": 558.44,
-    "jobs_this_week": 49,
+    "jobs_this_week": 50,
     "disabled_jobs": 17,
     "revenue_direct": 7,
     "revenue_indirect": 10,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "Apr 9, 8:04 PM ET",
+    "next_job_time": "Apr 10, 12:04 AM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -1687,6 +1687,13 @@
       "status": "active"
     },
     {
+      "time": "Mon Apr 13, 8:00 AM ET",
+      "agents": "System Health Sentinel + weekly-build-plan",
+      "risk": "MEDIUM",
+      "note": "Concurrent scheduled runs",
+      "status": "active"
+    },
+    {
       "time": "Mon Apr 13, 9:00 AM ET",
       "agents": "weekly-mode-signal + Content Drafts Scout",
       "risk": "MEDIUM",
@@ -1852,51 +1859,45 @@
     {
       "name": "analytics-7d-thu-apr3",
       "when": "Apr 10, 8:05 AM ET",
-      "delta": "~11h 59m",
+      "delta": "~7h 59m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "linkedin-analytics-7day-thu-apr3",
       "when": "Apr 10, 8:10 AM ET",
-      "delta": "~12h 4m",
+      "delta": "~8h 4m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-7d-fri-apr4",
       "when": "Apr 11, 7:45 AM ET",
-      "delta": "~1d 11h",
+      "delta": "~1d 7h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "linkedin-analytics-7d-linkedin-post-fri-apr4",
       "when": "Apr 11, 7:46 AM ET",
-      "delta": "~1d 11h",
+      "delta": "~1d 7h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "Analytics 48h \u2014 Nobody Teaches You",
       "when": "Apr 12, 8:00 AM ET",
-      "delta": "~2d 11h",
+      "delta": "~2d 7h",
       "reason": "Human follow-up / export likely needed"
     }
   ],
   "calendar_days": [
     {
-      "label": "Thursday",
-      "date": "Apr 9",
-      "items": [
-        {
-          "time": "8:09 PM",
-          "name": "consulting-pipeline-and-bookings-check",
-          "category": "content",
-          "conflict": false
-        }
-      ]
-    },
-    {
       "label": "Friday",
       "date": "Apr 10",
       "items": [
+        {
+          "time": "12:09 AM",
+          "name": "consulting-pipeline-and-bookings-check",
+          "category": "content",
+          "conflict": false
+        },
         {
           "time": "1:16 AM",
           "name": "Pending Review Auto-Archive",
@@ -2081,7 +2082,13 @@
           "time": "8:00 AM",
           "name": "System Health Sentinel",
           "category": "system",
-          "conflict": false
+          "conflict": true
+        },
+        {
+          "time": "8:00 AM",
+          "name": "weekly-build-plan",
+          "category": "content",
+          "conflict": true
         },
         {
           "time": "8:15 AM",
@@ -2198,6 +2205,30 @@
           "conflict": false
         }
       ]
+    },
+    {
+      "label": "Thursday",
+      "date": "Apr 16",
+      "items": [
+        {
+          "time": "8:00 AM",
+          "name": "LinkedIn \u2014 Institutional Knowledge Walks Out",
+          "category": "content",
+          "conflict": true
+        },
+        {
+          "time": "8:00 AM",
+          "name": "Analytics 48h \u2014 Conduit Quality Is a Training System Problem",
+          "category": "revenue",
+          "conflict": true
+        },
+        {
+          "time": "12:00 PM",
+          "name": "Nicholas Horvath follow-up reminder",
+          "category": "content",
+          "conflict": false
+        }
+      ]
     }
   ],
   "security_posture": {
@@ -2209,12 +2240,12 @@
     },
     "main_exec_security": "allowlist",
     "main_exec_ask": "off",
-    "main_allowlist_count": 126,
+    "main_allowlist_count": 130,
     "sandbox": "mode: off scope: agent",
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Thu Apr 9, 2026, 8:05 PM ET",
+    "generated_local": "Fri Apr 10, 2026, 12:05 AM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 4,
@@ -2224,7 +2255,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-10T00:05:07.335576+00:00"
+      "checked_at": "2026-04-10T04:05:10.273346+00:00"
     },
     "data_trust": "validated"
   }
