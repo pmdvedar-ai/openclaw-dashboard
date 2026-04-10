@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-10T04:05:10.272595+00:00",
+  "generated": "2026-04-10T08:05:12.847562+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -499,8 +499,8 @@
     "one_time_jobs": 39,
     "healthy": 29,
     "warning": 0,
-    "broken": 0,
-    "idle": 50,
+    "broken": 2,
+    "idle": 48,
     "revenue_aligned": 17,
     "est_monthly_ai_cost": 558.44,
     "jobs_this_week": 50,
@@ -508,7 +508,7 @@
     "revenue_direct": 7,
     "revenue_indirect": 10,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "Apr 10, 12:04 AM ET",
+    "next_job_time": "Apr 10, 4:04 AM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -1108,7 +1108,7 @@
       "delivery_target": "channel:1485490618636570805",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "Apr 9, 2:00 AM ET",
+      "last_run": "Apr 10, 2:00 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -1124,7 +1124,7 @@
       "downstream": [],
       "value": "SUPPORTING SYSTEM",
       "notes": "Fixed Apr 1 \u2014 pre-commit secret leak check added.",
-      "next_run": "Apr 10, 2:00 AM ET",
+      "next_run": "Apr 11, 2:00 AM ET",
       "enabled": true
     },
     {
@@ -1629,6 +1629,16 @@
   },
   "health_issues": [
     {
+      "name": "ERROR - Pending Review Auto-Archive",
+      "status": "broken",
+      "description": "Consecutive errors: 1 | Last run: Apr 10, 1:16 AM ET | Next: Apr 10, 9:30 AM ET"
+    },
+    {
+      "name": "ERROR - daily-exception-report",
+      "status": "broken",
+      "description": "Consecutive errors: 1 | Last run: Apr 10, 1:50 AM ET | Next: Apr 10, 9:45 AM ET"
+    },
+    {
       "name": "Security posture",
       "status": "warning",
       "description": "OpenClaw audit: 0 critical / 4 warn / 1 info"
@@ -1859,31 +1869,31 @@
     {
       "name": "analytics-7d-thu-apr3",
       "when": "Apr 10, 8:05 AM ET",
-      "delta": "~7h 59m",
+      "delta": "~3h 59m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "linkedin-analytics-7day-thu-apr3",
       "when": "Apr 10, 8:10 AM ET",
-      "delta": "~8h 4m",
+      "delta": "~4h 4m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-7d-fri-apr4",
       "when": "Apr 11, 7:45 AM ET",
-      "delta": "~1d 7h",
+      "delta": "~1d 3h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "linkedin-analytics-7d-linkedin-post-fri-apr4",
       "when": "Apr 11, 7:46 AM ET",
-      "delta": "~1d 7h",
+      "delta": "~1d 3h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "Analytics 48h \u2014 Nobody Teaches You",
       "when": "Apr 12, 8:00 AM ET",
-      "delta": "~2d 7h",
+      "delta": "~2d 3h",
       "reason": "Human follow-up / export likely needed"
     }
   ],
@@ -1893,32 +1903,8 @@
       "date": "Apr 10",
       "items": [
         {
-          "time": "12:09 AM",
+          "time": "4:09 AM",
           "name": "consulting-pipeline-and-bookings-check",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "1:16 AM",
-          "name": "Pending Review Auto-Archive",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "1:50 AM",
-          "name": "daily-exception-report",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "2:00 AM",
-          "name": "nightly-backup-test",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "2:15 AM",
-          "name": "self-learning-daily-cycle",
           "category": "content",
           "conflict": false
         },
@@ -1995,6 +1981,18 @@
           "conflict": false
         },
         {
+          "time": "9:30 AM",
+          "name": "Pending Review Auto-Archive",
+          "category": "content",
+          "conflict": false
+        },
+        {
+          "time": "9:45 AM",
+          "name": "daily-exception-report",
+          "category": "content",
+          "conflict": false
+        },
+        {
           "time": "10:00 AM",
           "name": "LinkedIn Growth",
           "category": "revenue",
@@ -2030,6 +2028,18 @@
       "label": "Saturday",
       "date": "Apr 11",
       "items": [
+        {
+          "time": "2:00 AM",
+          "name": "nightly-backup-test",
+          "category": "system",
+          "conflict": false
+        },
+        {
+          "time": "2:15 AM",
+          "name": "self-learning-daily-cycle",
+          "category": "content",
+          "conflict": false
+        },
         {
           "time": "7:45 AM",
           "name": "analytics-7d-fri-apr4",
@@ -2245,7 +2255,7 @@
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Fri Apr 10, 2026, 12:05 AM ET",
+    "generated_local": "Fri Apr 10, 2026, 4:05 AM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 4,
@@ -2255,7 +2265,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-10T04:05:10.273346+00:00"
+      "checked_at": "2026-04-10T08:05:12.848469+00:00"
     },
     "data_trust": "validated"
   }
