@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-10T08:05:12.847562+00:00",
+  "generated": "2026-04-10T12:05:06.864355+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -496,19 +496,19 @@
   "summary": {
     "total_agents": 96,
     "recurring_agents": 40,
-    "one_time_jobs": 39,
+    "one_time_jobs": 38,
     "healthy": 29,
     "warning": 0,
     "broken": 2,
-    "idle": 48,
+    "idle": 47,
     "revenue_aligned": 17,
     "est_monthly_ai_cost": 558.44,
-    "jobs_this_week": 50,
-    "disabled_jobs": 17,
+    "jobs_this_week": 48,
+    "disabled_jobs": 18,
     "revenue_direct": 7,
     "revenue_indirect": 10,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "Apr 10, 4:04 AM ET",
+    "next_job_time": "Apr 10, 8:04 AM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -833,7 +833,7 @@
       "delivery_target": "6394048111",
       "session_target": "isolated",
       "timeout_seconds": 600,
-      "last_run": "Apr 9, 10:18 AM ET",
+      "last_run": "Apr 10, 8:00 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -856,7 +856,7 @@
       ],
       "value": "SUPPORTING SYSTEM",
       "notes": "Timeout 300\u2192600s fixed Apr 1. Collector runs at 7:45 AM for 15-min buffer.",
-      "next_run": "Apr 10, 8:00 AM ET",
+      "next_run": "Apr 11, 8:00 AM ET",
       "enabled": true
     },
     {
@@ -872,7 +872,7 @@
       "delivery_target": "6394048111",
       "session_target": "isolated",
       "timeout_seconds": 120,
-      "last_run": "Apr 9, 10:29 AM ET",
+      "last_run": "Apr 10, 7:45 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -889,7 +889,7 @@
       ],
       "value": "SUPPORTING SYSTEM",
       "notes": "Runs 15 min before sentinel.",
-      "next_run": "Apr 10, 7:45 AM ET",
+      "next_run": "Apr 11, 7:45 AM ET",
       "enabled": true
     },
     {
@@ -1676,22 +1676,15 @@
   ],
   "timing_conflicts": [
     {
-      "time": "Fri Apr 10, 8:00 AM ET",
-      "agents": "daily-cost-sentinel + LinkedIn \u2014 Nobody Teaches You",
-      "risk": "MEDIUM",
-      "note": "Concurrent scheduled runs",
-      "status": "active"
-    },
-    {
-      "time": "Fri Apr 10, 8:05 AM ET",
-      "agents": "morning-draft-briefing + analytics-7d-thu-apr3",
-      "risk": "MEDIUM",
-      "note": "Concurrent scheduled runs",
-      "status": "active"
-    },
-    {
       "time": "Fri Apr 10, 8:10 AM ET",
       "agents": "linkedin-analytics-7day-thu-apr3 + Agent Commands Watcher",
+      "risk": "MEDIUM",
+      "note": "Concurrent scheduled runs",
+      "status": "active"
+    },
+    {
+      "time": "Sat Apr 11, 7:45 AM ET",
+      "agents": "analytics-7d-fri-apr4 + daily-cost-collector",
       "risk": "MEDIUM",
       "note": "Concurrent scheduled runs",
       "status": "active"
@@ -1867,32 +1860,32 @@
   "bold_recommendation_impact": "\ud83d\udcb0 Gate: (1) Call executed \u00b7 (2) Case seed filed with verbatim language \u00b7 (3) Artifact passes decision-impact check A/B/C \u00b7 (4) Buyer-visible integration on one surface \u00b7 (5) Enforcer evaluates Apr 15",
   "action_queue": [
     {
-      "name": "analytics-7d-thu-apr3",
-      "when": "Apr 10, 8:05 AM ET",
-      "delta": "~3h 59m",
-      "reason": "Human follow-up / export likely needed"
-    },
-    {
       "name": "linkedin-analytics-7day-thu-apr3",
       "when": "Apr 10, 8:10 AM ET",
-      "delta": "~4h 4m",
+      "delta": "~4m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-7d-fri-apr4",
       "when": "Apr 11, 7:45 AM ET",
-      "delta": "~1d 3h",
+      "delta": "~23h 39m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "linkedin-analytics-7d-linkedin-post-fri-apr4",
       "when": "Apr 11, 7:46 AM ET",
-      "delta": "~1d 3h",
+      "delta": "~23h 40m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "Analytics 48h \u2014 Nobody Teaches You",
       "when": "Apr 12, 8:00 AM ET",
+      "delta": "~1d 23h",
+      "reason": "Human follow-up / export likely needed"
+    },
+    {
+      "name": "analytics-48h-apr10-evh",
+      "when": "Apr 12, 12:00 PM ET",
       "delta": "~2d 3h",
       "reason": "Human follow-up / export likely needed"
     }
@@ -1903,40 +1896,10 @@
       "date": "Apr 10",
       "items": [
         {
-          "time": "4:09 AM",
+          "time": "8:09 AM",
           "name": "consulting-pipeline-and-bookings-check",
           "category": "content",
           "conflict": false
-        },
-        {
-          "time": "7:45 AM",
-          "name": "daily-cost-collector",
-          "category": "finance",
-          "conflict": false
-        },
-        {
-          "time": "8:00 AM",
-          "name": "daily-cost-sentinel",
-          "category": "finance",
-          "conflict": true
-        },
-        {
-          "time": "8:00 AM",
-          "name": "LinkedIn \u2014 Nobody Teaches You",
-          "category": "content",
-          "conflict": true
-        },
-        {
-          "time": "8:05 AM",
-          "name": "morning-draft-briefing",
-          "category": "revenue",
-          "conflict": true
-        },
-        {
-          "time": "8:05 AM",
-          "name": "analytics-7d-thu-apr3",
-          "category": "revenue",
-          "conflict": true
         },
         {
           "time": "8:10 AM",
@@ -2044,12 +2007,24 @@
           "time": "7:45 AM",
           "name": "analytics-7d-fri-apr4",
           "category": "revenue",
-          "conflict": false
+          "conflict": true
+        },
+        {
+          "time": "7:45 AM",
+          "name": "daily-cost-collector",
+          "category": "finance",
+          "conflict": true
         },
         {
           "time": "7:46 AM",
           "name": "linkedin-analytics-7d-linkedin-post-fri-apr4",
           "category": "revenue",
+          "conflict": false
+        },
+        {
+          "time": "8:00 AM",
+          "name": "daily-cost-sentinel",
+          "category": "finance",
           "conflict": false
         }
       ]
@@ -2255,7 +2230,7 @@
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Fri Apr 10, 2026, 4:05 AM ET",
+    "generated_local": "Fri Apr 10, 2026, 8:05 AM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 4,
@@ -2265,7 +2240,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-10T08:05:12.848469+00:00"
+      "checked_at": "2026-04-10T12:05:06.865316+00:00"
     },
     "data_trust": "validated"
   }
