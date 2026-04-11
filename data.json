@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-11T00:05:08.459750+00:00",
+  "generated": "2026-04-11T12:05:46.571916+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -494,21 +494,21 @@
     ]
   },
   "summary": {
-    "total_agents": 99,
-    "recurring_agents": 40,
-    "one_time_jobs": 39,
-    "healthy": 31,
+    "total_agents": 101,
+    "recurring_agents": 41,
+    "one_time_jobs": 37,
+    "healthy": 32,
     "warning": 0,
     "broken": 0,
-    "idle": 48,
+    "idle": 46,
     "revenue_aligned": 17,
     "est_monthly_ai_cost": 558.44,
     "jobs_this_week": 49,
-    "disabled_jobs": 20,
+    "disabled_jobs": 23,
     "revenue_direct": 7,
     "revenue_indirect": 10,
-    "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "Apr 10, 8:04 PM ET",
+    "next_job_name": "consulting-pipeline-and-bookings-check",
+    "next_job_time": "Apr 11, 8:05 AM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -833,7 +833,7 @@
       "delivery_target": "6394048111",
       "session_target": "isolated",
       "timeout_seconds": 600,
-      "last_run": "Apr 10, 2:26 PM ET",
+      "last_run": "Apr 11, 8:00 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -856,7 +856,7 @@
       ],
       "value": "SUPPORTING SYSTEM",
       "notes": "Timeout 300\u2192600s fixed Apr 1. Collector runs at 7:45 AM for 15-min buffer.",
-      "next_run": "Apr 11, 8:00 AM ET",
+      "next_run": "Apr 12, 8:00 AM ET",
       "enabled": true
     },
     {
@@ -872,7 +872,7 @@
       "delivery_target": "6394048111",
       "session_target": "isolated",
       "timeout_seconds": 120,
-      "last_run": "Apr 10, 2:25 PM ET",
+      "last_run": "Apr 11, 7:45 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -889,7 +889,7 @@
       ],
       "value": "SUPPORTING SYSTEM",
       "notes": "Runs 15 min before sentinel.",
-      "next_run": "Apr 11, 7:45 AM ET",
+      "next_run": "Apr 12, 7:45 AM ET",
       "enabled": true
     },
     {
@@ -1102,13 +1102,13 @@
       "purpose": "Full local backup + git-safe mirror push to GitHub",
       "schedule_cron": "0 2 * * *",
       "schedule_human": "Every day 2:00 AM ET",
-      "model": "ollama/qwen2.5:7b",
+      "model": "anthropic/claude-haiku-4-5",
       "model_tier": "local",
       "delivery_channel": "discord",
       "delivery_target": "channel:1485490618636570805",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "Apr 10, 2:00 AM ET",
+      "last_run": "Apr 11, 6:42 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -1124,7 +1124,7 @@
       "downstream": [],
       "value": "SUPPORTING SYSTEM",
       "notes": "Fixed Apr 1 \u2014 pre-commit secret leak check added.",
-      "next_run": "Apr 11, 2:00 AM ET",
+      "next_run": "Apr 12, 2:00 AM ET",
       "enabled": true
     },
     {
@@ -1666,8 +1666,8 @@
   ],
   "timing_conflicts": [
     {
-      "time": "Sat Apr 11, 7:45 AM ET",
-      "agents": "analytics-7d-fri-apr4 + daily-cost-collector",
+      "time": "Sun Apr 12, 8:00 AM ET",
+      "agents": "daily-cost-sentinel + Analytics 48h \u2014 Nobody Teaches You",
       "risk": "MEDIUM",
       "note": "Concurrent scheduled runs",
       "status": "active"
@@ -1822,95 +1822,41 @@
   "bold_recommendation_impact": "\ud83d\udcb0 Gate: (1) Call executed \u00b7 (2) Case seed filed with verbatim language \u00b7 (3) Artifact passes decision-impact check A/B/C \u00b7 (4) Buyer-visible integration on one surface \u00b7 (5) Enforcer evaluates Apr 15",
   "action_queue": [
     {
-      "name": "analytics-7d-fri-apr4",
-      "when": "Apr 11, 7:45 AM ET",
-      "delta": "~11h 39m",
-      "reason": "Human follow-up / export likely needed"
-    },
-    {
-      "name": "linkedin-analytics-7d-linkedin-post-fri-apr4",
-      "when": "Apr 11, 7:46 AM ET",
-      "delta": "~11h 40m",
-      "reason": "Human follow-up / export likely needed"
-    },
-    {
       "name": "Analytics 48h \u2014 Nobody Teaches You",
       "when": "Apr 12, 8:00 AM ET",
-      "delta": "~1d 11h",
+      "delta": "~23h 54m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-48h-apr10-evh",
       "when": "Apr 12, 12:00 PM ET",
-      "delta": "~1d 15h",
+      "delta": "~1d 3h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "Chris Darst follow-up reminder",
       "when": "Apr 13, 12:00 PM ET",
-      "delta": "~2d 15h",
+      "delta": "~2d 3h",
       "reason": "Upcoming scheduled work"
+    },
+    {
+      "name": "launch-countdown-daily",
+      "when": "Apr 11, 9:20 AM ET",
+      "delta": "~1h 14m",
+      "reason": "Upcoming scheduled work"
+    },
+    {
+      "name": "consulting-outreach-weekly",
+      "when": "Apr 12, 7:30 PM ET",
+      "delta": "~1d 11h",
+      "reason": "Pipeline generation"
     }
   ],
   "calendar_days": [
     {
-      "label": "Friday",
-      "date": "Apr 10",
-      "items": [
-        {
-          "time": "8:05 PM",
-          "name": "consulting-pipeline-and-bookings-check",
-          "category": "content",
-          "conflict": false
-        }
-      ]
-    },
-    {
       "label": "Saturday",
       "date": "Apr 11",
       "items": [
-        {
-          "time": "2:00 AM",
-          "name": "nightly-backup-test",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "2:15 AM",
-          "name": "self-learning-daily-cycle",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "7:45 AM",
-          "name": "analytics-7d-fri-apr4",
-          "category": "revenue",
-          "conflict": true
-        },
-        {
-          "time": "7:45 AM",
-          "name": "daily-cost-collector",
-          "category": "finance",
-          "conflict": true
-        },
-        {
-          "time": "7:46 AM",
-          "name": "linkedin-analytics-7d-linkedin-post-fri-apr4",
-          "category": "revenue",
-          "conflict": false
-        },
-        {
-          "time": "8:00 AM",
-          "name": "daily-cost-sentinel",
-          "category": "finance",
-          "conflict": false
-        },
-        {
-          "time": "8:05 AM",
-          "name": "morning-draft-briefing",
-          "category": "revenue",
-          "conflict": false
-        },
         {
           "time": "8:10 AM",
           "name": "Agent Commands Watcher",
@@ -1921,6 +1867,12 @@
           "time": "8:30 AM",
           "name": "cost-sentinel-renewal-check",
           "category": "finance",
+          "conflict": false
+        },
+        {
+          "time": "9:00 AM",
+          "name": "email-monitor-daily",
+          "category": "content",
           "conflict": false
         },
         {
@@ -1958,6 +1910,12 @@
           "name": "daily-exception-report",
           "category": "content",
           "conflict": false
+        },
+        {
+          "time": "12:04 PM",
+          "name": "dashboard-regenerate-hourly",
+          "category": "system",
+          "conflict": false
         }
       ]
     },
@@ -1966,8 +1924,38 @@
       "date": "Apr 12",
       "items": [
         {
+          "time": "2:00 AM",
+          "name": "nightly-backup-test",
+          "category": "system",
+          "conflict": false
+        },
+        {
+          "time": "2:15 AM",
+          "name": "self-learning-daily-cycle",
+          "category": "content",
+          "conflict": false
+        },
+        {
+          "time": "7:45 AM",
+          "name": "daily-cost-collector",
+          "category": "finance",
+          "conflict": false
+        },
+        {
+          "time": "8:00 AM",
+          "name": "daily-cost-sentinel",
+          "category": "finance",
+          "conflict": true
+        },
+        {
           "time": "8:00 AM",
           "name": "Analytics 48h \u2014 Nobody Teaches You",
+          "category": "revenue",
+          "conflict": true
+        },
+        {
+          "time": "8:05 AM",
+          "name": "morning-draft-briefing",
           "category": "revenue",
           "conflict": false
         },
@@ -2152,10 +2140,52 @@
           "conflict": false
         }
       ]
+    },
+    {
+      "label": "Friday",
+      "date": "Apr 17",
+      "items": [
+        {
+          "time": "8:00 AM",
+          "name": "Analytics 7-day \u2014 Nobody Teaches You",
+          "category": "revenue",
+          "conflict": false
+        },
+        {
+          "time": "12:00 PM",
+          "name": "analytics-7d-apr10-evh",
+          "category": "revenue",
+          "conflict": false
+        },
+        {
+          "time": "4:00 PM",
+          "name": "Consulting Outreach",
+          "category": "revenue",
+          "conflict": false
+        },
+        {
+          "time": "6:00 PM",
+          "name": "Weekly Metrics Digest",
+          "category": "system",
+          "conflict": false
+        },
+        {
+          "time": "6:15 PM",
+          "name": "Backlog Review Agent",
+          "category": "system",
+          "conflict": false
+        },
+        {
+          "time": "6:30 PM",
+          "name": "Weekly Executive Summary",
+          "category": "system",
+          "conflict": false
+        }
+      ]
     }
   ],
   "security_posture": {
-    "openclaw_version": "OpenClaw 2026.4.5 (3e72c03)",
+    "openclaw_version": "OpenClaw 2026.4.10 (44e5b62)",
     "audit_summary": {
       "critical": 0,
       "warn": 4,
@@ -2163,12 +2193,12 @@
     },
     "main_exec_security": "allowlist",
     "main_exec_ask": "off",
-    "main_allowlist_count": 155,
+    "main_allowlist_count": 49,
     "sandbox": "mode: off scope: agent",
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Fri Apr 10, 2026, 8:05 PM ET",
+    "generated_local": "Sat Apr 11, 2026, 8:05 AM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 4,
@@ -2178,7 +2208,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-11T00:05:08.460788+00:00"
+      "checked_at": "2026-04-11T12:05:46.572813+00:00"
     },
     "data_trust": "validated"
   }
