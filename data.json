@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-10T20:05:07.080727+00:00",
+  "generated": "2026-04-11T00:05:08.459750+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -508,7 +508,7 @@
     "revenue_direct": 7,
     "revenue_indirect": 10,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "Apr 10, 4:04 PM ET",
+    "next_job_time": "Apr 10, 8:04 PM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -525,7 +525,7 @@
       "delivery_target": "channel:1485491233756549202",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "Apr 6, 9:00 AM ET",
+      "last_run": "Apr 10, 6:07 PM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -1006,7 +1006,7 @@
       "delivery_target": "channel:1485491914986881115",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "Apr 3, 6:00 PM ET",
+      "last_run": "Apr 10, 6:00 PM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -1027,7 +1027,7 @@
       ],
       "value": "SUPPORTING SYSTEM",
       "notes": "Runs at 6 PM, Backlog Review at 6:15 PM, Exec Summary at 6:30 PM \u2014 correct sequencing.",
-      "next_run": "Apr 10, 6:00 PM ET",
+      "next_run": "Apr 17, 6:00 PM ET",
       "enabled": true
     },
     {
@@ -1043,7 +1043,7 @@
       "delivery_target": "channel:1485378155878551626",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "Apr 3, 6:30 PM ET",
+      "last_run": "Apr 10, 6:30 PM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -1060,7 +1060,7 @@
       "downstream": [],
       "value": "SUPPORTING SYSTEM",
       "notes": "Sonnet appropriate \u2014 public-facing synthesis. 30 min after metrics digest.",
-      "next_run": "Apr 10, 6:30 PM ET",
+      "next_run": "Apr 17, 6:30 PM ET",
       "enabled": true
     },
     {
@@ -1824,31 +1824,31 @@
     {
       "name": "analytics-7d-fri-apr4",
       "when": "Apr 11, 7:45 AM ET",
-      "delta": "~15h 39m",
+      "delta": "~11h 39m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "linkedin-analytics-7d-linkedin-post-fri-apr4",
       "when": "Apr 11, 7:46 AM ET",
-      "delta": "~15h 40m",
+      "delta": "~11h 40m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "Analytics 48h \u2014 Nobody Teaches You",
       "when": "Apr 12, 8:00 AM ET",
-      "delta": "~1d 15h",
+      "delta": "~1d 11h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-48h-apr10-evh",
       "when": "Apr 12, 12:00 PM ET",
-      "delta": "~1d 19h",
+      "delta": "~1d 15h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "Chris Darst follow-up reminder",
       "when": "Apr 13, 12:00 PM ET",
-      "delta": "~2d 19h",
+      "delta": "~2d 15h",
       "reason": "Upcoming scheduled work"
     }
   ],
@@ -1858,33 +1858,9 @@
       "date": "Apr 10",
       "items": [
         {
-          "time": "4:09 PM",
+          "time": "8:05 PM",
           "name": "consulting-pipeline-and-bookings-check",
           "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "4:10 PM",
-          "name": "Agent Commands Watcher",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "6:00 PM",
-          "name": "Weekly Metrics Digest",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "6:15 PM",
-          "name": "Backlog Review Agent",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "6:30 PM",
-          "name": "Weekly Executive Summary",
-          "category": "system",
           "conflict": false
         }
       ]
@@ -1933,6 +1909,12 @@
           "time": "8:05 AM",
           "name": "morning-draft-briefing",
           "category": "revenue",
+          "conflict": false
+        },
+        {
+          "time": "8:10 AM",
+          "name": "Agent Commands Watcher",
+          "category": "system",
           "conflict": false
         },
         {
@@ -2181,12 +2163,12 @@
     },
     "main_exec_security": "allowlist",
     "main_exec_ask": "off",
-    "main_allowlist_count": 144,
+    "main_allowlist_count": 155,
     "sandbox": "mode: off scope: agent",
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Fri Apr 10, 2026, 4:05 PM ET",
+    "generated_local": "Fri Apr 10, 2026, 8:05 PM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 4,
@@ -2196,7 +2178,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-10T20:05:07.081694+00:00"
+      "checked_at": "2026-04-11T00:05:08.460788+00:00"
     },
     "data_trust": "validated"
   }
