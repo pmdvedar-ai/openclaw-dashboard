@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-12T09:17:38.268285+00:00",
+  "generated": "2026-04-12T09:18:06.675014+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -1810,13 +1810,13 @@
     {
       "name": "Analytics 48h \u2014 Nobody Teaches You",
       "when": "Apr 12, 1:00 PM ET",
-      "delta": "~2h 42m",
+      "delta": "~2h 41m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-48h-apr10-evh",
       "when": "Apr 12, 5:00 PM ET",
-      "delta": "~6h 42m",
+      "delta": "~6h 41m",
       "reason": "Human follow-up / export likely needed"
     },
     {
@@ -1828,13 +1828,13 @@
     {
       "name": "launch-countdown-daily",
       "when": "Apr 12, 2:20 PM ET",
-      "delta": "~4h 2m",
+      "delta": "~4h 1m",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "consulting-outreach-weekly",
       "when": "Apr 13, 12:30 AM ET",
-      "delta": "~14h 12m",
+      "delta": "~14h 11m",
       "reason": "Pipeline generation"
     }
   ],
@@ -2191,12 +2191,12 @@
     },
     "main_exec_security": "allowlist",
     "main_exec_ask": "off",
-    "main_allowlist_count": 90,
+    "main_allowlist_count": 91,
     "sandbox": "mode: off scope: agent",
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Sun Apr 12, 2026, 10:17 AM WEST",
+    "generated_local": "Sun Apr 12, 2026, 10:18 AM WEST",
     "audit_summary": {
       "critical": 0,
       "warn": 4,
@@ -2206,7 +2206,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-12T09:17:38.268643+00:00"
+      "checked_at": "2026-04-12T09:18:06.675584+00:00"
     },
     "data_trust": "validated"
   }
