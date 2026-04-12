@@ -1073,8 +1073,9 @@ function renderRoadmap(phases) {
 // ── Timestamp + refresh ────────────────────────────────────────────────────
 function renderTimestamp(ts) {
   var d = new Date(ts);
-  var fmt = d.toLocaleString('en-US', {weekday:'short',month:'short',day:'numeric',year:'numeric',hour:'numeric',minute:'2-digit',timeZone:'America/New_York'});
-  var display = 'Generated: ' + fmt + ' ET';
+  var fmt = d.toLocaleString('en-US', {weekday:'short',month:'short',day:'numeric',year:'numeric',hour:'numeric',minute:'2-digit'});
+  var tz = Intl.DateTimeFormat().resolvedOptions().timeZone || 'local';
+  var display = 'Generated: ' + fmt + ' (' + tz + ')';
   var el = document.getElementById('ts-display');
   var ft = document.getElementById('footer-ts');
   if (el) el.textContent = display;
