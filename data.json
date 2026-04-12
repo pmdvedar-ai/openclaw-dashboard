@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-12T00:05:07.614707+00:00",
+  "generated": "2026-04-12T04:05:07.462268+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -508,7 +508,7 @@
     "revenue_direct": 7,
     "revenue_indirect": 10,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "Apr 11, 8:04 PM ET",
+    "next_job_time": "Apr 12, 12:04 AM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -1824,51 +1824,45 @@
     {
       "name": "Analytics 48h \u2014 Nobody Teaches You",
       "when": "Apr 12, 8:00 AM ET",
-      "delta": "~11h 54m",
+      "delta": "~7h 54m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-48h-apr10-evh",
       "when": "Apr 12, 12:00 PM ET",
-      "delta": "~15h 54m",
+      "delta": "~11h 54m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "Chris Darst follow-up reminder",
       "when": "Apr 13, 12:00 PM ET",
-      "delta": "~1d 15h",
+      "delta": "~1d 11h",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "launch-countdown-daily",
       "when": "Apr 12, 9:20 AM ET",
-      "delta": "~13h 14m",
+      "delta": "~9h 14m",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "consulting-outreach-weekly",
       "when": "Apr 12, 7:30 PM ET",
-      "delta": "~23h 24m",
+      "delta": "~19h 24m",
       "reason": "Pipeline generation"
     }
   ],
   "calendar_days": [
     {
-      "label": "Saturday",
-      "date": "Apr 11",
-      "items": [
-        {
-          "time": "8:07 PM",
-          "name": "consulting-pipeline-and-bookings-check",
-          "category": "content",
-          "conflict": false
-        }
-      ]
-    },
-    {
       "label": "Sunday",
       "date": "Apr 12",
       "items": [
+        {
+          "time": "12:07 AM",
+          "name": "consulting-pipeline-and-bookings-check",
+          "category": "content",
+          "conflict": false
+        },
         {
           "time": "2:00 AM",
           "name": "nightly-backup-test",
@@ -2182,6 +2176,18 @@
           "conflict": false
         }
       ]
+    },
+    {
+      "label": "Saturday",
+      "date": "Apr 18",
+      "items": [
+        {
+          "time": "8:00 AM",
+          "name": "analytics-48h-apr16-institutional-knowledge",
+          "category": "revenue",
+          "conflict": false
+        }
+      ]
     }
   ],
   "security_posture": {
@@ -2193,12 +2199,12 @@
     },
     "main_exec_security": "allowlist",
     "main_exec_ask": "off",
-    "main_allowlist_count": 76,
+    "main_allowlist_count": 77,
     "sandbox": "mode: off scope: agent",
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Sat Apr 11, 2026, 8:05 PM ET",
+    "generated_local": "Sun Apr 12, 2026, 12:05 AM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 4,
@@ -2208,7 +2214,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-12T00:05:07.615751+00:00"
+      "checked_at": "2026-04-12T04:05:07.463240+00:00"
     },
     "data_trust": "validated"
   }
