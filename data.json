@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-12T16:05:08.703108+00:00",
+  "generated": "2026-04-12T20:05:10.385481+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -494,7 +494,7 @@
     "revenue_direct": 7,
     "revenue_indirect": 10,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "Apr 12, 5:04 PM ET",
+    "next_job_time": "Apr 12, 9:04 PM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -1838,31 +1838,31 @@
     {
       "name": "Chris Darst follow-up reminder",
       "when": "Apr 13, 5:00 PM ET",
-      "delta": "~23h 54m",
+      "delta": "~19h 54m",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "analytics-7d-tue-apr8",
       "when": "Apr 15, 12:30 PM ET",
-      "delta": "~2d 19h",
+      "delta": "~2d 15h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "consulting-outreach-weekly",
       "when": "Apr 13, 12:30 AM ET",
-      "delta": "~7h 24m",
+      "delta": "~3h 24m",
       "reason": "Pipeline generation"
     },
     {
       "name": "launch-countdown-daily",
       "when": "Apr 13, 2:20 PM ET",
-      "delta": "~21h 14m",
+      "delta": "~17h 14m",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "LinkedIn Growth",
       "when": "Apr 13, 3:00 PM ET",
-      "delta": "~21h 54m",
+      "delta": "~17h 54m",
       "reason": "Content / audience growth revenue lever"
     }
   ],
@@ -1872,7 +1872,7 @@
       "date": "Apr 12",
       "items": [
         {
-          "time": "5:07 PM",
+          "time": "9:07 PM",
           "name": "consulting-pipeline-and-bookings-check",
           "category": "content",
           "conflict": false
@@ -2201,12 +2201,12 @@
     },
     "main_exec_security": "allowlist",
     "main_exec_ask": "off",
-    "main_allowlist_count": 116,
+    "main_allowlist_count": 117,
     "sandbox": "mode: off scope: agent",
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Sun Apr 12, 2026, 5:05 PM WEST",
+    "generated_local": "Sun Apr 12, 2026, 9:05 PM WEST",
     "audit_summary": {
       "critical": 0,
       "warn": 4,
@@ -2216,7 +2216,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-12T16:05:08.704120+00:00"
+      "checked_at": "2026-04-12T20:05:10.386538+00:00"
     },
     "data_trust": "validated"
   }
