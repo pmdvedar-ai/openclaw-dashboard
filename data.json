@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-12T09:17:25.545012+00:00",
+  "generated": "2026-04-12T09:17:38.268285+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -35,9 +35,9 @@
         "role": "CV & Thoracic Surgery PA \u2014 Baylor Scott & White",
         "date": "Apr 9, 7:30 PM ET",
         "status": "complete",
-        "outcome": "Verbal yes \u2014 pending COO sign-off. Said \u2018if it was up to me, I\u2019d already say yes.\u2019 Pricing ($2,500) landed clean. One-pager + framework draft sent Apr 9. On PTO week of Apr 14.",
+        "outcome": "Verbal yes \u2014 pending COO sign-off. Said 'if it was up to me, I'd already say yes.' Pricing ($2,500) landed clean. On PTO week of Apr 14.",
         "tier": "hot-prospect",
-        "next_action": "Wait for reply after COO meeting. Check in May 12 if no response.",
+        "next_action": "Wait for COO reply. Check in May 12 if no response.",
         "next_due": "2026-05-12",
         "estimated_value": 10000
       }
@@ -52,8 +52,8 @@
       },
       {
         "name": "Erin Switzer MacMillan",
-        "stage": "call-complete",
-        "tier": "warm",
+        "stage": "deferred",
+        "tier": "warm-deferred",
         "est_value": 8750,
         "company": "VCU Health"
       },
@@ -495,7 +495,7 @@
     "revenue_indirect": 10,
     "next_job_name": "consulting-pipeline-and-bookings-check",
     "next_job_time": "Apr 12, 10:22 AM ET",
-    "next_job_delta": "~5m"
+    "next_job_delta": "~4m"
   },
   "agents": [
     {
@@ -1746,7 +1746,7 @@
     }
   ],
   "top_weaknesses": [
-    "Revenue is still $0. System costs $558/mo. Mitesh Patel is a verbal yes but pending COO sign-off \u2014 no revenue until that converts. May 12 check-in cron is set.",
+    "Revenue is still $0. System costs ~$558/mo. Mitesh Patel verbal yes \u2014 pending COO sign-off. Next touch May 12. ElevenLabs resets Apr 24 for 15 Course 2 videos.",
     "Course 2 has 15 AI videos blocked until ElevenLabs quota resets Apr 24 (automated). On-camera modules (1, 6.3, 7.3+7.4, 8) need Pol recording post-travel Apr 26+.",
     "Course 1 launch May 12 \u2014 pre-launch window May 5\u201311 requires all recording + upload complete. 30 days out.",
     "Pipeline depth thin beyond Mitesh. Erin Switzer deferred to July. Jonathan Kiemel, Claire Cavatorta, Eddie Kazlauskas still at dm-sent stage.",
@@ -1804,8 +1804,8 @@
       "completed": "2026-04-08"
     }
   ],
-  "bold_recommendation": "You\u2019re in Portugal and the machine is running. Mitesh said yes \u2014 his COO hasn\u2019t weighed in yet. Don\u2019t reach out before May 12. ElevenLabs resets Apr 24 and 15 Course 2 videos build automatically. Come back Apr 26 with one priority: get on camera for on-cam modules and close Mitesh. Everything else is queued and running.",
-  "bold_recommendation_impact": "\ud83d\udcb0 Travel mode gates: (1) Mitesh follow-up May 12 if no reply \u00b7 (2) ElevenLabs 15 videos auto-resume Apr 24 \u00b7 (3) On-camera recording starts Apr 26+ \u00b7 (4) Enforcer first run Apr 15 \u00b7 (5) Course 1 pre-launch May 5\u201311",
+  "bold_recommendation": "System is running unattended. Mitesh said yes \u2014 COO meeting pending. ElevenLabs resets Apr 24, 15 Course 2 videos auto-build. Come back Apr 26 ready to record on-camera modules and follow up Mitesh May 12 if silent. Nothing to do until then.",
+  "bold_recommendation_impact": "\ud83d\udcb0 Gates: (1) Mitesh COO reply \u2014 watch for email \u00b7 (2) ElevenLabs 15 videos auto-resume Apr 24 \u00b7 (3) On-camera recording starts Apr 26+ \u00b7 (4) Enforcer first run Apr 15 \u00b7 (5) Course 1 pre-launch May 5\u201311",
   "action_queue": [
     {
       "name": "Analytics 48h \u2014 Nobody Teaches You",
@@ -2206,7 +2206,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-12T09:17:25.546055+00:00"
+      "checked_at": "2026-04-12T09:17:38.268643+00:00"
     },
     "data_trust": "validated"
   }
