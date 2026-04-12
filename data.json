@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-12T09:18:06.675014+00:00",
+  "generated": "2026-04-12T12:05:09.733235+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -482,20 +482,20 @@
   "summary": {
     "total_agents": 101,
     "recurring_agents": 41,
-    "one_time_jobs": 37,
+    "one_time_jobs": 36,
     "healthy": 32,
     "warning": 0,
     "broken": 0,
-    "idle": 46,
+    "idle": 45,
     "revenue_aligned": 17,
     "est_monthly_ai_cost": 558.44,
-    "jobs_this_week": 50,
-    "disabled_jobs": 23,
+    "jobs_this_week": 47,
+    "disabled_jobs": 24,
     "revenue_direct": 7,
     "revenue_indirect": 10,
-    "next_job_name": "consulting-pipeline-and-bookings-check",
-    "next_job_time": "Apr 12, 10:22 AM ET",
-    "next_job_delta": "~4m"
+    "next_job_name": "dashboard-regenerate-hourly",
+    "next_job_time": "Apr 12, 1:04 PM ET",
+    "next_job_delta": "now"
   },
   "agents": [
     {
@@ -819,7 +819,7 @@
       "delivery_target": "6394048111",
       "session_target": "isolated",
       "timeout_seconds": 600,
-      "last_run": "Apr 11, 1:00 PM ET",
+      "last_run": "Apr 12, 1:00 PM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -842,7 +842,7 @@
       ],
       "value": "SUPPORTING SYSTEM",
       "notes": "Timeout 300\u2192600s fixed Apr 1. Collector runs at 7:45 AM for 15-min buffer.",
-      "next_run": "Apr 12, 1:00 PM ET",
+      "next_run": "Apr 13, 1:00 PM ET",
       "enabled": true
     },
     {
@@ -858,7 +858,7 @@
       "delivery_target": "6394048111",
       "session_target": "isolated",
       "timeout_seconds": 120,
-      "last_run": "Apr 11, 12:45 PM ET",
+      "last_run": "Apr 12, 12:45 PM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -875,7 +875,7 @@
       ],
       "value": "SUPPORTING SYSTEM",
       "notes": "Runs 15 min before sentinel.",
-      "next_run": "Apr 12, 12:45 PM ET",
+      "next_run": "Apr 13, 12:45 PM ET",
       "enabled": true
     },
     {
@@ -1652,8 +1652,8 @@
   ],
   "timing_conflicts": [
     {
-      "time": "Sun Apr 12, 1:00 PM ET",
-      "agents": "daily-cost-sentinel + Analytics 48h \u2014 Nobody Teaches You",
+      "time": "Mon Apr 13, 1:00 PM ET",
+      "agents": "daily-cost-sentinel + System Health Sentinel",
       "risk": "MEDIUM",
       "note": "Concurrent scheduled runs",
       "status": "active"
@@ -1808,33 +1808,33 @@
   "bold_recommendation_impact": "\ud83d\udcb0 Gates: (1) Mitesh COO reply \u2014 watch for email \u00b7 (2) ElevenLabs 15 videos auto-resume Apr 24 \u00b7 (3) On-camera recording starts Apr 26+ \u00b7 (4) Enforcer first run Apr 15 \u00b7 (5) Course 1 pre-launch May 5\u201311",
   "action_queue": [
     {
-      "name": "Analytics 48h \u2014 Nobody Teaches You",
-      "when": "Apr 12, 1:00 PM ET",
-      "delta": "~2h 41m",
-      "reason": "Human follow-up / export likely needed"
-    },
-    {
       "name": "analytics-48h-apr10-evh",
       "when": "Apr 12, 5:00 PM ET",
-      "delta": "~6h 41m",
+      "delta": "~3h 54m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "Chris Darst follow-up reminder",
       "when": "Apr 13, 5:00 PM ET",
-      "delta": "~1d 6h",
+      "delta": "~1d 3h",
       "reason": "Upcoming scheduled work"
+    },
+    {
+      "name": "analytics-7d-tue-apr8",
+      "when": "Apr 15, 12:30 PM ET",
+      "delta": "~2d 23h",
+      "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "launch-countdown-daily",
       "when": "Apr 12, 2:20 PM ET",
-      "delta": "~4h 1m",
+      "delta": "~1h 14m",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "consulting-outreach-weekly",
       "when": "Apr 13, 12:30 AM ET",
-      "delta": "~14h 11m",
+      "delta": "~11h 24m",
       "reason": "Pipeline generation"
     }
   ],
@@ -1844,39 +1844,9 @@
       "date": "Apr 12",
       "items": [
         {
-          "time": "10:22 AM",
+          "time": "1:07 PM",
           "name": "consulting-pipeline-and-bookings-check",
           "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "12:45 PM",
-          "name": "daily-cost-collector",
-          "category": "finance",
-          "conflict": false
-        },
-        {
-          "time": "1:00 PM",
-          "name": "daily-cost-sentinel",
-          "category": "finance",
-          "conflict": true
-        },
-        {
-          "time": "1:00 PM",
-          "name": "Analytics 48h \u2014 Nobody Teaches You",
-          "category": "revenue",
-          "conflict": true
-        },
-        {
-          "time": "1:04 PM",
-          "name": "dashboard-regenerate-hourly",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "1:05 PM",
-          "name": "morning-draft-briefing",
-          "category": "revenue",
           "conflict": false
         },
         {
@@ -1970,10 +1940,22 @@
           "conflict": false
         },
         {
+          "time": "12:45 PM",
+          "name": "daily-cost-collector",
+          "category": "finance",
+          "conflict": false
+        },
+        {
+          "time": "1:00 PM",
+          "name": "daily-cost-sentinel",
+          "category": "finance",
+          "conflict": true
+        },
+        {
           "time": "1:00 PM",
           "name": "System Health Sentinel",
           "category": "system",
-          "conflict": false
+          "conflict": true
         },
         {
           "time": "1:10 PM",
@@ -2191,12 +2173,12 @@
     },
     "main_exec_security": "allowlist",
     "main_exec_ask": "off",
-    "main_allowlist_count": 91,
+    "main_allowlist_count": 106,
     "sandbox": "mode: off scope: agent",
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Sun Apr 12, 2026, 10:18 AM WEST",
+    "generated_local": "Sun Apr 12, 2026, 1:05 PM WEST",
     "audit_summary": {
       "critical": 0,
       "warn": 4,
@@ -2206,7 +2188,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-12T09:18:06.675584+00:00"
+      "checked_at": "2026-04-12T12:05:09.734028+00:00"
     },
     "data_trust": "validated"
   }
