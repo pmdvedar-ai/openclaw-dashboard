@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-13T01:41:14.358779+00:00",
+  "generated": "2026-04-13T04:05:09.855538+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -126,7 +126,7 @@
     "scripts_ready": true,
     "resume_script": "scripts/execute_course2_build.py",
     "launch_date": "May 12, 2026",
-    "days_to_launch": 30
+    "days_to_launch": 29
   },
   "travel_window": {
     "departure": "2026-04-11",
@@ -489,13 +489,13 @@
     "idle": 45,
     "revenue_aligned": 17,
     "est_monthly_ai_cost": 558.44,
-    "jobs_this_week": 47,
+    "jobs_this_week": 46,
     "disabled_jobs": 26,
     "revenue_direct": 7,
     "revenue_indirect": 10,
-    "next_job_name": "consulting-pipeline-and-bookings-check",
-    "next_job_time": "Apr 13, 2:52 AM ET",
-    "next_job_delta": "~11m"
+    "next_job_name": "dashboard-regenerate-hourly",
+    "next_job_time": "Apr 13, 5:04 AM ET",
+    "next_job_delta": "now"
   },
   "agents": [
     {
@@ -1802,31 +1802,31 @@
     {
       "name": "Chris Darst follow-up reminder",
       "when": "Apr 13, 5:00 PM ET",
-      "delta": "~14h 18m",
+      "delta": "~11h 54m",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "analytics-7d-tue-apr8",
       "when": "Apr 15, 12:30 PM ET",
-      "delta": "~2d 9h",
+      "delta": "~2d 7h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "launch-countdown-daily",
       "when": "Apr 13, 2:20 PM ET",
-      "delta": "~11h 38m",
+      "delta": "~9h 14m",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "LinkedIn Growth",
       "when": "Apr 13, 3:00 PM ET",
-      "delta": "~12h 18m",
+      "delta": "~9h 54m",
       "reason": "Content / audience growth revenue lever"
     },
     {
       "name": "Lead Magnet Builder",
       "when": "Apr 13, 7:00 PM ET",
-      "delta": "~16h 18m",
+      "delta": "~13h 54m",
       "reason": "Upcoming scheduled work"
     }
   ],
@@ -1836,15 +1836,9 @@
       "date": "Apr 13",
       "items": [
         {
-          "time": "2:52 AM",
+          "time": "5:07 AM",
           "name": "consulting-pipeline-and-bookings-check",
           "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "5:04 AM",
-          "name": "dashboard-regenerate-hourly",
-          "category": "system",
           "conflict": false
         },
         {
@@ -2170,7 +2164,7 @@
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Mon Apr 13, 2026, 2:41 AM WEST",
+    "generated_local": "Mon Apr 13, 2026, 5:05 AM WEST",
     "audit_summary": {
       "critical": 0,
       "warn": 4,
@@ -2180,7 +2174,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-13T01:41:14.359802+00:00"
+      "checked_at": "2026-04-13T04:05:09.856620+00:00"
     },
     "data_trust": "validated"
   }
