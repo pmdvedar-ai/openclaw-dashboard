@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-13T04:05:09.855538+00:00",
+  "generated": "2026-04-13T08:05:12.543432+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -494,7 +494,7 @@
     "revenue_direct": 7,
     "revenue_indirect": 10,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "Apr 13, 5:04 AM ET",
+    "next_job_time": "Apr 13, 9:04 AM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -1094,7 +1094,7 @@
       "delivery_target": "channel:1485490618636570805",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "Apr 12, 7:00 AM ET",
+      "last_run": "Apr 13, 7:00 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -1110,7 +1110,7 @@
       "downstream": [],
       "value": "SUPPORTING SYSTEM",
       "notes": "Fixed Apr 1 \u2014 pre-commit secret leak check added.",
-      "next_run": "Apr 13, 7:00 AM ET",
+      "next_run": "Apr 14, 7:00 AM ET",
       "enabled": true
     },
     {
@@ -1802,31 +1802,31 @@
     {
       "name": "Chris Darst follow-up reminder",
       "when": "Apr 13, 5:00 PM ET",
-      "delta": "~11h 54m",
+      "delta": "~7h 54m",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "analytics-7d-tue-apr8",
       "when": "Apr 15, 12:30 PM ET",
-      "delta": "~2d 7h",
+      "delta": "~2d 3h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "launch-countdown-daily",
       "when": "Apr 13, 2:20 PM ET",
-      "delta": "~9h 14m",
+      "delta": "~5h 14m",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "LinkedIn Growth",
       "when": "Apr 13, 3:00 PM ET",
-      "delta": "~9h 54m",
+      "delta": "~5h 54m",
       "reason": "Content / audience growth revenue lever"
     },
     {
       "name": "Lead Magnet Builder",
       "when": "Apr 13, 7:00 PM ET",
-      "delta": "~13h 54m",
+      "delta": "~9h 54m",
       "reason": "Upcoming scheduled work"
     }
   ],
@@ -1836,20 +1836,8 @@
       "date": "Apr 13",
       "items": [
         {
-          "time": "5:07 AM",
+          "time": "9:07 AM",
           "name": "consulting-pipeline-and-bookings-check",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "7:00 AM",
-          "name": "nightly-backup-test",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "7:15 AM",
-          "name": "self-learning-daily-cycle",
           "category": "content",
           "conflict": false
         },
@@ -2022,6 +2010,18 @@
       "date": "Apr 14",
       "items": [
         {
+          "time": "7:00 AM",
+          "name": "nightly-backup-test",
+          "category": "system",
+          "conflict": false
+        },
+        {
+          "time": "7:15 AM",
+          "name": "self-learning-daily-cycle",
+          "category": "content",
+          "conflict": false
+        },
+        {
           "time": "4:00 PM",
           "name": "Instagram Content Agent",
           "category": "content",
@@ -2159,12 +2159,12 @@
     },
     "main_exec_security": "allowlist",
     "main_exec_ask": "off",
-    "main_allowlist_count": 163,
+    "main_allowlist_count": 173,
     "sandbox": "mode: off scope: agent",
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Mon Apr 13, 2026, 5:05 AM WEST",
+    "generated_local": "Mon Apr 13, 2026, 9:05 AM WEST",
     "audit_summary": {
       "critical": 0,
       "warn": 4,
@@ -2174,7 +2174,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-13T04:05:09.856620+00:00"
+      "checked_at": "2026-04-13T08:05:12.544420+00:00"
     },
     "data_trust": "validated"
   }
