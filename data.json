@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-12T20:05:10.385481+00:00",
+  "generated": "2026-04-13T00:05:03.914643+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -481,20 +481,20 @@
   },
   "summary": {
     "total_agents": 101,
-    "recurring_agents": 41,
+    "recurring_agents": 40,
     "one_time_jobs": 35,
-    "healthy": 32,
+    "healthy": 31,
     "warning": 0,
     "broken": 0,
     "idle": 44,
     "revenue_aligned": 17,
     "est_monthly_ai_cost": 558.44,
-    "jobs_this_week": 47,
-    "disabled_jobs": 25,
+    "jobs_this_week": 46,
+    "disabled_jobs": 26,
     "revenue_direct": 7,
     "revenue_indirect": 10,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "Apr 12, 9:04 PM ET",
+    "next_job_time": "Apr 13, 1:04 AM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -687,7 +687,7 @@
       "delivery_target": "channel:1485491529991589888",
       "session_target": "isolated",
       "timeout_seconds": 600,
-      "last_run": "Apr 6, 12:30 AM ET",
+      "last_run": "Apr 13, 12:30 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -701,7 +701,7 @@
       "downstream": [],
       "value": "DIRECT REVENUE",
       "notes": "Staggered to 7:30 PM to avoid Book Writing Session conflict at 7:00 PM.",
-      "next_run": "Apr 13, 12:30 AM ET",
+      "next_run": "Apr 20, 12:30 AM ET",
       "enabled": true
     },
     {
@@ -750,10 +750,10 @@
       "delivery_target": "channel:1485491588418240703",
       "session_target": "isolated",
       "timeout_seconds": 900,
-      "last_run": "Apr 6, 12:00 AM ET",
+      "last_run": "Apr 13, 12:00 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
-      "status": "HEALTHY",
+      "status": "DISABLED",
       "inputs": [
         "MEMORY.md",
         "projects/"
@@ -767,8 +767,8 @@
       ],
       "value": "INDIRECT REVENUE",
       "notes": "Long-term asset. Runs 30 min before Consulting Outreach Weekend \u2014 staggered.",
-      "next_run": "Apr 13, 12:00 AM ET",
-      "enabled": true
+      "next_run": "-",
+      "enabled": false
     },
     {
       "id": "18bc0657",
@@ -1659,6 +1659,13 @@
       "status": "active"
     },
     {
+      "time": "Mon Apr 13, 1:10 PM ET",
+      "agents": "weekly-build-plan + Agent Commands Watcher",
+      "risk": "MEDIUM",
+      "note": "Concurrent scheduled runs",
+      "status": "active"
+    },
+    {
       "time": "Mon Apr 13, 2:00 PM ET",
       "agents": "email-monitor-daily + weekly-mode-signal",
       "risk": "MEDIUM",
@@ -1838,67 +1845,43 @@
     {
       "name": "Chris Darst follow-up reminder",
       "when": "Apr 13, 5:00 PM ET",
-      "delta": "~19h 54m",
+      "delta": "~15h 54m",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "analytics-7d-tue-apr8",
       "when": "Apr 15, 12:30 PM ET",
-      "delta": "~2d 15h",
+      "delta": "~2d 11h",
       "reason": "Human follow-up / export likely needed"
-    },
-    {
-      "name": "consulting-outreach-weekly",
-      "when": "Apr 13, 12:30 AM ET",
-      "delta": "~3h 24m",
-      "reason": "Pipeline generation"
     },
     {
       "name": "launch-countdown-daily",
       "when": "Apr 13, 2:20 PM ET",
-      "delta": "~17h 14m",
+      "delta": "~13h 14m",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "LinkedIn Growth",
       "when": "Apr 13, 3:00 PM ET",
-      "delta": "~17h 54m",
+      "delta": "~13h 54m",
       "reason": "Content / audience growth revenue lever"
+    },
+    {
+      "name": "Lead Magnet Builder",
+      "when": "Apr 13, 7:00 PM ET",
+      "delta": "~17h 54m",
+      "reason": "Upcoming scheduled work"
     }
   ],
   "calendar_days": [
-    {
-      "label": "Sunday",
-      "date": "Apr 12",
-      "items": [
-        {
-          "time": "9:07 PM",
-          "name": "consulting-pipeline-and-bookings-check",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "9:10 PM",
-          "name": "Agent Commands Watcher",
-          "category": "system",
-          "conflict": false
-        }
-      ]
-    },
     {
       "label": "Monday",
       "date": "Apr 13",
       "items": [
         {
-          "time": "12:00 AM",
-          "name": "Book Writing Session",
+          "time": "1:07 AM",
+          "name": "consulting-pipeline-and-bookings-check",
           "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "12:30 AM",
-          "name": "consulting-outreach-weekly",
-          "category": "revenue",
           "conflict": false
         },
         {
@@ -1941,7 +1924,13 @@
           "time": "1:10 PM",
           "name": "weekly-build-plan",
           "category": "content",
-          "conflict": false
+          "conflict": true
+        },
+        {
+          "time": "1:10 PM",
+          "name": "Agent Commands Watcher",
+          "category": "system",
+          "conflict": true
         },
         {
           "time": "1:15 PM",
@@ -2190,6 +2179,18 @@
           "conflict": false
         }
       ]
+    },
+    {
+      "label": "Monday",
+      "date": "Apr 20",
+      "items": [
+        {
+          "time": "12:30 AM",
+          "name": "consulting-outreach-weekly",
+          "category": "revenue",
+          "conflict": false
+        }
+      ]
     }
   ],
   "security_posture": {
@@ -2201,12 +2202,12 @@
     },
     "main_exec_security": "allowlist",
     "main_exec_ask": "off",
-    "main_allowlist_count": 117,
+    "main_allowlist_count": 139,
     "sandbox": "mode: off scope: agent",
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Sun Apr 12, 2026, 9:05 PM WEST",
+    "generated_local": "Mon Apr 13, 2026, 1:05 AM WEST",
     "audit_summary": {
       "critical": 0,
       "warn": 4,
@@ -2216,7 +2217,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-12T20:05:10.386538+00:00"
+      "checked_at": "2026-04-13T00:05:03.915692+00:00"
     },
     "data_trust": "validated"
   }
