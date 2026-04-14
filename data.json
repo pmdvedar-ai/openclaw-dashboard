@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-14T04:05:10.372724+00:00",
+  "generated": "2026-04-14T08:05:08.120443+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -494,7 +494,7 @@
     "revenue_direct": 7,
     "revenue_indirect": 10,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "Apr 14, 5:04 AM ET",
+    "next_job_time": "Apr 14, 9:04 AM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -1094,7 +1094,7 @@
       "delivery_target": "channel:1485490618636570805",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "Apr 13, 7:00 AM ET",
+      "last_run": "Apr 14, 7:00 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -1110,7 +1110,7 @@
       "downstream": [],
       "value": "SUPPORTING SYSTEM",
       "notes": "Fixed Apr 1 \u2014 pre-commit secret leak check added.",
-      "next_run": "Apr 14, 7:00 AM ET",
+      "next_run": "Apr 15, 7:00 AM ET",
       "enabled": true
     },
     {
@@ -1802,31 +1802,31 @@
     {
       "name": "analytics-7d-tue-apr8",
       "when": "Apr 15, 12:30 PM ET",
-      "delta": "~1d 7h",
+      "delta": "~1d 3h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "Nicholas Horvath follow-up reminder",
       "when": "Apr 16, 5:00 PM ET",
-      "delta": "~2d 11h",
+      "delta": "~2d 7h",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "analytics-48h-apr14-peer-to-leader",
       "when": "Apr 16, 5:10 PM ET",
-      "delta": "~2d 12h",
+      "delta": "~2d 8h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "launch-countdown-daily",
       "when": "Apr 14, 2:20 PM ET",
-      "delta": "~9h 14m",
+      "delta": "~5h 14m",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "LinkedIn Growth",
       "when": "Apr 15, 3:00 PM ET",
-      "delta": "~1d 9h",
+      "delta": "~1d 5h",
       "reason": "Content / audience growth revenue lever"
     }
   ],
@@ -1835,18 +1835,6 @@
       "label": "Tuesday",
       "date": "Apr 14",
       "items": [
-        {
-          "time": "7:00 AM",
-          "name": "nightly-backup-test",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "7:15 AM",
-          "name": "self-learning-daily-cycle",
-          "category": "content",
-          "conflict": false
-        },
         {
           "time": "12:45 PM",
           "name": "daily-cost-collector",
@@ -1937,6 +1925,18 @@
       "label": "Wednesday",
       "date": "Apr 15",
       "items": [
+        {
+          "time": "7:00 AM",
+          "name": "nightly-backup-test",
+          "category": "system",
+          "conflict": false
+        },
+        {
+          "time": "7:15 AM",
+          "name": "self-learning-daily-cycle",
+          "category": "content",
+          "conflict": false
+        },
         {
           "time": "12:30 PM",
           "name": "analytics-7d-tue-apr8",
@@ -2141,12 +2141,12 @@
     },
     "main_exec_security": "allowlist",
     "main_exec_ask": "off",
-    "main_allowlist_count": 293,
+    "main_allowlist_count": 303,
     "sandbox": "mode: off scope: agent",
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Tue Apr 14, 2026, 5:05 AM WEST",
+    "generated_local": "Tue Apr 14, 2026, 9:05 AM WEST",
     "audit_summary": {
       "critical": 0,
       "warn": 4,
@@ -2156,7 +2156,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-14T04:05:10.373779+00:00"
+      "checked_at": "2026-04-14T08:05:08.121522+00:00"
     },
     "data_trust": "validated"
   }
