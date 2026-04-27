@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-27T16:05:03.025653+00:00",
+  "generated": "2026-04-27T20:05:01.181335+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -489,12 +489,12 @@
     "idle": 27,
     "revenue_aligned": 17,
     "est_monthly_ai_cost": 558.44,
-    "jobs_this_week": 51,
+    "jobs_this_week": 52,
     "disabled_jobs": 39,
     "revenue_direct": 7,
     "revenue_indirect": 10,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "Apr 27, 12:04 PM ET",
+    "next_job_time": "Apr 27, 4:04 PM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -584,7 +584,7 @@
       "delivery_target": "channel:1485491390304747550",
       "session_target": "isolated",
       "timeout_seconds": 600,
-      "last_run": "Apr 27, 1:45 AM ET",
+      "last_run": "Apr 27, 2:00 PM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -603,7 +603,7 @@
       ],
       "value": "DIRECT REVENUE",
       "notes": "Directly feeds MBA PA Academy enrollment funnel",
-      "next_run": "Apr 27, 2:00 PM ET",
+      "next_run": "May 4, 2:00 PM ET",
       "enabled": true
     },
     {
@@ -619,7 +619,7 @@
       "delivery_target": "channel:1485491468683448451",
       "session_target": "isolated",
       "timeout_seconds": 900,
-      "last_run": "Apr 27, 1:47 AM ET",
+      "last_run": "Apr 27, 3:00 PM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -638,7 +638,7 @@
       ],
       "value": "DIRECT REVENUE",
       "notes": "Weekly until May 12, then monthly. Course 1 focus. Course 2 build resumes post-travel.",
-      "next_run": "Apr 27, 3:00 PM ET",
+      "next_run": "May 4, 3:00 PM ET",
       "enabled": true
     },
     {
@@ -1822,32 +1822,32 @@
     {
       "name": "analytics-7d-apr21-surgeon-trust",
       "when": "Apr 28, 8:10 AM ET",
-      "delta": "~20h 4m",
+      "delta": "~16h 4m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "linkedin-analytics-48h-apr27",
       "when": "Apr 29, 2:09 AM ET",
-      "delta": "~1d 14h",
+      "delta": "~1d 10h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "linkedin-analytics-48h-apr27-onboarding-system",
       "when": "Apr 29, 12:10 PM ET",
-      "delta": "~2d",
+      "delta": "~1d 20h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-7d-apr23-business-literacy",
       "when": "Apr 30, 8:10 AM ET",
-      "delta": "~2d 20h",
+      "delta": "~2d 16h",
       "reason": "Human follow-up / export likely needed"
     },
     {
-      "name": "Lead Magnet Builder",
-      "when": "Apr 27, 2:00 PM ET",
-      "delta": "~1h 54m",
-      "reason": "Upcoming scheduled work"
+      "name": "analytics-48h-apr28-shadowing",
+      "when": "Apr 30, 12:10 PM ET",
+      "delta": "~2d 20h",
+      "reason": "Human follow-up / export likely needed"
     }
   ],
   "calendar_days": [
@@ -1855,18 +1855,6 @@
       "label": "Monday",
       "date": "Apr 27",
       "items": [
-        {
-          "time": "2:00 PM",
-          "name": "Lead Magnet Builder",
-          "category": "revenue",
-          "conflict": false
-        },
-        {
-          "time": "3:00 PM",
-          "name": "Course Architect",
-          "category": "revenue",
-          "conflict": false
-        },
         {
           "time": "4:10 PM",
           "name": "Agent Commands Watcher",
@@ -2155,12 +2143,12 @@
     },
     "main_exec_security": "allowlist",
     "main_exec_ask": "off",
-    "main_allowlist_count": 420,
+    "main_allowlist_count": 421,
     "sandbox": "mode: off scope: agent",
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Mon Apr 27, 2026, 12:05 PM ET",
+    "generated_local": "Mon Apr 27, 2026, 4:05 PM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 4,
@@ -2170,7 +2158,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-27T16:05:03.026575+00:00"
+      "checked_at": "2026-04-27T20:05:01.182403+00:00"
     },
     "data_trust": "validated"
   }
