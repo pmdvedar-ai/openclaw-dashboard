@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-27T08:05:02.205099+00:00",
+  "generated": "2026-04-27T12:05:10.225555+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -489,12 +489,12 @@
     "idle": 27,
     "revenue_aligned": 17,
     "est_monthly_ai_cost": 558.44,
-    "jobs_this_week": 51,
+    "jobs_this_week": 50,
     "disabled_jobs": 39,
     "revenue_direct": 7,
     "revenue_indirect": 10,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "Apr 27, 4:04 AM ET",
+    "next_job_time": "Apr 27, 8:04 AM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -819,7 +819,7 @@
       "delivery_target": "6394048111",
       "session_target": "isolated",
       "timeout_seconds": 600,
-      "last_run": "Apr 27, 1:19 AM ET",
+      "last_run": "Apr 27, 8:00 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -842,7 +842,7 @@
       ],
       "value": "SUPPORTING SYSTEM",
       "notes": "Timeout 300\u2192600s fixed Apr 1. Collector runs at 7:45 AM for 15-min buffer.",
-      "next_run": "Apr 27, 8:00 AM ET",
+      "next_run": "Apr 29, 8:00 AM ET",
       "enabled": true
     },
     {
@@ -858,7 +858,7 @@
       "delivery_target": "6394048111",
       "session_target": "isolated",
       "timeout_seconds": 120,
-      "last_run": "Apr 27, 1:19 AM ET",
+      "last_run": "Apr 27, 7:45 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -875,7 +875,7 @@
       ],
       "value": "SUPPORTING SYSTEM",
       "notes": "Runs 15 min before sentinel.",
-      "next_run": "Apr 27, 7:45 AM ET",
+      "next_run": "Apr 29, 7:45 AM ET",
       "enabled": true
     },
     {
@@ -1062,7 +1062,7 @@
       "delivery_target": "channel:1485490618636570805",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "Apr 27, 1:34 AM ET",
+      "last_run": "Apr 27, 8:03 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -1078,7 +1078,7 @@
       "downstream": [],
       "value": "SUPPORTING SYSTEM",
       "notes": "Local model appropriate for mechanical checks.",
-      "next_run": "Apr 27, 8:02 AM ET",
+      "next_run": "May 4, 8:02 AM ET",
       "enabled": true
     },
     {
@@ -1650,7 +1650,15 @@
       "description": "6 agents live. Thesis locked v1. Execution Enforcer first run Apr 15. Board (Skeptic/Investor/Offer Audit) first run May 4."
     }
   ],
-  "timing_conflicts": [],
+  "timing_conflicts": [
+    {
+      "time": "Wed Apr 29, 8:00 AM ET",
+      "agents": "daily-cost-sentinel + linkedin-post-apr29-evh-systems-indicator",
+      "risk": "MEDIUM",
+      "note": "Concurrent scheduled runs",
+      "status": "active"
+    }
+  ],
   "model_optimization": [
     {
       "agent": "Weekly Executive Summary",
@@ -1802,31 +1810,31 @@
     {
       "name": "analytics-7d-apr21-surgeon-trust",
       "when": "Apr 28, 8:10 AM ET",
-      "delta": "~1d 4h",
+      "delta": "~1d",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "linkedin-analytics-48h-apr27",
       "when": "Apr 29, 2:09 AM ET",
-      "delta": "~1d 22h",
+      "delta": "~1d 18h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "linkedin-analytics-48h-apr27-onboarding-system",
       "when": "Apr 29, 12:10 PM ET",
-      "delta": "~2d 8h",
+      "delta": "~2d 4h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "launch-countdown-daily",
       "when": "Apr 27, 9:20 AM ET",
-      "delta": "~5h 14m",
+      "delta": "~1h 14m",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "LinkedIn Growth",
       "when": "Apr 27, 10:00 AM ET",
-      "delta": "~5h 54m",
+      "delta": "~1h 54m",
       "reason": "Content / audience growth revenue lever"
     }
   ],
@@ -1835,30 +1843,6 @@
       "label": "Monday",
       "date": "Apr 27",
       "items": [
-        {
-          "time": "7:45 AM",
-          "name": "daily-cost-collector",
-          "category": "finance",
-          "conflict": false
-        },
-        {
-          "time": "8:00 AM",
-          "name": "daily-cost-sentinel",
-          "category": "finance",
-          "conflict": false
-        },
-        {
-          "time": "8:02 AM",
-          "name": "System Health Sentinel",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "8:05 AM",
-          "name": "morning-draft-briefing",
-          "category": "revenue",
-          "conflict": false
-        },
         {
           "time": "8:10 AM",
           "name": "Agent Commands Watcher",
@@ -2046,10 +2030,22 @@
           "conflict": false
         },
         {
+          "time": "7:45 AM",
+          "name": "daily-cost-collector",
+          "category": "finance",
+          "conflict": false
+        },
+        {
+          "time": "8:00 AM",
+          "name": "daily-cost-sentinel",
+          "category": "finance",
+          "conflict": true
+        },
+        {
           "time": "8:00 AM",
           "name": "linkedin-post-apr29-evh-systems-indicator",
           "category": "revenue",
-          "conflict": false
+          "conflict": true
         },
         {
           "time": "8:15 AM",
@@ -2188,7 +2184,7 @@
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Mon Apr 27, 2026, 4:05 AM ET",
+    "generated_local": "Mon Apr 27, 2026, 8:05 AM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 4,
@@ -2198,7 +2194,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-27T08:05:02.206087+00:00"
+      "checked_at": "2026-04-27T12:05:10.226544+00:00"
     },
     "data_trust": "validated"
   }
