@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-27T12:05:10.225555+00:00",
+  "generated": "2026-04-27T16:05:03.025653+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -483,18 +483,18 @@
     "total_agents": 105,
     "recurring_agents": 40,
     "one_time_jobs": 26,
-    "healthy": 39,
+    "healthy": 38,
     "warning": 0,
-    "broken": 0,
+    "broken": 1,
     "idle": 27,
     "revenue_aligned": 17,
     "est_monthly_ai_cost": 558.44,
-    "jobs_this_week": 50,
+    "jobs_this_week": 51,
     "disabled_jobs": 39,
     "revenue_direct": 7,
     "revenue_indirect": 10,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "Apr 27, 8:04 AM ET",
+    "next_job_time": "Apr 27, 12:04 PM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -511,7 +511,7 @@
       "delivery_target": "channel:1485491233756549202",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "Apr 27, 1:43 AM ET",
+      "last_run": "Apr 27, 9:13 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -530,7 +530,7 @@
       ],
       "value": "INDIRECT REVENUE",
       "notes": "Writes content/weekly-brief.md after each run. Feeds LinkedIn + Instagram with unified weekly theme.",
-      "next_run": "Apr 27, 9:13 AM ET",
+      "next_run": "May 4, 9:13 AM ET",
       "enabled": true
     },
     {
@@ -546,7 +546,7 @@
       "delivery_target": "channel:1485491337095544963",
       "session_target": "isolated",
       "timeout_seconds": 180,
-      "last_run": "Apr 27, 1:25 AM ET",
+      "last_run": "Apr 27, 10:00 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -568,7 +568,7 @@
       ],
       "value": "DIRECT REVENUE",
       "notes": "Brief-aware: reads content/weekly-brief.md first. Scheduled: Apr 10 'Nobody Teaches You' \u00b7 Apr 14 'Conduit Quality Training System'.",
-      "next_run": "Apr 27, 10:00 AM ET",
+      "next_run": "Apr 29, 10:00 AM ET",
       "enabled": true
     },
     {
@@ -891,7 +891,7 @@
       "delivery_target": "channel:1487048489618641002",
       "session_target": "isolated",
       "timeout_seconds": 120,
-      "last_run": "Apr 27, 1:23 AM ET",
+      "last_run": "Apr 27, 8:30 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -907,7 +907,7 @@
       "downstream": [],
       "value": "SUPPORTING SYSTEM",
       "notes": "Runs 30 min after sentinel \u2014 good timing.",
-      "next_run": "Apr 27, 8:30 AM ET",
+      "next_run": "Apr 28, 8:30 AM ET",
       "enabled": true
     },
     {
@@ -923,7 +923,7 @@
       "delivery_target": "channel:1485490618636570805",
       "session_target": "isolated",
       "timeout_seconds": 120,
-      "last_run": "Apr 27, 1:39 AM ET",
+      "last_run": "Apr 27, 9:10 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -942,7 +942,7 @@
       ],
       "value": "SUPPORTING SYSTEM",
       "notes": "Fixed Apr 1. MEMORY.md trimmed from 24.2k \u2192 13.1k on Apr 8 to prevent injection truncation.",
-      "next_run": "Apr 27, 9:10 AM ET",
+      "next_run": "Apr 28, 9:10 AM ET",
       "enabled": true
     },
     {
@@ -958,7 +958,7 @@
       "delivery_target": "channel:1485492143584837633",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "Apr 27, 1:30 AM ET",
+      "last_run": "Apr 27, 9:05 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -976,7 +976,7 @@
       ],
       "value": "SUPPORTING SYSTEM",
       "notes": "Runs same time as Memory Governance \u2014 no conflict (different tasks).",
-      "next_run": "Apr 27, 9:05 AM ET",
+      "next_run": "Apr 28, 9:05 AM ET",
       "enabled": true
     },
     {
@@ -1126,10 +1126,10 @@
       "delivery_target": "user:1485377509578244207",
       "session_target": "isolated",
       "timeout_seconds": 120,
-      "last_run": "Apr 27, 1:39 AM ET",
-      "last_run_status": "ok",
-      "consecutive_errors": 0,
-      "status": "HEALTHY",
+      "last_run": "Apr 27, 10:57 AM ET",
+      "last_run_status": "error",
+      "consecutive_errors": 1,
+      "status": "ERROR",
       "inputs": [
         "MEMORY.md",
         "projects/academy-lesson-breakdown.md"
@@ -1141,7 +1141,7 @@
       "downstream": [],
       "value": "DIRECT REVENUE",
       "notes": "\u26a0\ufe0f 1 consecutive error Apr 8. Needs diagnosis \u2014 likely delivery config.",
-      "next_run": "Apr 27, 9:20 AM ET",
+      "next_run": "Apr 28, 9:20 AM ET",
       "enabled": true
     },
     {
@@ -1369,7 +1369,7 @@
       "delivery_target": "1485491914986881115",
       "session_target": "isolated",
       "timeout_seconds": 120,
-      "last_run": "Apr 27, 1:53 AM ET",
+      "last_run": "Apr 27, 8:20 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -1384,7 +1384,7 @@
       "downstream": [],
       "value": "INDIRECT REVENUE",
       "notes": "13 posts registered. Read-only \u2014 prompt changes require Pol approval.",
-      "next_run": "Apr 27, 8:20 AM ET",
+      "next_run": "May 4, 8:20 AM ET",
       "enabled": true
     }
   ],
@@ -1615,6 +1615,11 @@
   },
   "health_issues": [
     {
+      "name": "ERROR - launch-countdown-daily",
+      "status": "broken",
+      "description": "Consecutive errors: 1 | Last run: Apr 27, 10:57 AM ET | Next: Apr 28, 9:20 AM ET"
+    },
+    {
       "name": "Security posture",
       "status": "warning",
       "description": "OpenClaw audit: 0 critical / 4 warn / 1 info"
@@ -1651,6 +1656,13 @@
     }
   ],
   "timing_conflicts": [
+    {
+      "time": "Tue Apr 28, 9:00 AM ET",
+      "agents": "email-monitor-daily + behavioral-learning-signal-checkpoint",
+      "risk": "MEDIUM",
+      "note": "Concurrent scheduled runs",
+      "status": "active"
+    },
     {
       "time": "Wed Apr 29, 8:00 AM ET",
       "agents": "daily-cost-sentinel + linkedin-post-apr29-evh-systems-indicator",
@@ -1810,32 +1822,32 @@
     {
       "name": "analytics-7d-apr21-surgeon-trust",
       "when": "Apr 28, 8:10 AM ET",
-      "delta": "~1d",
+      "delta": "~20h 4m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "linkedin-analytics-48h-apr27",
       "when": "Apr 29, 2:09 AM ET",
-      "delta": "~1d 18h",
+      "delta": "~1d 14h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "linkedin-analytics-48h-apr27-onboarding-system",
       "when": "Apr 29, 12:10 PM ET",
-      "delta": "~2d 4h",
+      "delta": "~2d",
       "reason": "Human follow-up / export likely needed"
     },
     {
-      "name": "launch-countdown-daily",
-      "when": "Apr 27, 9:20 AM ET",
-      "delta": "~1h 14m",
-      "reason": "Upcoming scheduled work"
+      "name": "analytics-7d-apr23-business-literacy",
+      "when": "Apr 30, 8:10 AM ET",
+      "delta": "~2d 20h",
+      "reason": "Human follow-up / export likely needed"
     },
     {
-      "name": "LinkedIn Growth",
-      "when": "Apr 27, 10:00 AM ET",
+      "name": "Lead Magnet Builder",
+      "when": "Apr 27, 2:00 PM ET",
       "delta": "~1h 54m",
-      "reason": "Content / audience growth revenue lever"
+      "reason": "Upcoming scheduled work"
     }
   ],
   "calendar_days": [
@@ -1843,126 +1855,6 @@
       "label": "Monday",
       "date": "Apr 27",
       "items": [
-        {
-          "time": "8:10 AM",
-          "name": "Agent Commands Watcher",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "8:13 AM",
-          "name": "weekly-build-plan",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "8:15 AM",
-          "name": "competitive-monitor-weekly",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "8:20 AM",
-          "name": "behavioral-learning-weekly-patterns",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "8:30 AM",
-          "name": "cost-sentinel-renewal-check",
-          "category": "finance",
-          "conflict": false
-        },
-        {
-          "time": "8:35 AM",
-          "name": "weekly-strategic-recalibration",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "8:45 AM",
-          "name": "cso-weekly-brief",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "9:00 AM",
-          "name": "email-monitor-daily",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "9:02 AM",
-          "name": "weekly-mode-signal",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "9:05 AM",
-          "name": "Backlog Intake Processor",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "9:10 AM",
-          "name": "memory-governance-daily",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "9:13 AM",
-          "name": "Content Drafts Scout",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "9:15 AM",
-          "name": "security-sentinel",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "9:17 AM",
-          "name": "board-skeptic-monthly",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "9:20 AM",
-          "name": "launch-countdown-daily",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "9:30 AM",
-          "name": "Pending Review Auto-Archive",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "9:45 AM",
-          "name": "daily-exception-report",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "9:47 AM",
-          "name": "board-investor-monthly",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "10:00 AM",
-          "name": "LinkedIn Growth",
-          "category": "revenue",
-          "conflict": false
-        },
-        {
-          "time": "10:15 AM",
-          "name": "board-offer-audit-monthly",
-          "category": "content",
-          "conflict": false
-        },
         {
           "time": "2:00 PM",
           "name": "Lead Magnet Builder",
@@ -1973,6 +1865,12 @@
           "time": "3:00 PM",
           "name": "Course Architect",
           "category": "revenue",
+          "conflict": false
+        },
+        {
+          "time": "4:10 PM",
+          "name": "Agent Commands Watcher",
+          "category": "system",
           "conflict": false
         }
       ]
@@ -1994,14 +1892,68 @@
           "conflict": false
         },
         {
+          "time": "8:05 AM",
+          "name": "morning-draft-briefing",
+          "category": "revenue",
+          "conflict": false
+        },
+        {
           "time": "8:10 AM",
           "name": "analytics-7d-apr21-surgeon-trust",
           "category": "revenue",
           "conflict": false
         },
         {
+          "time": "8:30 AM",
+          "name": "cost-sentinel-renewal-check",
+          "category": "finance",
+          "conflict": false
+        },
+        {
+          "time": "9:00 AM",
+          "name": "email-monitor-daily",
+          "category": "content",
+          "conflict": true
+        },
+        {
           "time": "9:00 AM",
           "name": "behavioral-learning-signal-checkpoint",
+          "category": "content",
+          "conflict": true
+        },
+        {
+          "time": "9:05 AM",
+          "name": "Backlog Intake Processor",
+          "category": "system",
+          "conflict": false
+        },
+        {
+          "time": "9:10 AM",
+          "name": "memory-governance-daily",
+          "category": "system",
+          "conflict": false
+        },
+        {
+          "time": "9:15 AM",
+          "name": "security-sentinel",
+          "category": "system",
+          "conflict": false
+        },
+        {
+          "time": "9:20 AM",
+          "name": "launch-countdown-daily",
+          "category": "system",
+          "conflict": false
+        },
+        {
+          "time": "9:30 AM",
+          "name": "Pending Review Auto-Archive",
+          "category": "content",
+          "conflict": false
+        },
+        {
+          "time": "9:45 AM",
+          "name": "daily-exception-report",
           "category": "content",
           "conflict": false
         },
@@ -2051,6 +2003,12 @@
           "time": "8:15 AM",
           "name": "execution-enforcer-midweek",
           "category": "content",
+          "conflict": false
+        },
+        {
+          "time": "10:00 AM",
+          "name": "LinkedIn Growth",
+          "category": "revenue",
           "conflict": false
         },
         {
@@ -2110,6 +2068,24 @@
         {
           "time": "9:10 AM",
           "name": "anthropic-csv-reminder",
+          "category": "content",
+          "conflict": false
+        },
+        {
+          "time": "9:17 AM",
+          "name": "board-skeptic-monthly",
+          "category": "content",
+          "conflict": false
+        },
+        {
+          "time": "9:47 AM",
+          "name": "board-investor-monthly",
+          "category": "content",
+          "conflict": false
+        },
+        {
+          "time": "10:15 AM",
+          "name": "board-offer-audit-monthly",
           "category": "content",
           "conflict": false
         },
@@ -2179,12 +2155,12 @@
     },
     "main_exec_security": "allowlist",
     "main_exec_ask": "off",
-    "main_allowlist_count": 404,
+    "main_allowlist_count": 420,
     "sandbox": "mode: off scope: agent",
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Mon Apr 27, 2026, 8:05 AM ET",
+    "generated_local": "Mon Apr 27, 2026, 12:05 PM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 4,
@@ -2194,7 +2170,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-27T12:05:10.226544+00:00"
+      "checked_at": "2026-04-27T16:05:03.026575+00:00"
     },
     "data_trust": "validated"
   }
