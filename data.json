@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-27T20:05:01.181335+00:00",
+  "generated": "2026-04-28T00:05:01.776500+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -494,7 +494,7 @@
     "revenue_direct": 7,
     "revenue_indirect": 10,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "Apr 27, 4:04 PM ET",
+    "next_job_time": "Apr 27, 8:04 PM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -1657,6 +1657,13 @@
   ],
   "timing_conflicts": [
     {
+      "time": "Tue Apr 28, 8:10 AM ET",
+      "agents": "analytics-7d-apr21-surgeon-trust + Agent Commands Watcher",
+      "risk": "MEDIUM",
+      "note": "Concurrent scheduled runs",
+      "status": "active"
+    },
+    {
       "time": "Tue Apr 28, 9:00 AM ET",
       "agents": "email-monitor-daily + behavioral-learning-signal-checkpoint",
       "risk": "MEDIUM",
@@ -1822,47 +1829,35 @@
     {
       "name": "analytics-7d-apr21-surgeon-trust",
       "when": "Apr 28, 8:10 AM ET",
-      "delta": "~16h 4m",
+      "delta": "~12h 4m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "linkedin-analytics-48h-apr27",
       "when": "Apr 29, 2:09 AM ET",
-      "delta": "~1d 10h",
+      "delta": "~1d 6h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "linkedin-analytics-48h-apr27-onboarding-system",
       "when": "Apr 29, 12:10 PM ET",
-      "delta": "~1d 20h",
+      "delta": "~1d 16h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-7d-apr23-business-literacy",
       "when": "Apr 30, 8:10 AM ET",
-      "delta": "~2d 16h",
+      "delta": "~2d 12h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-48h-apr28-shadowing",
       "when": "Apr 30, 12:10 PM ET",
-      "delta": "~2d 20h",
+      "delta": "~2d 16h",
       "reason": "Human follow-up / export likely needed"
     }
   ],
   "calendar_days": [
-    {
-      "label": "Monday",
-      "date": "Apr 27",
-      "items": [
-        {
-          "time": "4:10 PM",
-          "name": "Agent Commands Watcher",
-          "category": "system",
-          "conflict": false
-        }
-      ]
-    },
     {
       "label": "Tuesday",
       "date": "Apr 28",
@@ -1889,7 +1884,13 @@
           "time": "8:10 AM",
           "name": "analytics-7d-apr21-surgeon-trust",
           "category": "revenue",
-          "conflict": false
+          "conflict": true
+        },
+        {
+          "time": "8:10 AM",
+          "name": "Agent Commands Watcher",
+          "category": "system",
+          "conflict": true
         },
         {
           "time": "8:30 AM",
@@ -2132,6 +2133,84 @@
           "conflict": false
         }
       ]
+    },
+    {
+      "label": "Monday",
+      "date": "May 4",
+      "items": [
+        {
+          "time": "2:09 AM",
+          "name": "linkedin-analytics-7d-apr27",
+          "category": "revenue",
+          "conflict": false
+        },
+        {
+          "time": "8:02 AM",
+          "name": "System Health Sentinel",
+          "category": "system",
+          "conflict": false
+        },
+        {
+          "time": "8:13 AM",
+          "name": "weekly-build-plan",
+          "category": "content",
+          "conflict": false
+        },
+        {
+          "time": "8:15 AM",
+          "name": "competitive-monitor-weekly",
+          "category": "content",
+          "conflict": false
+        },
+        {
+          "time": "8:20 AM",
+          "name": "behavioral-learning-weekly-patterns",
+          "category": "system",
+          "conflict": false
+        },
+        {
+          "time": "8:35 AM",
+          "name": "weekly-strategic-recalibration",
+          "category": "content",
+          "conflict": false
+        },
+        {
+          "time": "8:45 AM",
+          "name": "cso-weekly-brief",
+          "category": "content",
+          "conflict": false
+        },
+        {
+          "time": "9:02 AM",
+          "name": "weekly-mode-signal",
+          "category": "content",
+          "conflict": false
+        },
+        {
+          "time": "9:13 AM",
+          "name": "Content Drafts Scout",
+          "category": "content",
+          "conflict": false
+        },
+        {
+          "time": "12:10 PM",
+          "name": "linkedin-analytics-7d-apr27-onboarding-system",
+          "category": "revenue",
+          "conflict": false
+        },
+        {
+          "time": "2:00 PM",
+          "name": "Lead Magnet Builder",
+          "category": "revenue",
+          "conflict": false
+        },
+        {
+          "time": "3:00 PM",
+          "name": "Course Architect",
+          "category": "revenue",
+          "conflict": false
+        }
+      ]
     }
   ],
   "security_posture": {
@@ -2148,7 +2227,7 @@
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Mon Apr 27, 2026, 4:05 PM ET",
+    "generated_local": "Mon Apr 27, 2026, 8:05 PM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 4,
@@ -2158,7 +2237,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-27T20:05:01.182403+00:00"
+      "checked_at": "2026-04-28T00:05:01.777552+00:00"
     },
     "data_trust": "validated"
   }
