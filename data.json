@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-28T16:04:59.815014+00:00",
+  "generated": "2026-04-28T20:04:58.571749+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -480,21 +480,21 @@
     ]
   },
   "summary": {
-    "total_agents": 105,
+    "total_agents": 107,
     "recurring_agents": 40,
-    "one_time_jobs": 23,
+    "one_time_jobs": 25,
     "healthy": 39,
     "warning": 0,
     "broken": 0,
-    "idle": 24,
+    "idle": 26,
     "revenue_aligned": 17,
     "est_monthly_ai_cost": 558.44,
-    "jobs_this_week": 50,
+    "jobs_this_week": 53,
     "disabled_jobs": 42,
     "revenue_direct": 7,
     "revenue_indirect": 10,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "Apr 28, 12:04 PM ET",
+    "next_job_time": "Apr 28, 4:04 PM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -1810,31 +1810,31 @@
     {
       "name": "linkedin-analytics-48h-apr27",
       "when": "Apr 29, 2:09 AM ET",
-      "delta": "~14h 4m",
+      "delta": "~10h 4m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "linkedin-analytics-48h-apr27-onboarding-system",
       "when": "Apr 29, 12:10 PM ET",
-      "delta": "~1d",
+      "delta": "~20h 5m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-7d-apr23-business-literacy",
       "when": "Apr 30, 8:10 AM ET",
-      "delta": "~1d 20h",
+      "delta": "~1d 16h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-48h-apr28-shadowing",
       "when": "Apr 30, 12:10 PM ET",
-      "delta": "~2d",
+      "delta": "~1d 20h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-48h-apr29-evh-systems-indicator",
       "when": "May 1, 8:10 AM ET",
-      "delta": "~2d 20h",
+      "delta": "~2d 16h",
       "reason": "Human follow-up / export likely needed"
     }
   ],
@@ -1991,6 +1991,12 @@
           "time": "12:10 PM",
           "name": "analytics-48h-apr28-shadowing",
           "category": "revenue",
+          "conflict": false
+        },
+        {
+          "time": "2:10 PM",
+          "name": "linkedin-apr28-shadowing-48h",
+          "category": "content",
           "conflict": false
         }
       ]
@@ -2179,12 +2185,12 @@
     },
     "main_exec_security": "allowlist",
     "main_exec_ask": "off",
-    "main_allowlist_count": 426,
+    "main_allowlist_count": 433,
     "sandbox": "mode: off scope: agent",
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Tue Apr 28, 2026, 12:04 PM ET",
+    "generated_local": "Tue Apr 28, 2026, 4:04 PM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 4,
@@ -2194,7 +2200,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-28T16:04:59.815359+00:00"
+      "checked_at": "2026-04-28T20:04:58.572113+00:00"
     },
     "data_trust": "validated"
   }
