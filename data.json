@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-28T08:05:02.649668+00:00",
+  "generated": "2026-04-28T12:05:03.439493+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -489,12 +489,12 @@
     "idle": 27,
     "revenue_aligned": 17,
     "est_monthly_ai_cost": 558.44,
-    "jobs_this_week": 52,
+    "jobs_this_week": 51,
     "disabled_jobs": 39,
     "revenue_direct": 7,
     "revenue_indirect": 10,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "Apr 28, 4:04 AM ET",
+    "next_job_time": "Apr 28, 8:04 AM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -1829,31 +1829,31 @@
     {
       "name": "analytics-7d-apr21-surgeon-trust",
       "when": "Apr 28, 8:10 AM ET",
-      "delta": "~4h 4m",
+      "delta": "~4m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "linkedin-analytics-48h-apr27",
       "when": "Apr 29, 2:09 AM ET",
-      "delta": "~22h 3m",
+      "delta": "~18h 3m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "linkedin-analytics-48h-apr27-onboarding-system",
       "when": "Apr 29, 12:10 PM ET",
-      "delta": "~1d 8h",
+      "delta": "~1d 4h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-7d-apr23-business-literacy",
       "when": "Apr 30, 8:10 AM ET",
-      "delta": "~2d 4h",
+      "delta": "~2d",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-48h-apr28-shadowing",
       "when": "Apr 30, 12:10 PM ET",
-      "delta": "~2d 8h",
+      "delta": "~2d 4h",
       "reason": "Human follow-up / export likely needed"
     }
   ],
@@ -1862,12 +1862,6 @@
       "label": "Tuesday",
       "date": "Apr 28",
       "items": [
-        {
-          "time": "8:05 AM",
-          "name": "morning-draft-briefing",
-          "category": "revenue",
-          "conflict": false
-        },
         {
           "time": "8:10 AM",
           "name": "analytics-7d-apr21-surgeon-trust",
@@ -2227,7 +2221,7 @@
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Tue Apr 28, 2026, 4:05 AM ET",
+    "generated_local": "Tue Apr 28, 2026, 8:05 AM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 4,
@@ -2237,7 +2231,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-28T08:05:02.650025+00:00"
+      "checked_at": "2026-04-28T12:05:03.440244+00:00"
     },
     "data_trust": "validated"
   }
