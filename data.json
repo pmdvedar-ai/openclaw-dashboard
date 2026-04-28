@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-28T04:04:58.391632+00:00",
+  "generated": "2026-04-28T08:05:02.649668+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -494,7 +494,7 @@
     "revenue_direct": 7,
     "revenue_indirect": 10,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "Apr 28, 12:04 AM ET",
+    "next_job_time": "Apr 28, 4:04 AM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -1094,7 +1094,7 @@
       "delivery_target": "channel:1485490618636570805",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "Apr 27, 2:01 AM ET",
+      "last_run": "Apr 28, 2:00 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -1110,7 +1110,7 @@
       "downstream": [],
       "value": "SUPPORTING SYSTEM",
       "notes": "Fixed Apr 1 \u2014 pre-commit secret leak check added.",
-      "next_run": "Apr 28, 2:00 AM ET",
+      "next_run": "Apr 29, 2:00 AM ET",
       "enabled": true
     },
     {
@@ -1829,31 +1829,31 @@
     {
       "name": "analytics-7d-apr21-surgeon-trust",
       "when": "Apr 28, 8:10 AM ET",
-      "delta": "~8h 5m",
+      "delta": "~4h 4m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "linkedin-analytics-48h-apr27",
       "when": "Apr 29, 2:09 AM ET",
-      "delta": "~1d 2h",
+      "delta": "~22h 3m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "linkedin-analytics-48h-apr27-onboarding-system",
       "when": "Apr 29, 12:10 PM ET",
-      "delta": "~1d 12h",
+      "delta": "~1d 8h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-7d-apr23-business-literacy",
       "when": "Apr 30, 8:10 AM ET",
-      "delta": "~2d 8h",
+      "delta": "~2d 4h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-48h-apr28-shadowing",
       "when": "Apr 30, 12:10 PM ET",
-      "delta": "~2d 12h",
+      "delta": "~2d 8h",
       "reason": "Human follow-up / export likely needed"
     }
   ],
@@ -1862,18 +1862,6 @@
       "label": "Tuesday",
       "date": "Apr 28",
       "items": [
-        {
-          "time": "2:00 AM",
-          "name": "nightly-backup-test",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "2:15 AM",
-          "name": "self-learning-daily-cycle",
-          "category": "content",
-          "conflict": false
-        },
         {
           "time": "8:05 AM",
           "name": "morning-draft-briefing",
@@ -1965,9 +1953,21 @@
       "date": "Apr 29",
       "items": [
         {
+          "time": "2:00 AM",
+          "name": "nightly-backup-test",
+          "category": "system",
+          "conflict": false
+        },
+        {
           "time": "2:09 AM",
           "name": "linkedin-analytics-48h-apr27",
           "category": "revenue",
+          "conflict": false
+        },
+        {
+          "time": "2:15 AM",
+          "name": "self-learning-daily-cycle",
+          "category": "content",
           "conflict": false
         },
         {
@@ -2227,7 +2227,7 @@
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Tue Apr 28, 2026, 12:04 AM ET",
+    "generated_local": "Tue Apr 28, 2026, 4:05 AM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 4,
@@ -2237,7 +2237,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-28T04:04:58.392247+00:00"
+      "checked_at": "2026-04-28T08:05:02.650025+00:00"
     },
     "data_trust": "validated"
   }
