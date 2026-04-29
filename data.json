@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-29T04:06:19.044251+00:00",
+  "generated": "2026-04-29T08:05:11.482049+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -480,21 +480,21 @@
     ]
   },
   "summary": {
-    "total_agents": 117,
-    "recurring_agents": 50,
-    "one_time_jobs": 25,
-    "healthy": 42,
+    "total_agents": 112,
+    "recurring_agents": 45,
+    "one_time_jobs": 24,
+    "healthy": 41,
     "warning": 0,
-    "broken": 1,
-    "idle": 32,
+    "broken": 0,
+    "idle": 28,
     "revenue_aligned": 17,
     "est_monthly_ai_cost": 558.44,
-    "jobs_this_week": 62,
-    "disabled_jobs": 42,
+    "jobs_this_week": 57,
+    "disabled_jobs": 43,
     "revenue_direct": 7,
     "revenue_indirect": 10,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "Apr 29, 12:04 AM ET",
+    "next_job_time": "Apr 29, 4:04 AM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -1094,7 +1094,7 @@
       "delivery_target": "channel:1485490618636570805",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "Apr 28, 2:00 AM ET",
+      "last_run": "Apr 29, 2:00 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -1110,7 +1110,7 @@
       "downstream": [],
       "value": "SUPPORTING SYSTEM",
       "notes": "Fixed Apr 1 \u2014 pre-commit secret leak check added.",
-      "next_run": "Apr 29, 2:00 AM ET",
+      "next_run": "Apr 30, 2:00 AM ET",
       "enabled": true
     },
     {
@@ -1615,14 +1615,9 @@
   },
   "health_issues": [
     {
-      "name": "ERROR - os-v2-task-audit",
-      "status": "broken",
-      "description": "Consecutive errors: 1 | Last run: Apr 29, 12:04 AM ET | Next: Apr 29, 1:04 AM ET"
-    },
-    {
       "name": "Security posture",
       "status": "warning",
-      "description": "OpenClaw audit: 0 critical / 4 warn / 1 info"
+      "description": "OpenClaw audit: 0 critical / 3 warn / 1 info"
     },
     {
       "name": "\u2705 launch-countdown-daily \u2014 Fixed Apr 8 + rescheduled 9:20 AM",
@@ -1665,21 +1660,14 @@
     },
     {
       "time": "Wed Apr 29, 9:00 AM ET",
-      "agents": "os-v2-security-scan + email-monitor-daily + os-monitor-security-scan",
-      "risk": "HIGH",
+      "agents": "os-v2-security-scan + email-monitor-daily",
+      "risk": "MEDIUM",
       "note": "Concurrent scheduled runs",
       "status": "active"
     },
     {
       "time": "Wed Apr 29, 9:30 AM ET",
-      "agents": "os-monitor-cleanup-preview + os-v2-cleanup-preview + Pending Review Auto-Archive",
-      "risk": "HIGH",
-      "note": "Concurrent scheduled runs",
-      "status": "active"
-    },
-    {
-      "time": "Mon May 4, 8:00 AM ET",
-      "agents": "os-monitor-weekly-report + os-v2-weekly-health",
+      "agents": "os-v2-cleanup-preview + Pending Review Auto-Archive",
       "risk": "MEDIUM",
       "note": "Concurrent scheduled runs",
       "status": "active"
@@ -1834,34 +1822,34 @@
   "bold_recommendation_impact": "\ud83d\udcb0 Gates: (1) Mitesh COO reply \u2014 watch for email \u00b7 (2) ElevenLabs 15 videos auto-resume Apr 24 \u00b7 (3) On-camera recording starts Apr 26+ \u00b7 (4) Enforcer first run Apr 15 \u00b7 (5) Course 1 pre-launch May 5\u201311",
   "action_queue": [
     {
-      "name": "linkedin-analytics-48h-apr27",
-      "when": "Apr 29, 2:09 AM ET",
-      "delta": "~2h 2m",
-      "reason": "Human follow-up / export likely needed"
-    },
-    {
       "name": "linkedin-analytics-48h-apr27-onboarding-system",
       "when": "Apr 29, 12:10 PM ET",
-      "delta": "~12h 3m",
+      "delta": "~8h 4m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-7d-apr23-business-literacy",
       "when": "Apr 30, 8:10 AM ET",
-      "delta": "~1d 8h",
+      "delta": "~1d 4h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-48h-apr28-shadowing",
       "when": "Apr 30, 12:10 PM ET",
-      "delta": "~1d 12h",
+      "delta": "~1d 8h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-48h-apr29-evh-systems-indicator",
       "when": "May 1, 8:10 AM ET",
-      "delta": "~2d 8h",
+      "delta": "~2d 4h",
       "reason": "Human follow-up / export likely needed"
+    },
+    {
+      "name": "anthropic-csv-reminder",
+      "when": "May 1, 9:10 AM ET",
+      "delta": "~2d 5h",
+      "reason": "Upcoming scheduled work"
     }
   ],
   "calendar_days": [
@@ -1870,38 +1858,14 @@
       "date": "Apr 29",
       "items": [
         {
-          "time": "12:07 AM",
+          "time": "4:08 AM",
           "name": "os-v2-gateway-monitor",
           "category": "content",
           "conflict": false
         },
         {
-          "time": "1:01 AM",
+          "time": "5:01 AM",
           "name": "os-monitor-task-audit",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "1:04 AM",
-          "name": "os-v2-task-audit",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "2:00 AM",
-          "name": "nightly-backup-test",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "2:09 AM",
-          "name": "linkedin-analytics-48h-apr27",
-          "category": "revenue",
-          "conflict": false
-        },
-        {
-          "time": "2:15 AM",
-          "name": "self-learning-daily-cycle",
           "category": "content",
           "conflict": false
         },
@@ -1960,12 +1924,6 @@
           "conflict": true
         },
         {
-          "time": "9:00 AM",
-          "name": "os-monitor-security-scan",
-          "category": "system",
-          "conflict": true
-        },
-        {
           "time": "9:05 AM",
           "name": "Backlog Intake Processor",
           "category": "system",
@@ -1988,12 +1946,6 @@
           "name": "launch-countdown-daily",
           "category": "system",
           "conflict": false
-        },
-        {
-          "time": "9:30 AM",
-          "name": "os-monitor-cleanup-preview",
-          "category": "content",
-          "conflict": true
         },
         {
           "time": "9:30 AM",
@@ -2037,6 +1989,18 @@
       "label": "Thursday",
       "date": "Apr 30",
       "items": [
+        {
+          "time": "2:00 AM",
+          "name": "nightly-backup-test",
+          "category": "system",
+          "conflict": false
+        },
+        {
+          "time": "2:15 AM",
+          "name": "self-learning-daily-cycle",
+          "category": "content",
+          "conflict": false
+        },
         {
           "time": "8:10 AM",
           "name": "analytics-7d-apr23-business-literacy",
@@ -2171,15 +2135,9 @@
         },
         {
           "time": "8:00 AM",
-          "name": "os-monitor-weekly-report",
-          "category": "content",
-          "conflict": true
-        },
-        {
-          "time": "8:00 AM",
           "name": "os-v2-weekly-health",
           "category": "system",
-          "conflict": true
+          "conflict": false
         },
         {
           "time": "8:02 AM",
@@ -2284,27 +2242,27 @@
     "openclaw_version": "OpenClaw 2026.4.26 (be8c246)",
     "audit_summary": {
       "critical": 0,
-      "warn": 4,
+      "warn": 3,
       "info": 1
     },
     "main_exec_security": "allowlist",
     "main_exec_ask": "off",
-    "main_allowlist_count": 487,
+    "main_allowlist_count": 505,
     "sandbox": "mode: off scope: agent",
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Wed Apr 29, 2026, 12:06 AM ET",
+    "generated_local": "Wed Apr 29, 2026, 4:05 AM ET",
     "audit_summary": {
       "critical": 0,
-      "warn": 4,
+      "warn": 3,
       "info": 1
     },
     "validation": {
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-29T04:06:19.044753+00:00"
+      "checked_at": "2026-04-29T08:05:11.482811+00:00"
     },
     "data_trust": "validated"
   }
