@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-28T20:04:58.571749+00:00",
+  "generated": "2026-04-29T00:04:59.917434+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -494,7 +494,7 @@
     "revenue_direct": 7,
     "revenue_indirect": 10,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "Apr 28, 4:04 PM ET",
+    "next_job_time": "Apr 28, 8:04 PM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -1810,47 +1810,35 @@
     {
       "name": "linkedin-analytics-48h-apr27",
       "when": "Apr 29, 2:09 AM ET",
-      "delta": "~10h 4m",
+      "delta": "~6h 4m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "linkedin-analytics-48h-apr27-onboarding-system",
       "when": "Apr 29, 12:10 PM ET",
-      "delta": "~20h 5m",
+      "delta": "~16h 5m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-7d-apr23-business-literacy",
       "when": "Apr 30, 8:10 AM ET",
-      "delta": "~1d 16h",
+      "delta": "~1d 12h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-48h-apr28-shadowing",
       "when": "Apr 30, 12:10 PM ET",
-      "delta": "~1d 20h",
+      "delta": "~1d 16h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-48h-apr29-evh-systems-indicator",
       "when": "May 1, 8:10 AM ET",
-      "delta": "~2d 16h",
+      "delta": "~2d 12h",
       "reason": "Human follow-up / export likely needed"
     }
   ],
   "calendar_days": [
-    {
-      "label": "Tuesday",
-      "date": "Apr 28",
-      "items": [
-        {
-          "time": "4:10 PM",
-          "name": "Agent Commands Watcher",
-          "category": "system",
-          "conflict": false
-        }
-      ]
-    },
     {
       "label": "Wednesday",
       "date": "Apr 29",
@@ -1895,6 +1883,12 @@
           "time": "8:05 AM",
           "name": "morning-draft-briefing",
           "category": "revenue",
+          "conflict": false
+        },
+        {
+          "time": "8:10 AM",
+          "name": "Agent Commands Watcher",
+          "category": "system",
           "conflict": false
         },
         {
@@ -2174,6 +2168,36 @@
           "conflict": false
         }
       ]
+    },
+    {
+      "label": "Tuesday",
+      "date": "May 5",
+      "items": [
+        {
+          "time": "9:00 AM",
+          "name": "Review Teachable About photo before launch",
+          "category": "content",
+          "conflict": false
+        },
+        {
+          "time": "11:00 AM",
+          "name": "Instagram Content Agent",
+          "category": "content",
+          "conflict": false
+        },
+        {
+          "time": "12:10 PM",
+          "name": "analytics-7d-apr28-shadowing",
+          "category": "revenue",
+          "conflict": false
+        },
+        {
+          "time": "2:10 PM",
+          "name": "linkedin-apr28-shadowing-7d",
+          "category": "content",
+          "conflict": false
+        }
+      ]
     }
   ],
   "security_posture": {
@@ -2190,7 +2214,7 @@
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Tue Apr 28, 2026, 4:04 PM ET",
+    "generated_local": "Tue Apr 28, 2026, 8:04 PM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 4,
@@ -2200,7 +2224,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-28T20:04:58.572113+00:00"
+      "checked_at": "2026-04-29T00:04:59.917791+00:00"
     },
     "data_trust": "validated"
   }
