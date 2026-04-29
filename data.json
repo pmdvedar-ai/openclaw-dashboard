@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-29T16:05:13.862789+00:00",
+  "generated": "2026-04-29T20:05:11.168391+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -480,21 +480,21 @@
     ]
   },
   "summary": {
-    "total_agents": 113,
+    "total_agents": 99,
     "recurring_agents": 45,
-    "one_time_jobs": 25,
+    "one_time_jobs": 22,
     "healthy": 42,
     "warning": 0,
     "broken": 1,
-    "idle": 27,
+    "idle": 24,
     "revenue_aligned": 17,
     "est_monthly_ai_cost": 558.44,
-    "jobs_this_week": 60,
-    "disabled_jobs": 43,
+    "jobs_this_week": 57,
+    "disabled_jobs": 32,
     "revenue_direct": 7,
     "revenue_indirect": 10,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "Apr 29, 12:04 PM ET",
+    "next_job_time": "Apr 29, 4:04 PM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -568,7 +568,7 @@
       ],
       "value": "DIRECT REVENUE",
       "notes": "Brief-aware: reads content/weekly-brief.md first. Scheduled: Apr 10 'Nobody Teaches You' \u00b7 Apr 14 'Conduit Quality Training System'.",
-      "next_run": "May 1, 10:00 AM ET",
+      "next_run": "May 4, 10:00 AM ET",
       "enabled": true
     },
     {
@@ -1820,34 +1820,34 @@
   "bold_recommendation_impact": "\ud83d\udcb0 Gates: (1) Mitesh COO reply \u2014 watch for email \u00b7 (2) ElevenLabs 15 videos auto-resume Apr 24 \u00b7 (3) On-camera recording starts Apr 26+ \u00b7 (4) Enforcer first run Apr 15 \u00b7 (5) Course 1 pre-launch May 5\u201311",
   "action_queue": [
     {
-      "name": "linkedin-analytics-48h-apr27-onboarding-system",
-      "when": "Apr 29, 12:10 PM ET",
-      "delta": "~4m",
-      "reason": "Human follow-up / export likely needed"
-    },
-    {
       "name": "analytics-7d-apr23-business-literacy",
       "when": "Apr 30, 8:10 AM ET",
-      "delta": "~20h 4m",
+      "delta": "~16h 4m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-48h-apr28-shadowing",
       "when": "Apr 30, 12:10 PM ET",
-      "delta": "~1d",
+      "delta": "~20h 4m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-48h-apr29-evh-systems-indicator",
       "when": "May 1, 8:10 AM ET",
-      "delta": "~1d 20h",
+      "delta": "~1d 16h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "anthropic-csv-reminder",
       "when": "May 1, 9:10 AM ET",
-      "delta": "~1d 21h",
+      "delta": "~1d 17h",
       "reason": "Upcoming scheduled work"
+    },
+    {
+      "name": "analytics-48h-apr30-burnout",
+      "when": "May 2, 12:10 PM ET",
+      "delta": "~2d 20h",
+      "reason": "Human follow-up / export likely needed"
     }
   ],
   "calendar_days": [
@@ -1856,20 +1856,8 @@
       "date": "Apr 29",
       "items": [
         {
-          "time": "12:07 PM",
+          "time": "4:08 PM",
           "name": "os-v2-gateway-monitor",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "12:10 PM",
-          "name": "linkedin-analytics-48h-apr27-onboarding-system",
-          "category": "revenue",
-          "conflict": false
-        },
-        {
-          "time": "1:01 PM",
-          "name": "os-monitor-task-audit",
           "category": "content",
           "conflict": false
         },
@@ -1877,6 +1865,12 @@
           "time": "4:10 PM",
           "name": "Agent Commands Watcher",
           "category": "system",
+          "conflict": false
+        },
+        {
+          "time": "5:01 PM",
+          "name": "os-monitor-task-audit",
+          "category": "content",
           "conflict": false
         },
         {
@@ -1976,12 +1970,6 @@
           "conflict": false
         },
         {
-          "time": "12:00 PM",
-          "name": "linkedin-burnout-story-tue-apr21",
-          "category": "content",
-          "conflict": false
-        },
-        {
           "time": "12:10 PM",
           "name": "analytics-48h-apr28-shadowing",
           "category": "revenue",
@@ -2051,12 +2039,6 @@
           "time": "9:47 AM",
           "name": "board-investor-monthly",
           "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "10:00 AM",
-          "name": "LinkedIn Growth",
-          "category": "revenue",
           "conflict": false
         },
         {
@@ -2186,6 +2168,12 @@
           "conflict": false
         },
         {
+          "time": "10:00 AM",
+          "name": "LinkedIn Growth",
+          "category": "revenue",
+          "conflict": false
+        },
+        {
           "time": "12:10 PM",
           "name": "linkedin-analytics-7d-apr27-onboarding-system",
           "category": "revenue",
@@ -2245,12 +2233,12 @@
     },
     "main_exec_security": "allowlist",
     "main_exec_ask": "off",
-    "main_allowlist_count": 625,
+    "main_allowlist_count": 636,
     "sandbox": "mode: off scope: agent",
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Wed Apr 29, 2026, 12:05 PM ET",
+    "generated_local": "Wed Apr 29, 2026, 4:05 PM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 3,
@@ -2260,7 +2248,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-29T16:05:13.863610+00:00"
+      "checked_at": "2026-04-29T20:05:11.169059+00:00"
     },
     "data_trust": "validated"
   }
