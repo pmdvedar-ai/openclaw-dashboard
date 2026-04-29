@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-29T00:04:59.917434+00:00",
+  "generated": "2026-04-29T04:06:19.044251+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -126,7 +126,7 @@
     "scripts_ready": true,
     "resume_script": "scripts/execute_course2_build.py",
     "launch_date": "May 12, 2026",
-    "days_to_launch": 14
+    "days_to_launch": 13
   },
   "travel_window": {
     "departure": "2026-04-11",
@@ -480,21 +480,21 @@
     ]
   },
   "summary": {
-    "total_agents": 107,
-    "recurring_agents": 40,
+    "total_agents": 117,
+    "recurring_agents": 50,
     "one_time_jobs": 25,
-    "healthy": 39,
+    "healthy": 42,
     "warning": 0,
-    "broken": 0,
-    "idle": 26,
+    "broken": 1,
+    "idle": 32,
     "revenue_aligned": 17,
     "est_monthly_ai_cost": 558.44,
-    "jobs_this_week": 53,
+    "jobs_this_week": 62,
     "disabled_jobs": 42,
     "revenue_direct": 7,
     "revenue_indirect": 10,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "Apr 28, 8:04 PM ET",
+    "next_job_time": "Apr 29, 12:04 AM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -1615,6 +1615,11 @@
   },
   "health_issues": [
     {
+      "name": "ERROR - os-v2-task-audit",
+      "status": "broken",
+      "description": "Consecutive errors: 1 | Last run: Apr 29, 12:04 AM ET | Next: Apr 29, 1:04 AM ET"
+    },
+    {
       "name": "Security posture",
       "status": "warning",
       "description": "OpenClaw audit: 0 critical / 4 warn / 1 info"
@@ -1654,6 +1659,27 @@
     {
       "time": "Wed Apr 29, 8:00 AM ET",
       "agents": "daily-cost-sentinel + linkedin-post-apr29-evh-systems-indicator",
+      "risk": "MEDIUM",
+      "note": "Concurrent scheduled runs",
+      "status": "active"
+    },
+    {
+      "time": "Wed Apr 29, 9:00 AM ET",
+      "agents": "os-v2-security-scan + email-monitor-daily + os-monitor-security-scan",
+      "risk": "HIGH",
+      "note": "Concurrent scheduled runs",
+      "status": "active"
+    },
+    {
+      "time": "Wed Apr 29, 9:30 AM ET",
+      "agents": "os-monitor-cleanup-preview + os-v2-cleanup-preview + Pending Review Auto-Archive",
+      "risk": "HIGH",
+      "note": "Concurrent scheduled runs",
+      "status": "active"
+    },
+    {
+      "time": "Mon May 4, 8:00 AM ET",
+      "agents": "os-monitor-weekly-report + os-v2-weekly-health",
       "risk": "MEDIUM",
       "note": "Concurrent scheduled runs",
       "status": "active"
@@ -1810,31 +1836,31 @@
     {
       "name": "linkedin-analytics-48h-apr27",
       "when": "Apr 29, 2:09 AM ET",
-      "delta": "~6h 4m",
+      "delta": "~2h 2m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "linkedin-analytics-48h-apr27-onboarding-system",
       "when": "Apr 29, 12:10 PM ET",
-      "delta": "~16h 5m",
+      "delta": "~12h 3m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-7d-apr23-business-literacy",
       "when": "Apr 30, 8:10 AM ET",
-      "delta": "~1d 12h",
+      "delta": "~1d 8h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-48h-apr28-shadowing",
       "when": "Apr 30, 12:10 PM ET",
-      "delta": "~1d 16h",
+      "delta": "~1d 12h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-48h-apr29-evh-systems-indicator",
       "when": "May 1, 8:10 AM ET",
-      "delta": "~2d 12h",
+      "delta": "~2d 8h",
       "reason": "Human follow-up / export likely needed"
     }
   ],
@@ -1843,6 +1869,24 @@
       "label": "Wednesday",
       "date": "Apr 29",
       "items": [
+        {
+          "time": "12:07 AM",
+          "name": "os-v2-gateway-monitor",
+          "category": "content",
+          "conflict": false
+        },
+        {
+          "time": "1:01 AM",
+          "name": "os-monitor-task-audit",
+          "category": "content",
+          "conflict": false
+        },
+        {
+          "time": "1:04 AM",
+          "name": "os-v2-task-audit",
+          "category": "content",
+          "conflict": false
+        },
         {
           "time": "2:00 AM",
           "name": "nightly-backup-test",
@@ -1905,9 +1949,21 @@
         },
         {
           "time": "9:00 AM",
+          "name": "os-v2-security-scan",
+          "category": "system",
+          "conflict": true
+        },
+        {
+          "time": "9:00 AM",
           "name": "email-monitor-daily",
           "category": "content",
-          "conflict": false
+          "conflict": true
+        },
+        {
+          "time": "9:00 AM",
+          "name": "os-monitor-security-scan",
+          "category": "system",
+          "conflict": true
         },
         {
           "time": "9:05 AM",
@@ -1935,9 +1991,21 @@
         },
         {
           "time": "9:30 AM",
+          "name": "os-monitor-cleanup-preview",
+          "category": "content",
+          "conflict": true
+        },
+        {
+          "time": "9:30 AM",
+          "name": "os-v2-cleanup-preview",
+          "category": "content",
+          "conflict": true
+        },
+        {
+          "time": "9:30 AM",
           "name": "Pending Review Auto-Archive",
           "category": "content",
-          "conflict": false
+          "conflict": true
         },
         {
           "time": "9:45 AM",
@@ -2102,6 +2170,18 @@
           "conflict": false
         },
         {
+          "time": "8:00 AM",
+          "name": "os-monitor-weekly-report",
+          "category": "content",
+          "conflict": true
+        },
+        {
+          "time": "8:00 AM",
+          "name": "os-v2-weekly-health",
+          "category": "system",
+          "conflict": true
+        },
+        {
           "time": "8:02 AM",
           "name": "System Health Sentinel",
           "category": "system",
@@ -2201,7 +2281,7 @@
     }
   ],
   "security_posture": {
-    "openclaw_version": "OpenClaw 2026.4.14 (323493f)",
+    "openclaw_version": "OpenClaw 2026.4.26 (be8c246)",
     "audit_summary": {
       "critical": 0,
       "warn": 4,
@@ -2209,12 +2289,12 @@
     },
     "main_exec_security": "allowlist",
     "main_exec_ask": "off",
-    "main_allowlist_count": 433,
+    "main_allowlist_count": 487,
     "sandbox": "mode: off scope: agent",
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Tue Apr 28, 2026, 8:04 PM ET",
+    "generated_local": "Wed Apr 29, 2026, 12:06 AM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 4,
@@ -2224,7 +2304,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-29T00:04:59.917791+00:00"
+      "checked_at": "2026-04-29T04:06:19.044753+00:00"
     },
     "data_trust": "validated"
   }
