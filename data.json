@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-30T08:05:12.388455+00:00",
+  "generated": "2026-04-30T12:05:12.968175+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -489,12 +489,12 @@
     "idle": 33,
     "revenue_aligned": 17,
     "est_monthly_ai_cost": 558.44,
-    "jobs_this_week": 59,
+    "jobs_this_week": 58,
     "disabled_jobs": 32,
     "revenue_direct": 7,
     "revenue_indirect": 10,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "Apr 30, 4:04 AM ET",
+    "next_job_time": "Apr 30, 8:04 AM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -1669,6 +1669,13 @@
       "status": "active"
     },
     {
+      "time": "Thu Apr 30, 8:30 AM ET",
+      "agents": "cost-sentinel-renewal-check + background-routing-cron-trigger-evaluation",
+      "risk": "MEDIUM",
+      "note": "Concurrent scheduled runs",
+      "status": "active"
+    },
+    {
       "time": "Thu Apr 30, 9:00 AM ET",
       "agents": "os-v2-security-scan + email-monitor-daily",
       "risk": "MEDIUM",
@@ -1834,31 +1841,31 @@
     {
       "name": "analytics-7d-apr23-business-literacy",
       "when": "Apr 30, 8:10 AM ET",
-      "delta": "~4h 4m",
+      "delta": "~4m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-48h-apr28-shadowing",
       "when": "Apr 30, 12:10 PM ET",
-      "delta": "~8h 4m",
+      "delta": "~4h 4m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-48h-apr29-evh-systems-indicator",
       "when": "May 1, 8:10 AM ET",
-      "delta": "~1d 4h",
+      "delta": "~1d",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "anthropic-csv-reminder",
       "when": "May 1, 9:10 AM ET",
-      "delta": "~1d 5h",
+      "delta": "~1d 1h",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "analytics-48h-apr30-burnout",
       "when": "May 2, 12:10 PM ET",
-      "delta": "~2d 8h",
+      "delta": "~2d 4h",
       "reason": "Human follow-up / export likely needed"
     }
   ],
@@ -1868,27 +1875,9 @@
       "date": "Apr 30",
       "items": [
         {
-          "time": "4:07 AM",
+          "time": "8:07 AM",
           "name": "os-v2-gateway-monitor",
           "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "4:15 AM",
-          "name": "background-routing-queue-polling",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "4:30 AM",
-          "name": "background-routing-cron-trigger-evaluation",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "8:05 AM",
-          "name": "morning-draft-briefing",
-          "category": "revenue",
           "conflict": false
         },
         {
@@ -1904,10 +1893,22 @@
           "conflict": true
         },
         {
+          "time": "8:15 AM",
+          "name": "background-routing-queue-polling",
+          "category": "content",
+          "conflict": false
+        },
+        {
           "time": "8:30 AM",
           "name": "cost-sentinel-renewal-check",
           "category": "finance",
-          "conflict": false
+          "conflict": true
+        },
+        {
+          "time": "8:30 AM",
+          "name": "background-routing-cron-trigger-evaluation",
+          "category": "content",
+          "conflict": true
         },
         {
           "time": "9:00 AM",
@@ -2274,7 +2275,7 @@
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Thu Apr 30, 2026, 4:05 AM ET",
+    "generated_local": "Thu Apr 30, 2026, 8:05 AM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 3,
@@ -2284,7 +2285,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-30T08:05:12.389389+00:00"
+      "checked_at": "2026-04-30T12:05:12.969020+00:00"
     },
     "data_trust": "validated"
   }
