@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-29T20:05:11.168391+00:00",
+  "generated": "2026-04-30T04:05:14.429891+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -126,7 +126,7 @@
     "scripts_ready": true,
     "resume_script": "scripts/execute_course2_build.py",
     "launch_date": "May 12, 2026",
-    "days_to_launch": 13
+    "days_to_launch": 12
   },
   "travel_window": {
     "departure": "2026-04-11",
@@ -480,21 +480,21 @@
     ]
   },
   "summary": {
-    "total_agents": 99,
-    "recurring_agents": 45,
-    "one_time_jobs": 22,
-    "healthy": 42,
+    "total_agents": 109,
+    "recurring_agents": 46,
+    "one_time_jobs": 31,
+    "healthy": 41,
     "warning": 0,
-    "broken": 1,
-    "idle": 24,
+    "broken": 3,
+    "idle": 33,
     "revenue_aligned": 17,
     "est_monthly_ai_cost": 558.44,
-    "jobs_this_week": 57,
+    "jobs_this_week": 59,
     "disabled_jobs": 32,
     "revenue_direct": 7,
     "revenue_indirect": 10,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "Apr 29, 4:04 PM ET",
+    "next_job_time": "Apr 30, 12:04 AM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -654,10 +654,10 @@
       "delivery_target": "channel:1485491529991589888",
       "session_target": "isolated",
       "timeout_seconds": 180,
-      "last_run": "Apr 27, 1:38 AM ET",
-      "last_run_status": "ok",
-      "consecutive_errors": 0,
-      "status": "HEALTHY",
+      "last_run": "Apr 29, 6:00 PM ET",
+      "last_run_status": "error",
+      "consecutive_errors": 1,
+      "status": "ERROR",
       "inputs": [
         "agents/consulting-outreach/outreach-tracker.jsonl",
         "MEMORY.md"
@@ -671,7 +671,7 @@
       ],
       "value": "DIRECT REVENUE",
       "notes": "GPT-5.4 for warm lead judgment. 22 DMs sent total. 8 follow-ups due Apr 15.",
-      "next_run": "Apr 29, 6:00 PM ET",
+      "next_run": "May 6, 6:00 PM ET",
       "enabled": true
     },
     {
@@ -1615,9 +1615,19 @@
   },
   "health_issues": [
     {
+      "name": "ERROR - dashboard-regenerate-hourly",
+      "status": "broken",
+      "description": "Consecutive errors: 1 | Last run: Apr 29, 8:04 PM ET | Next: Apr 30, 12:04 AM ET"
+    },
+    {
       "name": "ERROR - execution-enforcer-midweek",
       "status": "broken",
       "description": "Consecutive errors: 1 | Last run: Apr 29, 8:15 AM ET | Next: May 6, 8:15 AM ET"
+    },
+    {
+      "name": "ERROR - consulting-outreach-midweek",
+      "status": "broken",
+      "description": "Consecutive errors: 1 | Last run: Apr 29, 6:00 PM ET | Next: May 6, 6:00 PM ET"
     },
     {
       "name": "Security posture",
@@ -1656,6 +1666,13 @@
     }
   ],
   "timing_conflicts": [
+    {
+      "time": "Thu Apr 30, 8:10 AM ET",
+      "agents": "analytics-7d-apr23-business-literacy + Agent Commands Watcher",
+      "risk": "MEDIUM",
+      "note": "Concurrent scheduled runs",
+      "status": "active"
+    },
     {
       "time": "Thu Apr 30, 9:00 AM ET",
       "agents": "os-v2-security-scan + email-monitor-daily",
@@ -1822,69 +1839,57 @@
     {
       "name": "analytics-7d-apr23-business-literacy",
       "when": "Apr 30, 8:10 AM ET",
-      "delta": "~16h 4m",
+      "delta": "~8h 4m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-48h-apr28-shadowing",
       "when": "Apr 30, 12:10 PM ET",
-      "delta": "~20h 4m",
+      "delta": "~12h 4m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "analytics-48h-apr29-evh-systems-indicator",
       "when": "May 1, 8:10 AM ET",
-      "delta": "~1d 16h",
+      "delta": "~1d 8h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "anthropic-csv-reminder",
       "when": "May 1, 9:10 AM ET",
-      "delta": "~1d 17h",
+      "delta": "~1d 9h",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "analytics-48h-apr30-burnout",
       "when": "May 2, 12:10 PM ET",
-      "delta": "~2d 20h",
+      "delta": "~2d 12h",
       "reason": "Human follow-up / export likely needed"
     }
   ],
   "calendar_days": [
     {
-      "label": "Wednesday",
-      "date": "Apr 29",
+      "label": "Thursday",
+      "date": "Apr 30",
       "items": [
         {
-          "time": "4:08 PM",
+          "time": "12:07 AM",
           "name": "os-v2-gateway-monitor",
           "category": "content",
           "conflict": false
         },
         {
-          "time": "4:10 PM",
-          "name": "Agent Commands Watcher",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "5:01 PM",
-          "name": "os-monitor-task-audit",
+          "time": "12:15 AM",
+          "name": "background-routing-queue-polling",
           "category": "content",
           "conflict": false
         },
         {
-          "time": "6:00 PM",
-          "name": "consulting-outreach-midweek",
-          "category": "revenue",
+          "time": "12:30 AM",
+          "name": "background-routing-cron-trigger-evaluation",
+          "category": "content",
           "conflict": false
-        }
-      ]
-    },
-    {
-      "label": "Thursday",
-      "date": "Apr 30",
-      "items": [
+        },
         {
           "time": "2:00 AM",
           "name": "nightly-backup-test",
@@ -1907,7 +1912,13 @@
           "time": "8:10 AM",
           "name": "analytics-7d-apr23-business-literacy",
           "category": "revenue",
-          "conflict": false
+          "conflict": true
+        },
+        {
+          "time": "8:10 AM",
+          "name": "Agent Commands Watcher",
+          "category": "system",
+          "conflict": true
         },
         {
           "time": "8:30 AM",
@@ -2210,6 +2221,12 @@
           "conflict": false
         },
         {
+          "time": "12:00 PM",
+          "name": "LinkedIn \u2014 Onboarding Debt \u2014 The Real Reason APPs Burn Out",
+          "category": "content",
+          "conflict": false
+        },
+        {
           "time": "12:10 PM",
           "name": "analytics-7d-apr28-shadowing",
           "category": "revenue",
@@ -2219,6 +2236,30 @@
           "time": "2:10 PM",
           "name": "linkedin-apr28-shadowing-7d",
           "category": "content",
+          "conflict": false
+        }
+      ]
+    },
+    {
+      "label": "Wednesday",
+      "date": "May 6",
+      "items": [
+        {
+          "time": "8:10 AM",
+          "name": "analytics-7d-apr29-evh-systems-indicator",
+          "category": "revenue",
+          "conflict": false
+        },
+        {
+          "time": "8:15 AM",
+          "name": "execution-enforcer-midweek",
+          "category": "content",
+          "conflict": false
+        },
+        {
+          "time": "6:00 PM",
+          "name": "consulting-outreach-midweek",
+          "category": "revenue",
           "conflict": false
         }
       ]
@@ -2233,12 +2274,12 @@
     },
     "main_exec_security": "allowlist",
     "main_exec_ask": "off",
-    "main_allowlist_count": 636,
+    "main_allowlist_count": 682,
     "sandbox": "mode: off scope: agent",
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Wed Apr 29, 2026, 4:05 PM ET",
+    "generated_local": "Thu Apr 30, 2026, 12:05 AM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 3,
@@ -2248,7 +2289,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-29T20:05:11.169059+00:00"
+      "checked_at": "2026-04-30T04:05:14.430696+00:00"
     },
     "data_trust": "validated"
   }
