@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-01T00:05:22.906484+00:00",
+  "generated": "2026-05-01T04:05:39.126757+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -126,7 +126,7 @@
     "scripts_ready": true,
     "resume_script": "scripts/execute_course2_build.py",
     "launch_date": "May 12, 2026",
-    "days_to_launch": 12
+    "days_to_launch": 11
   },
   "travel_window": {
     "departure": "2026-04-11",
@@ -480,21 +480,21 @@
     ]
   },
   "summary": {
-    "total_agents": 109,
+    "total_agents": 110,
     "recurring_agents": 47,
-    "one_time_jobs": 29,
-    "healthy": 39,
+    "one_time_jobs": 30,
+    "healthy": 40,
     "warning": 0,
-    "broken": 6,
-    "idle": 31,
+    "broken": 5,
+    "idle": 32,
     "revenue_aligned": 17,
     "est_monthly_ai_cost": 558.44,
-    "jobs_this_week": 62,
+    "jobs_this_week": 63,
     "disabled_jobs": 33,
     "revenue_direct": 7,
     "revenue_indirect": 10,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "Apr 30, 8:04 PM ET",
+    "next_job_time": "May 1, 12:04 AM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -687,7 +687,7 @@
       "delivery_target": "channel:1485491529991589888",
       "session_target": "isolated",
       "timeout_seconds": 600,
-      "last_run": "Apr 27, 1:36 AM ET",
+      "last_run": "Apr 30, 10:16 PM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -1635,11 +1635,6 @@
       "description": "Consecutive errors: 1 | Last run: Apr 30, 9:45 AM ET | Next: May 1, 9:45 AM ET"
     },
     {
-      "name": "ERROR - execution-enforcer-midweek",
-      "status": "broken",
-      "description": "Consecutive errors: 1 | Last run: Apr 29, 8:15 AM ET | Next: May 6, 8:15 AM ET"
-    },
-    {
       "name": "ERROR - consulting-outreach-midweek",
       "status": "broken",
       "description": "Consecutive errors: 1 | Last run: Apr 29, 6:00 PM ET | Next: May 6, 6:00 PM ET"
@@ -1882,75 +1877,63 @@
     {
       "name": "analytics-48h-apr29-evh-systems-indicator",
       "when": "May 1, 8:10 AM ET",
-      "delta": "~12h 4m",
+      "delta": "~8h 4m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "anthropic-csv-reminder",
       "when": "May 1, 9:10 AM ET",
-      "delta": "~13h 4m",
+      "delta": "~9h 4m",
+      "reason": "Upcoming scheduled work"
+    },
+    {
+      "name": "Jordan follow-up reminder",
+      "when": "May 1, 7:00 PM ET",
+      "delta": "~18h 54m",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "analytics-48h-apr30-burnout",
       "when": "May 2, 12:10 PM ET",
-      "delta": "~1d 16h",
+      "delta": "~1d 12h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "launch-countdown-daily",
       "when": "May 1, 9:20 AM ET",
-      "delta": "~13h 14m",
+      "delta": "~9h 14m",
       "reason": "Upcoming scheduled work"
-    },
-    {
-      "name": "Consulting Outreach",
-      "when": "May 1, 4:00 PM ET",
-      "delta": "~19h 54m",
-      "reason": "Pipeline generation"
     }
   ],
   "calendar_days": [
     {
-      "label": "Thursday",
-      "date": "Apr 30",
+      "label": "Friday",
+      "date": "May 1",
       "items": [
         {
-          "time": "8:08 PM",
+          "time": "12:08 AM",
           "name": "os-v2-gateway-monitor",
           "category": "content",
           "conflict": false
         },
         {
-          "time": "8:15 PM",
+          "time": "12:15 AM",
           "name": "background-routing-queue-polling",
           "category": "content",
           "conflict": false
         },
         {
-          "time": "8:20 PM",
+          "time": "12:22 AM",
           "name": "phase1-cache-evidence-watch",
           "category": "content",
           "conflict": false
         },
         {
-          "time": "8:30 PM",
+          "time": "12:30 AM",
           "name": "background-routing-cron-trigger-evaluation",
           "category": "content",
           "conflict": false
         },
-        {
-          "time": "9:15 PM",
-          "name": "follow-up-cron-audit-tonight",
-          "category": "content",
-          "conflict": false
-        }
-      ]
-    },
-    {
-      "label": "Friday",
-      "date": "May 1",
-      "items": [
         {
           "time": "2:00 AM",
           "name": "nightly-backup-test",
@@ -2117,6 +2100,18 @@
           "time": "6:30 PM",
           "name": "Weekly Executive Summary",
           "category": "system",
+          "conflict": false
+        },
+        {
+          "time": "7:00 PM",
+          "name": "Jordan follow-up reminder",
+          "category": "content",
+          "conflict": false
+        },
+        {
+          "time": "7:15 PM",
+          "name": "Tomorrow LinkedIn outreach block",
+          "category": "revenue",
           "conflict": false
         }
       ]
@@ -2300,6 +2295,36 @@
           "conflict": false
         }
       ]
+    },
+    {
+      "label": "Thursday",
+      "date": "May 7",
+      "items": [
+        {
+          "time": "12:00 PM",
+          "name": "LinkedIn \u2014 Business Literacy Gap",
+          "category": "content",
+          "conflict": false
+        },
+        {
+          "time": "12:10 PM",
+          "name": "analytics-48h-may5-onboarding-systems",
+          "category": "revenue",
+          "conflict": true
+        },
+        {
+          "time": "12:10 PM",
+          "name": "linkedin-analytics-48h-onboarding-debt-the-real-reason-apps-burn-out",
+          "category": "revenue",
+          "conflict": true
+        },
+        {
+          "time": "12:15 PM",
+          "name": "analytics-7d-apr30-burnout",
+          "category": "revenue",
+          "conflict": false
+        }
+      ]
     }
   ],
   "security_posture": {
@@ -2311,12 +2336,12 @@
     },
     "main_exec_security": "allowlist",
     "main_exec_ask": "off",
-    "main_allowlist_count": 729,
+    "main_allowlist_count": 741,
     "sandbox": "mode: off scope: agent",
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Thu Apr 30, 2026, 8:05 PM ET",
+    "generated_local": "Fri May 1, 2026, 12:05 AM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 3,
@@ -2326,7 +2351,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-05-01T00:05:22.907212+00:00"
+      "checked_at": "2026-05-01T04:05:39.127470+00:00"
     },
     "data_trust": "validated"
   }
