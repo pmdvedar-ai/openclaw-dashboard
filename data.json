@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-01T04:05:39.126757+00:00",
+  "generated": "2026-05-01T08:05:14.033485+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -494,7 +494,7 @@
     "revenue_direct": 7,
     "revenue_indirect": 10,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "May 1, 12:04 AM ET",
+    "next_job_time": "May 1, 4:04 AM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -1094,7 +1094,7 @@
       "delivery_target": "channel:1485490618636570805",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "Apr 30, 2:00 AM ET",
+      "last_run": "May 1, 2:00 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -1110,7 +1110,7 @@
       "downstream": [],
       "value": "SUPPORTING SYSTEM",
       "notes": "Fixed Apr 1 \u2014 pre-commit secret leak check added.",
-      "next_run": "May 1, 2:00 AM ET",
+      "next_run": "May 2, 2:00 AM ET",
       "enabled": true
     },
     {
@@ -1877,32 +1877,32 @@
     {
       "name": "analytics-48h-apr29-evh-systems-indicator",
       "when": "May 1, 8:10 AM ET",
-      "delta": "~8h 4m",
+      "delta": "~4h 4m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "anthropic-csv-reminder",
       "when": "May 1, 9:10 AM ET",
-      "delta": "~9h 4m",
+      "delta": "~5h 4m",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "Jordan follow-up reminder",
       "when": "May 1, 7:00 PM ET",
-      "delta": "~18h 54m",
+      "delta": "~14h 54m",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "analytics-48h-apr30-burnout",
       "when": "May 2, 12:10 PM ET",
-      "delta": "~1d 12h",
+      "delta": "~1d 8h",
       "reason": "Human follow-up / export likely needed"
     },
     {
-      "name": "launch-countdown-daily",
-      "when": "May 1, 9:20 AM ET",
-      "delta": "~9h 14m",
-      "reason": "Upcoming scheduled work"
+      "name": "linkedin-analytics-7d-apr27",
+      "when": "May 4, 2:09 AM ET",
+      "delta": "~2d 22h",
+      "reason": "Human follow-up / export likely needed"
     }
   ],
   "calendar_days": [
@@ -1911,38 +1911,26 @@
       "date": "May 1",
       "items": [
         {
-          "time": "12:08 AM",
+          "time": "4:08 AM",
           "name": "os-v2-gateway-monitor",
           "category": "content",
           "conflict": false
         },
         {
-          "time": "12:15 AM",
+          "time": "4:15 AM",
           "name": "background-routing-queue-polling",
           "category": "content",
           "conflict": false
         },
         {
-          "time": "12:22 AM",
+          "time": "4:22 AM",
           "name": "phase1-cache-evidence-watch",
           "category": "content",
           "conflict": false
         },
         {
-          "time": "12:30 AM",
+          "time": "4:30 AM",
           "name": "background-routing-cron-trigger-evaluation",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "2:00 AM",
-          "name": "nightly-backup-test",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "2:15 AM",
-          "name": "self-learning-daily-cycle",
           "category": "content",
           "conflict": false
         },
@@ -2120,6 +2108,18 @@
       "label": "Saturday",
       "date": "May 2",
       "items": [
+        {
+          "time": "2:00 AM",
+          "name": "nightly-backup-test",
+          "category": "system",
+          "conflict": false
+        },
+        {
+          "time": "2:15 AM",
+          "name": "self-learning-daily-cycle",
+          "category": "content",
+          "conflict": false
+        },
         {
           "time": "12:10 PM",
           "name": "analytics-48h-apr30-burnout",
@@ -2341,7 +2341,7 @@
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Fri May 1, 2026, 12:05 AM ET",
+    "generated_local": "Fri May 1, 2026, 4:05 AM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 3,
@@ -2351,7 +2351,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-05-01T04:05:39.127470+00:00"
+      "checked_at": "2026-05-01T08:05:14.034272+00:00"
     },
     "data_trust": "validated"
   }
