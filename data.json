@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-30T20:05:34.521537+00:00",
+  "generated": "2026-05-01T00:05:22.906484+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -480,21 +480,21 @@
     ]
   },
   "summary": {
-    "total_agents": 107,
+    "total_agents": 109,
     "recurring_agents": 47,
-    "one_time_jobs": 28,
+    "one_time_jobs": 29,
     "healthy": 39,
     "warning": 0,
     "broken": 6,
-    "idle": 30,
+    "idle": 31,
     "revenue_aligned": 17,
     "est_monthly_ai_cost": 558.44,
-    "jobs_this_week": 61,
-    "disabled_jobs": 32,
+    "jobs_this_week": 62,
+    "disabled_jobs": 33,
     "revenue_direct": 7,
     "revenue_indirect": 10,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "Apr 30, 4:04 PM ET",
+    "next_job_time": "Apr 30, 8:04 PM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -653,7 +653,7 @@
       "delivery_channel": "discord",
       "delivery_target": "channel:1485491529991589888",
       "session_target": "isolated",
-      "timeout_seconds": 180,
+      "timeout_seconds": 300,
       "last_run": "Apr 29, 6:00 PM ET",
       "last_run_status": "error",
       "consecutive_errors": 1,
@@ -922,7 +922,7 @@
       "delivery_channel": "discord",
       "delivery_target": "channel:1485490618636570805",
       "session_target": "isolated",
-      "timeout_seconds": 120,
+      "timeout_seconds": 240,
       "last_run": "Apr 30, 9:10 AM ET",
       "last_run_status": "error",
       "consecutive_errors": 1,
@@ -1615,9 +1615,9 @@
   },
   "health_issues": [
     {
-      "name": "ERROR - background-routing-queue-polling",
+      "name": "ERROR - Agent Commands Watcher",
       "status": "broken",
-      "description": "Consecutive errors: 1 | Last run: Apr 30, 3:45 PM ET | Next: Apr 30, 4:15 PM ET"
+      "description": "Consecutive errors: 1 | Last run: Apr 30, 4:10 PM ET | Next: May 1, 8:10 AM ET"
     },
     {
       "name": "ERROR - memory-governance-daily",
@@ -1684,6 +1684,13 @@
     {
       "time": "Fri May 1, 8:05 AM ET",
       "agents": "morning-draft-briefing + observe-daily-cost-sentinel-next-run",
+      "risk": "MEDIUM",
+      "note": "Concurrent scheduled runs",
+      "status": "active"
+    },
+    {
+      "time": "Fri May 1, 8:10 AM ET",
+      "agents": "analytics-48h-apr29-evh-systems-indicator + Agent Commands Watcher",
       "risk": "MEDIUM",
       "note": "Concurrent scheduled runs",
       "status": "active"
@@ -1875,31 +1882,31 @@
     {
       "name": "analytics-48h-apr29-evh-systems-indicator",
       "when": "May 1, 8:10 AM ET",
-      "delta": "~16h 4m",
+      "delta": "~12h 4m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "anthropic-csv-reminder",
       "when": "May 1, 9:10 AM ET",
-      "delta": "~17h 4m",
+      "delta": "~13h 4m",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "analytics-48h-apr30-burnout",
       "when": "May 2, 12:10 PM ET",
-      "delta": "~1d 20h",
+      "delta": "~1d 16h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "launch-countdown-daily",
       "when": "May 1, 9:20 AM ET",
-      "delta": "~17h 14m",
+      "delta": "~13h 14m",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "Consulting Outreach",
       "when": "May 1, 4:00 PM ET",
-      "delta": "~23h 54m",
+      "delta": "~19h 54m",
       "reason": "Pipeline generation"
     }
   ],
@@ -1909,32 +1916,32 @@
       "date": "Apr 30",
       "items": [
         {
-          "time": "4:08 PM",
+          "time": "8:08 PM",
           "name": "os-v2-gateway-monitor",
           "category": "content",
           "conflict": false
         },
         {
-          "time": "4:10 PM",
-          "name": "Agent Commands Watcher",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "4:15 PM",
+          "time": "8:15 PM",
           "name": "background-routing-queue-polling",
           "category": "content",
           "conflict": false
         },
         {
-          "time": "4:20 PM",
+          "time": "8:20 PM",
           "name": "phase1-cache-evidence-watch",
           "category": "content",
           "conflict": false
         },
         {
-          "time": "4:30 PM",
+          "time": "8:30 PM",
           "name": "background-routing-cron-trigger-evaluation",
+          "category": "content",
+          "conflict": false
+        },
+        {
+          "time": "9:15 PM",
+          "name": "follow-up-cron-audit-tonight",
           "category": "content",
           "conflict": false
         }
@@ -1984,7 +1991,13 @@
           "time": "8:10 AM",
           "name": "analytics-48h-apr29-evh-systems-indicator",
           "category": "revenue",
-          "conflict": false
+          "conflict": true
+        },
+        {
+          "time": "8:10 AM",
+          "name": "Agent Commands Watcher",
+          "category": "system",
+          "conflict": true
         },
         {
           "time": "8:30 AM",
@@ -2298,12 +2311,12 @@
     },
     "main_exec_security": "allowlist",
     "main_exec_ask": "off",
-    "main_allowlist_count": 717,
+    "main_allowlist_count": 729,
     "sandbox": "mode: off scope: agent",
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Thu Apr 30, 2026, 4:05 PM ET",
+    "generated_local": "Thu Apr 30, 2026, 8:05 PM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 3,
@@ -2313,7 +2326,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-04-30T20:05:34.522341+00:00"
+      "checked_at": "2026-05-01T00:05:22.907212+00:00"
     },
     "data_trust": "validated"
   }
