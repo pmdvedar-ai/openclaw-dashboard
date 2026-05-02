@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-02T16:05:29.117818+00:00",
+  "generated": "2026-05-02T20:05:26.583644+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -480,21 +480,21 @@
     ]
   },
   "summary": {
-    "total_agents": 107,
-    "recurring_agents": 47,
+    "total_agents": 108,
+    "recurring_agents": 48,
     "one_time_jobs": 18,
     "healthy": 43,
     "warning": 0,
     "broken": 3,
-    "idle": 19,
+    "idle": 20,
     "revenue_aligned": 17,
     "est_monthly_ai_cost": 558.44,
-    "jobs_this_week": 52,
+    "jobs_this_week": 53,
     "disabled_jobs": 42,
     "revenue_direct": 7,
     "revenue_indirect": 10,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "May 2, 12:04 PM ET",
+    "next_job_time": "May 2, 4:04 PM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -1839,31 +1839,31 @@
     {
       "name": "linkedin-analytics-7d-apr27-onboarding-system",
       "when": "May 4, 12:10 PM ET",
-      "delta": "~2d",
+      "delta": "~1d 20h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "launch-countdown-daily",
       "when": "May 3, 9:20 AM ET",
-      "delta": "~21h 14m",
+      "delta": "~17h 14m",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "consulting-outreach-weekly",
       "when": "May 3, 7:30 PM ET",
-      "delta": "~1d 7h",
+      "delta": "~1d 3h",
       "reason": "Pipeline generation"
     },
     {
       "name": "LinkedIn Growth",
       "when": "May 4, 10:00 AM ET",
-      "delta": "~1d 21h",
+      "delta": "~1d 17h",
       "reason": "Content / audience growth revenue lever"
     },
     {
       "name": "Lead Magnet Builder",
       "when": "May 4, 2:00 PM ET",
-      "delta": "~2d 1h",
+      "delta": "~1d 21h",
       "reason": "Upcoming scheduled work"
     }
   ],
@@ -1873,26 +1873,8 @@
       "date": "May 2",
       "items": [
         {
-          "time": "12:07 PM",
+          "time": "4:09 PM",
           "name": "os-v2-gateway-monitor",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "12:15 PM",
-          "name": "background-routing-queue-polling",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "12:23 PM",
-          "name": "phase1-cache-evidence-watch",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "12:30 PM",
-          "name": "background-routing-cron-trigger-evaluation",
           "category": "content",
           "conflict": false
         },
@@ -1900,6 +1882,24 @@
           "time": "4:10 PM",
           "name": "Agent Commands Watcher",
           "category": "system",
+          "conflict": false
+        },
+        {
+          "time": "4:15 PM",
+          "name": "background-routing-queue-polling",
+          "category": "content",
+          "conflict": false
+        },
+        {
+          "time": "4:20 PM",
+          "name": "phase1-cache-evidence-watch",
+          "category": "content",
+          "conflict": false
+        },
+        {
+          "time": "4:30 PM",
+          "name": "background-routing-cron-trigger-evaluation",
+          "category": "content",
           "conflict": false
         }
       ]
@@ -2226,12 +2226,12 @@
     },
     "main_exec_security": "allowlist",
     "main_exec_ask": "off",
-    "main_allowlist_count": 763,
+    "main_allowlist_count": 768,
     "sandbox": "mode: off scope: agent",
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Sat May 2, 2026, 12:05 PM ET",
+    "generated_local": "Sat May 2, 2026, 4:05 PM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 3,
@@ -2241,7 +2241,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-05-02T16:05:29.118533+00:00"
+      "checked_at": "2026-05-02T20:05:26.584689+00:00"
     },
     "data_trust": "validated"
   }
