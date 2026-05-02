@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-01T16:05:22.321233+00:00",
+  "generated": "2026-05-02T00:05:48.041370+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -480,21 +480,21 @@
     ]
   },
   "summary": {
-    "total_agents": 107,
+    "total_agents": 106,
     "recurring_agents": 47,
-    "one_time_jobs": 18,
-    "healthy": 42,
+    "one_time_jobs": 17,
+    "healthy": 41,
     "warning": 0,
-    "broken": 4,
-    "idle": 19,
+    "broken": 5,
+    "idle": 18,
     "revenue_aligned": 17,
     "est_monthly_ai_cost": 558.44,
-    "jobs_this_week": 51,
+    "jobs_this_week": 50,
     "disabled_jobs": 42,
     "revenue_direct": 7,
     "revenue_indirect": 10,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "May 1, 12:04 PM ET",
+    "next_job_time": "May 1, 8:04 PM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -717,7 +717,7 @@
       "delivery_target": "channel:1485491529991589888",
       "session_target": "isolated",
       "timeout_seconds": 240,
-      "last_run": "Apr 27, 1:27 AM ET",
+      "last_run": "May 1, 4:00 PM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -734,7 +734,7 @@
       ],
       "value": "DIRECT REVENUE",
       "notes": "GPT-5.4 \u2014 direct revenue, personalization matters.",
-      "next_run": "May 1, 4:00 PM ET",
+      "next_run": "May 8, 4:00 PM ET",
       "enabled": true
     },
     {
@@ -992,7 +992,7 @@
       "delivery_target": "channel:1485491914986881115",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "Apr 27, 1:27 AM ET",
+      "last_run": "May 1, 6:00 PM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -1013,7 +1013,7 @@
       ],
       "value": "SUPPORTING SYSTEM",
       "notes": "Runs at 6 PM, Backlog Review at 6:15 PM, Exec Summary at 6:30 PM \u2014 correct sequencing.",
-      "next_run": "May 1, 6:00 PM ET",
+      "next_run": "May 8, 6:00 PM ET",
       "enabled": true
     },
     {
@@ -1029,7 +1029,7 @@
       "delivery_target": "channel:1485378155878551626",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "Apr 27, 1:29 AM ET",
+      "last_run": "May 1, 6:31 PM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -1046,7 +1046,7 @@
       "downstream": [],
       "value": "SUPPORTING SYSTEM",
       "notes": "Sonnet appropriate \u2014 public-facing synthesis. 30 min after metrics digest.",
-      "next_run": "May 1, 6:30 PM ET",
+      "next_run": "May 8, 6:30 PM ET",
       "enabled": true
     },
     {
@@ -1615,6 +1615,11 @@
   },
   "health_issues": [
     {
+      "name": "ERROR - dashboard-regenerate-hourly",
+      "status": "broken",
+      "description": "Consecutive errors: 1 | Last run: May 1, 4:04 PM ET | Next: May 1, 8:04 PM ET"
+    },
+    {
       "name": "ERROR - memory-governance-daily",
       "status": "broken",
       "description": "Consecutive errors: 2 | Last run: May 1, 9:10 AM ET | Next: May 2, 9:10 AM ET"
@@ -1842,34 +1847,34 @@
   "bold_recommendation_impact": "\ud83d\udcb0 Gates: (1) Mitesh COO reply \u2014 watch for email \u00b7 (2) ElevenLabs 15 videos auto-resume Apr 24 \u00b7 (3) On-camera recording starts Apr 26+ \u00b7 (4) Enforcer first run Apr 15 \u00b7 (5) Course 1 pre-launch May 5\u201311",
   "action_queue": [
     {
-      "name": "Jordan follow-up reminder",
-      "when": "May 1, 7:00 PM ET",
-      "delta": "~6h 54m",
-      "reason": "Upcoming scheduled work"
-    },
-    {
-      "name": "Consulting Outreach",
-      "when": "May 1, 4:00 PM ET",
-      "delta": "~3h 54m",
-      "reason": "Pipeline generation"
+      "name": "linkedin-analytics-7d-apr27-onboarding-system",
+      "when": "May 4, 12:10 PM ET",
+      "delta": "~2d 16h",
+      "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "launch-countdown-daily",
       "when": "May 2, 9:20 AM ET",
-      "delta": "~21h 14m",
+      "delta": "~13h 14m",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "consulting-outreach-weekly",
       "when": "May 3, 7:30 PM ET",
-      "delta": "~2d 7h",
+      "delta": "~1d 23h",
       "reason": "Pipeline generation"
     },
     {
       "name": "LinkedIn Growth",
       "when": "May 4, 10:00 AM ET",
-      "delta": "~2d 21h",
+      "delta": "~2d 13h",
       "reason": "Content / audience growth revenue lever"
+    },
+    {
+      "name": "Lead Magnet Builder",
+      "when": "May 4, 2:00 PM ET",
+      "delta": "~2d 17h",
+      "reason": "Upcoming scheduled work"
     }
   ],
   "calendar_days": [
@@ -1878,63 +1883,27 @@
       "date": "May 1",
       "items": [
         {
-          "time": "12:15 PM",
+          "time": "8:09 PM",
+          "name": "os-v2-gateway-monitor",
+          "category": "content",
+          "conflict": false
+        },
+        {
+          "time": "8:15 PM",
           "name": "background-routing-queue-polling",
           "category": "content",
           "conflict": false
         },
         {
-          "time": "12:22 PM",
+          "time": "8:22 PM",
           "name": "phase1-cache-evidence-watch",
           "category": "content",
           "conflict": false
         },
         {
-          "time": "12:30 PM",
+          "time": "8:30 PM",
           "name": "background-routing-cron-trigger-evaluation",
           "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "4:00 PM",
-          "name": "Consulting Outreach",
-          "category": "revenue",
-          "conflict": false
-        },
-        {
-          "time": "4:10 PM",
-          "name": "Agent Commands Watcher",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "6:00 PM",
-          "name": "Weekly Metrics Digest",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "6:15 PM",
-          "name": "Backlog Review Agent",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "6:30 PM",
-          "name": "Weekly Executive Summary",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "7:00 PM",
-          "name": "Jordan follow-up reminder",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "7:15 PM",
-          "name": "Tomorrow LinkedIn outreach block",
-          "category": "revenue",
           "conflict": false
         }
       ]
@@ -1959,6 +1928,12 @@
           "time": "8:05 AM",
           "name": "morning-draft-briefing",
           "category": "revenue",
+          "conflict": false
+        },
+        {
+          "time": "8:10 AM",
+          "name": "Agent Commands Watcher",
+          "category": "system",
           "conflict": false
         },
         {
@@ -2231,12 +2206,12 @@
     },
     "main_exec_security": "allowlist",
     "main_exec_ask": "off",
-    "main_allowlist_count": 751,
+    "main_allowlist_count": 755,
     "sandbox": "mode: off scope: agent",
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Fri May 1, 2026, 12:05 PM ET",
+    "generated_local": "Fri May 1, 2026, 8:05 PM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 3,
@@ -2246,7 +2221,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-05-01T16:05:22.321940+00:00"
+      "checked_at": "2026-05-02T00:05:48.042143+00:00"
     },
     "data_trust": "validated"
   }
