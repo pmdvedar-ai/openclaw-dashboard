@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-02T12:05:38.198900+00:00",
+  "generated": "2026-05-02T16:05:29.117818+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -483,18 +483,18 @@
     "total_agents": 107,
     "recurring_agents": 47,
     "one_time_jobs": 18,
-    "healthy": 41,
+    "healthy": 43,
     "warning": 0,
-    "broken": 5,
+    "broken": 3,
     "idle": 19,
     "revenue_aligned": 17,
     "est_monthly_ai_cost": 558.44,
-    "jobs_this_week": 50,
+    "jobs_this_week": 52,
     "disabled_jobs": 42,
     "revenue_direct": 7,
     "revenue_indirect": 10,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "May 2, 8:04 AM ET",
+    "next_job_time": "May 2, 12:04 PM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -648,12 +648,12 @@
       "purpose": "Identifies and drafts outreach messages to potential consulting clients in cardiac surgery/PA space",
       "schedule_cron": "0 18 * * 3",
       "schedule_human": "Every Wednesday 6:00 PM ET",
-      "model": "openai/gpt-5.4",
+      "model": "anthropic/claude-haiku-4-5",
       "model_tier": "premium",
       "delivery_channel": "discord",
       "delivery_target": "channel:1485491529991589888",
       "session_target": "isolated",
-      "timeout_seconds": 300,
+      "timeout_seconds": 180,
       "last_run": "Apr 29, 6:00 PM ET",
       "last_run_status": "error",
       "consecutive_errors": 1,
@@ -891,7 +891,7 @@
       "delivery_target": "channel:1487048489618641002",
       "session_target": "isolated",
       "timeout_seconds": 120,
-      "last_run": "May 1, 8:30 AM ET",
+      "last_run": "May 2, 8:30 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -907,7 +907,7 @@
       "downstream": [],
       "value": "SUPPORTING SYSTEM",
       "notes": "Runs 30 min after sentinel \u2014 good timing.",
-      "next_run": "May 2, 8:30 AM ET",
+      "next_run": "May 3, 8:30 AM ET",
       "enabled": true
     },
     {
@@ -917,16 +917,16 @@
       "purpose": "Validates memory files, processes promotion queue, enforces memory health rules",
       "schedule_cron": "0 9 * * *",
       "schedule_human": "Every day 9:00 AM ET",
-      "model": "ollama/qwen3:30b-a3b",
+      "model": "anthropic/claude-haiku-4-5",
       "model_tier": "haiku",
       "delivery_channel": "discord",
       "delivery_target": "channel:1485490618636570805",
       "session_target": "isolated",
-      "timeout_seconds": 240,
-      "last_run": "May 1, 9:10 AM ET",
-      "last_run_status": "error",
-      "consecutive_errors": 2,
-      "status": "ERROR",
+      "timeout_seconds": 180,
+      "last_run": "May 2, 9:35 AM ET",
+      "last_run_status": "ok",
+      "consecutive_errors": 0,
+      "status": "HEALTHY",
       "inputs": [
         "MEMORY.md",
         "memory/YYYY-MM-DD.md",
@@ -942,7 +942,7 @@
       ],
       "value": "SUPPORTING SYSTEM",
       "notes": "Fixed Apr 1. MEMORY.md trimmed from 24.2k \u2192 13.1k on Apr 8 to prevent injection truncation.",
-      "next_run": "May 2, 9:10 AM ET",
+      "next_run": "May 3, 9:10 AM ET",
       "enabled": true
     },
     {
@@ -952,13 +952,13 @@
       "purpose": "Processes new backlog entries, scores them, and updates backlog.md",
       "schedule_cron": "0 9 * * *",
       "schedule_human": "Every day 9:00 AM ET",
-      "model": "ollama/qwen3:30b-a3b",
+      "model": "anthropic/claude-haiku-4-5",
       "model_tier": "haiku",
       "delivery_channel": "discord",
       "delivery_target": "channel:1485492143584837633",
       "session_target": "isolated",
-      "timeout_seconds": 300,
-      "last_run": "May 1, 9:05 AM ET",
+      "timeout_seconds": 180,
+      "last_run": "May 2, 9:28 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -976,7 +976,7 @@
       ],
       "value": "SUPPORTING SYSTEM",
       "notes": "Runs same time as Memory Governance \u2014 no conflict (different tasks).",
-      "next_run": "May 2, 9:05 AM ET",
+      "next_run": "May 3, 9:05 AM ET",
       "enabled": true
     },
     {
@@ -1126,7 +1126,7 @@
       "delivery_target": "user:1485377509578244207",
       "session_target": "isolated",
       "timeout_seconds": 120,
-      "last_run": "May 1, 9:20 AM ET",
+      "last_run": "May 2, 9:20 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -1141,7 +1141,7 @@
       "downstream": [],
       "value": "DIRECT REVENUE",
       "notes": "\u26a0\ufe0f 1 consecutive error Apr 8. Needs diagnosis \u2014 likely delivery config.",
-      "next_run": "May 2, 9:20 AM ET",
+      "next_run": "May 3, 9:20 AM ET",
       "enabled": true
     },
     {
@@ -1615,19 +1615,9 @@
   },
   "health_issues": [
     {
-      "name": "ERROR - dashboard-regenerate-hourly",
+      "name": "ERROR - os-v2-cleanup-preview",
       "status": "broken",
-      "description": "Consecutive errors: 1 | Last run: May 2, 4:04 AM ET | Next: May 2, 8:04 AM ET"
-    },
-    {
-      "name": "ERROR - memory-governance-daily",
-      "status": "broken",
-      "description": "Consecutive errors: 2 | Last run: May 1, 9:10 AM ET | Next: May 2, 9:10 AM ET"
-    },
-    {
-      "name": "ERROR - Pending Review Auto-Archive",
-      "status": "broken",
-      "description": "Consecutive errors: 1 | Last run: May 1, 9:30 AM ET | Next: May 2, 9:30 AM ET"
+      "description": "Consecutive errors: 1 | Last run: May 2, 9:30 AM ET | Next: May 3, 9:30 AM ET"
     },
     {
       "name": "ERROR - consulting-outreach-midweek",
@@ -1677,21 +1667,14 @@
   ],
   "timing_conflicts": [
     {
-      "time": "Sat May 2, 8:30 AM ET",
-      "agents": "cost-sentinel-renewal-check + background-routing-cron-trigger-evaluation",
-      "risk": "MEDIUM",
-      "note": "Concurrent scheduled runs",
-      "status": "active"
-    },
-    {
-      "time": "Sat May 2, 9:00 AM ET",
+      "time": "Sun May 3, 9:00 AM ET",
       "agents": "os-v2-security-scan + email-monitor-daily",
       "risk": "MEDIUM",
       "note": "Concurrent scheduled runs",
       "status": "active"
     },
     {
-      "time": "Sat May 2, 9:30 AM ET",
+      "time": "Sun May 3, 9:30 AM ET",
       "agents": "os-v2-cleanup-preview + Pending Review Auto-Archive",
       "risk": "MEDIUM",
       "note": "Concurrent scheduled runs",
@@ -1856,31 +1839,31 @@
     {
       "name": "linkedin-analytics-7d-apr27-onboarding-system",
       "when": "May 4, 12:10 PM ET",
-      "delta": "~2d 4h",
+      "delta": "~2d",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "launch-countdown-daily",
-      "when": "May 2, 9:20 AM ET",
-      "delta": "~1h 14m",
+      "when": "May 3, 9:20 AM ET",
+      "delta": "~21h 14m",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "consulting-outreach-weekly",
       "when": "May 3, 7:30 PM ET",
-      "delta": "~1d 11h",
+      "delta": "~1d 7h",
       "reason": "Pipeline generation"
     },
     {
       "name": "LinkedIn Growth",
       "when": "May 4, 10:00 AM ET",
-      "delta": "~2d 1h",
+      "delta": "~1d 21h",
       "reason": "Content / audience growth revenue lever"
     },
     {
       "name": "Lead Magnet Builder",
       "when": "May 4, 2:00 PM ET",
-      "delta": "~2d 5h",
+      "delta": "~2d 1h",
       "reason": "Upcoming scheduled work"
     }
   ],
@@ -1890,40 +1873,64 @@
       "date": "May 2",
       "items": [
         {
-          "time": "8:06 AM",
+          "time": "12:07 PM",
           "name": "os-v2-gateway-monitor",
           "category": "content",
           "conflict": false
         },
         {
-          "time": "8:10 AM",
-          "name": "Agent Commands Watcher",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "8:15 AM",
+          "time": "12:15 PM",
           "name": "background-routing-queue-polling",
           "category": "content",
           "conflict": false
         },
         {
-          "time": "8:22 AM",
+          "time": "12:23 PM",
           "name": "phase1-cache-evidence-watch",
           "category": "content",
+          "conflict": false
+        },
+        {
+          "time": "12:30 PM",
+          "name": "background-routing-cron-trigger-evaluation",
+          "category": "content",
+          "conflict": false
+        },
+        {
+          "time": "4:10 PM",
+          "name": "Agent Commands Watcher",
+          "category": "system",
+          "conflict": false
+        }
+      ]
+    },
+    {
+      "label": "Sunday",
+      "date": "May 3",
+      "items": [
+        {
+          "time": "2:00 AM",
+          "name": "nightly-backup-test",
+          "category": "system",
+          "conflict": false
+        },
+        {
+          "time": "2:15 AM",
+          "name": "self-learning-daily-cycle",
+          "category": "content",
+          "conflict": false
+        },
+        {
+          "time": "8:05 AM",
+          "name": "morning-draft-briefing",
+          "category": "revenue",
           "conflict": false
         },
         {
           "time": "8:30 AM",
           "name": "cost-sentinel-renewal-check",
           "category": "finance",
-          "conflict": true
-        },
-        {
-          "time": "8:30 AM",
-          "name": "background-routing-cron-trigger-evaluation",
-          "category": "content",
-          "conflict": true
+          "conflict": false
         },
         {
           "time": "9:00 AM",
@@ -1994,24 +2001,6 @@
         {
           "time": "10:15 AM",
           "name": "board-offer-audit-monthly",
-          "category": "content",
-          "conflict": false
-        }
-      ]
-    },
-    {
-      "label": "Sunday",
-      "date": "May 3",
-      "items": [
-        {
-          "time": "2:00 AM",
-          "name": "nightly-backup-test",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "2:15 AM",
-          "name": "self-learning-daily-cycle",
           "category": "content",
           "conflict": false
         },
@@ -2237,12 +2226,12 @@
     },
     "main_exec_security": "allowlist",
     "main_exec_ask": "off",
-    "main_allowlist_count": 759,
+    "main_allowlist_count": 763,
     "sandbox": "mode: off scope: agent",
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Sat May 2, 2026, 8:05 AM ET",
+    "generated_local": "Sat May 2, 2026, 12:05 PM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 3,
@@ -2252,7 +2241,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-05-02T12:05:38.199667+00:00"
+      "checked_at": "2026-05-02T16:05:29.118533+00:00"
     },
     "data_trust": "validated"
   }
