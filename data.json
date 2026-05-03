@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-02T20:05:26.583644+00:00",
+  "generated": "2026-05-03T00:05:46.486685+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -494,7 +494,7 @@
     "revenue_direct": 7,
     "revenue_indirect": 10,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "May 2, 4:04 PM ET",
+    "next_job_time": "May 2, 8:04 PM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -1839,31 +1839,31 @@
     {
       "name": "linkedin-analytics-7d-apr27-onboarding-system",
       "when": "May 4, 12:10 PM ET",
-      "delta": "~1d 20h",
+      "delta": "~1d 16h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "launch-countdown-daily",
       "when": "May 3, 9:20 AM ET",
-      "delta": "~17h 14m",
+      "delta": "~13h 14m",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "consulting-outreach-weekly",
       "when": "May 3, 7:30 PM ET",
-      "delta": "~1d 3h",
+      "delta": "~23h 24m",
       "reason": "Pipeline generation"
     },
     {
       "name": "LinkedIn Growth",
       "when": "May 4, 10:00 AM ET",
-      "delta": "~1d 17h",
+      "delta": "~1d 13h",
       "reason": "Content / audience growth revenue lever"
     },
     {
       "name": "Lead Magnet Builder",
       "when": "May 4, 2:00 PM ET",
-      "delta": "~1d 21h",
+      "delta": "~1d 17h",
       "reason": "Upcoming scheduled work"
     }
   ],
@@ -1873,31 +1873,25 @@
       "date": "May 2",
       "items": [
         {
-          "time": "4:09 PM",
+          "time": "8:09 PM",
           "name": "os-v2-gateway-monitor",
           "category": "content",
           "conflict": false
         },
         {
-          "time": "4:10 PM",
-          "name": "Agent Commands Watcher",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "4:15 PM",
+          "time": "8:15 PM",
           "name": "background-routing-queue-polling",
           "category": "content",
           "conflict": false
         },
         {
-          "time": "4:20 PM",
+          "time": "8:20 PM",
           "name": "phase1-cache-evidence-watch",
           "category": "content",
           "conflict": false
         },
         {
-          "time": "4:30 PM",
+          "time": "8:30 PM",
           "name": "background-routing-cron-trigger-evaluation",
           "category": "content",
           "conflict": false
@@ -1924,6 +1918,12 @@
           "time": "8:05 AM",
           "name": "morning-draft-briefing",
           "category": "revenue",
+          "conflict": false
+        },
+        {
+          "time": "8:10 AM",
+          "name": "Agent Commands Watcher",
+          "category": "system",
           "conflict": false
         },
         {
@@ -2231,7 +2231,7 @@
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Sat May 2, 2026, 4:05 PM ET",
+    "generated_local": "Sat May 2, 2026, 8:05 PM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 3,
@@ -2241,7 +2241,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-05-02T20:05:26.584689+00:00"
+      "checked_at": "2026-05-03T00:05:46.487416+00:00"
     },
     "data_trust": "validated"
   }
