@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-03T04:05:38.656853+00:00",
+  "generated": "2026-05-03T08:05:38.945396+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -489,12 +489,12 @@
     "idle": 21,
     "revenue_aligned": 17,
     "est_monthly_ai_cost": 558.44,
-    "jobs_this_week": 54,
+    "jobs_this_week": 55,
     "disabled_jobs": 42,
     "revenue_direct": 7,
     "revenue_indirect": 10,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "May 3, 12:04 AM ET",
+    "next_job_time": "May 3, 4:04 AM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -1094,7 +1094,7 @@
       "delivery_target": "channel:1485490618636570805",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "May 2, 2:00 AM ET",
+      "last_run": "May 3, 2:00 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -1110,7 +1110,7 @@
       "downstream": [],
       "value": "SUPPORTING SYSTEM",
       "notes": "Fixed Apr 1 \u2014 pre-commit secret leak check added.",
-      "next_run": "May 3, 2:00 AM ET",
+      "next_run": "May 4, 2:00 AM ET",
       "enabled": true
     },
     {
@@ -1839,31 +1839,31 @@
     {
       "name": "linkedin-analytics-7d-apr27-onboarding-system",
       "when": "May 4, 12:10 PM ET",
-      "delta": "~1d 12h",
+      "delta": "~1d 8h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "launch-countdown-daily",
       "when": "May 3, 9:20 AM ET",
-      "delta": "~9h 14m",
+      "delta": "~5h 14m",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "consulting-outreach-weekly",
       "when": "May 3, 7:30 PM ET",
-      "delta": "~19h 24m",
+      "delta": "~15h 24m",
       "reason": "Pipeline generation"
     },
     {
       "name": "LinkedIn Growth",
       "when": "May 4, 10:00 AM ET",
-      "delta": "~1d 9h",
+      "delta": "~1d 5h",
       "reason": "Content / audience growth revenue lever"
     },
     {
       "name": "Lead Magnet Builder",
       "when": "May 4, 2:00 PM ET",
-      "delta": "~1d 13h",
+      "delta": "~1d 9h",
       "reason": "Upcoming scheduled work"
     }
   ],
@@ -1873,32 +1873,26 @@
       "date": "May 3",
       "items": [
         {
-          "time": "12:15 AM",
+          "time": "4:07 AM",
+          "name": "os-v2-gateway-monitor",
+          "category": "content",
+          "conflict": false
+        },
+        {
+          "time": "4:15 AM",
           "name": "background-routing-queue-polling",
           "category": "content",
           "conflict": false
         },
         {
-          "time": "12:20 AM",
+          "time": "4:21 AM",
           "name": "phase1-cache-evidence-watch",
           "category": "content",
           "conflict": false
         },
         {
-          "time": "12:30 AM",
+          "time": "4:30 AM",
           "name": "background-routing-cron-trigger-evaluation",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "2:00 AM",
-          "name": "nightly-backup-test",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "2:15 AM",
-          "name": "self-learning-daily-cycle",
           "category": "content",
           "conflict": false
         },
@@ -2022,6 +2016,18 @@
       "label": "Monday",
       "date": "May 4",
       "items": [
+        {
+          "time": "2:00 AM",
+          "name": "nightly-backup-test",
+          "category": "system",
+          "conflict": false
+        },
+        {
+          "time": "2:15 AM",
+          "name": "self-learning-daily-cycle",
+          "category": "content",
+          "conflict": false
+        },
         {
           "time": "7:45 AM",
           "name": "daily-cost-collector",
@@ -2244,12 +2250,12 @@
     },
     "main_exec_security": "allowlist",
     "main_exec_ask": "off",
-    "main_allowlist_count": 777,
+    "main_allowlist_count": 788,
     "sandbox": "mode: off scope: agent",
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Sun May 3, 2026, 12:05 AM ET",
+    "generated_local": "Sun May 3, 2026, 4:05 AM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 3,
@@ -2259,7 +2265,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-05-03T04:05:38.657788+00:00"
+      "checked_at": "2026-05-03T08:05:38.946366+00:00"
     },
     "data_trust": "validated"
   }
