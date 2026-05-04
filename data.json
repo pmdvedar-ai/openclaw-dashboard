@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-04T16:05:22.316145+00:00",
+  "generated": "2026-05-04T20:05:45.068201+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -480,21 +480,21 @@
     ]
   },
   "summary": {
-    "total_agents": 113,
+    "total_agents": 112,
     "recurring_agents": 51,
-    "one_time_jobs": 20,
+    "one_time_jobs": 19,
     "healthy": 45,
     "warning": 0,
     "broken": 5,
-    "idle": 21,
+    "idle": 20,
     "revenue_aligned": 17,
     "est_monthly_ai_cost": 558.44,
-    "jobs_this_week": 55,
+    "jobs_this_week": 53,
     "disabled_jobs": 42,
     "revenue_direct": 7,
     "revenue_indirect": 10,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "May 4, 12:04 PM ET",
+    "next_job_time": "May 4, 4:04 PM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -584,7 +584,7 @@
       "delivery_target": "channel:1485491390304747550",
       "session_target": "isolated",
       "timeout_seconds": 600,
-      "last_run": "Apr 27, 2:00 PM ET",
+      "last_run": "May 4, 2:00 PM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -603,7 +603,7 @@
       ],
       "value": "DIRECT REVENUE",
       "notes": "Directly feeds MBA PA Academy enrollment funnel",
-      "next_run": "May 4, 2:00 PM ET",
+      "next_run": "May 11, 2:00 PM ET",
       "enabled": true
     },
     {
@@ -619,7 +619,7 @@
       "delivery_target": "channel:1485491468683448451",
       "session_target": "isolated",
       "timeout_seconds": 900,
-      "last_run": "Apr 27, 3:00 PM ET",
+      "last_run": "May 4, 3:00 PM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -638,7 +638,7 @@
       ],
       "value": "DIRECT REVENUE",
       "notes": "Weekly until May 12, then monthly. Course 1 focus. Course 2 build resumes post-travel.",
-      "next_run": "May 4, 3:00 PM ET",
+      "next_run": "May 11, 3:00 PM ET",
       "enabled": true
     },
     {
@@ -1840,34 +1840,34 @@
   "bold_recommendation_impact": "\ud83d\udcb0 Gates: (1) Mitesh COO reply \u2014 watch for email \u00b7 (2) ElevenLabs 15 videos auto-resume Apr 24 \u00b7 (3) On-camera recording starts Apr 26+ \u00b7 (4) Enforcer first run Apr 15 \u00b7 (5) Course 1 pre-launch May 5\u201311",
   "action_queue": [
     {
-      "name": "linkedin-analytics-7d-apr27-onboarding-system",
-      "when": "May 4, 12:10 PM ET",
-      "delta": "~4m",
+      "name": "linkedin-analytics-48h-onboarding-debt-the-real-reason-apps-burn-out",
+      "when": "May 7, 12:10 PM ET",
+      "delta": "~2d 20h",
       "reason": "Human follow-up / export likely needed"
-    },
-    {
-      "name": "Lead Magnet Builder",
-      "when": "May 4, 2:00 PM ET",
-      "delta": "~1h 54m",
-      "reason": "Upcoming scheduled work"
-    },
-    {
-      "name": "Course Architect",
-      "when": "May 4, 3:00 PM ET",
-      "delta": "~2h 54m",
-      "reason": "Upcoming scheduled work"
     },
     {
       "name": "launch-countdown-daily",
       "when": "May 5, 9:20 AM ET",
-      "delta": "~21h 14m",
+      "delta": "~17h 14m",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "LinkedIn Growth",
       "when": "May 6, 10:00 AM ET",
-      "delta": "~1d 21h",
+      "delta": "~1d 17h",
       "reason": "Content / audience growth revenue lever"
+    },
+    {
+      "name": "consulting-outreach-midweek",
+      "when": "May 6, 6:00 PM ET",
+      "delta": "~2d 1h",
+      "reason": "Pipeline generation"
+    },
+    {
+      "name": "nightly-backup-test",
+      "when": "May 5, 2:00 AM ET",
+      "delta": "~9h 54m",
+      "reason": "System reliability"
     }
   ],
   "calendar_days": [
@@ -1876,51 +1876,27 @@
       "date": "May 4",
       "items": [
         {
-          "time": "12:07 PM",
-          "name": "os-v2-gateway-monitor",
-          "category": "content",
+          "time": "4:10 PM",
+          "name": "Agent Commands Watcher",
+          "category": "system",
           "conflict": false
         },
         {
-          "time": "12:10 PM",
-          "name": "linkedin-analytics-7d-apr27-onboarding-system",
-          "category": "revenue",
-          "conflict": false
-        },
-        {
-          "time": "12:15 PM",
+          "time": "4:15 PM",
           "name": "background-routing-queue-polling",
           "category": "content",
           "conflict": false
         },
         {
-          "time": "12:29 PM",
+          "time": "4:29 PM",
           "name": "phase1-cache-evidence-watch",
           "category": "content",
           "conflict": false
         },
         {
-          "time": "12:30 PM",
+          "time": "4:30 PM",
           "name": "background-routing-cron-trigger-evaluation",
           "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "2:00 PM",
-          "name": "Lead Magnet Builder",
-          "category": "revenue",
-          "conflict": false
-        },
-        {
-          "time": "3:00 PM",
-          "name": "Course Architect",
-          "category": "revenue",
-          "conflict": false
-        },
-        {
-          "time": "4:10 PM",
-          "name": "Agent Commands Watcher",
-          "category": "system",
           "conflict": false
         }
       ]
@@ -2199,12 +2175,12 @@
     },
     "main_exec_security": "allowlist",
     "main_exec_ask": "off",
-    "main_allowlist_count": 828,
+    "main_allowlist_count": 830,
     "sandbox": "mode: off scope: agent",
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Mon May 4, 2026, 12:05 PM ET",
+    "generated_local": "Mon May 4, 2026, 4:05 PM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 3,
@@ -2214,7 +2190,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-05-04T16:05:22.316845+00:00"
+      "checked_at": "2026-05-04T20:05:45.068949+00:00"
     },
     "data_trust": "validated"
   }
