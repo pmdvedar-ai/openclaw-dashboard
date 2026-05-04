@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-04T08:05:38.435359+00:00",
+  "generated": "2026-05-04T12:11:51.524848+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -483,18 +483,18 @@
     "total_agents": 113,
     "recurring_agents": 51,
     "one_time_jobs": 20,
-    "healthy": 46,
+    "healthy": 44,
     "warning": 0,
-    "broken": 3,
-    "idle": 22,
+    "broken": 6,
+    "idle": 21,
     "revenue_aligned": 17,
     "est_monthly_ai_cost": 558.44,
-    "jobs_this_week": 58,
+    "jobs_this_week": 53,
     "disabled_jobs": 42,
     "revenue_direct": 7,
     "revenue_indirect": 10,
-    "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "May 4, 4:04 AM ET",
+    "next_job_name": "System Health Sentinel",
+    "next_job_time": "May 4, 8:02 AM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -819,10 +819,10 @@
       "delivery_target": "channel:1487048489618641002",
       "session_target": "isolated",
       "timeout_seconds": 600,
-      "last_run": "May 1, 8:00 AM ET",
-      "last_run_status": "ok",
-      "consecutive_errors": 0,
-      "status": "HEALTHY",
+      "last_run": "May 4, 8:00 AM ET",
+      "last_run_status": "error",
+      "consecutive_errors": 1,
+      "status": "ERROR",
       "inputs": [
         "agents/daily-cost-sentinel/data/YYYY-MM-DD.csv",
         "ledger.json",
@@ -842,7 +842,7 @@
       ],
       "value": "SUPPORTING SYSTEM",
       "notes": "Timeout 300\u2192600s fixed Apr 1. Collector runs at 7:45 AM for 15-min buffer.",
-      "next_run": "May 4, 8:00 AM ET",
+      "next_run": "May 6, 8:00 AM ET",
       "enabled": true
     },
     {
@@ -858,7 +858,7 @@
       "delivery_target": "6394048111",
       "session_target": "isolated",
       "timeout_seconds": 120,
-      "last_run": "May 1, 7:45 AM ET",
+      "last_run": "May 4, 7:45 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -875,7 +875,7 @@
       ],
       "value": "SUPPORTING SYSTEM",
       "notes": "Runs 15 min before sentinel.",
-      "next_run": "May 4, 7:45 AM ET",
+      "next_run": "May 6, 7:45 AM ET",
       "enabled": true
     },
     {
@@ -1615,14 +1615,29 @@
   },
   "health_issues": [
     {
+      "name": "ERROR - background-routing-cron-trigger-evaluation",
+      "status": "broken",
+      "description": "Consecutive errors: 1 | Last run: May 4, 8:00 AM ET | Next: May 4, 8:30 AM ET"
+    },
+    {
       "name": "ERROR - security-sentinel",
       "status": "broken",
       "description": "Consecutive errors: 1 | Last run: May 3, 9:15 AM ET | Next: May 4, 9:15 AM ET"
     },
     {
+      "name": "ERROR - daily-cost-sentinel",
+      "status": "broken",
+      "description": "Consecutive errors: 1 | Last run: May 4, 8:00 AM ET | Next: May 6, 8:00 AM ET"
+    },
+    {
       "name": "ERROR - consulting-outreach-midweek",
       "status": "broken",
       "description": "Consecutive errors: 1 | Last run: Apr 29, 6:00 PM ET | Next: May 6, 6:00 PM ET"
+    },
+    {
+      "name": "ERROR - os-v2-weekly-health",
+      "status": "broken",
+      "description": "Consecutive errors: 1 | Last run: May 4, 8:00 AM ET | Next: May 11, 8:00 AM ET"
     },
     {
       "name": "ERROR - agent-drift-check",
@@ -1667,15 +1682,15 @@
   ],
   "timing_conflicts": [
     {
-      "time": "Mon May 4, 8:00 AM ET",
-      "agents": "daily-cost-sentinel + os-v2-weekly-health",
+      "time": "Mon May 4, 8:15 AM ET",
+      "agents": "background-routing-queue-polling + competitive-monitor-weekly",
       "risk": "MEDIUM",
       "note": "Concurrent scheduled runs",
       "status": "active"
     },
     {
-      "time": "Mon May 4, 8:10 AM ET",
-      "agents": "browser-endpoint-drift-check-daily + Agent Commands Watcher",
+      "time": "Mon May 4, 8:30 AM ET",
+      "agents": "cost-sentinel-renewal-check + background-routing-cron-trigger-evaluation",
       "risk": "MEDIUM",
       "note": "Concurrent scheduled runs",
       "status": "active"
@@ -1846,31 +1861,31 @@
     {
       "name": "linkedin-analytics-7d-apr27-onboarding-system",
       "when": "May 4, 12:10 PM ET",
-      "delta": "~8h 4m",
+      "delta": "~3h 58m",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "launch-countdown-daily",
       "when": "May 4, 9:20 AM ET",
-      "delta": "~5h 14m",
+      "delta": "~1h 8m",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "LinkedIn Growth",
       "when": "May 4, 10:00 AM ET",
-      "delta": "~5h 54m",
+      "delta": "~1h 48m",
       "reason": "Content / audience growth revenue lever"
     },
     {
       "name": "Lead Magnet Builder",
       "when": "May 4, 2:00 PM ET",
-      "delta": "~9h 54m",
+      "delta": "~5h 48m",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "Course Architect",
       "when": "May 4, 3:00 PM ET",
-      "delta": "~10h 54m",
+      "delta": "~6h 48m",
       "reason": "Upcoming scheduled work"
     }
   ],
@@ -1880,78 +1895,6 @@
       "date": "May 4",
       "items": [
         {
-          "time": "4:08 AM",
-          "name": "os-v2-gateway-monitor",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "4:15 AM",
-          "name": "background-routing-queue-polling",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "4:21 AM",
-          "name": "phase1-cache-evidence-watch",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "4:30 AM",
-          "name": "background-routing-cron-trigger-evaluation",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "7:20 AM",
-          "name": "Routing Violation Sentinel",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "7:45 AM",
-          "name": "daily-cost-collector",
-          "category": "finance",
-          "conflict": false
-        },
-        {
-          "time": "8:00 AM",
-          "name": "daily-cost-sentinel",
-          "category": "finance",
-          "conflict": true
-        },
-        {
-          "time": "8:00 AM",
-          "name": "os-v2-weekly-health",
-          "category": "system",
-          "conflict": true
-        },
-        {
-          "time": "8:02 AM",
-          "name": "System Health Sentinel",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "8:05 AM",
-          "name": "morning-draft-briefing",
-          "category": "revenue",
-          "conflict": false
-        },
-        {
-          "time": "8:10 AM",
-          "name": "browser-endpoint-drift-check-daily",
-          "category": "content",
-          "conflict": true
-        },
-        {
-          "time": "8:10 AM",
-          "name": "Agent Commands Watcher",
-          "category": "system",
-          "conflict": true
-        },
-        {
           "time": "8:13 AM",
           "name": "weekly-build-plan",
           "category": "content",
@@ -1959,14 +1902,26 @@
         },
         {
           "time": "8:15 AM",
+          "name": "background-routing-queue-polling",
+          "category": "content",
+          "conflict": true
+        },
+        {
+          "time": "8:15 AM",
           "name": "competitive-monitor-weekly",
           "category": "content",
-          "conflict": false
+          "conflict": true
         },
         {
           "time": "8:20 AM",
           "name": "behavioral-learning-weekly-patterns",
           "category": "system",
+          "conflict": false
+        },
+        {
+          "time": "8:21 AM",
+          "name": "phase1-cache-evidence-watch",
+          "category": "content",
           "conflict": false
         },
         {
@@ -1979,7 +1934,13 @@
           "time": "8:30 AM",
           "name": "cost-sentinel-renewal-check",
           "category": "finance",
-          "conflict": false
+          "conflict": true
+        },
+        {
+          "time": "8:30 AM",
+          "name": "background-routing-cron-trigger-evaluation",
+          "category": "content",
+          "conflict": true
         },
         {
           "time": "8:35 AM",
@@ -2120,6 +2081,12 @@
           "conflict": false
         },
         {
+          "time": "7:20 AM",
+          "name": "Routing Violation Sentinel",
+          "category": "content",
+          "conflict": false
+        },
+        {
           "time": "9:00 AM",
           "name": "Review Teachable About photo before launch",
           "category": "content",
@@ -2161,6 +2128,18 @@
       "label": "Wednesday",
       "date": "May 6",
       "items": [
+        {
+          "time": "7:45 AM",
+          "name": "daily-cost-collector",
+          "category": "finance",
+          "conflict": false
+        },
+        {
+          "time": "8:00 AM",
+          "name": "daily-cost-sentinel",
+          "category": "finance",
+          "conflict": false
+        },
         {
           "time": "8:15 AM",
           "name": "execution-enforcer-midweek",
@@ -2280,7 +2259,7 @@
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Mon May 4, 2026, 4:05 AM ET",
+    "generated_local": "Mon May 4, 2026, 8:11 AM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 3,
@@ -2290,7 +2269,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-05-04T08:05:38.436347+00:00"
+      "checked_at": "2026-05-04T12:11:51.525527+00:00"
     },
     "data_trust": "validated"
   }
