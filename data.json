@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-04T12:11:51.524848+00:00",
+  "generated": "2026-05-04T16:05:22.316145+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -483,18 +483,18 @@
     "total_agents": 113,
     "recurring_agents": 51,
     "one_time_jobs": 20,
-    "healthy": 44,
+    "healthy": 45,
     "warning": 0,
-    "broken": 6,
+    "broken": 5,
     "idle": 21,
     "revenue_aligned": 17,
     "est_monthly_ai_cost": 558.44,
-    "jobs_this_week": 53,
+    "jobs_this_week": 55,
     "disabled_jobs": 42,
     "revenue_direct": 7,
     "revenue_indirect": 10,
-    "next_job_name": "System Health Sentinel",
-    "next_job_time": "May 4, 8:02 AM ET",
+    "next_job_name": "dashboard-regenerate-hourly",
+    "next_job_time": "May 4, 12:04 PM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -511,7 +511,7 @@
       "delivery_target": "channel:1485491233756549202",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "Apr 27, 9:13 AM ET",
+      "last_run": "May 4, 9:13 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -530,7 +530,7 @@
       ],
       "value": "INDIRECT REVENUE",
       "notes": "Writes content/weekly-brief.md after each run. Feeds LinkedIn + Instagram with unified weekly theme.",
-      "next_run": "May 4, 9:13 AM ET",
+      "next_run": "May 11, 9:13 AM ET",
       "enabled": true
     },
     {
@@ -546,7 +546,7 @@
       "delivery_target": "channel:1485491337095544963",
       "session_target": "isolated",
       "timeout_seconds": 180,
-      "last_run": "Apr 29, 10:00 AM ET",
+      "last_run": "May 4, 10:00 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -568,7 +568,7 @@
       ],
       "value": "DIRECT REVENUE",
       "notes": "Brief-aware: reads content/weekly-brief.md first. Scheduled: Apr 10 'Nobody Teaches You' \u00b7 Apr 14 'Conduit Quality Training System'.",
-      "next_run": "May 4, 10:00 AM ET",
+      "next_run": "May 6, 10:00 AM ET",
       "enabled": true
     },
     {
@@ -653,7 +653,7 @@
       "delivery_channel": "discord",
       "delivery_target": "channel:1485491529991589888",
       "session_target": "isolated",
-      "timeout_seconds": 180,
+      "timeout_seconds": 420,
       "last_run": "Apr 29, 6:00 PM ET",
       "last_run_status": "error",
       "consecutive_errors": 1,
@@ -813,16 +813,16 @@
       "purpose": "Analyzes daily spend, detects anomalies, updates ledger, delivers cost report",
       "schedule_cron": "0 8 * * *",
       "schedule_human": "Every day 8:00 AM ET",
-      "model": "ollama/qwen3:30b-a3b",
+      "model": "GPT",
       "model_tier": "haiku",
       "delivery_channel": "discord",
       "delivery_target": "channel:1487048489618641002",
       "session_target": "isolated",
-      "timeout_seconds": 600,
-      "last_run": "May 4, 8:00 AM ET",
-      "last_run_status": "error",
-      "consecutive_errors": 1,
-      "status": "ERROR",
+      "timeout_seconds": 300,
+      "last_run": "May 4, 9:34 AM ET",
+      "last_run_status": "ok",
+      "consecutive_errors": 0,
+      "status": "HEALTHY",
       "inputs": [
         "agents/daily-cost-sentinel/data/YYYY-MM-DD.csv",
         "ledger.json",
@@ -891,7 +891,7 @@
       "delivery_target": "channel:1487048489618641002",
       "session_target": "isolated",
       "timeout_seconds": 120,
-      "last_run": "May 3, 8:30 AM ET",
+      "last_run": "May 4, 8:56 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -907,7 +907,7 @@
       "downstream": [],
       "value": "SUPPORTING SYSTEM",
       "notes": "Runs 30 min after sentinel \u2014 good timing.",
-      "next_run": "May 4, 8:30 AM ET",
+      "next_run": "May 5, 8:30 AM ET",
       "enabled": true
     },
     {
@@ -942,7 +942,7 @@
       ],
       "value": "SUPPORTING SYSTEM",
       "notes": "Fixed Apr 1. MEMORY.md trimmed from 24.2k \u2192 13.1k on Apr 8 to prevent injection truncation.",
-      "next_run": "May 4, 9:10 AM ET",
+      "next_run": "May 5, 9:10 AM ET",
       "enabled": true
     },
     {
@@ -958,10 +958,10 @@
       "delivery_target": "channel:1485492143584837633",
       "session_target": "isolated",
       "timeout_seconds": 180,
-      "last_run": "May 3, 9:05 AM ET",
-      "last_run_status": "ok",
-      "consecutive_errors": 0,
-      "status": "HEALTHY",
+      "last_run": "May 4, 9:08 AM ET",
+      "last_run_status": "error",
+      "consecutive_errors": 1,
+      "status": "ERROR",
       "inputs": [
         "backlog.md",
         "Discord ideas channel"
@@ -976,7 +976,7 @@
       ],
       "value": "SUPPORTING SYSTEM",
       "notes": "Runs same time as Memory Governance \u2014 no conflict (different tasks).",
-      "next_run": "May 4, 9:05 AM ET",
+      "next_run": "May 5, 9:05 AM ET",
       "enabled": true
     },
     {
@@ -1062,10 +1062,10 @@
       "delivery_target": "channel:1485490618636570805",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "Apr 27, 8:03 AM ET",
-      "last_run_status": "ok",
-      "consecutive_errors": 0,
-      "status": "HEALTHY",
+      "last_run": "May 4, 9:57 AM ET",
+      "last_run_status": "error",
+      "consecutive_errors": 2,
+      "status": "ERROR",
       "inputs": [
         "cron list",
         "log files",
@@ -1078,7 +1078,7 @@
       "downstream": [],
       "value": "SUPPORTING SYSTEM",
       "notes": "Local model appropriate for mechanical checks.",
-      "next_run": "May 4, 8:02 AM ET",
+      "next_run": "May 11, 8:02 AM ET",
       "enabled": true
     },
     {
@@ -1126,7 +1126,7 @@
       "delivery_target": "user:1485377509578244207",
       "session_target": "isolated",
       "timeout_seconds": 120,
-      "last_run": "May 3, 9:20 AM ET",
+      "last_run": "May 4, 9:20 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -1141,7 +1141,7 @@
       "downstream": [],
       "value": "DIRECT REVENUE",
       "notes": "\u26a0\ufe0f 1 consecutive error Apr 8. Needs diagnosis \u2014 likely delivery config.",
-      "next_run": "May 4, 9:20 AM ET",
+      "next_run": "May 5, 9:20 AM ET",
       "enabled": true
     },
     {
@@ -1369,7 +1369,7 @@
       "delivery_target": "1485491914986881115",
       "session_target": "isolated",
       "timeout_seconds": 120,
-      "last_run": "Apr 27, 8:20 AM ET",
+      "last_run": "May 4, 8:20 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -1384,7 +1384,7 @@
       "downstream": [],
       "value": "INDIRECT REVENUE",
       "notes": "13 posts registered. Read-only \u2014 prompt changes require Pol approval.",
-      "next_run": "May 4, 8:20 AM ET",
+      "next_run": "May 11, 8:20 AM ET",
       "enabled": true
     }
   ],
@@ -1615,19 +1615,9 @@
   },
   "health_issues": [
     {
-      "name": "ERROR - background-routing-cron-trigger-evaluation",
+      "name": "ERROR - Backlog Intake Processor",
       "status": "broken",
-      "description": "Consecutive errors: 1 | Last run: May 4, 8:00 AM ET | Next: May 4, 8:30 AM ET"
-    },
-    {
-      "name": "ERROR - security-sentinel",
-      "status": "broken",
-      "description": "Consecutive errors: 1 | Last run: May 3, 9:15 AM ET | Next: May 4, 9:15 AM ET"
-    },
-    {
-      "name": "ERROR - daily-cost-sentinel",
-      "status": "broken",
-      "description": "Consecutive errors: 1 | Last run: May 4, 8:00 AM ET | Next: May 6, 8:00 AM ET"
+      "description": "Consecutive errors: 1 | Last run: May 4, 9:08 AM ET | Next: May 5, 9:05 AM ET"
     },
     {
       "name": "ERROR - consulting-outreach-midweek",
@@ -1635,9 +1625,14 @@
       "description": "Consecutive errors: 1 | Last run: Apr 29, 6:00 PM ET | Next: May 6, 6:00 PM ET"
     },
     {
-      "name": "ERROR - os-v2-weekly-health",
+      "name": "ERROR - System Health Sentinel",
       "status": "broken",
-      "description": "Consecutive errors: 1 | Last run: May 4, 8:00 AM ET | Next: May 11, 8:00 AM ET"
+      "description": "Consecutive errors: 2 | Last run: May 4, 9:57 AM ET | Next: May 11, 8:02 AM ET"
+    },
+    {
+      "name": "ERROR - weekly-mode-signal",
+      "status": "broken",
+      "description": "Consecutive errors: 1 | Last run: May 4, 9:08 AM ET | Next: May 11, 9:02 AM ET"
     },
     {
       "name": "ERROR - agent-drift-check",
@@ -1682,28 +1677,14 @@
   ],
   "timing_conflicts": [
     {
-      "time": "Mon May 4, 8:15 AM ET",
-      "agents": "background-routing-queue-polling + competitive-monitor-weekly",
-      "risk": "MEDIUM",
+      "time": "Tue May 5, 9:00 AM ET",
+      "agents": "Review Teachable About photo before launch + os-v2-security-scan + email-monitor-daily",
+      "risk": "HIGH",
       "note": "Concurrent scheduled runs",
       "status": "active"
     },
     {
-      "time": "Mon May 4, 8:30 AM ET",
-      "agents": "cost-sentinel-renewal-check + background-routing-cron-trigger-evaluation",
-      "risk": "MEDIUM",
-      "note": "Concurrent scheduled runs",
-      "status": "active"
-    },
-    {
-      "time": "Mon May 4, 9:00 AM ET",
-      "agents": "os-v2-security-scan + email-monitor-daily",
-      "risk": "MEDIUM",
-      "note": "Concurrent scheduled runs",
-      "status": "active"
-    },
-    {
-      "time": "Mon May 4, 9:30 AM ET",
+      "time": "Tue May 5, 9:30 AM ET",
       "agents": "os-v2-cleanup-preview + Pending Review Auto-Archive",
       "risk": "MEDIUM",
       "note": "Concurrent scheduled runs",
@@ -1861,32 +1842,32 @@
     {
       "name": "linkedin-analytics-7d-apr27-onboarding-system",
       "when": "May 4, 12:10 PM ET",
-      "delta": "~3h 58m",
+      "delta": "~4m",
       "reason": "Human follow-up / export likely needed"
-    },
-    {
-      "name": "launch-countdown-daily",
-      "when": "May 4, 9:20 AM ET",
-      "delta": "~1h 8m",
-      "reason": "Upcoming scheduled work"
-    },
-    {
-      "name": "LinkedIn Growth",
-      "when": "May 4, 10:00 AM ET",
-      "delta": "~1h 48m",
-      "reason": "Content / audience growth revenue lever"
     },
     {
       "name": "Lead Magnet Builder",
       "when": "May 4, 2:00 PM ET",
-      "delta": "~5h 48m",
+      "delta": "~1h 54m",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "Course Architect",
       "when": "May 4, 3:00 PM ET",
-      "delta": "~6h 48m",
+      "delta": "~2h 54m",
       "reason": "Upcoming scheduled work"
+    },
+    {
+      "name": "launch-countdown-daily",
+      "when": "May 5, 9:20 AM ET",
+      "delta": "~21h 14m",
+      "reason": "Upcoming scheduled work"
+    },
+    {
+      "name": "LinkedIn Growth",
+      "when": "May 6, 10:00 AM ET",
+      "delta": "~1d 21h",
+      "reason": "Content / audience growth revenue lever"
     }
   ],
   "calendar_days": [
@@ -1895,152 +1876,8 @@
       "date": "May 4",
       "items": [
         {
-          "time": "8:13 AM",
-          "name": "weekly-build-plan",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "8:15 AM",
-          "name": "background-routing-queue-polling",
-          "category": "content",
-          "conflict": true
-        },
-        {
-          "time": "8:15 AM",
-          "name": "competitive-monitor-weekly",
-          "category": "content",
-          "conflict": true
-        },
-        {
-          "time": "8:20 AM",
-          "name": "behavioral-learning-weekly-patterns",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "8:21 AM",
-          "name": "phase1-cache-evidence-watch",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "8:25 AM",
-          "name": "routing-violation-sentinel-daily",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "8:30 AM",
-          "name": "cost-sentinel-renewal-check",
-          "category": "finance",
-          "conflict": true
-        },
-        {
-          "time": "8:30 AM",
-          "name": "background-routing-cron-trigger-evaluation",
-          "category": "content",
-          "conflict": true
-        },
-        {
-          "time": "8:35 AM",
-          "name": "weekly-strategic-recalibration",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "8:45 AM",
-          "name": "cso-weekly-brief",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "9:00 AM",
-          "name": "os-v2-security-scan",
-          "category": "system",
-          "conflict": true
-        },
-        {
-          "time": "9:00 AM",
-          "name": "email-monitor-daily",
-          "category": "content",
-          "conflict": true
-        },
-        {
-          "time": "9:02 AM",
-          "name": "weekly-mode-signal",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "9:05 AM",
-          "name": "Backlog Intake Processor",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "9:10 AM",
-          "name": "memory-governance-daily",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "9:13 AM",
-          "name": "Content Drafts Scout",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "9:15 AM",
-          "name": "security-sentinel",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "9:17 AM",
-          "name": "board-skeptic-monthly",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "9:20 AM",
-          "name": "launch-countdown-daily",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "9:30 AM",
-          "name": "os-v2-cleanup-preview",
-          "category": "content",
-          "conflict": true
-        },
-        {
-          "time": "9:30 AM",
-          "name": "Pending Review Auto-Archive",
-          "category": "content",
-          "conflict": true
-        },
-        {
-          "time": "9:45 AM",
-          "name": "daily-exception-report",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "9:47 AM",
-          "name": "board-investor-monthly",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "10:00 AM",
-          "name": "LinkedIn Growth",
-          "category": "revenue",
-          "conflict": false
-        },
-        {
-          "time": "10:15 AM",
-          "name": "board-offer-audit-monthly",
+          "time": "12:07 PM",
+          "name": "os-v2-gateway-monitor",
           "category": "content",
           "conflict": false
         },
@@ -2048,6 +1885,24 @@
           "time": "12:10 PM",
           "name": "linkedin-analytics-7d-apr27-onboarding-system",
           "category": "revenue",
+          "conflict": false
+        },
+        {
+          "time": "12:15 PM",
+          "name": "background-routing-queue-polling",
+          "category": "content",
+          "conflict": false
+        },
+        {
+          "time": "12:29 PM",
+          "name": "phase1-cache-evidence-watch",
+          "category": "content",
+          "conflict": false
+        },
+        {
+          "time": "12:30 PM",
+          "name": "background-routing-cron-trigger-evaluation",
+          "category": "content",
           "conflict": false
         },
         {
@@ -2060,6 +1915,12 @@
           "time": "3:00 PM",
           "name": "Course Architect",
           "category": "revenue",
+          "conflict": false
+        },
+        {
+          "time": "4:10 PM",
+          "name": "Agent Commands Watcher",
+          "category": "system",
           "conflict": false
         }
       ]
@@ -2087,8 +1948,86 @@
           "conflict": false
         },
         {
+          "time": "8:05 AM",
+          "name": "morning-draft-briefing",
+          "category": "revenue",
+          "conflict": false
+        },
+        {
+          "time": "8:10 AM",
+          "name": "browser-endpoint-drift-check-daily",
+          "category": "content",
+          "conflict": false
+        },
+        {
+          "time": "8:25 AM",
+          "name": "routing-violation-sentinel-daily",
+          "category": "content",
+          "conflict": false
+        },
+        {
+          "time": "8:30 AM",
+          "name": "cost-sentinel-renewal-check",
+          "category": "finance",
+          "conflict": false
+        },
+        {
           "time": "9:00 AM",
           "name": "Review Teachable About photo before launch",
+          "category": "content",
+          "conflict": true
+        },
+        {
+          "time": "9:00 AM",
+          "name": "os-v2-security-scan",
+          "category": "system",
+          "conflict": true
+        },
+        {
+          "time": "9:00 AM",
+          "name": "email-monitor-daily",
+          "category": "content",
+          "conflict": true
+        },
+        {
+          "time": "9:05 AM",
+          "name": "Backlog Intake Processor",
+          "category": "system",
+          "conflict": false
+        },
+        {
+          "time": "9:10 AM",
+          "name": "memory-governance-daily",
+          "category": "system",
+          "conflict": false
+        },
+        {
+          "time": "9:15 AM",
+          "name": "security-sentinel",
+          "category": "system",
+          "conflict": false
+        },
+        {
+          "time": "9:20 AM",
+          "name": "launch-countdown-daily",
+          "category": "system",
+          "conflict": false
+        },
+        {
+          "time": "9:30 AM",
+          "name": "os-v2-cleanup-preview",
+          "category": "content",
+          "conflict": true
+        },
+        {
+          "time": "9:30 AM",
+          "name": "Pending Review Auto-Archive",
+          "category": "content",
+          "conflict": true
+        },
+        {
+          "time": "9:45 AM",
+          "name": "daily-exception-report",
           "category": "content",
           "conflict": false
         },
@@ -2144,6 +2083,12 @@
           "time": "8:15 AM",
           "name": "execution-enforcer-midweek",
           "category": "content",
+          "conflict": false
+        },
+        {
+          "time": "10:00 AM",
+          "name": "LinkedIn Growth",
+          "category": "revenue",
           "conflict": false
         },
         {
@@ -2254,12 +2199,12 @@
     },
     "main_exec_security": "allowlist",
     "main_exec_ask": "off",
-    "main_allowlist_count": 811,
+    "main_allowlist_count": 828,
     "sandbox": "mode: off scope: agent",
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Mon May 4, 2026, 8:11 AM ET",
+    "generated_local": "Mon May 4, 2026, 12:05 PM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 3,
@@ -2269,7 +2214,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-05-04T12:11:51.525527+00:00"
+      "checked_at": "2026-05-04T16:05:22.316845+00:00"
     },
     "data_trust": "validated"
   }
