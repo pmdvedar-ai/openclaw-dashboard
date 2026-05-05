@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-05T04:05:19.553497+00:00",
+  "generated": "2026-05-05T08:05:25.985283+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -494,7 +494,7 @@
     "revenue_direct": 7,
     "revenue_indirect": 10,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "May 5, 12:04 AM ET",
+    "next_job_time": "May 5, 4:04 AM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -1094,7 +1094,7 @@
       "delivery_target": "channel:1485490618636570805",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "May 4, 2:00 AM ET",
+      "last_run": "May 5, 2:00 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -1110,7 +1110,7 @@
       "downstream": [],
       "value": "SUPPORTING SYSTEM",
       "notes": "Fixed Apr 1 \u2014 pre-commit secret leak check added.",
-      "next_run": "May 5, 2:00 AM ET",
+      "next_run": "May 6, 2:00 AM ET",
       "enabled": true
     },
     {
@@ -1849,32 +1849,32 @@
     {
       "name": "linkedin-analytics-48h-onboarding-debt-the-real-reason-apps-burn-out",
       "when": "May 7, 12:10 PM ET",
-      "delta": "~2d 12h",
+      "delta": "~2d 8h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "launch-countdown-daily",
       "when": "May 5, 9:20 AM ET",
-      "delta": "~9h 14m",
+      "delta": "~5h 14m",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "LinkedIn Growth",
       "when": "May 6, 10:00 AM ET",
-      "delta": "~1d 9h",
+      "delta": "~1d 5h",
       "reason": "Content / audience growth revenue lever"
     },
     {
       "name": "consulting-outreach-midweek",
       "when": "May 6, 6:00 PM ET",
-      "delta": "~1d 17h",
+      "delta": "~1d 13h",
       "reason": "Pipeline generation"
     },
     {
-      "name": "nightly-backup-test",
-      "when": "May 5, 2:00 AM ET",
-      "delta": "~1h 54m",
-      "reason": "System reliability"
+      "name": "os-v2-security-scan",
+      "when": "May 5, 9:00 AM ET",
+      "delta": "~4h 54m",
+      "reason": "Security monitoring"
     }
   ],
   "calendar_days": [
@@ -1883,38 +1883,26 @@
       "date": "May 5",
       "items": [
         {
-          "time": "12:08 AM",
+          "time": "4:08 AM",
           "name": "os-v2-gateway-monitor",
           "category": "content",
           "conflict": false
         },
         {
-          "time": "12:15 AM",
+          "time": "4:15 AM",
           "name": "background-routing-queue-polling",
           "category": "content",
           "conflict": false
         },
         {
-          "time": "12:29 AM",
+          "time": "4:29 AM",
           "name": "phase1-cache-evidence-watch",
           "category": "content",
           "conflict": false
         },
         {
-          "time": "12:30 AM",
+          "time": "4:30 AM",
           "name": "background-routing-cron-trigger-evaluation",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "2:00 AM",
-          "name": "nightly-backup-test",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "2:15 AM",
-          "name": "self-learning-daily-cycle",
           "category": "content",
           "conflict": false
         },
@@ -2050,6 +2038,18 @@
       "label": "Wednesday",
       "date": "May 6",
       "items": [
+        {
+          "time": "2:00 AM",
+          "name": "nightly-backup-test",
+          "category": "system",
+          "conflict": false
+        },
+        {
+          "time": "2:15 AM",
+          "name": "self-learning-daily-cycle",
+          "category": "content",
+          "conflict": false
+        },
         {
           "time": "7:45 AM",
           "name": "daily-cost-collector",
@@ -2259,7 +2259,7 @@
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Tue May 5, 2026, 12:05 AM ET",
+    "generated_local": "Tue May 5, 2026, 4:05 AM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 3,
@@ -2269,7 +2269,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-05-05T04:05:19.554197+00:00"
+      "checked_at": "2026-05-05T08:05:25.986009+00:00"
     },
     "data_trust": "validated"
   }
