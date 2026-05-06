@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-05T20:05:20.342440+00:00",
+  "generated": "2026-05-06T00:05:23.952451+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -480,21 +480,21 @@
     ]
   },
   "summary": {
-    "total_agents": 110,
-    "recurring_agents": 52,
+    "total_agents": 111,
+    "recurring_agents": 54,
     "one_time_jobs": 16,
-    "healthy": 46,
+    "healthy": 48,
     "warning": 0,
     "broken": 5,
     "idle": 17,
     "revenue_aligned": 17,
     "est_monthly_ai_cost": 558.44,
-    "jobs_this_week": 52,
-    "disabled_jobs": 42,
+    "jobs_this_week": 54,
+    "disabled_jobs": 41,
     "revenue_direct": 7,
     "revenue_indirect": 10,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "May 5, 4:04 PM ET",
+    "next_job_time": "May 5, 8:04 PM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -1677,8 +1677,22 @@
   ],
   "timing_conflicts": [
     {
-      "time": "Tue May 5, 4:30 PM ET",
+      "time": "Tue May 5, 8:15 PM ET",
+      "agents": "background-routing-queue-polling + browser-lane-hybrid-monitor",
+      "risk": "MEDIUM",
+      "note": "Concurrent scheduled runs",
+      "status": "active"
+    },
+    {
+      "time": "Tue May 5, 8:30 PM ET",
       "agents": "background-routing-cron-trigger-evaluation + phase1-cache-evidence-watch",
+      "risk": "MEDIUM",
+      "note": "Concurrent scheduled runs",
+      "status": "active"
+    },
+    {
+      "time": "Wed May 6, 8:10 AM ET",
+      "agents": "browser-endpoint-drift-check-daily + Agent Commands Watcher",
       "risk": "MEDIUM",
       "note": "Concurrent scheduled runs",
       "status": "active"
@@ -1849,31 +1863,31 @@
     {
       "name": "linkedin-analytics-48h-onboarding-debt-the-real-reason-apps-burn-out",
       "when": "May 7, 12:10 PM ET",
-      "delta": "~1d 20h",
+      "delta": "~1d 16h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "launch-countdown-daily",
       "when": "May 6, 9:20 AM ET",
-      "delta": "~17h 14m",
+      "delta": "~13h 14m",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "LinkedIn Growth",
       "when": "May 6, 10:00 AM ET",
-      "delta": "~17h 54m",
+      "delta": "~13h 54m",
       "reason": "Content / audience growth revenue lever"
     },
     {
       "name": "consulting-outreach-midweek",
       "when": "May 6, 6:00 PM ET",
-      "delta": "~1d 1h",
+      "delta": "~21h 54m",
       "reason": "Pipeline generation"
     },
     {
       "name": "Consulting Outreach",
       "when": "May 8, 4:00 PM ET",
-      "delta": "~2d 23h",
+      "delta": "~2d 19h",
       "reason": "Pipeline generation"
     }
   ],
@@ -1883,31 +1897,31 @@
       "date": "May 5",
       "items": [
         {
-          "time": "4:05 PM",
+          "time": "8:08 PM",
           "name": "os-v2-gateway-monitor",
           "category": "content",
           "conflict": false
         },
         {
-          "time": "4:10 PM",
-          "name": "Agent Commands Watcher",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "4:15 PM",
+          "time": "8:15 PM",
           "name": "background-routing-queue-polling",
           "category": "content",
-          "conflict": false
+          "conflict": true
         },
         {
-          "time": "4:30 PM",
+          "time": "8:15 PM",
+          "name": "browser-lane-hybrid-monitor",
+          "category": "content",
+          "conflict": true
+        },
+        {
+          "time": "8:30 PM",
           "name": "background-routing-cron-trigger-evaluation",
           "category": "content",
           "conflict": true
         },
         {
-          "time": "4:30 PM",
+          "time": "8:30 PM",
           "name": "phase1-cache-evidence-watch",
           "category": "content",
           "conflict": true
@@ -1958,7 +1972,13 @@
           "time": "8:10 AM",
           "name": "browser-endpoint-drift-check-daily",
           "category": "content",
-          "conflict": false
+          "conflict": true
+        },
+        {
+          "time": "8:10 AM",
+          "name": "Agent Commands Watcher",
+          "category": "system",
+          "conflict": true
         },
         {
           "time": "8:15 AM",
@@ -2153,6 +2173,12 @@
       "date": "May 11",
       "items": [
         {
+          "time": "7:30 AM",
+          "name": "upgrade-sentinel-weekly",
+          "category": "content",
+          "conflict": false
+        },
+        {
           "time": "8:00 AM",
           "name": "os-v2-weekly-health",
           "category": "system",
@@ -2230,12 +2256,12 @@
     },
     "main_exec_security": "allowlist",
     "main_exec_ask": "off",
-    "main_allowlist_count": 847,
+    "main_allowlist_count": 851,
     "sandbox": "mode: off scope: agent",
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Tue May 5, 2026, 4:05 PM ET",
+    "generated_local": "Tue May 5, 2026, 8:05 PM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 3,
@@ -2245,7 +2271,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-05-05T20:05:20.343191+00:00"
+      "checked_at": "2026-05-06T00:05:23.953346+00:00"
     },
     "data_trust": "validated"
   }
