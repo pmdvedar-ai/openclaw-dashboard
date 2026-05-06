@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-06T00:05:23.952451+00:00",
+  "generated": "2026-05-06T04:05:18.676671+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -126,7 +126,7 @@
     "scripts_ready": true,
     "resume_script": "scripts/execute_course2_build.py",
     "launch_date": "May 12, 2026",
-    "days_to_launch": 7
+    "days_to_launch": 6
   },
   "travel_window": {
     "departure": "2026-04-11",
@@ -494,7 +494,7 @@
     "revenue_direct": 7,
     "revenue_indirect": 10,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "May 5, 8:04 PM ET",
+    "next_job_time": "May 6, 12:04 AM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -1677,14 +1677,14 @@
   ],
   "timing_conflicts": [
     {
-      "time": "Tue May 5, 8:15 PM ET",
+      "time": "Wed May 6, 12:15 AM ET",
       "agents": "background-routing-queue-polling + browser-lane-hybrid-monitor",
       "risk": "MEDIUM",
       "note": "Concurrent scheduled runs",
       "status": "active"
     },
     {
-      "time": "Tue May 5, 8:30 PM ET",
+      "time": "Wed May 6, 12:30 AM ET",
       "agents": "background-routing-cron-trigger-evaluation + phase1-cache-evidence-watch",
       "risk": "MEDIUM",
       "note": "Concurrent scheduled runs",
@@ -1863,75 +1863,69 @@
     {
       "name": "linkedin-analytics-48h-onboarding-debt-the-real-reason-apps-burn-out",
       "when": "May 7, 12:10 PM ET",
-      "delta": "~1d 16h",
+      "delta": "~1d 12h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "launch-countdown-daily",
       "when": "May 6, 9:20 AM ET",
-      "delta": "~13h 14m",
+      "delta": "~9h 14m",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "LinkedIn Growth",
       "when": "May 6, 10:00 AM ET",
-      "delta": "~13h 54m",
+      "delta": "~9h 54m",
       "reason": "Content / audience growth revenue lever"
     },
     {
       "name": "consulting-outreach-midweek",
       "when": "May 6, 6:00 PM ET",
-      "delta": "~21h 54m",
+      "delta": "~17h 54m",
       "reason": "Pipeline generation"
     },
     {
       "name": "Consulting Outreach",
       "when": "May 8, 4:00 PM ET",
-      "delta": "~2d 19h",
+      "delta": "~2d 15h",
       "reason": "Pipeline generation"
     }
   ],
   "calendar_days": [
     {
-      "label": "Tuesday",
-      "date": "May 5",
+      "label": "Wednesday",
+      "date": "May 6",
       "items": [
         {
-          "time": "8:08 PM",
+          "time": "12:08 AM",
           "name": "os-v2-gateway-monitor",
           "category": "content",
           "conflict": false
         },
         {
-          "time": "8:15 PM",
+          "time": "12:15 AM",
           "name": "background-routing-queue-polling",
           "category": "content",
           "conflict": true
         },
         {
-          "time": "8:15 PM",
+          "time": "12:15 AM",
           "name": "browser-lane-hybrid-monitor",
           "category": "content",
           "conflict": true
         },
         {
-          "time": "8:30 PM",
+          "time": "12:30 AM",
           "name": "background-routing-cron-trigger-evaluation",
           "category": "content",
           "conflict": true
         },
         {
-          "time": "8:30 PM",
+          "time": "12:30 AM",
           "name": "phase1-cache-evidence-watch",
           "category": "content",
           "conflict": true
-        }
-      ]
-    },
-    {
-      "label": "Wednesday",
-      "date": "May 6",
-      "items": [
+        },
         {
           "time": "2:00 AM",
           "name": "nightly-backup-test",
@@ -2245,6 +2239,24 @@
           "conflict": false
         }
       ]
+    },
+    {
+      "label": "Tuesday",
+      "date": "May 12",
+      "items": [
+        {
+          "time": "11:00 AM",
+          "name": "Instagram Content Agent",
+          "category": "content",
+          "conflict": false
+        },
+        {
+          "time": "12:15 PM",
+          "name": "linkedin-analytics-7d-onboarding-debt-the-real-reason-apps-burn-out",
+          "category": "revenue",
+          "conflict": false
+        }
+      ]
     }
   ],
   "security_posture": {
@@ -2256,12 +2268,12 @@
     },
     "main_exec_security": "allowlist",
     "main_exec_ask": "off",
-    "main_allowlist_count": 851,
+    "main_allowlist_count": 855,
     "sandbox": "mode: off scope: agent",
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Tue May 5, 2026, 8:05 PM ET",
+    "generated_local": "Wed May 6, 2026, 12:05 AM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 3,
@@ -2271,7 +2283,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-05-06T00:05:23.953346+00:00"
+      "checked_at": "2026-05-06T04:05:18.677421+00:00"
     },
     "data_trust": "validated"
   }
