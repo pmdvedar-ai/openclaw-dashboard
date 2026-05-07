@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-07T16:05:13.292737+00:00",
+  "generated": "2026-05-07T20:05:15.384028+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -480,21 +480,21 @@
     ]
   },
   "summary": {
-    "total_agents": 113,
+    "total_agents": 111,
     "recurring_agents": 55,
-    "one_time_jobs": 17,
+    "one_time_jobs": 15,
     "healthy": 50,
     "warning": 0,
     "broken": 4,
-    "idle": 18,
+    "idle": 16,
     "revenue_aligned": 17,
     "est_monthly_ai_cost": 558.44,
-    "jobs_this_week": 57,
+    "jobs_this_week": 58,
     "disabled_jobs": 41,
     "revenue_direct": 7,
     "revenue_indirect": 10,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "May 7, 12:04 PM ET",
+    "next_job_time": "May 7, 4:04 PM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -1672,14 +1672,14 @@
   ],
   "timing_conflicts": [
     {
-      "time": "Thu May 7, 12:15 PM ET",
+      "time": "Thu May 7, 4:15 PM ET",
       "agents": "background-routing-queue-polling + browser-lane-hybrid-monitor",
       "risk": "MEDIUM",
       "note": "Concurrent scheduled runs",
       "status": "active"
     },
     {
-      "time": "Thu May 7, 12:30 PM ET",
+      "time": "Thu May 7, 4:30 PM ET",
       "agents": "background-routing-cron-trigger-evaluation + pilot-followthrough-watch",
       "risk": "MEDIUM",
       "note": "Concurrent scheduled runs",
@@ -1856,34 +1856,34 @@
   "bold_recommendation_impact": "\ud83d\udcb0 Gates: (1) Mitesh COO reply \u2014 watch for email \u00b7 (2) ElevenLabs 15 videos auto-resume Apr 24 \u00b7 (3) On-camera recording starts Apr 26+ \u00b7 (4) Enforcer first run Apr 15 \u00b7 (5) Course 1 pre-launch May 5\u201311",
   "action_queue": [
     {
-      "name": "linkedin-analytics-48h-onboarding-debt-the-real-reason-apps-burn-out",
-      "when": "May 7, 12:10 PM ET",
-      "delta": "~4m",
-      "reason": "Human follow-up / export likely needed"
-    },
-    {
       "name": "linkedin-founder-amplification-reminder",
       "when": "May 7, 7:00 PM ET",
-      "delta": "~6h 54m",
+      "delta": "~2h 54m",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "send-mitesh-followup-email",
       "when": "May 9, 9:00 AM ET",
-      "delta": "~1d 20h",
+      "delta": "~1d 16h",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "linkedin-analytics-48h-business-literacy-gap",
       "when": "May 9, 12:10 PM ET",
-      "delta": "~2d",
+      "delta": "~1d 20h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "launch-countdown-daily",
       "when": "May 8, 9:20 AM ET",
-      "delta": "~21h 14m",
+      "delta": "~17h 14m",
       "reason": "Upcoming scheduled work"
+    },
+    {
+      "name": "Consulting Outreach",
+      "when": "May 8, 4:00 PM ET",
+      "delta": "~23h 54m",
+      "reason": "Pipeline generation"
     }
   ],
   "calendar_days": [
@@ -1892,52 +1892,46 @@
       "date": "May 7",
       "items": [
         {
-          "time": "12:08 PM",
+          "time": "4:05 PM",
+          "name": "phase1-cache-evidence-watch",
+          "category": "content",
+          "conflict": false
+        },
+        {
+          "time": "4:08 PM",
           "name": "os-v2-gateway-monitor",
           "category": "content",
           "conflict": false
-        },
-        {
-          "time": "12:10 PM",
-          "name": "linkedin-analytics-48h-onboarding-debt-the-real-reason-apps-burn-out",
-          "category": "revenue",
-          "conflict": false
-        },
-        {
-          "time": "12:15 PM",
-          "name": "background-routing-queue-polling",
-          "category": "content",
-          "conflict": true
-        },
-        {
-          "time": "12:15 PM",
-          "name": "browser-lane-hybrid-monitor",
-          "category": "content",
-          "conflict": true
-        },
-        {
-          "time": "12:20 PM",
-          "name": "linkedin-post-verify-business-literacy-gap",
-          "category": "revenue",
-          "conflict": false
-        },
-        {
-          "time": "12:30 PM",
-          "name": "background-routing-cron-trigger-evaluation",
-          "category": "content",
-          "conflict": true
-        },
-        {
-          "time": "12:30 PM",
-          "name": "pilot-followthrough-watch",
-          "category": "content",
-          "conflict": true
         },
         {
           "time": "4:10 PM",
           "name": "Agent Commands Watcher",
           "category": "system",
           "conflict": false
+        },
+        {
+          "time": "4:15 PM",
+          "name": "background-routing-queue-polling",
+          "category": "content",
+          "conflict": true
+        },
+        {
+          "time": "4:15 PM",
+          "name": "browser-lane-hybrid-monitor",
+          "category": "content",
+          "conflict": true
+        },
+        {
+          "time": "4:30 PM",
+          "name": "background-routing-cron-trigger-evaluation",
+          "category": "content",
+          "conflict": true
+        },
+        {
+          "time": "4:30 PM",
+          "name": "pilot-followthrough-watch",
+          "category": "content",
+          "conflict": true
         },
         {
           "time": "7:00 PM",
@@ -2275,12 +2269,12 @@
     },
     "main_exec_security": "allowlist",
     "main_exec_ask": "off",
-    "main_allowlist_count": 888,
+    "main_allowlist_count": 897,
     "sandbox": "mode: off scope: agent",
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Thu May 7, 2026, 12:05 PM ET",
+    "generated_local": "Thu May 7, 2026, 4:05 PM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 3,
@@ -2290,7 +2284,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-05-07T16:05:13.293547+00:00"
+      "checked_at": "2026-05-07T20:05:15.384622+00:00"
     },
     "data_trust": "validated"
   }
