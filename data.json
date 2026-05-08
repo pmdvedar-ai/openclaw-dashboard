@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-08T08:05:13.281505+00:00",
+  "generated": "2026-05-08T12:05:12.883872+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -489,12 +489,12 @@
     "idle": 15,
     "revenue_aligned": 17,
     "est_monthly_ai_cost": 558.44,
-    "jobs_this_week": 57,
+    "jobs_this_week": 56,
     "disabled_jobs": 41,
     "revenue_direct": 7,
     "revenue_indirect": 10,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "May 8, 4:04 AM ET",
+    "next_job_time": "May 8, 8:04 AM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -819,7 +819,7 @@
       "delivery_target": "channel:1487048489618641002",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "May 6, 9:23 AM ET",
+      "last_run": "May 8, 8:00 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -842,7 +842,7 @@
       ],
       "value": "SUPPORTING SYSTEM",
       "notes": "Timeout 300\u2192600s fixed Apr 1. Collector runs at 7:45 AM for 15-min buffer.",
-      "next_run": "May 8, 8:00 AM ET",
+      "next_run": "May 11, 8:00 AM ET",
       "enabled": true
     },
     {
@@ -854,11 +854,11 @@
       "schedule_human": "Every day 7:45 AM ET",
       "model": "anthropic/claude-haiku-4-5",
       "model_tier": "local",
-      "delivery_channel": "telegram",
-      "delivery_target": "6394048111",
+      "delivery_channel": "discord",
+      "delivery_target": "channel:1487048489618641002",
       "session_target": "isolated",
       "timeout_seconds": 120,
-      "last_run": "May 6, 8:55 AM ET",
+      "last_run": "May 8, 7:45 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -875,7 +875,7 @@
       ],
       "value": "SUPPORTING SYSTEM",
       "notes": "Runs 15 min before sentinel.",
-      "next_run": "May 8, 7:45 AM ET",
+      "next_run": "May 11, 7:45 AM ET",
       "enabled": true
     },
     {
@@ -1677,23 +1677,23 @@
   ],
   "timing_conflicts": [
     {
-      "time": "Fri May 8, 4:15 AM ET",
+      "time": "Fri May 8, 8:10 AM ET",
+      "agents": "browser-endpoint-drift-check-daily + Agent Commands Watcher",
+      "risk": "MEDIUM",
+      "note": "Concurrent scheduled runs",
+      "status": "active"
+    },
+    {
+      "time": "Fri May 8, 8:15 AM ET",
       "agents": "background-routing-queue-polling + browser-lane-hybrid-monitor",
       "risk": "MEDIUM",
       "note": "Concurrent scheduled runs",
       "status": "active"
     },
     {
-      "time": "Fri May 8, 4:30 AM ET",
-      "agents": "background-routing-cron-trigger-evaluation + pilot-followthrough-watch",
-      "risk": "MEDIUM",
-      "note": "Concurrent scheduled runs",
-      "status": "active"
-    },
-    {
-      "time": "Fri May 8, 8:10 AM ET",
-      "agents": "browser-endpoint-drift-check-daily + Agent Commands Watcher",
-      "risk": "MEDIUM",
+      "time": "Fri May 8, 8:30 AM ET",
+      "agents": "cost-sentinel-renewal-check + background-routing-cron-trigger-evaluation + pilot-followthrough-watch",
+      "risk": "HIGH",
       "note": "Concurrent scheduled runs",
       "status": "active"
     },
@@ -1707,6 +1707,13 @@
     {
       "time": "Fri May 8, 9:30 AM ET",
       "agents": "os-v2-cleanup-preview + Pending Review Auto-Archive",
+      "risk": "MEDIUM",
+      "note": "Concurrent scheduled runs",
+      "status": "active"
+    },
+    {
+      "time": "Mon May 11, 8:00 AM ET",
+      "agents": "daily-cost-sentinel + os-v2-weekly-health",
       "risk": "MEDIUM",
       "note": "Concurrent scheduled runs",
       "status": "active"
@@ -1870,31 +1877,31 @@
     {
       "name": "send-mitesh-followup-email",
       "when": "May 9, 9:00 AM ET",
-      "delta": "~1d 4h",
+      "delta": "~1d",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "linkedin-analytics-48h-business-literacy-gap",
       "when": "May 9, 12:10 PM ET",
-      "delta": "~1d 8h",
+      "delta": "~1d 4h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "launch-countdown-daily",
       "when": "May 8, 9:20 AM ET",
-      "delta": "~5h 14m",
+      "delta": "~1h 14m",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "Consulting Outreach",
       "when": "May 8, 4:00 PM ET",
-      "delta": "~11h 54m",
+      "delta": "~7h 54m",
       "reason": "Pipeline generation"
     },
     {
       "name": "consulting-outreach-weekly",
       "when": "May 10, 7:30 PM ET",
-      "delta": "~2d 15h",
+      "delta": "~2d 11h",
       "reason": "Pipeline generation"
     }
   ],
@@ -1904,63 +1911,15 @@
       "date": "May 8",
       "items": [
         {
-          "time": "4:05 AM",
+          "time": "8:05 AM",
           "name": "phase1-cache-evidence-watch",
           "category": "content",
           "conflict": false
         },
         {
-          "time": "4:09 AM",
+          "time": "8:09 AM",
           "name": "os-v2-gateway-monitor",
           "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "4:15 AM",
-          "name": "background-routing-queue-polling",
-          "category": "content",
-          "conflict": true
-        },
-        {
-          "time": "4:15 AM",
-          "name": "browser-lane-hybrid-monitor",
-          "category": "content",
-          "conflict": true
-        },
-        {
-          "time": "4:30 AM",
-          "name": "background-routing-cron-trigger-evaluation",
-          "category": "content",
-          "conflict": true
-        },
-        {
-          "time": "4:30 AM",
-          "name": "pilot-followthrough-watch",
-          "category": "content",
-          "conflict": true
-        },
-        {
-          "time": "7:20 AM",
-          "name": "Routing Violation Sentinel",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "7:45 AM",
-          "name": "daily-cost-collector",
-          "category": "finance",
-          "conflict": false
-        },
-        {
-          "time": "8:00 AM",
-          "name": "daily-cost-sentinel",
-          "category": "finance",
-          "conflict": false
-        },
-        {
-          "time": "8:05 AM",
-          "name": "morning-draft-briefing",
-          "category": "revenue",
           "conflict": false
         },
         {
@@ -1976,6 +1935,18 @@
           "conflict": true
         },
         {
+          "time": "8:15 AM",
+          "name": "background-routing-queue-polling",
+          "category": "content",
+          "conflict": true
+        },
+        {
+          "time": "8:15 AM",
+          "name": "browser-lane-hybrid-monitor",
+          "category": "content",
+          "conflict": true
+        },
+        {
           "time": "8:25 AM",
           "name": "routing-violation-sentinel-daily",
           "category": "content",
@@ -1985,7 +1956,19 @@
           "time": "8:30 AM",
           "name": "cost-sentinel-renewal-check",
           "category": "finance",
-          "conflict": false
+          "conflict": true
+        },
+        {
+          "time": "8:30 AM",
+          "name": "background-routing-cron-trigger-evaluation",
+          "category": "content",
+          "conflict": true
+        },
+        {
+          "time": "8:30 AM",
+          "name": "pilot-followthrough-watch",
+          "category": "content",
+          "conflict": true
         },
         {
           "time": "9:00 AM",
@@ -2096,6 +2079,12 @@
           "conflict": false
         },
         {
+          "time": "7:20 AM",
+          "name": "Routing Violation Sentinel",
+          "category": "content",
+          "conflict": false
+        },
+        {
           "time": "9:00 AM",
           "name": "send-mitesh-followup-email",
           "category": "content",
@@ -2138,10 +2127,22 @@
           "conflict": false
         },
         {
+          "time": "7:45 AM",
+          "name": "daily-cost-collector",
+          "category": "finance",
+          "conflict": false
+        },
+        {
+          "time": "8:00 AM",
+          "name": "daily-cost-sentinel",
+          "category": "finance",
+          "conflict": true
+        },
+        {
           "time": "8:00 AM",
           "name": "os-v2-weekly-health",
           "category": "system",
-          "conflict": false
+          "conflict": true
         },
         {
           "time": "8:02 AM",
@@ -2298,7 +2299,7 @@
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Fri May 8, 2026, 4:05 AM ET",
+    "generated_local": "Fri May 8, 2026, 8:05 AM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 3,
@@ -2308,7 +2309,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-05-08T08:05:13.282367+00:00"
+      "checked_at": "2026-05-08T12:05:12.884233+00:00"
     },
     "data_trust": "validated"
   }
