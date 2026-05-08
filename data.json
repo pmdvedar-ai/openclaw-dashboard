@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-08T00:05:16.076319+00:00",
+  "generated": "2026-05-08T04:05:24.426372+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -126,7 +126,7 @@
     "scripts_ready": true,
     "resume_script": "scripts/execute_course2_build.py",
     "launch_date": "May 12, 2026",
-    "days_to_launch": 5
+    "days_to_launch": 4
   },
   "travel_window": {
     "departure": "2026-04-11",
@@ -494,7 +494,7 @@
     "revenue_direct": 7,
     "revenue_indirect": 10,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "May 7, 8:04 PM ET",
+    "next_job_time": "May 8, 12:04 AM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -1637,7 +1637,7 @@
     {
       "name": "Security posture",
       "status": "warning",
-      "description": "OpenClaw audit: 0 critical / 3 warn / 1 info"
+      "description": "OpenClaw audit: 0 critical / 4 warn / 1 info"
     },
     {
       "name": "\u2705 launch-countdown-daily \u2014 Fixed Apr 8 + rescheduled 9:20 AM",
@@ -1672,14 +1672,14 @@
   ],
   "timing_conflicts": [
     {
-      "time": "Thu May 7, 8:15 PM ET",
+      "time": "Fri May 8, 12:15 AM ET",
       "agents": "background-routing-queue-polling + browser-lane-hybrid-monitor",
       "risk": "MEDIUM",
       "note": "Concurrent scheduled runs",
       "status": "active"
     },
     {
-      "time": "Thu May 7, 8:30 PM ET",
+      "time": "Fri May 8, 12:30 AM ET",
       "agents": "background-routing-cron-trigger-evaluation + pilot-followthrough-watch",
       "risk": "MEDIUM",
       "note": "Concurrent scheduled runs",
@@ -1865,81 +1865,75 @@
     {
       "name": "send-mitesh-followup-email",
       "when": "May 9, 9:00 AM ET",
-      "delta": "~1d 12h",
+      "delta": "~1d 8h",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "linkedin-analytics-48h-business-literacy-gap",
       "when": "May 9, 12:10 PM ET",
-      "delta": "~1d 16h",
+      "delta": "~1d 12h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "launch-countdown-daily",
       "when": "May 8, 9:20 AM ET",
-      "delta": "~13h 14m",
+      "delta": "~9h 14m",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "Consulting Outreach",
       "when": "May 8, 4:00 PM ET",
-      "delta": "~19h 54m",
+      "delta": "~15h 54m",
       "reason": "Pipeline generation"
     },
     {
       "name": "consulting-outreach-weekly",
       "when": "May 10, 7:30 PM ET",
-      "delta": "~2d 23h",
+      "delta": "~2d 19h",
       "reason": "Pipeline generation"
     }
   ],
   "calendar_days": [
     {
-      "label": "Thursday",
-      "date": "May 7",
+      "label": "Friday",
+      "date": "May 8",
       "items": [
         {
-          "time": "8:05 PM",
+          "time": "12:05 AM",
           "name": "phase1-cache-evidence-watch",
           "category": "content",
           "conflict": false
         },
         {
-          "time": "8:09 PM",
+          "time": "12:09 AM",
           "name": "os-v2-gateway-monitor",
           "category": "content",
           "conflict": false
         },
         {
-          "time": "8:15 PM",
+          "time": "12:15 AM",
           "name": "background-routing-queue-polling",
           "category": "content",
           "conflict": true
         },
         {
-          "time": "8:15 PM",
+          "time": "12:15 AM",
           "name": "browser-lane-hybrid-monitor",
           "category": "content",
           "conflict": true
         },
         {
-          "time": "8:30 PM",
+          "time": "12:30 AM",
           "name": "background-routing-cron-trigger-evaluation",
           "category": "content",
           "conflict": true
         },
         {
-          "time": "8:30 PM",
+          "time": "12:30 AM",
           "name": "pilot-followthrough-watch",
           "category": "content",
           "conflict": true
-        }
-      ]
-    },
-    {
-      "label": "Friday",
-      "date": "May 8",
-      "items": [
+        },
         {
           "time": "2:00 AM",
           "name": "nightly-backup-test",
@@ -2259,13 +2253,37 @@
           "conflict": false
         }
       ]
+    },
+    {
+      "label": "Thursday",
+      "date": "May 14",
+      "items": [
+        {
+          "time": "12:00 PM",
+          "name": "LinkedIn \u2014 APP Onboarding Scorecard Lead Magnet",
+          "category": "revenue",
+          "conflict": false
+        },
+        {
+          "time": "12:15 PM",
+          "name": "linkedin-analytics-7d-business-literacy-gap",
+          "category": "revenue",
+          "conflict": false
+        },
+        {
+          "time": "12:20 PM",
+          "name": "linkedin-post-verify-app-onboarding-scorecard-lead-magnet",
+          "category": "revenue",
+          "conflict": false
+        }
+      ]
     }
   ],
   "security_posture": {
     "openclaw_version": "OpenClaw 2026.4.26 (be8c246)",
     "audit_summary": {
       "critical": 0,
-      "warn": 3,
+      "warn": 4,
       "info": 1
     },
     "main_exec_security": "allowlist",
@@ -2275,17 +2293,17 @@
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Thu May 7, 2026, 8:05 PM ET",
+    "generated_local": "Fri May 8, 2026, 12:05 AM ET",
     "audit_summary": {
       "critical": 0,
-      "warn": 3,
+      "warn": 4,
       "info": 1
     },
     "validation": {
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-05-08T00:05:16.077093+00:00"
+      "checked_at": "2026-05-08T04:05:24.449387+00:00"
     },
     "data_trust": "validated"
   }
