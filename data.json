@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-08T04:05:24.426372+00:00",
+  "generated": "2026-05-08T08:05:13.281505+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -483,9 +483,9 @@
     "total_agents": 110,
     "recurring_agents": 55,
     "one_time_jobs": 14,
-    "healthy": 50,
+    "healthy": 49,
     "warning": 0,
-    "broken": 4,
+    "broken": 5,
     "idle": 15,
     "revenue_aligned": 17,
     "est_monthly_ai_cost": 558.44,
@@ -494,7 +494,7 @@
     "revenue_direct": 7,
     "revenue_indirect": 10,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "May 8, 12:04 AM ET",
+    "next_job_time": "May 8, 4:04 AM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -1094,7 +1094,7 @@
       "delivery_target": "channel:1485490618636570805",
       "session_target": "isolated",
       "timeout_seconds": 300,
-      "last_run": "May 7, 2:00 AM ET",
+      "last_run": "May 8, 2:00 AM ET",
       "last_run_status": "ok",
       "consecutive_errors": 0,
       "status": "HEALTHY",
@@ -1110,7 +1110,7 @@
       "downstream": [],
       "value": "SUPPORTING SYSTEM",
       "notes": "Fixed Apr 1 \u2014 pre-commit secret leak check added.",
-      "next_run": "May 8, 2:00 AM ET",
+      "next_run": "May 9, 2:00 AM ET",
       "enabled": true
     },
     {
@@ -1615,6 +1615,11 @@
   },
   "health_issues": [
     {
+      "name": "ERROR - self-learning-daily-cycle",
+      "status": "broken",
+      "description": "Consecutive errors: 1 | Last run: May 8, 2:15 AM ET | Next: May 9, 2:15 AM ET"
+    },
+    {
       "name": "ERROR - System Health Sentinel",
       "status": "broken",
       "description": "Consecutive errors: 2 | Last run: May 4, 9:57 AM ET | Next: May 11, 8:02 AM ET"
@@ -1637,7 +1642,7 @@
     {
       "name": "Security posture",
       "status": "warning",
-      "description": "OpenClaw audit: 0 critical / 4 warn / 1 info"
+      "description": "OpenClaw audit: 0 critical / 3 warn / 1 info"
     },
     {
       "name": "\u2705 launch-countdown-daily \u2014 Fixed Apr 8 + rescheduled 9:20 AM",
@@ -1672,14 +1677,14 @@
   ],
   "timing_conflicts": [
     {
-      "time": "Fri May 8, 12:15 AM ET",
+      "time": "Fri May 8, 4:15 AM ET",
       "agents": "background-routing-queue-polling + browser-lane-hybrid-monitor",
       "risk": "MEDIUM",
       "note": "Concurrent scheduled runs",
       "status": "active"
     },
     {
-      "time": "Fri May 8, 12:30 AM ET",
+      "time": "Fri May 8, 4:30 AM ET",
       "agents": "background-routing-cron-trigger-evaluation + pilot-followthrough-watch",
       "risk": "MEDIUM",
       "note": "Concurrent scheduled runs",
@@ -1865,31 +1870,31 @@
     {
       "name": "send-mitesh-followup-email",
       "when": "May 9, 9:00 AM ET",
-      "delta": "~1d 8h",
+      "delta": "~1d 4h",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "linkedin-analytics-48h-business-literacy-gap",
       "when": "May 9, 12:10 PM ET",
-      "delta": "~1d 12h",
+      "delta": "~1d 8h",
       "reason": "Human follow-up / export likely needed"
     },
     {
       "name": "launch-countdown-daily",
       "when": "May 8, 9:20 AM ET",
-      "delta": "~9h 14m",
+      "delta": "~5h 14m",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "Consulting Outreach",
       "when": "May 8, 4:00 PM ET",
-      "delta": "~15h 54m",
+      "delta": "~11h 54m",
       "reason": "Pipeline generation"
     },
     {
       "name": "consulting-outreach-weekly",
       "when": "May 10, 7:30 PM ET",
-      "delta": "~2d 19h",
+      "delta": "~2d 15h",
       "reason": "Pipeline generation"
     }
   ],
@@ -1899,52 +1904,40 @@
       "date": "May 8",
       "items": [
         {
-          "time": "12:05 AM",
+          "time": "4:05 AM",
           "name": "phase1-cache-evidence-watch",
           "category": "content",
           "conflict": false
         },
         {
-          "time": "12:09 AM",
+          "time": "4:09 AM",
           "name": "os-v2-gateway-monitor",
           "category": "content",
           "conflict": false
         },
         {
-          "time": "12:15 AM",
+          "time": "4:15 AM",
           "name": "background-routing-queue-polling",
           "category": "content",
           "conflict": true
         },
         {
-          "time": "12:15 AM",
+          "time": "4:15 AM",
           "name": "browser-lane-hybrid-monitor",
           "category": "content",
           "conflict": true
         },
         {
-          "time": "12:30 AM",
+          "time": "4:30 AM",
           "name": "background-routing-cron-trigger-evaluation",
           "category": "content",
           "conflict": true
         },
         {
-          "time": "12:30 AM",
+          "time": "4:30 AM",
           "name": "pilot-followthrough-watch",
           "category": "content",
           "conflict": true
-        },
-        {
-          "time": "2:00 AM",
-          "name": "nightly-backup-test",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "2:15 AM",
-          "name": "self-learning-daily-cycle",
-          "category": "content",
-          "conflict": false
         },
         {
           "time": "7:20 AM",
@@ -2090,6 +2083,18 @@
       "label": "Saturday",
       "date": "May 9",
       "items": [
+        {
+          "time": "2:00 AM",
+          "name": "nightly-backup-test",
+          "category": "system",
+          "conflict": false
+        },
+        {
+          "time": "2:15 AM",
+          "name": "self-learning-daily-cycle",
+          "category": "content",
+          "conflict": false
+        },
         {
           "time": "9:00 AM",
           "name": "send-mitesh-followup-email",
@@ -2283,7 +2288,7 @@
     "openclaw_version": "OpenClaw 2026.4.26 (be8c246)",
     "audit_summary": {
       "critical": 0,
-      "warn": 4,
+      "warn": 3,
       "info": 1
     },
     "main_exec_security": "allowlist",
@@ -2293,17 +2298,17 @@
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Fri May 8, 2026, 12:05 AM ET",
+    "generated_local": "Fri May 8, 2026, 4:05 AM ET",
     "audit_summary": {
       "critical": 0,
-      "warn": 4,
+      "warn": 3,
       "info": 1
     },
     "validation": {
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-05-08T04:05:24.449387+00:00"
+      "checked_at": "2026-05-08T08:05:13.282367+00:00"
     },
     "data_trust": "validated"
   }
