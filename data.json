@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-09T12:05:41.810641+00:00",
+  "generated": "2026-05-09T12:05:57.956595+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -2268,7 +2268,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-05-09T12:05:41.811393+00:00"
+      "checked_at": "2026-05-09T12:05:57.957209+00:00"
     },
     "data_trust": "validated"
   }
