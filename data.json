@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-09T20:05:43.557556+00:00",
+  "generated": "2026-05-10T00:05:43.410343+00:00",
   "revenue": {
     "closed_total": 0,
     "mtd": 0,
@@ -494,7 +494,7 @@
     "revenue_direct": 7,
     "revenue_indirect": 10,
     "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "May 9, 4:04 PM ET",
+    "next_job_time": "May 9, 8:04 PM ET",
     "next_job_delta": "now"
   },
   "agents": [
@@ -1617,7 +1617,7 @@
     {
       "name": "ERROR - Agent Commands Watcher",
       "status": "broken",
-      "description": "Consecutive errors: 2 | Last run: May 9, 8:10 AM ET | Next: May 9, 4:10 PM ET"
+      "description": "Consecutive errors: 3 | Last run: May 9, 4:10 PM ET | Next: May 10, 8:10 AM ET"
     },
     {
       "name": "ERROR - weekly-mode-signal",
@@ -1672,15 +1672,22 @@
   ],
   "timing_conflicts": [
     {
-      "time": "Sat May 9, 4:15 PM ET",
+      "time": "Sat May 9, 8:15 PM ET",
       "agents": "background-routing-queue-polling + browser-lane-hybrid-monitor",
       "risk": "MEDIUM",
       "note": "Concurrent scheduled runs",
       "status": "active"
     },
     {
-      "time": "Sat May 9, 4:30 PM ET",
+      "time": "Sat May 9, 8:30 PM ET",
       "agents": "background-routing-cron-trigger-evaluation + pilot-followthrough-watch",
+      "risk": "MEDIUM",
+      "note": "Concurrent scheduled runs",
+      "status": "active"
+    },
+    {
+      "time": "Sun May 10, 8:10 AM ET",
+      "agents": "browser-endpoint-drift-check-daily + Agent Commands Watcher",
       "risk": "MEDIUM",
       "note": "Concurrent scheduled runs",
       "status": "active"
@@ -1865,31 +1872,31 @@
     {
       "name": "launch-countdown-daily",
       "when": "May 10, 9:20 AM ET",
-      "delta": "~17h 14m",
+      "delta": "~13h 14m",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "consulting-outreach-weekly",
       "when": "May 10, 7:30 PM ET",
-      "delta": "~1d 3h",
+      "delta": "~23h 24m",
       "reason": "Pipeline generation"
     },
     {
       "name": "LinkedIn Growth",
       "when": "May 11, 10:00 AM ET",
-      "delta": "~1d 17h",
+      "delta": "~1d 13h",
       "reason": "Content / audience growth revenue lever"
     },
     {
       "name": "Lead Magnet Builder",
       "when": "May 11, 2:00 PM ET",
-      "delta": "~1d 21h",
+      "delta": "~1d 17h",
       "reason": "Upcoming scheduled work"
     },
     {
       "name": "Course Architect",
       "when": "May 11, 3:00 PM ET",
-      "delta": "~1d 22h",
+      "delta": "~1d 18h",
       "reason": "Upcoming scheduled work"
     }
   ],
@@ -1899,43 +1906,37 @@
       "date": "May 9",
       "items": [
         {
-          "time": "4:06 PM",
+          "time": "8:06 PM",
           "name": "phase1-cache-evidence-watch",
           "category": "content",
           "conflict": false
         },
         {
-          "time": "4:09 PM",
+          "time": "8:09 PM",
           "name": "os-v2-gateway-monitor",
           "category": "content",
           "conflict": false
         },
         {
-          "time": "4:10 PM",
-          "name": "Agent Commands Watcher",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "4:15 PM",
+          "time": "8:15 PM",
           "name": "background-routing-queue-polling",
           "category": "content",
           "conflict": true
         },
         {
-          "time": "4:15 PM",
+          "time": "8:15 PM",
           "name": "browser-lane-hybrid-monitor",
           "category": "content",
           "conflict": true
         },
         {
-          "time": "4:30 PM",
+          "time": "8:30 PM",
           "name": "background-routing-cron-trigger-evaluation",
           "category": "content",
           "conflict": true
         },
         {
-          "time": "4:30 PM",
+          "time": "8:30 PM",
           "name": "pilot-followthrough-watch",
           "category": "content",
           "conflict": true
@@ -1974,7 +1975,13 @@
           "time": "8:10 AM",
           "name": "browser-endpoint-drift-check-daily",
           "category": "content",
-          "conflict": false
+          "conflict": true
+        },
+        {
+          "time": "8:10 AM",
+          "name": "Agent Commands Watcher",
+          "category": "system",
+          "conflict": true
         },
         {
           "time": "8:25 AM",
@@ -2245,7 +2252,7 @@
     "docker_available": false
   },
   "meta": {
-    "generated_local": "Sat May 9, 2026, 4:05 PM ET",
+    "generated_local": "Sat May 9, 2026, 8:05 PM ET",
     "audit_summary": {
       "critical": 0,
       "warn": 3,
@@ -2255,7 +2262,7 @@
       "ok": true,
       "issues": [],
       "source": "openclaw cron list --all --json",
-      "checked_at": "2026-05-09T20:05:43.558373+00:00"
+      "checked_at": "2026-05-10T00:05:43.411190+00:00"
     },
     "data_trust": "validated"
   }
