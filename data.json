@@ -1,2269 +1,334 @@
 {
-  "generated": "2026-05-10T00:05:43.410343+00:00",
-  "revenue": {
-    "closed_total": 0,
-    "mtd": 0,
-    "pipeline_value": 27500,
-    "pipeline_value_note": "Mitesh (est. $10k Tier 2) + 2 warm leads (est. avg $8,750) = conservative pipeline floor",
-    "first_client_target": "Q2 2026",
-    "currency": "USD"
-  },
-  "consulting_pipeline": {
-    "calls": [
-      {
-        "name": "Tracy Bingaman, PA-C",
-        "role": "Clinician Business Consultant / Podcast Host",
-        "date": "Apr 8, 4:00 PM ET",
-        "status": "complete",
-        "outcome": "Peer connection. Robert Arledge referral. Podcast open door (2-3 wks).",
-        "tier": "peer",
-        "next_action": "Await Robert intro from Tracy. Check back Apr 22 if no movement.",
-        "next_due": "2026-04-22"
-      },
-      {
-        "name": "Kaci Hardsock, PA-C",
-        "role": "CT Surgery PA / National Student Advisor",
-        "date": "Apr 8, 8:00 PM ET",
-        "status": "complete",
-        "outcome": "Strong peer connection. Beta reviewer for Course 1 confirmed. Key pain: tribal knowledge leaves with the lead APP. Differentiation flag: Course 2 sounded like APACVS content \u2014 need stronger sales copy angle.",
-        "tier": "peer-validator",
-        "next_action": "Follow up post-return Apr 26 with Teachable access link.",
-        "next_due": "2026-04-26"
-      },
-      {
-        "name": "Mitesh J. Patel, MBA, MSHS, PA-C",
-        "role": "CV & Thoracic Surgery PA \u2014 Baylor Scott & White",
-        "date": "Apr 9, 7:30 PM ET",
-        "status": "complete",
-        "outcome": "Verbal yes \u2014 pending COO sign-off. Said 'if it was up to me, I'd already say yes.' Pricing ($2,500) landed clean. On PTO week of Apr 14.",
-        "tier": "hot-prospect",
-        "next_action": "Wait for COO reply. Check in May 12 if no response.",
-        "next_due": "2026-05-12",
-        "estimated_value": 10000
-      }
-    ],
-    "pipeline_leads": [
-      {
-        "name": "Mitesh Patel",
-        "stage": "verbal-yes",
-        "tier": "hot",
-        "est_value": 10000,
-        "company": "Baylor Scott & White"
-      },
-      {
-        "name": "Erin Switzer MacMillan",
-        "stage": "deferred",
-        "tier": "warm-deferred",
-        "est_value": 8750,
-        "company": "VCU Health"
-      },
-      {
-        "name": "Jonathan Kiemel",
-        "stage": "dm-sent",
-        "tier": "hot",
-        "est_value": 8750,
-        "company": "Amelia Heart & Vascular"
-      },
-      {
-        "name": "Chris Darst",
-        "stage": "comment-replied",
-        "tier": "partnership",
-        "est_value": 0,
-        "company": "VesselHarvest / Enlighten Media"
-      },
-      {
-        "name": "Kimberly Kim",
-        "stage": "replied",
-        "tier": "warm",
-        "est_value": 0,
-        "company": "HCA FL Heart and Lung \u2014 course buyer"
-      }
-    ],
-    "dms_sent_total": 4,
-    "dms_replied": 6,
-    "calls_completed": 4,
-    "calls_scheduled": 0,
-    "revenue_closed": 0,
-    "follow_ups_due_apr15": [
-      "Erika Francis",
-      "Kimberly Kim",
-      "Jonathan Kiemel, PA-C",
-      "Frank Marcantonio, PA-C",
-      "Tracy Bingaman, PA-C",
-      "Chris Darst, MPAS, PA-C",
-      "Robert Arledge, MMSc, PA-C",
-      "Kaci Hardsock, MS, PA-C"
-    ]
-  },
-  "course2_progress": {
-    "total_lessons": 25,
-    "videos_built": 10,
-    "videos_uploaded": 10,
-    "elevenlabs_quota_resets": "Apr 24, 2026",
-    "blocked_lessons": [
-      "3.6",
-      "4.1",
-      "4.2",
-      "4.3",
-      "4.4",
-      "4.5",
-      "4.6",
-      "4.7",
-      "5.1",
-      "5.2",
-      "5.3",
-      "5.4",
-      "5.5",
-      "5.6",
-      "5.7"
-    ],
-    "on_camera_remaining": [
-      "Module 1 (all 5)",
-      "Lesson 6.3",
-      "Lessons 7.3+7.4",
-      "Module 8 (all 4)"
-    ],
-    "scripts_ready": true,
-    "resume_script": "scripts/execute_course2_build.py",
-    "launch_date": "May 12, 2026",
-    "days_to_launch": 3
-  },
-  "travel_window": {
-    "departure": "2026-04-11",
-    "return": "2026-04-26",
-    "days_until_departure": 0,
-    "itinerary": "Portugal Apr 11\u201320 \u2192 Spain Apr 20\u201326",
-    "active": false,
-    "pre_travel_checklist": [
-      {
-        "done": true,
-        "text": "Strategy Office built + crons live"
-      },
-      {
-        "done": true,
-        "text": "7 outbound DMs sent"
-      },
-      {
-        "done": true,
-        "text": "Call prep: Tracy, Kaci, Mitesh"
-      },
-      {
-        "done": true,
-        "text": "LinkedIn posts queued Apr 14 + beyond"
-      },
-      {
-        "done": true,
-        "text": "Mitesh call executed + case seed filed"
-      },
-      {
-        "done": true,
-        "text": "Module scripts reviewed before departure"
-      }
-    ]
-  },
-  "strategy_office": {
-    "thesis": "The only system for building and leading high-performing cardiac surgery APP teams \u2014 with zero turnover as the proof point.",
-    "thesis_version": "v1",
-    "thesis_locked": true,
-    "current_nonnegotiable": "Course 1 pre-launch May 5\u201311 \u2014 all recording + upload complete before May 12. ElevenLabs resets Apr 24 \u2014 15 Course 2 videos resume automatically. Mitesh COO approval \u2014 follow up May 12 if silent.",
-    "enforcer_level": 0,
-    "first_enforcer_run": "Wed Apr 15, 8:15 AM ET",
-    "agents": [
-      {
-        "name": "Competitive Monitor",
-        "schedule": "Mon 8:15 AM ET",
-        "first_run": "Apr 13",
-        "model": "ollama/qwen3:30b-a3b"
-      },
-      {
-        "name": "CSO (Chief Strategy Officer)",
-        "schedule": "Mon 8:45 AM ET",
-        "first_run": "Apr 13",
-        "model": "openai/gpt-5.4"
-      },
-      {
-        "name": "Execution Enforcer",
-        "schedule": "Wed 8:15 AM ET",
-        "first_run": "Apr 15",
-        "model": "openai/gpt-5.4"
-      },
-      {
-        "name": "The Skeptic",
-        "schedule": "First Mon 9:15 AM ET",
-        "first_run": "May 4",
-        "model": "ollama/qwen3:30b-a3b"
-      },
-      {
-        "name": "The Investor",
-        "schedule": "First Mon 9:45 AM ET",
-        "first_run": "May 4",
-        "model": "openai/gpt-5.4"
-      },
-      {
-        "name": "Offer Audit",
-        "schedule": "First Mon 10:15 AM ET",
-        "first_run": "May 4",
-        "model": "openai/gpt-5.4"
-      }
-    ]
-  },
-  "roadmap": {
-    "phases": [
-      {
-        "label": "Phase 1",
-        "title": "Course 1 \u2014 MBA PA Academy (APP Leadership)",
-        "start": "2026-03-28",
-        "end": "2026-05-12",
-        "color": "#C9973A",
-        "status": "in_progress",
-        "milestone": "May 12 Launch",
-        "cost_estimate": {
-          "recommended_tier": "Already underway",
-          "build_cost_low": 1200,
-          "build_cost_high": 1800,
-          "ongoing_monthly_low": 22,
-          "ongoing_monthly_high": 50,
-          "timeline_weeks": "Launch May 12, 2026",
-          "notes": "Teachable Builder $828/yr (paid). ElevenLabs $22/mo. AI build costs ~$300\u2013500. Most cost already incurred. Revenue target: $249 early bird \u2192 $399 standard."
-        },
-        "items": [
-          {
-            "done": true,
-            "text": "Course shell + 29 lessons built"
-          },
-          {
-            "done": true,
-            "text": "Stripe + Builder plan connected"
-          },
-          {
-            "done": true,
-            "text": "All modules recorded (on-camera + ElevenLabs) \u2705"
-          },
-          {
-            "done": true,
-            "text": "All 26 videos uploaded to Teachable \u2705"
-          },
-          {
-            "done": false,
-            "text": "Pre-launch window May 5\u201311"
-          },
-          {
-            "done": false,
-            "text": "Course goes live May 12"
-          }
-        ]
-      },
-      {
-        "label": "Phase 1b",
-        "title": "Course 2 \u2014 First-Assist Fundamentals",
-        "start": "2026-04-01",
-        "end": "2026-06-01",
-        "color": "#f59e0b",
-        "status": "in_progress",
-        "milestone": "Full release post-travel (ElevenLabs resets Apr 24)",
-        "cost_estimate": {
-          "recommended_tier": "ElevenLabs + AI video pipeline",
-          "build_cost_low": 500,
-          "build_cost_high": 1200,
-          "ongoing_monthly_low": 22,
-          "ongoing_monthly_high": 50,
-          "timeline_weeks": "Build resumes Apr 24 (ElevenLabs quota reset)",
-          "notes": "10 of 25 AI videos built. 15 blocked until Apr 24. On-camera modules (1, 6.3, 7.3, 7.4, 8) recorded by Pol post-travel. Pricing: $399 EB / $499 std / $749\u2013899 cohort / $3,500/yr institutional."
-        },
-        "items": [
-          {
-            "done": true,
-            "text": "Shell: 8 sections, 40 lessons, PDFs live"
-          },
-          {
-            "done": true,
-            "text": "10/25 AI videos built + uploaded"
-          },
-          {
-            "done": true,
-            "text": "All module scripts written"
-          },
-          {
-            "done": false,
-            "text": "Lessons 3.6, 4.1\u20134.7, 5.1\u20135.7 (ElevenLabs Apr 24)"
-          },
-          {
-            "done": false,
-            "text": "On-camera modules recorded post-travel"
-          },
-          {
-            "done": false,
-            "text": "Full course launch"
-          }
-        ]
-      },
-      {
-        "label": "Phase 2",
-        "title": "Consulting Pipeline",
-        "start": "2026-03-27",
-        "end": "2026-07-01",
-        "color": "#22c55e",
-        "status": "in_progress",
-        "milestone": "First paid client",
-        "cost_estimate": {
-          "recommended_tier": "Near-zero cost, highest ROI",
-          "build_cost_low": 0,
-          "build_cost_high": 500,
-          "ongoing_monthly_low": 0,
-          "ongoing_monthly_high": 50,
-          "timeline_weeks": "Ongoing \u2014 first client target Q2 2026",
-          "notes": "One-pager + Calendly already live ($0). Outreach is time only. Revenue target: $3,000\u201310,000 per engagement. Highest ROI of any phase."
-        },
-        "items": [
-          {
-            "done": true,
-            "text": "One-pager + Calendly + Stripe live"
-          },
-          {
-            "done": true,
-            "text": "22 outbound DMs sent"
-          },
-          {
-            "done": true,
-            "text": "Tracy Bingaman call \u2014 peer connection"
-          },
-          {
-            "done": true,
-            "text": "Kaci Hardsock call \u2014 Apr 8 \u2705 (peer validator, Course 1 beta reviewer)"
-          },
-          {
-            "done": true,
-            "text": "Mitesh Patel call \u2014 Apr 9 \u2705 (verbal yes, COO approval pending)"
-          },
-          {
-            "done": false,
-            "text": "First paid engagement signed"
-          },
-          {
-            "done": false,
-            "text": "3 clients \u2014 validate framework"
-          }
-        ]
-      },
-      {
-        "label": "Phase 3",
-        "title": "Question Bank",
-        "start": "2026-06-01",
-        "end": "2026-10-01",
-        "color": "#60a5fa",
-        "status": "planned",
-        "milestone": "Beta launch @ $99/yr",
-        "cost_estimate": {
-          "recommended_tier": "AI-assisted custom build",
-          "build_cost_low": 500,
-          "build_cost_high": 2000,
-          "ongoing_monthly_low": 50,
-          "ongoing_monthly_high": 150,
-          "timeline_weeks": "6\u201310 weeks post-validation",
-          "notes": "25 questions structured. Validate demand with course audience first. AI-assisted custom web app (Tier 2): $500\u20132,000 + 40\u201380 hrs. Stripe + auth + Supabase backend."
-        },
-        "items": [
-          {
-            "done": true,
-            "text": "25 questions structured (JSON schema)"
-          },
-          {
-            "done": false,
-            "text": "Validate demand with course audience"
-          },
-          {
-            "done": false,
-            "text": "Content spec + 500 seed questions"
-          },
-          {
-            "done": false,
-            "text": "AI-assisted custom web app (Tier 2)"
-          },
-          {
-            "done": false,
-            "text": "Stripe + auth + Supabase backend"
-          },
-          {
-            "done": false,
-            "text": "Beta launch \u2014 $99/yr recurring"
-          }
-        ]
-      },
-      {
-        "label": "Phase 4",
-        "title": "APP Leadership OS (SaaS)",
-        "start": "2026-11-01",
-        "end": "2027-06-01",
-        "color": "#a855f7",
-        "status": "planned",
-        "milestone": "SaaS MVP after 3 consulting clients",
-        "cost_estimate": {
-          "recommended_tier": "Manual consulting first, then AI-assisted SaaS",
-          "build_cost_low": 3000,
-          "build_cost_high": 8000,
-          "ongoing_monthly_low": 100,
-          "ongoing_monthly_high": 300,
-          "timeline_weeks": "4\u20136 months post-validation",
-          "notes": "Do NOT build until 3 consulting clients validate the framework. Revenue potential: $200\u2013500/mo per institution \u00d7 20 = $4,000\u201310,000/mo. Concept validated Apr 5 2026."
-        },
-        "items": [
-          {
-            "done": false,
-            "text": "3 consulting clients validate framework"
-          },
-          {
-            "done": false,
-            "text": "Manual delivery via Notion + Airtable"
-          },
-          {
-            "done": false,
-            "text": "Scope SaaS MVP (multi-tenant, role-based)"
-          },
-          {
-            "done": false,
-            "text": "Bidirectional competency sign-offs"
-          },
-          {
-            "done": false,
-            "text": "$200\u2013500/mo per institution"
-          },
-          {
-            "done": false,
-            "text": "Est. build cost: $3,000\u20138,000 (post-validation)"
-          }
-        ]
-      },
-      {
-        "label": "Phase 5",
-        "title": "Book",
-        "start": "2026-03-27",
-        "end": "2027-09-01",
-        "color": "#f472b6",
-        "status": "in_progress",
-        "milestone": "Published (self or traditional)",
-        "cost_estimate": {
-          "recommended_tier": "Self-publish (KDP)",
-          "build_cost_low": 4000,
-          "build_cost_high": 12000,
-          "ongoing_monthly_low": 0,
-          "ongoing_monthly_high": 100,
-          "timeline_weeks": "18\u201330 months total",
-          "notes": "Book Writing Agent live Sundays 7 PM. Dev editor: $2,000\u20135,000. Copy editor: $1,000\u20133,000. Cover + formatting: $500\u20132,000. Traditional publishing: free to query but 12\u201324 months longer."
-        },
-        "items": [
-          {
-            "done": true,
-            "text": "Book Writing Agent live (Sundays 7 PM)"
-          },
-          {
-            "done": false,
-            "text": "Complete first draft"
-          },
-          {
-            "done": false,
-            "text": "Developmental edit ($2,000\u20135,000)"
-          },
-          {
-            "done": false,
-            "text": "Copy edit + proofread ($1,000\u20133,000)"
-          },
-          {
-            "done": false,
-            "text": "Cover design + formatting ($500\u20132,000)"
-          },
-          {
-            "done": false,
-            "text": "Publish (KDP self or traditional query)"
-          }
-        ]
-      }
-    ]
-  },
-  "summary": {
-    "total_agents": 103,
-    "recurring_agents": 52,
-    "one_time_jobs": 7,
-    "healthy": 46,
-    "warning": 0,
-    "broken": 4,
-    "idle": 9,
-    "revenue_aligned": 17,
-    "est_monthly_ai_cost": 558.44,
-    "jobs_this_week": 49,
-    "disabled_jobs": 44,
-    "revenue_direct": 7,
-    "revenue_indirect": 10,
-    "next_job_name": "dashboard-regenerate-hourly",
-    "next_job_time": "May 9, 8:04 PM ET",
-    "next_job_delta": "now"
-  },
-  "agents": [
-    {
-      "id": "efafceb4",
-      "name": "Content Scout",
-      "category": "content",
-      "purpose": "Scans web/feeds for trending topics relevant to cardiac surgery PA niche; outputs content ideas to Discord",
-      "schedule_cron": "0 9 * * 1",
-      "schedule_human": "Every Monday 9:00 AM ET",
-      "model": "openai/gpt-5.4",
-      "model_tier": "premium",
-      "delivery_channel": "discord",
-      "delivery_target": "channel:1485491233756549202",
-      "session_target": "isolated",
-      "timeout_seconds": 300,
-      "last_run": "May 4, 9:13 AM ET",
-      "last_run_status": "ok",
-      "consecutive_errors": 0,
-      "status": "HEALTHY",
-      "inputs": [
-        "web search",
-        "MEMORY.md"
-      ],
-      "outputs": [
-        "Discord content ideas post",
-        "content/weekly-brief.md"
-      ],
-      "dependencies": [],
-      "downstream": [
-        "LinkedIn Growth",
-        "Instagram Content Agent"
-      ],
-      "value": "INDIRECT REVENUE",
-      "notes": "Writes content/weekly-brief.md after each run. Feeds LinkedIn + Instagram with unified weekly theme.",
-      "next_run": "May 11, 9:13 AM ET",
-      "enabled": true
-    },
-    {
-      "id": "c8519ff6",
-      "name": "LinkedIn Growth",
-      "category": "revenue",
-      "purpose": "Drafts and queues LinkedIn posts targeting PA audience to build audience and drive course/consulting leads",
-      "schedule_cron": "0 10 * * 1,3,5",
-      "schedule_human": "Mon/Wed/Fri 10:00 AM ET",
-      "model": "anthropic/claude-sonnet-4-6",
-      "model_tier": "premium",
-      "delivery_channel": "discord",
-      "delivery_target": "channel:1485491337095544963",
-      "session_target": "isolated",
-      "timeout_seconds": 180,
-      "last_run": "May 6, 10:00 AM ET",
-      "last_run_status": "ok",
-      "consecutive_errors": 0,
-      "status": "HEALTHY",
-      "inputs": [
-        "MEMORY.md",
-        "content/weekly-brief.md",
-        "content/linkedin-posts"
-      ],
-      "outputs": [
-        "LinkedIn draft posts to Discord",
-        "scheduled linkedin-post-* crons"
-      ],
-      "dependencies": [
-        "Content Scout"
-      ],
-      "downstream": [
-        "linkedin-post-* one-time jobs",
-        "analytics reminders"
-      ],
-      "value": "DIRECT REVENUE",
-      "notes": "Brief-aware: reads content/weekly-brief.md first. Scheduled: Apr 10 'Nobody Teaches You' \u00b7 Apr 14 'Conduit Quality Training System'.",
-      "next_run": "May 11, 10:00 AM ET",
-      "enabled": true
-    },
-    {
-      "id": "75378957",
-      "name": "Lead Magnet Builder",
-      "category": "revenue",
-      "purpose": "Creates and distributes lead magnets (PDFs, templates) to grow email list and Teachable pipeline",
-      "schedule_cron": "0 14 * * 1",
-      "schedule_human": "Every Monday 2:00 PM ET",
-      "model": "openai/gpt-5.4",
-      "model_tier": "premium",
-      "delivery_channel": "discord",
-      "delivery_target": "channel:1485491390304747550",
-      "session_target": "isolated",
-      "timeout_seconds": 600,
-      "last_run": "May 4, 2:00 PM ET",
-      "last_run_status": "ok",
-      "consecutive_errors": 0,
-      "status": "HEALTHY",
-      "inputs": [
-        "MEMORY.md",
-        "content/lead-magnets"
-      ],
-      "outputs": [
-        "Lead magnet assets to Discord",
-        "Google Drive PDFs"
-      ],
-      "dependencies": [],
-      "downstream": [
-        "Linktree",
-        "ManyChat automation"
-      ],
-      "value": "DIRECT REVENUE",
-      "notes": "Directly feeds MBA PA Academy enrollment funnel",
-      "next_run": "May 11, 2:00 PM ET",
-      "enabled": true
-    },
-    {
-      "id": "5b0442e2",
-      "name": "Course Architect",
-      "category": "revenue",
-      "purpose": "Develops MBA PA Academy course content \u2014 scripts, lessons, curriculum refinements",
-      "schedule_cron": "0 15 * * 1",
-      "schedule_human": "Every Monday 3:00 PM ET (weekly until May 12)",
-      "model": "openai/gpt-5.4",
-      "model_tier": "premium",
-      "delivery_channel": "discord",
-      "delivery_target": "channel:1485491468683448451",
-      "session_target": "isolated",
-      "timeout_seconds": 900,
-      "last_run": "May 4, 3:00 PM ET",
-      "last_run_status": "ok",
-      "consecutive_errors": 0,
-      "status": "HEALTHY",
-      "inputs": [
-        "projects/academy-curriculum-final.md",
-        "projects/academy-lesson-breakdown.md",
-        "MEMORY.md"
-      ],
-      "outputs": [
-        "Course scripts",
-        "lesson drafts to Discord"
-      ],
-      "dependencies": [],
-      "downstream": [
-        "Teachable course content"
-      ],
-      "value": "DIRECT REVENUE",
-      "notes": "Weekly until May 12, then monthly. Course 1 focus. Course 2 build resumes post-travel.",
-      "next_run": "May 11, 3:00 PM ET",
-      "enabled": true
-    },
-    {
-      "id": "46cefa69",
-      "name": "Consulting Outreach (Midweek)",
-      "category": "revenue",
-      "purpose": "Identifies and drafts outreach messages to potential consulting clients in cardiac surgery/PA space",
-      "schedule_cron": "0 18 * * 3",
-      "schedule_human": "Every Wednesday 6:00 PM ET",
-      "model": "anthropic/claude-haiku-4-5",
-      "model_tier": "premium",
-      "delivery_channel": "discord",
-      "delivery_target": "channel:1485491529991589888",
-      "session_target": "isolated",
-      "timeout_seconds": 420,
-      "last_run": "May 6, 6:00 PM ET",
-      "last_run_status": "ok",
-      "consecutive_errors": 0,
-      "status": "HEALTHY",
-      "inputs": [
-        "agents/consulting-outreach/outreach-tracker.jsonl",
-        "MEMORY.md"
-      ],
-      "outputs": [
-        "Outreach drafts to Discord"
-      ],
-      "dependencies": [],
-      "downstream": [
-        "Calendly bookings"
-      ],
-      "value": "DIRECT REVENUE",
-      "notes": "GPT-5.4 for warm lead judgment. 22 DMs sent total. 8 follow-ups due Apr 15.",
-      "next_run": "May 13, 6:00 PM ET",
-      "enabled": true
-    },
-    {
-      "id": "4f5053dc",
-      "name": "Consulting Outreach (Weekend)",
-      "category": "revenue",
-      "purpose": "Sunday batch run for consulting outreach pipeline",
-      "schedule_cron": "0 19 * * 0",
-      "schedule_human": "Every Sunday 7:30 PM ET",
-      "model": "openai/gpt-5.4",
-      "model_tier": "premium",
-      "delivery_channel": "discord",
-      "delivery_target": "channel:1485491529991589888",
-      "session_target": "isolated",
-      "timeout_seconds": 600,
-      "last_run": "May 3, 7:30 PM ET",
-      "last_run_status": "ok",
-      "consecutive_errors": 0,
-      "status": "HEALTHY",
-      "inputs": [
-        "agents/consulting-outreach/outreach-tracker.jsonl"
-      ],
-      "outputs": [
-        "Outreach Discord post"
-      ],
-      "dependencies": [],
-      "downstream": [],
-      "value": "DIRECT REVENUE",
-      "notes": "Staggered to 7:30 PM to avoid Book Writing Session conflict at 7:00 PM.",
-      "next_run": "May 10, 7:30 PM ET",
-      "enabled": true
-    },
-    {
-      "id": "c4360b5a",
-      "name": "Network Outreach",
-      "category": "revenue",
-      "purpose": "Manages warm outreach to PA network contacts for consulting pipeline and course beta",
-      "schedule_cron": "0 16 * * 5",
-      "schedule_human": "Every Friday 4:00 PM ET",
-      "model": "openai/gpt-5.4",
-      "model_tier": "premium",
-      "delivery_channel": "discord",
-      "delivery_target": "channel:1485491529991589888",
-      "session_target": "isolated",
-      "timeout_seconds": 240,
-      "last_run": "May 8, 11:21 PM ET",
-      "last_run_status": "ok",
-      "consecutive_errors": 0,
-      "status": "HEALTHY",
-      "inputs": [
-        "MEMORY.md",
-        "agents/consulting-outreach/outreach-tracker.jsonl"
-      ],
-      "outputs": [
-        "Outreach messages to Discord"
-      ],
-      "dependencies": [],
-      "downstream": [
-        "Calendly bookings"
-      ],
-      "value": "DIRECT REVENUE",
-      "notes": "GPT-5.4 \u2014 direct revenue, personalization matters.",
-      "next_run": "May 15, 4:00 PM ET",
-      "enabled": true
-    },
-    {
-      "id": "70cd568c",
-      "name": "Book Writing Session",
-      "category": "content",
-      "purpose": "Structured book writing sessions for PA leadership/career book project",
-      "schedule_cron": "0 19 * * 0",
-      "schedule_human": "Every Sunday 7:00 PM ET",
-      "model": "anthropic/claude-sonnet-4-6",
-      "model_tier": "premium",
-      "delivery_channel": "discord",
-      "delivery_target": "channel:1485491588418240703",
-      "session_target": "isolated",
-      "timeout_seconds": 900,
-      "last_run": "May 3, 7:00 PM ET",
-      "last_run_status": "ok",
-      "consecutive_errors": 0,
-      "status": "HEALTHY",
-      "inputs": [
-        "MEMORY.md",
-        "projects/"
-      ],
-      "outputs": [
-        "Book chapter drafts to Discord"
-      ],
-      "dependencies": [],
-      "downstream": [
-        "future book product"
-      ],
-      "value": "INDIRECT REVENUE",
-      "notes": "Long-term asset. Runs 30 min before Consulting Outreach Weekend \u2014 staggered.",
-      "next_run": "May 10, 7:00 PM ET",
-      "enabled": true
-    },
-    {
-      "id": "18bc0657",
-      "name": "Instagram Content Agent",
-      "category": "content",
-      "purpose": "Creates Instagram/Facebook content for MBA PA brand growth",
-      "schedule_cron": "0 11 * * 2",
-      "schedule_human": "Every Tuesday 11:00 AM ET",
-      "model": "ollama/qwen3:30b-a3b",
-      "model_tier": "premium",
-      "delivery_channel": "discord",
-      "delivery_target": "channel:1487280071059439696",
-      "session_target": "isolated",
-      "timeout_seconds": 300,
-      "last_run": "May 5, 11:00 AM ET",
-      "last_run_status": "ok",
-      "consecutive_errors": 0,
-      "status": "HEALTHY",
-      "inputs": [
-        "MEMORY.md",
-        "content/weekly-brief.md",
-        "content/instagram-*"
-      ],
-      "outputs": [
-        "Instagram post drafts"
-      ],
-      "dependencies": [
-        "Content Scout"
-      ],
-      "downstream": [
-        "ManyChat automation"
-      ],
-      "value": "INDIRECT REVENUE",
-      "notes": "Switched GPT-5.4 \u2192 Sonnet Apr 2 (writing lane). Brief-aware.",
-      "next_run": "May 12, 11:00 AM ET",
-      "enabled": true
-    },
-    {
-      "id": "48881c4a",
-      "name": "Daily Cost Sentinel",
-      "category": "finance",
-      "purpose": "Analyzes daily spend, detects anomalies, updates ledger, delivers cost report",
-      "schedule_cron": "0 8 * * *",
-      "schedule_human": "Every day 8:00 AM ET",
-      "model": "GPT",
-      "model_tier": "haiku",
-      "delivery_channel": "discord",
-      "delivery_target": "channel:1487048489618641002",
-      "session_target": "isolated",
-      "timeout_seconds": 300,
-      "last_run": "May 8, 8:00 AM ET",
-      "last_run_status": "ok",
-      "consecutive_errors": 0,
-      "status": "HEALTHY",
-      "inputs": [
-        "agents/daily-cost-sentinel/data/YYYY-MM-DD.csv",
-        "ledger.json",
-        "recurring-costs.json"
-      ],
-      "outputs": [
-        "Telegram cost report",
-        "state/summary-YYYY-MM-DD.json",
-        "ledger.json updates"
-      ],
-      "dependencies": [
-        "daily-cost-collector"
-      ],
-      "downstream": [
-        "cost-sentinel-renewal-check",
-        "Weekly Metrics Digest"
-      ],
-      "value": "SUPPORTING SYSTEM",
-      "notes": "Timeout 300\u2192600s fixed Apr 1. Collector runs at 7:45 AM for 15-min buffer.",
-      "next_run": "May 11, 8:00 AM ET",
-      "enabled": true
-    },
-    {
-      "id": "86ba05a1",
-      "name": "Daily Cost Collector",
-      "category": "finance",
-      "purpose": "Collects daily transaction data from OpenAI/Anthropic APIs and writes CSV for sentinel",
-      "schedule_cron": "45 7 * * *",
-      "schedule_human": "Every day 7:45 AM ET",
-      "model": "anthropic/claude-haiku-4-5",
-      "model_tier": "local",
-      "delivery_channel": "discord",
-      "delivery_target": "channel:1487048489618641002",
-      "session_target": "isolated",
-      "timeout_seconds": 120,
-      "last_run": "May 8, 7:45 AM ET",
-      "last_run_status": "ok",
-      "consecutive_errors": 0,
-      "status": "HEALTHY",
-      "inputs": [
-        "OpenAI API",
-        "Anthropic API"
-      ],
-      "outputs": [
-        "agents/daily-cost-sentinel/data/YYYY-MM-DD.csv"
-      ],
-      "dependencies": [],
-      "downstream": [
-        "Daily Cost Sentinel"
-      ],
-      "value": "SUPPORTING SYSTEM",
-      "notes": "Runs 15 min before sentinel.",
-      "next_run": "May 11, 7:45 AM ET",
-      "enabled": true
-    },
-    {
-      "id": "0cb35065",
-      "name": "Cost Sentinel Renewal Check",
-      "category": "finance",
-      "purpose": "Checks for upcoming subscription renewals within 14 days and sends decision prompts",
-      "schedule_cron": "30 8 * * *",
-      "schedule_human": "Every day 8:30 AM ET",
-      "model": "ollama/qwen2.5:7b",
-      "model_tier": "local",
-      "delivery_channel": "discord",
-      "delivery_target": "channel:1487048489618641002",
-      "session_target": "isolated",
-      "timeout_seconds": 120,
-      "last_run": "May 9, 8:30 AM ET",
-      "last_run_status": "ok",
-      "consecutive_errors": 0,
-      "status": "HEALTHY",
-      "inputs": [
-        "ledger.json"
-      ],
-      "outputs": [
-        "Discord renewal alerts"
-      ],
-      "dependencies": [
-        "Daily Cost Sentinel"
-      ],
-      "downstream": [],
-      "value": "SUPPORTING SYSTEM",
-      "notes": "Runs 30 min after sentinel \u2014 good timing.",
-      "next_run": "May 10, 8:30 AM ET",
-      "enabled": true
-    },
-    {
-      "id": "94d0ad88",
-      "name": "Memory Governance Daily",
-      "category": "system",
-      "purpose": "Validates memory files, processes promotion queue, enforces memory health rules",
-      "schedule_cron": "0 9 * * *",
-      "schedule_human": "Every day 9:00 AM ET",
-      "model": "anthropic/claude-haiku-4-5",
-      "model_tier": "haiku",
-      "delivery_channel": "discord",
-      "delivery_target": "channel:1485490618636570805",
-      "session_target": "isolated",
-      "timeout_seconds": 180,
-      "last_run": "May 9, 9:10 AM ET",
-      "last_run_status": "ok",
-      "consecutive_errors": 0,
-      "status": "HEALTHY",
-      "inputs": [
-        "MEMORY.md",
-        "memory/YYYY-MM-DD.md",
-        "memory/promotion-queue.jsonl"
-      ],
-      "outputs": [
-        "MEMORY.md updates",
-        "health reports"
-      ],
-      "dependencies": [],
-      "downstream": [
-        "all agents that read MEMORY.md"
-      ],
-      "value": "SUPPORTING SYSTEM",
-      "notes": "Fixed Apr 1. MEMORY.md trimmed from 24.2k \u2192 13.1k on Apr 8 to prevent injection truncation.",
-      "next_run": "May 10, 9:10 AM ET",
-      "enabled": true
-    },
-    {
-      "id": "4f07ae9a",
-      "name": "Backlog Intake Processor",
-      "category": "system",
-      "purpose": "Processes new backlog entries, scores them, and updates backlog.md",
-      "schedule_cron": "0 9 * * *",
-      "schedule_human": "Every day 9:00 AM ET",
-      "model": "anthropic/claude-haiku-4-5",
-      "model_tier": "haiku",
-      "delivery_channel": "discord",
-      "delivery_target": "channel:1485492143584837633",
-      "session_target": "isolated",
-      "timeout_seconds": 180,
-      "last_run": "May 8, 9:05 AM ET",
-      "last_run_status": "error",
-      "consecutive_errors": 1,
-      "status": "ERROR",
-      "inputs": [
-        "backlog.md",
-        "Discord ideas channel"
-      ],
-      "outputs": [
-        "backlog.md updates"
-      ],
-      "dependencies": [],
-      "downstream": [
-        "Weekly Metrics Digest",
-        "Backlog Review Agent"
-      ],
-      "value": "SUPPORTING SYSTEM",
-      "notes": "Runs same time as Memory Governance \u2014 no conflict (different tasks).",
-      "next_run": "May 9, 9:05 AM ET",
-      "enabled": true
-    },
-    {
-      "id": "2f976eb0",
-      "name": "Weekly Metrics Digest",
-      "category": "system",
-      "purpose": "Compiles weekly performance metrics across all agents and delivers summary to Discord",
-      "schedule_cron": "0 18 * * 5",
-      "schedule_human": "Every Friday 6:00 PM ET",
-      "model": "anthropic/claude-haiku-4-5",
-      "model_tier": "haiku",
-      "delivery_channel": "discord",
-      "delivery_target": "channel:1485491914986881115",
-      "session_target": "isolated",
-      "timeout_seconds": 300,
-      "last_run": "May 8, 6:00 PM ET",
-      "last_run_status": "ok",
-      "consecutive_errors": 0,
-      "status": "HEALTHY",
-      "inputs": [
-        "state/summary-*.json",
-        "MEMORY.md",
-        "backlog.md"
-      ],
-      "outputs": [
-        "Weekly metrics Discord report"
-      ],
-      "dependencies": [
-        "Daily Cost Sentinel",
-        "all weekly agents"
-      ],
-      "downstream": [
-        "Weekly Executive Summary"
-      ],
-      "value": "SUPPORTING SYSTEM",
-      "notes": "Runs at 6 PM, Backlog Review at 6:15 PM, Exec Summary at 6:30 PM \u2014 correct sequencing.",
-      "next_run": "May 15, 6:00 PM ET",
-      "enabled": true
-    },
-    {
-      "id": "b39ff404",
-      "name": "Weekly Executive Summary",
-      "category": "system",
-      "purpose": "High-level executive summary of the week: revenue progress, content output, system health",
-      "schedule_cron": "30 18 * * 5",
-      "schedule_human": "Every Friday 6:30 PM ET",
-      "model": "anthropic/claude-sonnet-4-6",
-      "model_tier": "premium",
-      "delivery_channel": "discord",
-      "delivery_target": "channel:1485378155878551626",
-      "session_target": "isolated",
-      "timeout_seconds": 300,
-      "last_run": "May 8, 6:30 PM ET",
-      "last_run_status": "ok",
-      "consecutive_errors": 0,
-      "status": "DISABLED",
-      "inputs": [
-        "Weekly Metrics Digest output",
-        "MEMORY.md"
-      ],
-      "outputs": [
-        "Discord executive summary"
-      ],
-      "dependencies": [
-        "Weekly Metrics Digest"
-      ],
-      "downstream": [],
-      "value": "SUPPORTING SYSTEM",
-      "notes": "Sonnet appropriate \u2014 public-facing synthesis. 30 min after metrics digest.",
-      "next_run": "-",
-      "enabled": false
-    },
-    {
-      "id": "55f1b746",
-      "name": "System Health Sentinel",
-      "category": "system",
-      "purpose": "Weekly system audit: checks cron health, file integrity, exec status",
-      "schedule_cron": "0 8 * * 1",
-      "schedule_human": "Every Monday 8:00 AM ET",
-      "model": "ollama/qwen2.5:7b",
-      "model_tier": "local",
-      "delivery_channel": "discord",
-      "delivery_target": "channel:1485490618636570805",
-      "session_target": "isolated",
-      "timeout_seconds": 180,
-      "last_run": "May 8, 11:36 PM ET",
-      "last_run_status": "ok",
-      "consecutive_errors": 0,
-      "status": "HEALTHY",
-      "inputs": [
-        "cron list",
-        "log files",
-        "state files"
-      ],
-      "outputs": [
-        "Discord health report"
-      ],
-      "dependencies": [],
-      "downstream": [],
-      "value": "SUPPORTING SYSTEM",
-      "notes": "Local model appropriate for mechanical checks.",
-      "next_run": "May 11, 8:02 AM ET",
-      "enabled": true
-    },
-    {
-      "id": "4b0fd81e",
-      "name": "Nightly Backup",
-      "category": "system",
-      "purpose": "Full local backup + git-safe mirror push to GitHub",
-      "schedule_cron": "0 2 * * *",
-      "schedule_human": "Every day 2:00 AM ET",
-      "model": "anthropic/claude-haiku-4-5",
-      "model_tier": "local",
-      "delivery_channel": "discord",
-      "delivery_target": "channel:1485490618636570805",
-      "session_target": "isolated",
-      "timeout_seconds": 300,
-      "last_run": "May 9, 2:00 AM ET",
-      "last_run_status": "ok",
-      "consecutive_errors": 0,
-      "status": "HEALTHY",
-      "inputs": [
-        "~/.openclaw/",
-        "workspace/"
-      ],
-      "outputs": [
-        "~/openclaw-backup/",
-        "GitHub repo"
-      ],
-      "dependencies": [],
-      "downstream": [],
-      "value": "SUPPORTING SYSTEM",
-      "notes": "Fixed Apr 1 \u2014 pre-commit secret leak check added.",
-      "next_run": "May 10, 2:00 AM ET",
-      "enabled": true
-    },
-    {
-      "id": "fa2af3e2",
-      "name": "Launch Countdown Daily",
-      "category": "system",
-      "purpose": "Daily Discord briefing: days to May 12 launch, modules done, today's priority action",
-      "schedule_cron": "15 9 * * *",
-      "schedule_human": "Every day 9:15 AM ET",
-      "model": "anthropic/claude-haiku-4-5",
-      "model_tier": "haiku",
-      "delivery_channel": "discord",
-      "delivery_target": "user:1485377509578244207",
-      "session_target": "isolated",
-      "timeout_seconds": 120,
-      "last_run": "May 9, 9:20 AM ET",
-      "last_run_status": "ok",
-      "consecutive_errors": 0,
-      "status": "HEALTHY",
-      "inputs": [
-        "MEMORY.md",
-        "projects/academy-lesson-breakdown.md"
-      ],
-      "outputs": [
-        "Discord DM to Pol \u2014 daily launch countdown briefing"
-      ],
-      "dependencies": [],
-      "downstream": [],
-      "value": "DIRECT REVENUE",
-      "notes": "\u26a0\ufe0f 1 consecutive error Apr 8. Needs diagnosis \u2014 likely delivery config.",
-      "next_run": "May 10, 9:20 AM ET",
-      "enabled": true
-    },
-    {
-      "id": "strat-competitive-monitor",
-      "name": "Competitive Monitor",
-      "category": "system",
-      "purpose": "Weekly scan of competitive landscape \u2014 VesselHarvest, Chris Darst, adjacent PA education players. Writes to strategy/competitive-intel/.",
-      "schedule_cron": "15 8 * * 1",
-      "schedule_human": "Every Monday 8:15 AM ET",
-      "model": "ollama/qwen3:30b-a3b",
-      "model_tier": "haiku",
-      "delivery_channel": "discord",
-      "delivery_target": "channel:1485378155878551626",
-      "session_target": "isolated",
-      "timeout_seconds": 300,
-      "last_run": null,
-      "last_run_status": null,
-      "consecutive_errors": 0,
-      "status": "HEALTHY",
-      "inputs": [
-        "strategy/competitive-intel/",
-        "MEMORY.md",
-        "web search"
-      ],
-      "outputs": [
-        "strategy/competitive-intel/YYYY-MM-DD-monitor.md",
-        "Discord strategy channel"
-      ],
-      "dependencies": [],
-      "downstream": [
-        "CSO"
-      ],
-      "value": "INDIRECT REVENUE",
-      "notes": "First run: Apr 13. Strategy Office built Apr 8.",
-      "next_run": "Apr 13, 8:15 AM ET",
-      "enabled": true
-    },
-    {
-      "id": "strat-cso",
-      "name": "CSO (Chief Strategy Officer)",
-      "category": "system",
-      "purpose": "Weekly strategic review \u2014 synthesizes competitive intel, pipeline signals, and enforcer state into one directional verdict.",
-      "schedule_cron": "45 8 * * 1",
-      "schedule_human": "Every Monday 8:45 AM ET",
-      "model": "openai/gpt-5.4",
-      "model_tier": "premium",
-      "delivery_channel": "discord",
-      "delivery_target": "channel:1485378155878551626",
-      "session_target": "isolated",
-      "timeout_seconds": 600,
-      "last_run": null,
-      "last_run_status": null,
-      "consecutive_errors": 0,
-      "status": "HEALTHY",
-      "inputs": [
-        "strategy/",
-        "MEMORY.md",
-        "Competitive Monitor output"
-      ],
-      "outputs": [
-        "strategy/2026-MM-DD-strategic-review.md",
-        "Discord strategy channel"
-      ],
-      "dependencies": [
-        "Competitive Monitor"
-      ],
-      "downstream": [
-        "Execution Enforcer"
-      ],
-      "value": "INDIRECT REVENUE",
-      "notes": "First run: Apr 13. Requires verdict \u2014 no summaries.",
-      "next_run": "Apr 13, 8:45 AM ET",
-      "enabled": true
-    },
-    {
-      "id": "strat-enforcer",
-      "name": "Execution Enforcer",
-      "category": "system",
-      "purpose": "Evaluates completion of current non-negotiable against 5-gate standard. Escalates to L1/L2/L3 blocking if incomplete.",
-      "schedule_cron": "15 8 * * 3",
-      "schedule_human": "Every Wednesday 8:15 AM ET",
-      "model": "openai/gpt-5.4",
-      "model_tier": "premium",
-      "delivery_channel": "discord",
-      "delivery_target": "channel:1485378155878551626",
-      "session_target": "isolated",
-      "timeout_seconds": 600,
-      "last_run": null,
-      "last_run_status": null,
-      "consecutive_errors": 0,
-      "status": "HEALTHY",
-      "inputs": [
-        "strategy/enforcer-state.json",
-        "strategy/decision-log.md",
-        "MEMORY.md"
-      ],
-      "outputs": [
-        "strategy/enforcer-state.json update",
-        "Discord blocking verdict"
-      ],
-      "dependencies": [],
-      "downstream": [
-        "CSO (escalation)"
-      ],
-      "value": "INDIRECT REVENUE",
-      "notes": "First run: Apr 15. Will evaluate Mitesh call completion. 5-gate standard required.",
-      "next_run": "Apr 15, 8:15 AM ET",
-      "enabled": true
-    },
-    {
-      "id": "strat-skeptic",
-      "name": "The Skeptic (Board)",
-      "category": "system",
-      "purpose": "Monthly board agent. Challenges thesis, flags confirmation bias, stress-tests positioning claims.",
-      "schedule_cron": "15 9 * * 1",
-      "schedule_human": "First Monday of month 9:15 AM ET",
-      "model": "ollama/qwen3:30b-a3b",
-      "model_tier": "haiku",
-      "delivery_channel": "discord",
-      "delivery_target": "channel:1485378155878551626",
-      "session_target": "isolated",
-      "timeout_seconds": 600,
-      "last_run": null,
-      "last_run_status": null,
-      "consecutive_errors": 0,
-      "status": "HEALTHY",
-      "inputs": [
-        "strategy/thesis-log.md",
-        "strategy/decision-log.md",
-        "MEMORY.md"
-      ],
-      "outputs": [
-        "Discord board report"
-      ],
-      "dependencies": [],
-      "downstream": [
-        "Investor",
-        "Offer Audit"
-      ],
-      "value": "INDIRECT REVENUE",
-      "notes": "First run: May 4. Monthly cadence \u2014 first Monday only.",
-      "next_run": "May 4, 9:15 AM ET",
-      "enabled": true
-    },
-    {
-      "id": "strat-investor",
-      "name": "The Investor (Board)",
-      "category": "system",
-      "purpose": "Monthly board agent. Evaluates revenue trajectory, capital allocation, and ROI of active investments.",
-      "schedule_cron": "45 9 * * 1",
-      "schedule_human": "First Monday of month 9:45 AM ET",
-      "model": "openai/gpt-5.4",
-      "model_tier": "premium",
-      "delivery_channel": "discord",
-      "delivery_target": "channel:1485378155878551626",
-      "session_target": "isolated",
-      "timeout_seconds": 600,
-      "last_run": null,
-      "last_run_status": null,
-      "consecutive_errors": 0,
-      "status": "HEALTHY",
-      "inputs": [
-        "agents/daily-cost-sentinel/ledger.json",
-        "strategy/decision-log.md",
-        "MEMORY.md"
-      ],
-      "outputs": [
-        "Discord board report"
-      ],
-      "dependencies": [
-        "Skeptic"
-      ],
-      "downstream": [
-        "Offer Audit"
-      ],
-      "value": "INDIRECT REVENUE",
-      "notes": "First run: May 4.",
-      "next_run": "May 4, 9:45 AM ET",
-      "enabled": true
-    },
-    {
-      "id": "strat-offer-audit",
-      "name": "Offer Audit (Board)",
-      "category": "system",
-      "purpose": "Monthly board agent. Audits all active offers for clarity, pricing, positioning, and conversion readiness.",
-      "schedule_cron": "15 10 * * 1",
-      "schedule_human": "First Monday of month 10:15 AM ET",
-      "model": "openai/gpt-5.4",
-      "model_tier": "premium",
-      "delivery_channel": "discord",
-      "delivery_target": "channel:1485378155878551626",
-      "session_target": "isolated",
-      "timeout_seconds": 600,
-      "last_run": null,
-      "last_run_status": null,
-      "consecutive_errors": 0,
-      "status": "HEALTHY",
-      "inputs": [
-        "MEMORY.md",
-        "consulting/",
-        "projects/academy-curriculum-final.md"
-      ],
-      "outputs": [
-        "Discord board report"
-      ],
-      "dependencies": [
-        "Investor"
-      ],
-      "downstream": [],
-      "value": "INDIRECT REVENUE",
-      "notes": "First run: May 4.",
-      "next_run": "May 4, 10:15 AM ET",
-      "enabled": true
-    },
-    {
-      "id": "ccb7ef4b",
-      "name": "Behavioral Learning \u2014 Weekly Patterns",
-      "category": "system",
-      "purpose": "Analyzes registered LinkedIn posts for engagement patterns. Read-only output \u2014 no prompt changes without Pol approval.",
-      "schedule_cron": "0 8 * * 1",
-      "schedule_human": "Every Monday 8:00 AM ET",
-      "model": "anthropic/claude-haiku-4-5",
-      "model_tier": "haiku",
-      "delivery_channel": "discord",
-      "delivery_target": "1485491914986881115",
-      "session_target": "isolated",
-      "timeout_seconds": 120,
-      "last_run": "May 4, 8:20 AM ET",
-      "last_run_status": "ok",
-      "consecutive_errors": 0,
-      "status": "HEALTHY",
-      "inputs": [
-        "agents/behavioral-learning/",
-        "MEMORY.md"
-      ],
-      "outputs": [
-        "Discord pattern report"
-      ],
-      "dependencies": [],
-      "downstream": [],
-      "value": "INDIRECT REVENUE",
-      "notes": "13 posts registered. Read-only \u2014 prompt changes require Pol approval.",
-      "next_run": "May 11, 8:20 AM ET",
-      "enabled": true
-    }
-  ],
-  "weekly_calendar": {
-    "monday": [
-      {
-        "time": "8:00 AM",
-        "name": "System Health Sentinel",
-        "category": "system"
-      },
-      {
-        "time": "8:00 AM",
-        "name": "Behavioral Learning \u2014 Weekly Patterns",
-        "category": "system"
-      },
-      {
-        "time": "8:15 AM",
-        "name": "Competitive Monitor",
-        "category": "system"
-      },
-      {
-        "time": "8:30 AM",
-        "name": "weekly-strategic-recalibration",
-        "category": "content"
-      },
-      {
-        "time": "8:45 AM",
-        "name": "CSO (Chief Strategy Officer)",
-        "category": "system"
-      },
-      {
-        "time": "9:00 AM",
-        "name": "Content Scout",
-        "category": "content"
-      },
-      {
-        "time": "9:00 AM",
-        "name": "Memory Governance Daily",
-        "category": "system"
-      },
-      {
-        "time": "9:00 AM",
-        "name": "Backlog Intake Processor",
-        "category": "system"
-      },
-      {
-        "time": "10:00 AM",
-        "name": "LinkedIn Growth",
-        "category": "revenue"
-      },
-      {
-        "time": "2:00 PM",
-        "name": "Lead Magnet Builder",
-        "category": "revenue"
-      },
-      {
-        "time": "3:00 PM",
-        "name": "Course Architect",
-        "category": "revenue"
-      }
-    ],
-    "tuesday": [
-      {
-        "time": "7:45 AM",
-        "name": "Daily Cost Collector",
-        "category": "finance"
-      },
-      {
-        "time": "8:00 AM",
-        "name": "Daily Cost Sentinel",
-        "category": "finance"
-      },
-      {
-        "time": "8:30 AM",
-        "name": "Cost Sentinel Renewal Check",
-        "category": "finance"
-      },
-      {
-        "time": "9:00 AM",
-        "name": "Memory Governance Daily",
-        "category": "system"
-      },
-      {
-        "time": "9:00 AM",
-        "name": "Backlog Intake Processor",
-        "category": "system"
-      },
-      {
-        "time": "11:00 AM",
-        "name": "Instagram Content Agent",
-        "category": "content"
-      }
-    ],
-    "wednesday": [
-      {
-        "time": "7:45 AM",
-        "name": "Daily Cost Collector",
-        "category": "finance"
-      },
-      {
-        "time": "8:00 AM",
-        "name": "Daily Cost Sentinel",
-        "category": "finance"
-      },
-      {
-        "time": "8:15 AM",
-        "name": "Execution Enforcer",
-        "category": "system"
-      },
-      {
-        "time": "8:30 AM",
-        "name": "Cost Sentinel Renewal Check",
-        "category": "finance"
-      },
-      {
-        "time": "9:00 AM",
-        "name": "Memory Governance Daily",
-        "category": "system"
-      },
-      {
-        "time": "9:00 AM",
-        "name": "Backlog Intake Processor",
-        "category": "system"
-      },
-      {
-        "time": "10:00 AM",
-        "name": "LinkedIn Growth",
-        "category": "revenue"
-      },
-      {
-        "time": "6:00 PM",
-        "name": "Consulting Outreach (Midweek)",
-        "category": "revenue"
-      }
-    ],
-    "thursday": [
-      {
-        "time": "7:45 AM",
-        "name": "Daily Cost Collector",
-        "category": "finance"
-      },
-      {
-        "time": "8:00 AM",
-        "name": "Daily Cost Sentinel",
-        "category": "finance"
-      },
-      {
-        "time": "8:30 AM",
-        "name": "Cost Sentinel Renewal Check",
-        "category": "finance"
-      },
-      {
-        "time": "9:00 AM",
-        "name": "Memory Governance Daily",
-        "category": "system"
-      },
-      {
-        "time": "9:00 AM",
-        "name": "Backlog Intake Processor",
-        "category": "system"
-      }
-    ],
-    "friday": [
-      {
-        "time": "7:45 AM",
-        "name": "Daily Cost Collector",
-        "category": "finance"
-      },
-      {
-        "time": "8:00 AM",
-        "name": "Daily Cost Sentinel",
-        "category": "finance"
-      },
-      {
-        "time": "8:30 AM",
-        "name": "Cost Sentinel Renewal Check",
-        "category": "finance"
-      },
-      {
-        "time": "9:00 AM",
-        "name": "Memory Governance Daily",
-        "category": "system"
-      },
-      {
-        "time": "9:00 AM",
-        "name": "Backlog Intake Processor",
-        "category": "system"
-      },
-      {
-        "time": "10:00 AM",
-        "name": "LinkedIn Growth",
-        "category": "revenue"
-      },
-      {
-        "time": "4:00 PM",
-        "name": "Network Outreach",
-        "category": "revenue"
-      },
-      {
-        "time": "6:00 PM",
-        "name": "Weekly Metrics Digest",
-        "category": "system"
-      },
-      {
-        "time": "6:15 PM",
-        "name": "Backlog Review Agent",
-        "category": "system"
-      },
-      {
-        "time": "6:30 PM",
-        "name": "Weekly Executive Summary",
-        "category": "system"
-      }
-    ],
-    "saturday": [],
-    "sunday": [
-      {
-        "time": "7:00 PM",
-        "name": "Book Writing Session",
-        "category": "content"
-      },
-      {
-        "time": "7:30 PM",
-        "name": "Consulting Outreach (Weekend)",
-        "category": "revenue"
-      }
-    ]
-  },
-  "health_issues": [
-    {
-      "name": "ERROR - Agent Commands Watcher",
-      "status": "broken",
-      "description": "Consecutive errors: 3 | Last run: May 9, 4:10 PM ET | Next: May 10, 8:10 AM ET"
-    },
-    {
-      "name": "ERROR - weekly-mode-signal",
-      "status": "broken",
-      "description": "Consecutive errors: 1 | Last run: May 4, 9:08 AM ET | Next: May 11, 9:02 AM ET"
-    },
-    {
-      "name": "ERROR - linkedin-preflight-audit",
-      "status": "broken",
-      "description": "Consecutive errors: 1 | Last run: May 7, 11:00 AM ET | Next: May 12, 11:00 AM ET"
-    },
-    {
-      "name": "ERROR - agent-drift-check",
-      "status": "broken",
-      "description": "Consecutive errors: 1 | Last run: May 1, 9:00 AM ET | Next: Jun 1, 9:00 AM ET"
-    },
-    {
-      "name": "Security posture",
-      "status": "warning",
-      "description": "OpenClaw audit: 0 critical / 3 warn / 1 info"
-    },
-    {
-      "name": "\u2705 launch-countdown-daily \u2014 Fixed Apr 8 + rescheduled 9:20 AM",
-      "status": "resolved",
-      "description": "Root cause: delivery.mode=announce conflicting with exec send. Fixed Apr 8. Moved 9:15\u21929:20 AM to eliminate collision with security-sentinel. Error counter clears tomorrow morning."
-    },
-    {
-      "name": "\u2705 morning-draft-briefing \u2014 Fixed Apr 8",
-      "status": "resolved",
-      "description": "Root cause: delivery.mode=announce conflicting with exec send. Fixed: delivery.mode=none. Error counter clears on next successful run Apr 9, 8:05 AM."
-    },
-    {
-      "name": "\u2705 Mon 8:15 AM collision \u2014 Fixed Apr 8",
-      "status": "resolved",
-      "description": "behavioral-learning-weekly-patterns shifted to 8:25 AM. competitive-monitor-weekly stays 8:15 AM. No more simultaneous Monday runs."
-    },
-    {
-      "name": "\u2705 Memory Governance Daily \u2014 Fixed Apr 1",
-      "status": "resolved",
-      "description": "Delivery channel misconfigured \u2014 resolved. MEMORY.md also trimmed 24.2k\u219213.1k on Apr 8 to fix injection truncation."
-    },
-    {
-      "name": "\u2705 MEMORY.md Truncation \u2014 Fixed Apr 8",
-      "status": "resolved",
-      "description": "bootstrapMaxChars raised to 40k. MEMORY.md compressed from 24.2k\u219213.1k. Active Projects now pointer-only."
-    },
-    {
-      "name": "\u2705 Strategy Office \u2014 Built Apr 8",
-      "status": "resolved",
-      "description": "6 agents live. Thesis locked v1. Execution Enforcer first run Apr 15. Board (Skeptic/Investor/Offer Audit) first run May 4."
-    }
-  ],
-  "timing_conflicts": [
-    {
-      "time": "Sat May 9, 8:15 PM ET",
-      "agents": "background-routing-queue-polling + browser-lane-hybrid-monitor",
-      "risk": "MEDIUM",
-      "note": "Concurrent scheduled runs",
-      "status": "active"
-    },
-    {
-      "time": "Sat May 9, 8:30 PM ET",
-      "agents": "background-routing-cron-trigger-evaluation + pilot-followthrough-watch",
-      "risk": "MEDIUM",
-      "note": "Concurrent scheduled runs",
-      "status": "active"
-    },
-    {
-      "time": "Sun May 10, 8:10 AM ET",
-      "agents": "browser-endpoint-drift-check-daily + Agent Commands Watcher",
-      "risk": "MEDIUM",
-      "note": "Concurrent scheduled runs",
-      "status": "active"
-    },
-    {
-      "time": "Sun May 10, 9:00 AM ET",
-      "agents": "os-v2-security-scan + email-monitor-daily",
-      "risk": "MEDIUM",
-      "note": "Concurrent scheduled runs",
-      "status": "active"
-    },
-    {
-      "time": "Sun May 10, 9:30 AM ET",
-      "agents": "os-v2-cleanup-preview + Pending Review Auto-Archive",
-      "risk": "MEDIUM",
-      "note": "Concurrent scheduled runs",
-      "status": "active"
-    },
-    {
-      "time": "Mon May 11, 8:00 AM ET",
-      "agents": "daily-cost-sentinel + os-v2-weekly-health",
-      "risk": "MEDIUM",
-      "note": "Concurrent scheduled runs",
-      "status": "active"
-    },
-    {
-      "time": "Tue May 12, 11:00 AM ET",
-      "agents": "Instagram Content Agent + linkedin-preflight-audit",
-      "risk": "MEDIUM",
-      "note": "Concurrent scheduled runs",
-      "status": "active"
-    }
-  ],
-  "model_optimization": [
-    {
-      "agent": "Weekly Executive Summary",
-      "current": "anthropic/claude-sonnet-4-6",
-      "recommended": "anthropic/claude-sonnet-4-6",
-      "action": "KEEP \u2014 public-facing synthesis",
-      "impact": "\u2014"
-    },
-    {
-      "agent": "LinkedIn Growth",
-      "current": "anthropic/claude-sonnet-4-6",
-      "recommended": "anthropic/claude-sonnet-4-6",
-      "action": "KEEP \u2014 brand-facing content",
-      "impact": "\u2014"
-    },
-    {
-      "agent": "Book Writing Session",
-      "current": "anthropic/claude-sonnet-4-6",
-      "recommended": "anthropic/claude-sonnet-4-6",
-      "action": "KEEP \u2014 long-form creative",
-      "impact": "\u2014"
-    },
-    {
-      "agent": "Course Architect",
-      "current": "openai/gpt-5.4",
-      "recommended": "openai/gpt-5.4",
-      "action": "KEEP \u2014 complex structured output",
-      "impact": "\u2014"
-    },
-    {
-      "agent": "Content Scout",
-      "current": "openai/gpt-5.4",
-      "recommended": "openai/gpt-5.4",
-      "action": "KEEP \u2014 upstream pipeline brief, multi-source topic scoring",
-      "impact": "\u2014"
-    },
-    {
-      "agent": "Lead Magnet Builder",
-      "current": "openai/gpt-5.4",
-      "recommended": "openai/gpt-5.4",
-      "action": "KEEP \u2014 revenue-direct asset creation",
-      "impact": "\u2014"
-    },
-    {
-      "agent": "Network Outreach",
-      "current": "openai/gpt-5.4",
-      "recommended": "openai/gpt-5.4",
-      "action": "KEEP \u2014 direct revenue, personalization matters",
-      "impact": "\u2014"
-    },
-    {
-      "agent": "CSO / Enforcer / Investor / Offer Audit",
-      "current": "openai/gpt-5.4",
-      "recommended": "openai/gpt-5.4",
-      "action": "KEEP \u2014 strategy layer requires judgment, not execution",
-      "impact": "\u2014"
-    },
-    {
-      "agent": "Instagram Content Agent",
-      "current": "ollama/qwen3:30b-a3b",
-      "recommended": "anthropic/claude-sonnet-4-6",
-      "action": "DONE \u2014 switched GPT-5.4 \u2192 Sonnet on 2026-04-02",
-      "impact": "\u2014"
-    },
-    {
-      "agent": "Consulting Outreach Midweek",
-      "current": "openai/gpt-5.4",
-      "recommended": "openai/gpt-5.4",
-      "action": "DONE \u2014 upgraded Haiku \u2192 GPT-5.4 on 2026-04-02",
-      "impact": "\u2014"
-    },
-    {
-      "agent": "Behavioral Learning / Competitive Monitor / Skeptic",
-      "current": "ollama/qwen3:30b-a3b",
-      "recommended": "ollama/qwen3:30b-a3b",
-      "action": "KEEP \u2014 pattern analysis + competitive scan, local sufficient",
-      "impact": "~$0/run saved"
-    },
-    {
-      "agent": "Daily Cost Sentinel / Memory Governance / Backlog",
-      "current": "ollama/qwen3:30b-a3b",
-      "recommended": "ollama/qwen3:30b-a3b",
-      "action": "KEEP \u2014 structured rule-following, local appropriate",
-      "impact": "~$0/run saved"
-    }
-  ],
-  "top_weaknesses": [
-    "Revenue is still $0. System costs ~$558/mo. Mitesh Patel verbal yes \u2014 pending COO sign-off. Next touch May 12. ElevenLabs resets Apr 24 for 15 Course 2 videos.",
-    "Course 2 has 15 AI videos blocked until ElevenLabs quota resets Apr 24 (automated). On-camera modules (1, 6.3, 7.3+7.4, 8) need Pol recording post-travel Apr 26+.",
-    "Course 1 launch May 12 \u2014 pre-launch window May 5\u201311 requires all recording + upload complete. 30 days out.",
-    "Pipeline depth thin beyond Mitesh. Erin Switzer deferred to July. Jonathan Kiemel, Claire Cavatorta, Eddie Kazlauskas still at dm-sent stage.",
-    "8 follow-ups cued for Apr 15 via outreach agents \u2014 running autonomously. Robert Arledge intro from Tracy still pending."
-  ],
-  "top_improvements": [
-    {
-      "item": "Strategy Office built",
-      "status": "\u2705 DONE \u2014 Apr 8",
-      "completed": "2026-04-08"
-    },
-    {
-      "item": "MEMORY.md truncation fixed",
-      "status": "\u2705 DONE \u2014 Apr 8 (bootstrapMaxChars 40k, MEMORY trimmed)",
-      "completed": "2026-04-08"
-    },
-    {
-      "item": "7 outbound DMs sent in evening blitz",
-      "status": "\u2705 DONE \u2014 Apr 8",
-      "completed": "2026-04-08"
-    },
-    {
-      "item": "Tracy Bingaman call + Robert Arledge referral",
-      "status": "\u2705 DONE \u2014 Apr 8",
-      "completed": "2026-04-08"
-    },
-    {
-      "item": "Chris Darst competitive analysis + relationship opened",
-      "status": "\u2705 DONE \u2014 Apr 8",
-      "completed": "2026-04-08"
-    },
-    {
-      "item": "Memory Governance Daily fixed",
-      "status": "\u2705 DONE \u2014 Apr 1",
-      "completed": "2026-04-01"
-    },
-    {
-      "item": "LinkedIn auto-posting live",
-      "status": "\u2705 DONE \u2014 Mar 27",
-      "completed": "2026-03-27"
-    },
-    {
-      "item": "Lead magnet launch \u2014 33 protocol requests day 1",
-      "status": "\u2705 DONE \u2014 Apr 1",
-      "completed": "2026-04-01"
-    },
-    {
-      "item": "Queue travel window LinkedIn posts",
-      "status": "\ud83d\udd34 PENDING \u2014 depart Apr 11",
-      "completed": null
-    },
-    {
-      "item": "Diagnose + fix launch-countdown-daily + morning-draft-briefing errors",
-      "status": "\u2705 DONE \u2014 Apr 8 (delivery.mode fixed, launch-countdown rescheduled 9:20 AM, Mon 8:15 collision fixed)",
-      "completed": "2026-04-08"
-    }
-  ],
-  "bold_recommendation": "System is running unattended. Mitesh said yes \u2014 COO meeting pending. ElevenLabs resets Apr 24, 15 Course 2 videos auto-build. Come back Apr 26 ready to record on-camera modules and follow up Mitesh May 12 if silent. Nothing to do until then.",
-  "bold_recommendation_impact": "\ud83d\udcb0 Gates: (1) Mitesh COO reply \u2014 watch for email \u00b7 (2) ElevenLabs 15 videos auto-resume Apr 24 \u00b7 (3) On-camera recording starts Apr 26+ \u00b7 (4) Enforcer first run Apr 15 \u00b7 (5) Course 1 pre-launch May 5\u201311",
-  "action_queue": [
-    {
-      "name": "launch-countdown-daily",
-      "when": "May 10, 9:20 AM ET",
-      "delta": "~13h 14m",
-      "reason": "Upcoming scheduled work"
-    },
-    {
-      "name": "consulting-outreach-weekly",
-      "when": "May 10, 7:30 PM ET",
-      "delta": "~23h 24m",
-      "reason": "Pipeline generation"
-    },
-    {
-      "name": "LinkedIn Growth",
-      "when": "May 11, 10:00 AM ET",
-      "delta": "~1d 13h",
-      "reason": "Content / audience growth revenue lever"
-    },
-    {
-      "name": "Lead Magnet Builder",
-      "when": "May 11, 2:00 PM ET",
-      "delta": "~1d 17h",
-      "reason": "Upcoming scheduled work"
-    },
-    {
-      "name": "Course Architect",
-      "when": "May 11, 3:00 PM ET",
-      "delta": "~1d 18h",
-      "reason": "Upcoming scheduled work"
-    }
-  ],
-  "calendar_days": [
-    {
-      "label": "Saturday",
-      "date": "May 9",
-      "items": [
-        {
-          "time": "8:06 PM",
-          "name": "phase1-cache-evidence-watch",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "8:09 PM",
-          "name": "os-v2-gateway-monitor",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "8:15 PM",
-          "name": "background-routing-queue-polling",
-          "category": "content",
-          "conflict": true
-        },
-        {
-          "time": "8:15 PM",
-          "name": "browser-lane-hybrid-monitor",
-          "category": "content",
-          "conflict": true
-        },
-        {
-          "time": "8:30 PM",
-          "name": "background-routing-cron-trigger-evaluation",
-          "category": "content",
-          "conflict": true
-        },
-        {
-          "time": "8:30 PM",
-          "name": "pilot-followthrough-watch",
-          "category": "content",
-          "conflict": true
-        }
-      ]
-    },
-    {
-      "label": "Sunday",
-      "date": "May 10",
-      "items": [
-        {
-          "time": "2:00 AM",
-          "name": "nightly-backup-test",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "2:15 AM",
-          "name": "self-learning-daily-cycle",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "2:20 AM",
-          "name": "wave-3a-live-backup-validation",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "7:20 AM",
-          "name": "Routing Violation Sentinel",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "8:10 AM",
-          "name": "browser-endpoint-drift-check-daily",
-          "category": "content",
-          "conflict": true
-        },
-        {
-          "time": "8:10 AM",
-          "name": "Agent Commands Watcher",
-          "category": "system",
-          "conflict": true
-        },
-        {
-          "time": "8:25 AM",
-          "name": "routing-violation-sentinel-daily",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "8:30 AM",
-          "name": "cost-sentinel-renewal-check",
-          "category": "finance",
-          "conflict": false
-        },
-        {
-          "time": "9:00 AM",
-          "name": "os-v2-security-scan",
-          "category": "system",
-          "conflict": true
-        },
-        {
-          "time": "9:00 AM",
-          "name": "email-monitor-daily",
-          "category": "content",
-          "conflict": true
-        },
-        {
-          "time": "9:10 AM",
-          "name": "memory-governance-daily",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "9:15 AM",
-          "name": "security-sentinel",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "9:17 AM",
-          "name": "phase-advancement-alert-check",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "9:20 AM",
-          "name": "launch-countdown-daily",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "9:30 AM",
-          "name": "os-v2-cleanup-preview",
-          "category": "content",
-          "conflict": true
-        },
-        {
-          "time": "9:30 AM",
-          "name": "Pending Review Auto-Archive",
-          "category": "content",
-          "conflict": true
-        },
-        {
-          "time": "9:45 AM",
-          "name": "daily-exception-report",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "7:00 PM",
-          "name": "Book Writing Session",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "7:30 PM",
-          "name": "consulting-outreach-weekly",
-          "category": "revenue",
-          "conflict": false
-        }
-      ]
-    },
-    {
-      "label": "Monday",
-      "date": "May 11",
-      "items": [
-        {
-          "time": "7:30 AM",
-          "name": "upgrade-sentinel-weekly",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "7:45 AM",
-          "name": "daily-cost-collector",
-          "category": "finance",
-          "conflict": false
-        },
-        {
-          "time": "8:00 AM",
-          "name": "daily-cost-sentinel",
-          "category": "finance",
-          "conflict": true
-        },
-        {
-          "time": "8:00 AM",
-          "name": "os-v2-weekly-health",
-          "category": "system",
-          "conflict": true
-        },
-        {
-          "time": "8:02 AM",
-          "name": "System Health Sentinel",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "8:15 AM",
-          "name": "competitive-monitor-weekly",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "8:20 AM",
-          "name": "behavioral-learning-weekly-patterns",
-          "category": "system",
-          "conflict": false
-        },
-        {
-          "time": "8:25 AM",
-          "name": "model-intelligence-weekly",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "8:35 AM",
-          "name": "weekly-strategic-recalibration",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "8:45 AM",
-          "name": "cso-weekly-brief",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "9:02 AM",
-          "name": "weekly-mode-signal",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "9:13 AM",
-          "name": "Content Drafts Scout",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "10:00 AM",
-          "name": "LinkedIn Growth",
-          "category": "revenue",
-          "conflict": false
-        },
-        {
-          "time": "2:00 PM",
-          "name": "Lead Magnet Builder",
-          "category": "revenue",
-          "conflict": false
-        },
-        {
-          "time": "3:00 PM",
-          "name": "Course Architect",
-          "category": "revenue",
-          "conflict": false
-        }
-      ]
-    },
-    {
-      "label": "Tuesday",
-      "date": "May 12",
-      "items": [
-        {
-          "time": "11:00 AM",
-          "name": "Instagram Content Agent",
-          "category": "content",
-          "conflict": true
-        },
-        {
-          "time": "11:00 AM",
-          "name": "linkedin-preflight-audit",
-          "category": "content",
-          "conflict": true
-        }
-      ]
-    },
-    {
-      "label": "Wednesday",
-      "date": "May 13",
-      "items": [
-        {
-          "time": "8:15 AM",
-          "name": "execution-enforcer-midweek",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "11:00 AM",
-          "name": "course-architect-revert-to-monthly",
-          "category": "content",
-          "conflict": false
-        },
-        {
-          "time": "6:00 PM",
-          "name": "consulting-outreach-midweek",
-          "category": "revenue",
-          "conflict": false
-        }
-      ]
-    },
-    {
-      "label": "Thursday",
-      "date": "May 14",
-      "items": [
-        {
-          "time": "12:00 PM",
-          "name": "LinkedIn \u2014 APP Onboarding Scorecard Lead Magnet",
-          "category": "revenue",
-          "conflict": false
-        },
-        {
-          "time": "12:20 PM",
-          "name": "linkedin-post-verify-app-onboarding-scorecard-lead-magnet",
-          "category": "revenue",
-          "conflict": false
-        }
-      ]
-    },
-    {
-      "label": "Friday",
-      "date": "May 15",
-      "items": [
-        {
-          "time": "4:00 PM",
-          "name": "Consulting Outreach",
-          "category": "revenue",
-          "conflict": false
-        },
-        {
-          "time": "6:00 PM",
-          "name": "Weekly Metrics Digest",
-          "category": "system",
-          "conflict": false
-        }
-      ]
-    }
-  ],
-  "security_posture": {
-    "openclaw_version": "OpenClaw 2026.5.7 (eeef486)",
-    "audit_summary": {
-      "critical": 0,
-      "warn": 3,
-      "info": 1
-    },
-    "main_exec_security": "allowlist",
-    "main_exec_ask": "off",
-    "main_allowlist_count": 930,
-    "sandbox": "mode: off scope: agent",
-    "docker_available": false
-  },
+  "generated": "2026-05-10T02:16:40.368224+00:00",
   "meta": {
-    "generated_local": "Sat May 9, 2026, 8:05 PM ET",
-    "audit_summary": {
-      "critical": 0,
-      "warn": 3,
-      "info": 1
+    "generated_local": "Sat May 9, 2026, 10:16 PM ET",
+    "decision_hash": {
+      "fields": [
+        "h1_move",
+        "h2_emphasis",
+        "interrupt_state",
+        "system_constraint"
+      ],
+      "normalized": {
+        "h1_move": "advance shea dempsey, dmsc, mba, pa-c, em-caq now: keep the relationship warm; send a short friendly follow-up if useful, and revisit a guest lecture / student q&a only if it feels natural.",
+        "h2_emphasis": "system: tier 1-2",
+        "interrupt_state": "no interrupts",
+        "system_constraint": "keep system changes narrow; protect revenue execution."
+      },
+      "method": "sha256(json(sorted normalized semantic decision fields only))",
+      "value": "289a28ed425bc8cf26a07f49e61ae5bd9bef0f4f61148e8a74d302ff1b550c08",
+      "changed": true
     },
-    "validation": {
-      "ok": true,
-      "issues": [],
-      "source": "openclaw cron list --all --json",
-      "checked_at": "2026-05-10T00:05:43.411190+00:00"
+    "publish_target": "https://pmdvedar-ai.github.io/openclaw-dashboard",
+    "change_summary": "H1 move; H2 emphasis",
+    "publish_recommended": true,
+    "lookback": {
+      "h1_days": 14,
+      "signals_cycles": 2,
+      "system_hours": 72,
+      "schedule_hours": 72
+    }
+  },
+  "awareness": {
+    "system_health": {
+      "status": "ALL SYSTEMS NORMAL",
+      "items": [
+        {
+          "label": "backup",
+          "status": "UNKNOWN",
+          "detail": "No persisted artifact found in last scan window."
+        },
+        {
+          "label": "delivery",
+          "status": "UNKNOWN",
+          "detail": "No persisted artifact found in last scan window."
+        },
+        {
+          "label": "routing",
+          "status": "UNKNOWN",
+          "detail": "No persisted artifact found in last scan window."
+        },
+        {
+          "label": "cost drift",
+          "status": "NORMAL",
+          "detail": "Derived from latest cost sentinel report and current ledger."
+        }
+      ]
     },
-    "data_trust": "validated"
-  }
+    "upcoming_schedule": {
+      "status": "WHAT IS COMING UP",
+      "items": [
+        {
+          "label": "Mitesh J. Patel, MBA, MSHS, PA-C",
+          "when": "May 12, 12:00 AM ET",
+          "kind": "Outreach next action",
+          "detail": "Wait for reply after COO meeting. Check in May 12 if no response."
+        }
+      ]
+    },
+    "interrupts": {
+      "status": "NO INTERRUPTS",
+      "items": []
+    }
+  },
+  "sections": {
+    "h1_revenue_engine": {
+      "failure": null,
+      "status": "STALE OR UNCERTAIN DATA",
+      "items": [
+        {
+          "name": "Shea Dempsey, DMSc, MBA, PA-C, EM-CAQ",
+          "stage": "warm-follow-up",
+          "next_action": "Keep the relationship warm; send a short friendly follow-up if useful, and revisit a guest lecture / student Q&A only if it feels natural.",
+          "last_movement": "May 4, 11:34 PM ET",
+          "days_in_stage": 5,
+          "stall_reason": "Intentional wait state",
+          "classification": "HIGH PROBABILITY",
+          "conflict": false
+        },
+        {
+          "name": "Mitesh J. Patel, MBA, MSHS, PA-C",
+          "stage": "proposal",
+          "next_action": "Await scheduled May 9 follow-up send, then watch for reply after the COO conversation.",
+          "last_movement": "May 1, 5:29 PM ET",
+          "days_in_stage": 8,
+          "stall_reason": "External approval / reply pending",
+          "classification": "HIGH PROBABILITY",
+          "conflict": true
+        },
+        {
+          "name": "Mitesh J. Patel, MBA, MSHS, PA-C",
+          "stage": "proposal",
+          "next_action": "Wait for reply after COO meeting. Check in May 12 if no response.",
+          "last_movement": "Apr 9, 8:30 PM ET",
+          "days_in_stage": 30,
+          "stall_reason": "External approval / reply pending",
+          "classification": "HIGH PROBABILITY",
+          "conflict": true
+        }
+      ],
+      "close_target": "Shea Dempsey, DMSc, MBA, PA-C, EM-CAQ",
+      "immediate_decision": [
+        "Shea Dempsey, DMSc, MBA, PA-C, EM-CAQ",
+        "Mitesh J. Patel, MBA, MSHS, PA-C"
+      ],
+      "remove_from_pipeline": [],
+      "decision": "Advance Shea Dempsey, DMSc, MBA, PA-C, EM-CAQ now: Keep the relationship warm; send a short friendly follow-up if useful, and revisit a guest lecture / student Q&A only if it feels natural."
+    },
+    "execution_enforcer": {
+      "status": "DO THIS NOW",
+      "score": null,
+      "current_move": "Run the Baylor close sequence to outcome: confirm the May 9 COO follow-up sends, attach or offer the one-page proof asset, and update the case file the same day with one of three states — replied, forwarded internally, or no-response.",
+      "blocked": false,
+      "block_reason": null,
+      "carry_forward": true,
+      "gate_failures": [],
+      "move_verification": {
+        "executed": false,
+        "artifact": "ENFORCER ARTIFACT MISSING",
+        "buyer_visible": false,
+        "opportunity_id": "ot-20260328-0001",
+        "status": "INCOMPLETE"
+      },
+      "state_path": "strategy/enforcer-state.json",
+      "artifact_path": null,
+      "decision": "Make the current move buyer-visible now."
+    },
+    "proof_moat": {
+      "status": "WHAT IS GETTING STRONGER",
+      "signal_revenue_gap": false,
+      "items": [
+        {
+          "type": "L3",
+          "text": "Tier 1-2",
+          "component": "System",
+          "opportunity_id": "ot-20260328-0003",
+          "linked": true,
+          "source": "Jonathan Kiemel, PA-C",
+          "stage": "no-response"
+        },
+        {
+          "type": "L1",
+          "text": "s Apr 8 post (Conduit Quality Is a Leadership Problem) — strong co-sign of formal EVH pathway thesis. Founder of VesselHarvest.com (EVH/ERAH online courses, $349-649, up to 41 CME credits), Enlighten Medical Media (ACCME-accredited CME provider, Org ID 0008307), e-Echocardiography.com, PAStartup.co (pre-PA/PA school audience since 2017), OneFiveNine Group LLC. 15+ yrs EVH experience. NOT a competitor — upstream of Pol",
+          "component": "System",
+          "opportunity_id": "ot-20260408-chris-darst",
+          "linked": true,
+          "source": "Chris Darst, MPAS, PA-C",
+          "stage": "sent"
+        },
+        {
+          "type": "L1",
+          "text": "s courses; (3) PAStartup Podcast guest — reaches pre-PA and new PA audience, perfect for Pol",
+          "component": "System",
+          "opportunity_id": "ot-20260408-chris-darst",
+          "linked": true,
+          "source": "Chris Darst, MPAS, PA-C",
+          "stage": "sent"
+        }
+      ],
+      "decision": "System: Tier 1-2"
+    },
+    "objection_intelligence": {
+      "status": "NO OBJECTION DATA",
+      "items": [],
+      "decision": "Capture one live buyer objection verbatim and route it into offer language this cycle."
+    },
+    "system_health": {
+      "status": "HEALTH DATA INCOMPLETE",
+      "monthly_burn": "$1,186.17",
+      "cost_drift": "NORMAL",
+      "failures": [
+        {
+          "label": "backup",
+          "status": "UNKNOWN"
+        },
+        {
+          "label": "delivery",
+          "status": "UNKNOWN"
+        },
+        {
+          "label": "routing",
+          "status": "UNKNOWN"
+        }
+      ],
+      "phase_gate": {
+        "status": "not_ready",
+        "recommendation": "defer",
+        "current_phase": "1A",
+        "candidate_next_phase": "1B",
+        "ready_for_review": false
+      },
+      "decision": "Keep system changes narrow; protect revenue execution."
+    },
+    "stop_doing": {
+      "status": "WHAT WE ARE NOT DOING",
+      "items": [
+        {
+          "name": "CV-2026-05-09-001",
+          "reason": "Keep a small hardened Tier 1 persistent core, move Tier 2 lanes to on-demand use, and retire Tier 3 lanes from standing infrastructure."
+        },
+        {
+          "name": "CV-2026-05-09-002",
+          "reason": "Disabled the redundant jobs and rolled analytics interpretation into the weekly metrics digest instead of maintaining a reminder swarm."
+        },
+        {
+          "name": "browser-surface-mismatch-breadcrumbs",
+          "reason": "child"
+        }
+      ],
+      "decision": "Keep deadweight cut: no new standing surface unless one existing surface is removed or merged."
+    }
+  },
+  "focus_collapse": {
+    "h1_move": "Advance Shea Dempsey, DMSc, MBA, PA-C, EM-CAQ now: Keep the relationship warm; send a short friendly follow-up if useful, and revisit a guest lecture / student Q&A only if it feels natural.",
+    "h2_emphasis": "System: Tier 1-2",
+    "system_constraint": "Keep system changes narrow; protect revenue execution."
+  },
+  "exact_sources_used": {
+    "awareness_strip": [
+      {
+        "label": "published posts log",
+        "path": "content/published-posts-log.md"
+      },
+      {
+        "label": "linkedin run artifact",
+        "path": "data/linkedin-post-runs/2026-05-05-onboarding-debt-the-real-reason-apps-burn-out.json"
+      },
+      {
+        "label": "linkedin run artifact",
+        "path": "data/linkedin-post-runs/2026-05-07-business-literacy-gap.json"
+      }
+    ],
+    "h1_revenue_engine": [
+      {
+        "label": "pipeline tracker",
+        "path": "agents/consulting-outreach/outreach-tracker.jsonl"
+      },
+      {
+        "label": "lead context",
+        "path": "consulting/leads/mitesh-patel.md"
+      },
+      {
+        "label": "lead context",
+        "path": "consulting/leads/erin-switzer-macmillan.md"
+      }
+    ],
+    "execution_enforcer": [
+      {
+        "label": "enforcer state",
+        "path": "strategy/enforcer-state.json"
+      },
+      {
+        "label": "latest CSO brief",
+        "path": "strategy/2026-05-04-cso-brief.md"
+      }
+    ],
+    "proof_moat": [
+      {
+        "label": "signal tracker",
+        "path": "agents/consulting-outreach/outreach-tracker.jsonl"
+      },
+      {
+        "label": "thesis log",
+        "path": "strategy/thesis-log.md"
+      }
+    ],
+    "objection_intelligence": [
+      {
+        "label": "outreach tracker",
+        "path": "agents/consulting-outreach/outreach-tracker.jsonl"
+      },
+      {
+        "label": "case lifecycle",
+        "path": "consulting/case-lifecycle/CASE-20260328-mitesh-patel.md"
+      }
+    ],
+    "system_health": [
+      {
+        "label": "cost ledger",
+        "path": "agents/daily-cost-sentinel/ledger.json"
+      },
+      {
+        "label": "phase gate",
+        "path": "strategy/phase-advancement-gate.md"
+      },
+      {
+        "label": "phase registry",
+        "path": "strategy/phase-criteria-registry.json"
+      }
+    ],
+    "stop_doing": [
+      {
+        "label": "violation log",
+        "path": "strategy/constitution-violation-log.md"
+      },
+      {
+        "label": "phase capability registry",
+        "path": "strategy/phase-capability-registry.json"
+      }
+    ],
+    "fallback_memory": [
+      {
+        "label": "daily memory",
+        "path": "memory/RUNBOOK-UPGRADES.md"
+      },
+      {
+        "label": "daily memory",
+        "path": "memory/RUNBOOK.md"
+      }
+    ]
+  },
+  "system_gaps_conflicts": [
+    "Mitesh J. Patel, MBA, MSHS, PA-C: tracker vs lead file disagree",
+    "Erin Switzer MacMillan: tracker vs lead file disagree",
+    "Mitesh J. Patel, MBA, MSHS, PA-C: tracker vs lead file disagree",
+    "ENFORCER ARTIFACT MISSING",
+    "Objection capture remains sparse in canonical files."
+  ],
+  "implementation_plan": [
+    "Regenerate the dashboard from persisted tracker, strategy, cost, and ops artifacts only.",
+    "Render the command surface with one awareness strip, six decision sections, and a 3-line focus collapse footer.",
+    "Publish only when the decision hash changes; otherwise keep the local dashboard fresh and skip Pages publish."
+  ],
+  "decision_hash_method": "sha256(json(sorted normalized semantic decision fields only))"
 }
