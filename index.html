@@ -5,51 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>OpenClaw Command Surface</title>
 <style>
-:root{
-  --bg:#0b1220;--panel:#111b2e;--panel2:#17243c;--text:#e5edf8;--muted:#93a4bf;--gold:#d4a84d;
-  --green:#22c55e;--red:#ef4444;--yellow:#f59e0b;--blue:#60a5fa;--purple:#a78bfa;--border:#22314f;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Inter,system-ui,-apple-system,sans-serif;background:linear-gradient(180deg,#08101d,#0b1220 180px);color:var(--text);line-height:1.45}
-.container{max-width:1240px;margin:0 auto;padding:20px}
-a{color:var(--blue);text-decoration:none}
-.header{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;margin-bottom:20px}
-.title h1{font-size:28px;color:var(--gold)}
-.title p,.meta,.section-sub,.mini{color:var(--muted)}
-.meta{text-align:right;font-size:13px}
-.banner{background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.35);padding:12px 14px;border-radius:12px;margin:16px 0;font-weight:700;color:#fecaca}
-.awareness{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:18px 0 26px}
-.strip-card,.section,.footer-focus,.detail-card{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:16px}
-.strip-card h2,.section h2{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);margin-bottom:10px}
-.strip-status{font-size:18px;font-weight:700;margin-bottom:10px}
-.strip-list,.bullet-list{display:flex;flex-direction:column;gap:8px}
-.strip-item,.bullet{background:var(--panel2);border:1px solid rgba(255,255,255,.04);padding:10px 12px;border-radius:12px}
-.row{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
-.badge{display:inline-block;padding:4px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em}
-.ok{background:rgba(34,197,94,.14);color:#86efac}.failed{background:rgba(239,68,68,.14);color:#fca5a5}.warn{background:rgba(245,158,11,.14);color:#fcd34d}.info{background:rgba(96,165,250,.14);color:#bfdbfe}.muted{background:rgba(148,163,184,.16);color:#cbd5e1}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-.section{min-height:220px}
-.section-header{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;margin-bottom:10px}
-.section-status{font-size:18px;font-weight:700}
-.failure{margin:10px 0;padding:10px 12px;border-radius:12px;background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.3);color:#fecaca;font-weight:700}
-.table{display:flex;flex-direction:column;gap:10px}
-.table-item{background:var(--panel2);border:1px solid rgba(255,255,255,.04);padding:12px;border-radius:12px}
-.table-item h3{font-size:15px;margin-bottom:6px}
-.kv{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 12px;font-size:13px;color:var(--muted);margin-top:8px}
-.kv strong{color:var(--text);font-weight:600}
-.decision{margin-top:14px;padding-top:12px;border-top:1px solid rgba(255,255,255,.07)}
-.decision-label{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);margin-bottom:6px}
-.decision-text{font-size:16px;font-weight:700}
-.footer-focus{margin-top:18px;border:1px solid rgba(212,168,77,.35);background:linear-gradient(180deg,rgba(212,168,77,.08),rgba(17,27,46,1));}
-.footer-focus h2{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);margin-bottom:12px}
-.focus-line{padding:10px 12px;background:rgba(255,255,255,.03);border-radius:12px;margin-bottom:8px;font-size:15px;font-weight:700}
-.details{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:18px 0 28px}
-details{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:14px}
-summary{cursor:pointer;font-weight:700;color:var(--gold)}
-code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;background:rgba(255,255,255,.06);padding:2px 6px;border-radius:6px}
-pre{white-space:pre-wrap;color:var(--muted);font-size:12px;margin-top:10px}
-.no-data{color:var(--muted);font-style:italic}
-@media (max-width:960px){.awareness,.grid,.details{grid-template-columns:1fr}.meta{text-align:left}.header{flex-direction:column}.kv{grid-template-columns:1fr}}
+:root{--bg:#0b1220;--panel:#111b2e;--panel2:#17243c;--text:#e5edf8;--muted:#93a4bf;--gold:#d4a84d;--green:#22c55e;--red:#ef4444;--yellow:#f59e0b;--blue:#60a5fa;--border:#22314f;}
+*{box-sizing:border-box;margin:0;padding:0} body{font-family:Inter,system-ui,-apple-system,sans-serif;background:linear-gradient(180deg,#08101d,#0b1220 180px);color:var(--text);line-height:1.45} .container{max-width:1240px;margin:0 auto;padding:20px} .header{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;margin-bottom:20px} .title h1{font-size:28px;color:var(--gold)} .title p,.meta,.mini{color:var(--muted)} .meta{text-align:right;font-size:13px} .banner{background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.35);padding:12px 14px;border-radius:12px;margin:16px 0;font-weight:700;color:#fecaca} .awareness{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:18px 0 26px} .strip-card,.section,.footer-focus,details{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:16px} .strip-card h2,.section h2,.footer-focus h2{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);margin-bottom:10px} .strip-status,.section-status{font-size:18px;font-weight:700;margin-bottom:10px} .strip-list{display:flex;flex-direction:column;gap:8px} .strip-item,.table-item,.focus-line{background:var(--panel2);border:1px solid rgba(255,255,255,.04);padding:12px;border-radius:12px} .row{display:flex;justify-content:space-between;gap:12px;align-items:flex-start} .badge{display:inline-block;padding:4px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em} .ok{background:rgba(34,197,94,.14);color:#86efac} .failed{background:rgba(239,68,68,.14);color:#fca5a5} .warn{background:rgba(245,158,11,.14);color:#fcd34d} .info{background:rgba(96,165,250,.14);color:#bfdbfe} .muted{background:rgba(148,163,184,.16);color:#cbd5e1} .grid,.details{display:grid;grid-template-columns:repeat(2,1fr);gap:16px} .section{min-height:220px} .section-header{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;margin-bottom:10px} .table{display:flex;flex-direction:column;gap:10px} .kv{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 12px;font-size:13px;color:var(--muted);margin-top:8px} .kv strong{color:var(--text)} .decision{margin-top:14px;padding-top:12px;border-top:1px solid rgba(255,255,255,.07)} .decision-label{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);margin-bottom:6px} .decision-text{font-size:16px;font-weight:700} .footer-focus{margin-top:18px;border:1px solid rgba(212,168,77,.35);background:linear-gradient(180deg,rgba(212,168,77,.08),rgba(17,27,46,1))} .focus-line{margin-bottom:8px;font-size:15px;font-weight:700} details summary{cursor:pointer;font-weight:700;color:var(--gold)} code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;background:rgba(255,255,255,.06);padding:2px 6px;border-radius:6px} pre{white-space:pre-wrap;color:var(--muted);font-size:12px;margin-top:10px} .failure{margin:10px 0;padding:10px 12px;border-radius:12px;background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.3);color:#fecaca;font-weight:700} .failure.small{font-size:12px} .source-group{margin-top:10px} .empty{color:var(--muted);font-style:italic} @media (max-width:960px){.awareness,.grid,.details{grid-template-columns:1fr} .meta{text-align:left} .header{flex-direction:column} .kv{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -59,202 +16,155 @@ pre{white-space:pre-wrap;color:var(--muted);font-size:12px;margin-top:10px}
       <h1>⚡ OpenClaw Command Surface</h1>
       <p>Weekly decision pressure for H1 revenue, H2 proof, and system stability.</p>
     </div>
-    <div class="meta" id="meta">Loading…</div>
+    <div class="meta">Generated <strong>Sat May 9, 2026, 10:28 PM ET</strong><br>Decision hash <code>289a28ed425bc8cf26a07f49e61ae5bd9bef0f4f61148e8a74d302ff1b550c08</code><br>NO CHANGE · local only</div>
   </div>
-
-  <div id="failure-banner"></div>
-
+  
   <div class="awareness">
-    <section class="strip-card" id="awareness-health"></section>
-    <section class="strip-card" id="awareness-schedule"></section>
-    <section class="strip-card" id="awareness-interrupts"></section>
-  </div>
-
+    <section class="strip-card">
+      <h2>Awareness Strip · System Health Snapshot</h2>
+      <div class="strip-status">ALL SYSTEMS NORMAL</div>
+      <div class="strip-list"><div class="strip-item"><div class="row"><strong>backup</strong><span class="badge info">UNKNOWN</span></div><div class="mini">No persisted artifact found in last scan window.</div></div><div class="strip-item"><div class="row"><strong>delivery</strong><span class="badge info">UNKNOWN</span></div><div class="mini">No persisted artifact found in last scan window.</div></div><div class="strip-item"><div class="row"><strong>routing</strong><span class="badge info">UNKNOWN</span></div><div class="mini">No persisted artifact found in last scan window.</div></div><div class="strip-item"><div class="row"><strong>cost drift</strong><span class="badge ok">NORMAL</span></div><div class="mini">Derived from latest cost sentinel report and current ledger.</div></div></div>
+    </section>
+    
+    <section class="strip-card">
+      <h2>Awareness Strip · Upcoming Schedule (72H)</h2>
+      <div class="strip-status">WHAT IS COMING UP</div>
+      <div class="strip-list"><div class="strip-item"><div class="row"><strong>Mitesh J. Patel, MBA, MSHS, PA-C</strong><span class="mini">May 12, 12:00 AM ET</span></div><div class="mini">Wait for reply after COO meeting. Check in May 12 if no response.</div></div></div>
+    </section>
+    
+    <section class="strip-card">
+      <h2>Awareness Strip · Interrupts</h2>
+      <div class="strip-status">NO INTERRUPTS</div>
+      <div class="strip-list"><div class="empty">No qualifying items.</div></div>
+    </section>
+    </div>
   <div class="grid">
-    <section class="section" id="section-h1"></section>
-    <section class="section" id="section-enforcer"></section>
-    <section class="section" id="section-proof"></section>
-    <section class="section" id="section-objections"></section>
-    <section class="section" id="section-system"></section>
-    <section class="section" id="section-stop"></section>
+    
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <h2>H1 Revenue Engine</h2>
+          <div class="section-status">STALE OR UNCERTAIN DATA</div>
+        </div>
+        <span class="badge failed">STALE OR UNCERTAIN DATA</span>
+      </div>
+      
+      <div class="table"><div class="table-item"><h3>Shea Dempsey, DMSc, MBA, PA-C, EM-CAQ</h3><div class="row"><span class="badge info">HIGH PROBABILITY</span><span class="mini">May 4, 11:34 PM ET</span></div><div class="kv"><div>Stage<br><strong>warm-follow-up</strong></div><div>Days in stage<br><strong>5</strong></div><div>Next action<br><strong>Keep the relationship warm; send a short friendly follow-up if useful, and revisit a guest lecture / student Q&amp;A only if it feels natural.</strong></div><div>Stall reason<br><strong>Intentional wait state</strong></div></div></div><div class="table-item"><h3>Mitesh J. Patel, MBA, MSHS, PA-C</h3><div class="row"><span class="badge info">HIGH PROBABILITY</span><span class="mini">May 1, 5:29 PM ET</span></div><div class="kv"><div>Stage<br><strong>proposal</strong></div><div>Days in stage<br><strong>8</strong></div><div>Next action<br><strong>Await scheduled May 9 follow-up send, then watch for reply after the COO conversation.</strong></div><div>Stall reason<br><strong>External approval / reply pending</strong></div></div><div class="failure small">STALE OR UNCERTAIN DATA</div></div><div class="table-item"><h3>Mitesh J. Patel, MBA, MSHS, PA-C</h3><div class="row"><span class="badge info">HIGH PROBABILITY</span><span class="mini">Apr 9, 8:30 PM ET</span></div><div class="kv"><div>Stage<br><strong>proposal</strong></div><div>Days in stage<br><strong>30</strong></div><div>Next action<br><strong>Wait for reply after COO meeting. Check in May 12 if no response.</strong></div><div>Stall reason<br><strong>External approval / reply pending</strong></div></div><div class="failure small">STALE OR UNCERTAIN DATA</div></div></div>
+      <div class="decision">
+        <div class="decision-label">Decision</div>
+        <div class="decision-text">Advance Shea Dempsey, DMSc, MBA, PA-C, EM-CAQ now: Keep the relationship warm; send a short friendly follow-up if useful, and revisit a guest lecture / student Q&amp;A only if it feels natural.</div>
+      </div>
+    </section>
+    
+    
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <h2>Execution Enforcer + Move Verification</h2>
+          <div class="section-status">DO THIS NOW</div>
+        </div>
+        <span class="badge info">DO THIS NOW</span>
+      </div>
+      
+      <div class="table"><div class="table-item"><h3>Run the Baylor close sequence to outcome: confirm the May 9 COO follow-up sends, attach or offer the one-page proof asset, and update the case file the same day with one of three states — replied, forwarded internally, or no-response.</h3><div class="row"><span class="badge info">Score: None</span><span class="badge ok">carry-forward</span></div><div class="kv"><div>Executed<br><strong>False</strong></div><div>Buyer-visible<br><strong>False</strong></div><div>Artifact<br><strong>ENFORCER ARTIFACT MISSING</strong></div><div>Opportunity<br><strong>ot-20260328-0001</strong></div></div><div class="mini" style="margin-top:10px">Gate failures: none logged</div></div></div>
+      <div class="decision">
+        <div class="decision-label">Decision</div>
+        <div class="decision-text">Make the current move buyer-visible now.</div>
+      </div>
+    </section>
+    
+    
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <h2>Proof / Moat</h2>
+          <div class="section-status">WHAT IS GETTING STRONGER</div>
+        </div>
+        <span class="badge info">WHAT IS GETTING STRONGER</span>
+      </div>
+      
+      <div class="table"><div class="table-item"><h3>L3 · System</h3><div>Tier 1-2</div><div class="mini" style="margin-top:8px">Source: Jonathan Kiemel, PA-C · opportunity: ot-20260328-0003</div></div><div class="table-item"><h3>L1 · System</h3><div>s Apr 8 post (Conduit Quality Is a Leadership Problem) — strong co-sign of formal EVH pathway thesis. Founder of VesselHarvest.com (EVH/ERAH online courses, $349-649, up to 41 CME credits), Enlighten Medical Media (ACCME-accredited CME provider, Org ID 0008307), e-Echocardiography.com, PAStartup.co (pre-PA/PA school audience since 2017), OneFiveNine Group LLC. 15+ yrs EVH experience. NOT a competitor — upstream of Pol</div><div class="mini" style="margin-top:8px">Source: Chris Darst, MPAS, PA-C · opportunity: ot-20260408-chris-darst</div></div><div class="table-item"><h3>L1 · System</h3><div>s courses; (3) PAStartup Podcast guest — reaches pre-PA and new PA audience, perfect for Pol</div><div class="mini" style="margin-top:8px">Source: Chris Darst, MPAS, PA-C · opportunity: ot-20260408-chris-darst</div></div></div>
+      <div class="decision">
+        <div class="decision-label">Decision</div>
+        <div class="decision-text">System: Tier 1-2</div>
+      </div>
+    </section>
+    
+    
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <h2>Objection Intelligence</h2>
+          <div class="section-status">NO OBJECTION DATA</div>
+        </div>
+        <span class="badge info">NO OBJECTION DATA</span>
+      </div>
+      
+      <div class="table"><div class="empty">NO OBJECTION DATA</div></div>
+      <div class="decision">
+        <div class="decision-label">Decision</div>
+        <div class="decision-text">Capture one live buyer objection verbatim and route it into offer language this cycle.</div>
+      </div>
+    </section>
+    
+    
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <h2>System Health Decision</h2>
+          <div class="section-status">HEALTH DATA INCOMPLETE</div>
+        </div>
+        <span class="badge ok">HEALTH DATA INCOMPLETE</span>
+      </div>
+      
+      <div class="table"><div class="table-item"><div class="kv"><div>Monthly burn<br><strong>$1,186.17</strong></div><div>Cost drift<br><strong>NORMAL</strong></div><div>Current phase<br><strong>1A</strong></div><div>Candidate next phase<br><strong>1B</strong></div></div><div class="strip-list" style="margin-top:12px"><div class="strip-item"><div class="row"><strong>backup</strong><span class="badge info">UNKNOWN</span></div></div><div class="strip-item"><div class="row"><strong>delivery</strong><span class="badge info">UNKNOWN</span></div></div><div class="strip-item"><div class="row"><strong>routing</strong><span class="badge info">UNKNOWN</span></div></div></div></div></div>
+      <div class="decision">
+        <div class="decision-label">Decision</div>
+        <div class="decision-text">Keep system changes narrow; protect revenue execution.</div>
+      </div>
+    </section>
+    
+    
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <h2>Stop Doing</h2>
+          <div class="section-status">WHAT WE ARE NOT DOING</div>
+        </div>
+        <span class="badge info">WHAT WE ARE NOT DOING</span>
+      </div>
+      
+      <div class="table"><div class="table-item"><h3>CV-2026-05-09-001</h3><div>Keep a small hardened Tier 1 persistent core, move Tier 2 lanes to on-demand use, and retire Tier 3 lanes from standing infrastructure.</div></div><div class="table-item"><h3>CV-2026-05-09-002</h3><div>Disabled the redundant jobs and rolled analytics interpretation into the weekly metrics digest instead of maintaining a reminder swarm.</div></div><div class="table-item"><h3>browser-surface-mismatch-breadcrumbs</h3><div>child</div></div></div>
+      <div class="decision">
+        <div class="decision-label">Decision</div>
+        <div class="decision-text">Keep deadweight cut: no new standing surface unless one existing surface is removed or merged.</div>
+      </div>
+    </section>
+    
   </div>
-
-  <section class="footer-focus" id="focus-footer"></section>
-
-  <div class="details">
-    <details open>
-      <summary>Exact sources used</summary>
-      <div id="sources"></div>
-    </details>
-    <details open>
-      <summary>System gaps / conflicts</summary>
-      <div id="gaps"></div>
-    </details>
-    <details>
-      <summary>Implementation plan</summary>
-      <div id="plan"></div>
-    </details>
-    <details>
-      <summary>Decision hash method</summary>
-      <div id="hash"></div>
-    </details>
+  <section class="footer-focus"><h2>Focus Collapse</h2><div class="focus-line">H1: Advance Shea Dempsey, DMSc, MBA, PA-C, EM-CAQ now: Keep the relationship warm; send a short friendly follow-up if useful, and revisit a guest lecture / student Q&amp;A only if it feels natural.</div><div class="focus-line">H2: System: Tier 1-2</div><div class="focus-line">Constraint: Keep system changes narrow; protect revenue execution.</div></section>
+  <div class="details" style="margin-top:18px">
+    <details open><summary>Exact sources used</summary><div class="source-group"><h3>awareness_strip</h3><div class="mini">• published posts log — <code>content/published-posts-log.md</code></div><div class="mini">• linkedin run artifact — <code>data/linkedin-post-runs/2026-05-05-onboarding-debt-the-real-reason-apps-burn-out.json</code></div><div class="mini">• linkedin run artifact — <code>data/linkedin-post-runs/2026-05-07-business-literacy-gap.json</code></div></div><div class="source-group"><h3>h1_revenue_engine</h3><div class="mini">• pipeline tracker — <code>agents/consulting-outreach/outreach-tracker.jsonl</code></div><div class="mini">• lead context — <code>consulting/leads/mitesh-patel.md</code></div><div class="mini">• lead context — <code>consulting/leads/erin-switzer-macmillan.md</code></div></div><div class="source-group"><h3>execution_enforcer</h3><div class="mini">• enforcer state — <code>strategy/enforcer-state.json</code></div><div class="mini">• latest CSO brief — <code>strategy/2026-05-04-cso-brief.md</code></div></div><div class="source-group"><h3>proof_moat</h3><div class="mini">• signal tracker — <code>agents/consulting-outreach/outreach-tracker.jsonl</code></div><div class="mini">• thesis log — <code>strategy/thesis-log.md</code></div></div><div class="source-group"><h3>objection_intelligence</h3><div class="mini">• outreach tracker — <code>agents/consulting-outreach/outreach-tracker.jsonl</code></div><div class="mini">• case lifecycle — <code>consulting/case-lifecycle/CASE-20260328-mitesh-patel.md</code></div></div><div class="source-group"><h3>system_health</h3><div class="mini">• cost ledger — <code>agents/daily-cost-sentinel/ledger.json</code></div><div class="mini">• phase gate — <code>strategy/phase-advancement-gate.md</code></div><div class="mini">• phase registry — <code>strategy/phase-criteria-registry.json</code></div></div><div class="source-group"><h3>stop_doing</h3><div class="mini">• violation log — <code>strategy/constitution-violation-log.md</code></div><div class="mini">• phase capability registry — <code>strategy/phase-capability-registry.json</code></div></div><div class="source-group"><h3>fallback_memory</h3><div class="mini">• daily memory — <code>memory/RUNBOOK-UPGRADES.md</code></div><div class="mini">• daily memory — <code>memory/RUNBOOK.md</code></div></div></details>
+    <details open><summary>System gaps / conflicts</summary><div class="table-item">Mitesh J. Patel, MBA, MSHS, PA-C: tracker vs lead file disagree</div><div class="table-item">Erin Switzer MacMillan: tracker vs lead file disagree</div><div class="table-item">Mitesh J. Patel, MBA, MSHS, PA-C: tracker vs lead file disagree</div><div class="table-item">ENFORCER ARTIFACT MISSING</div><div class="table-item">Objection capture remains sparse in canonical files.</div></details>
+    <details><summary>Implementation plan</summary><div class="table-item">Regenerate the dashboard from persisted tracker, strategy, cost, and ops artifacts only.</div><div class="table-item">Render the command surface with one awareness strip, six decision sections, and a 3-line focus collapse footer.</div><div class="table-item">Publish only when the decision hash changes; otherwise keep the local dashboard fresh and skip Pages publish.</div></details>
+    <details><summary>Decision hash method</summary><pre>{
+  &quot;fields&quot;: [
+    &quot;h1_move&quot;,
+    &quot;h2_emphasis&quot;,
+    &quot;interrupt_state&quot;,
+    &quot;system_constraint&quot;
+  ],
+  &quot;normalized&quot;: {
+    &quot;h1_move&quot;: &quot;advance shea dempsey, dmsc, mba, pa-c, em-caq now: keep the relationship warm; send a short friendly follow-up if useful, and revisit a guest lecture / student q&amp;a only if it feels natural.&quot;,
+    &quot;h2_emphasis&quot;: &quot;system: tier 1-2&quot;,
+    &quot;interrupt_state&quot;: &quot;no interrupts&quot;,
+    &quot;system_constraint&quot;: &quot;keep system changes narrow; protect revenue execution.&quot;
+  },
+  &quot;method&quot;: &quot;sha256(json(sorted normalized semantic decision fields only))&quot;,
+  &quot;value&quot;: &quot;289a28ed425bc8cf26a07f49e61ae5bd9bef0f4f61148e8a74d302ff1b550c08&quot;,
+  &quot;changed&quot;: false
+}</pre><div class="mini">sha256(json(sorted normalized semantic decision fields only))</div></details>
   </div>
 </div>
-
-<script>
-const $ = (id) => document.getElementById(id);
-const badgeClass = (value='') => {
-  const v = value.toLowerCase();
-  if (['ok','healthy','normal','all systems normal','complete'].some(x => v.includes(x))) return 'badge ok';
-  if (['failed','failure','interrupt','incomplete','stale'].some(x => v.includes(x))) return 'badge failed';
-  if (['spike','warning','attention','uncertain'].some(x => v.includes(x))) return 'badge warn';
-  if (['no change','no signal','no active', 'missing', 'incomplete'].some(x => v.includes(x))) return 'badge muted';
-  return 'badge info';
-};
-const esc = (s='') => String(s)
-  .replaceAll('&','&amp;')
-  .replaceAll('<','&lt;')
-  .replaceAll('>','&gt;');
-
-function renderAwarenessCard(target, title, status, items, formatter){
-  const body = (items && items.length)
-    ? items.map(item => formatter(item)).join('')
-    : '<div class="no-data">No qualifying items.</div>';
-  target.innerHTML = `
-    <h2>${esc(title)}</h2>
-    <div class="strip-status">${esc(status || '—')}</div>
-    <div class="strip-list">${body}</div>
-  `;
-}
-
-function renderSection(target, title, section, renderer){
-  const items = section.items || [];
-  const body = items.length ? renderer(items) : `<div class="no-data">${esc(section.status || 'No data')}</div>`;
-  target.innerHTML = `
-    <div class="section-header">
-      <div>
-        <h2>${esc(title)}</h2>
-        <div class="section-status">${esc(section.status || '—')}</div>
-      </div>
-      <span class="${badgeClass(section.status)}">${esc(section.status || '—')}</span>
-    </div>
-    ${section.failure ? `<div class="failure">${esc(section.failure)}</div>` : ''}
-    ${body}
-    <div class="decision">
-      <div class="decision-label">Decision</div>
-      <div class="decision-text">${esc(section.decision || '—')}</div>
-    </div>
-  `;
-}
-
-function listBlock(items, formatter){
-  return `<div class="table">${items.map(item => `<div class="table-item">${formatter(item)}</div>`).join('')}</div>`;
-}
-
-function renderSources(sources){
-  const keys = Object.keys(sources || {});
-  if (!keys.length) return '<div class="no-data">No source metadata.</div>';
-  return keys.map(key => {
-    const items = sources[key] || [];
-    return `<div class="table-item" style="margin-top:10px"><h3>${esc(key)}</h3>${items.length ? items.map(it => `<div class="mini">• ${esc(it.label)} — <code>${esc(it.path)}</code></div>`).join('') : '<div class="no-data">None</div>'}</div>`;
-  }).join('');
-}
-
-fetch('data.json', {cache:'no-store'})
-  .then(r => r.json())
-  .then(data => {
-    const meta = data.meta || {};
-    $('meta').innerHTML = `Generated <strong>${esc(meta.generated_local || '—')}</strong><br>Decision hash <code>${esc((meta.decision_hash || {}).value || '—')}</code><br>${esc(meta.change_summary || '—')} · ${meta.publish_recommended ? 'publish recommended' : 'local only'}`;
-
-    const h1 = data.sections?.h1_revenue_engine || {};
-    if (h1.failure) $('failure-banner').innerHTML = `<div class="banner">${esc(h1.failure)}</div>`;
-
-    renderAwarenessCard($('awareness-health'), 'System health snapshot', data.awareness?.system_health?.status, data.awareness?.system_health?.items, item => `
-      <div class="strip-item">
-        <div class="row"><strong>${esc(item.label)}</strong><span class="${badgeClass(item.status)}">${esc(item.status)}</span></div>
-        <div class="mini">${esc(item.detail || '')}</div>
-      </div>`);
-
-    renderAwarenessCard($('awareness-schedule'), 'Upcoming schedule (72h)', data.awareness?.upcoming_schedule?.status, data.awareness?.upcoming_schedule?.items, item => `
-      <div class="strip-item">
-        <div class="row"><strong>${esc(item.label)}</strong><span class="mini">${esc(item.when || '')}</span></div>
-        <div class="mini">${esc(item.detail || item.kind || '')}</div>
-      </div>`);
-
-    renderAwarenessCard($('awareness-interrupts'), 'Interrupts', data.awareness?.interrupts?.status, (data.awareness?.interrupts?.items || []).map(text => ({text})), item => `
-      <div class="strip-item"><strong>${esc(item.text)}</strong></div>`);
-
-    renderSection($('section-h1'), 'H1 Revenue Engine', h1, items => listBlock(items, item => `
-      <h3>${esc(item.name)}</h3>
-      <div class="row"><span class="${badgeClass(item.classification)}">${esc(item.classification)}</span><span class="mini">${esc(item.last_movement)}</span></div>
-      <div class="kv">
-        <div>Stage<br><strong>${esc(item.stage)}</strong></div>
-        <div>Days in stage<br><strong>${esc(item.days_in_stage ?? '—')}</strong></div>
-        <div>Next action<br><strong>${esc(item.next_action)}</strong></div>
-        <div>Stall reason<br><strong>${esc(item.stall_reason)}</strong></div>
-      </div>
-      ${item.conflict ? '<div class="failure" style="margin-top:10px">STALE OR UNCERTAIN DATA</div>' : ''}`));
-
-    renderSection($('section-enforcer'), 'Execution Enforcer', data.sections?.execution_enforcer || {}, items => {
-      const section = data.sections?.execution_enforcer || {};
-      const mv = section.move_verification || {};
-      return listBlock([{...section, ...mv}], item => `
-        <h3>${esc(section.current_move || 'ENFORCER DATA MISSING')}</h3>
-        <div class="row"><span class="${badgeClass(String(section.score ?? 'missing'))}">Score: ${esc(section.score ?? '—')}</span><span class="${badgeClass(section.blocked ? 'failed' : 'ok')}">${section.blocked ? 'BLOCKED' : (section.carry_forward ? 'carry-forward' : 'active')}</span></div>
-        <div class="kv">
-          <div>Executed<br><strong>${esc(String(item.executed))}</strong></div>
-          <div>Buyer-visible<br><strong>${esc(String(item.buyer_visible))}</strong></div>
-          <div>Artifact<br><strong>${esc(item.artifact || '—')}</strong></div>
-          <div>Opportunity<br><strong>${esc(item.opportunity_id || '—')}</strong></div>
-        </div>
-        <div class="mini" style="margin-top:10px">Gate failures: ${section.gate_failures?.length ? esc(section.gate_failures.join(' · ')) : 'none logged'}</div>`);
-    });
-
-    renderSection($('section-proof'), 'Proof / Moat', data.sections?.proof_moat || {}, items => listBlock(items, item => `
-      <div class="row"><h3>${esc(item.type)} · ${esc(item.component)}</h3><span class="mini">${esc(item.stage || '')}</span></div>
-      <div>${esc(item.text)}</div>
-      <div class="mini" style="margin-top:8px">Source: ${esc(item.source || '—')} · opportunity: ${esc(item.opportunity_id || '—')}</div>`));
-
-    renderSection($('section-objections'), 'Objection Intelligence', data.sections?.objection_intelligence || {}, items => listBlock(items, item => `
-      <h3>${esc(item.name || item.opportunity_id || 'Opportunity')}</h3>
-      <div>${esc(item.phrasing)}</div>
-      <div class="mini" style="margin-top:8px">Stage: ${esc(item.stage || '—')} · opportunity: ${esc(item.opportunity_id || '—')}</div>`));
-
-    renderSection($('section-system'), 'System Health (Decision)', data.sections?.system_health || {}, items => {
-      const section = data.sections?.system_health || {};
-      const failures = section.failures || [];
-      return listBlock([{failures}], () => `
-        <div class="kv">
-          <div>Monthly burn<br><strong>${esc(section.monthly_burn || 'Unknown')}</strong></div>
-          <div>Cost drift<br><strong>${esc(section.cost_drift || 'Unknown')}</strong></div>
-          <div>Current phase<br><strong>${esc(section.phase_gate?.current_phase || '—')}</strong></div>
-          <div>Candidate next phase<br><strong>${esc(section.phase_gate?.candidate_next_phase || '—')}</strong></div>
-        </div>
-        <div class="bullet-list" style="margin-top:12px">${failures.map(f => `<div class="bullet"><div class="row"><strong>${esc(f.label)}</strong><span class="${badgeClass(f.status)}">${esc(f.status)}</span></div></div>`).join('')}</div>`);
-    });
-
-    renderSection($('section-stop'), 'Stop Doing', data.sections?.stop_doing || {}, items => listBlock(items, item => `
-      <h3>${esc(item.name)}</h3>
-      <div>${esc(item.reason)}</div>`));
-
-    const focus = data.focus_collapse || {};
-    $('focus-footer').innerHTML = `
-      <h2>Focus Collapse</h2>
-      <div class="focus-line">H1: ${esc(focus.h1_move || '—')}</div>
-      <div class="focus-line">H2: ${esc(focus.h2_emphasis || '—')}</div>
-      <div class="focus-line">Constraint: ${esc(focus.system_constraint || '—')}</div>`;
-
-    $('sources').innerHTML = renderSources(data.exact_sources_used);
-    $('gaps').innerHTML = (data.system_gaps_conflicts || []).length
-      ? (data.system_gaps_conflicts || []).map(item => `<div class="table-item" style="margin-top:10px">${esc(item)}</div>`).join('')
-      : '<div class="no-data">No active gaps logged.</div>';
-    $('plan').innerHTML = (data.implementation_plan || []).map(item => `<div class="table-item" style="margin-top:10px">${esc(item)}</div>`).join('');
-    $('hash').innerHTML = `<pre>${esc(JSON.stringify(data.meta?.decision_hash || {}, null, 2))}</pre><div class="mini" style="margin-top:10px">${esc(data.decision_hash_method || '')}</div>`;
-  })
-  .catch(err => {
-    $('meta').textContent = 'Failed to load data.json';
-    console.error(err);
-  });
-</script>
 </body>
 </html>

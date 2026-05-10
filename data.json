@@ -1,7 +1,7 @@
 {
-  "generated": "2026-05-10T02:16:40.368224+00:00",
+  "generated": "2026-05-10T02:28:03.986483+00:00",
   "meta": {
-    "generated_local": "Sat May 9, 2026, 10:16 PM ET",
+    "generated_local": "Sat May 9, 2026, 10:28 PM ET",
     "decision_hash": {
       "fields": [
         "h1_move",
@@ -17,11 +17,11 @@
       },
       "method": "sha256(json(sorted normalized semantic decision fields only))",
       "value": "289a28ed425bc8cf26a07f49e61ae5bd9bef0f4f61148e8a74d302ff1b550c08",
-      "changed": true
+      "changed": false
     },
     "publish_target": "https://pmdvedar-ai.github.io/openclaw-dashboard",
-    "change_summary": "H1 move; H2 emphasis",
-    "publish_recommended": true,
+    "change_summary": "NO CHANGE",
+    "publish_recommended": false,
     "lookback": {
       "h1_days": 14,
       "signals_cycles": 2,
