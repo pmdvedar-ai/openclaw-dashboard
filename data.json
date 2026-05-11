@@ -1,7 +1,7 @@
 {
-  "generated": "2026-05-10T02:28:03.986483+00:00",
+  "generated": "2026-05-11T04:05:32.674949+00:00",
   "meta": {
-    "generated_local": "Sat May 9, 2026, 10:28 PM ET",
+    "generated_local": "Mon May 11, 2026, 12:05 AM ET",
     "decision_hash": {
       "fields": [
         "h1_move",
@@ -13,15 +13,15 @@
         "h1_move": "advance shea dempsey, dmsc, mba, pa-c, em-caq now: keep the relationship warm; send a short friendly follow-up if useful, and revisit a guest lecture / student q&a only if it feels natural.",
         "h2_emphasis": "system: tier 1-2",
         "interrupt_state": "no interrupts",
-        "system_constraint": "keep system changes narrow; protect revenue execution."
+        "system_constraint": "do not add new standing surfaces until a live revenue object closes."
       },
       "method": "sha256(json(sorted normalized semantic decision fields only))",
-      "value": "289a28ed425bc8cf26a07f49e61ae5bd9bef0f4f61148e8a74d302ff1b550c08",
-      "changed": false
+      "value": "e53b3e81baf1f7b66aaf9c358ecae5b9b0d33b115c94d61abdfbdee2a5a7074b",
+      "changed": true
     },
     "publish_target": "https://pmdvedar-ai.github.io/openclaw-dashboard",
-    "change_summary": "NO CHANGE",
-    "publish_recommended": false,
+    "change_summary": "System constraint",
+    "publish_recommended": true,
     "lookback": {
       "h1_days": 14,
       "signals_cycles": 2,
@@ -63,6 +63,12 @@
           "when": "May 12, 12:00 AM ET",
           "kind": "Outreach next action",
           "detail": "Wait for reply after COO meeting. Check in May 12 if no response."
+        },
+        {
+          "label": "APP Onboarding Scorecard Lead Magnet — \"Most APP onboarding problems are visible by day 30.\"",
+          "when": "May 14, 12:00 AM ET",
+          "kind": "LinkedIn schedule",
+          "detail": "LinkedIn schedule"
         }
       ]
     },
@@ -73,7 +79,7 @@
   },
   "sections": {
     "h1_revenue_engine": {
-      "failure": null,
+      "failure": "H1 FAILURE: NO REVENUE MOVEMENT",
       "status": "STALE OR UNCERTAIN DATA",
       "items": [
         {
@@ -81,7 +87,7 @@
           "stage": "warm-follow-up",
           "next_action": "Keep the relationship warm; send a short friendly follow-up if useful, and revisit a guest lecture / student Q&A only if it feels natural.",
           "last_movement": "May 4, 11:34 PM ET",
-          "days_in_stage": 5,
+          "days_in_stage": 7,
           "stall_reason": "Intentional wait state",
           "classification": "HIGH PROBABILITY",
           "conflict": false
@@ -91,7 +97,7 @@
           "stage": "proposal",
           "next_action": "Await scheduled May 9 follow-up send, then watch for reply after the COO conversation.",
           "last_movement": "May 1, 5:29 PM ET",
-          "days_in_stage": 8,
+          "days_in_stage": 10,
           "stall_reason": "External approval / reply pending",
           "classification": "HIGH PROBABILITY",
           "conflict": true
@@ -101,7 +107,7 @@
           "stage": "proposal",
           "next_action": "Wait for reply after COO meeting. Check in May 12 if no response.",
           "last_movement": "Apr 9, 8:30 PM ET",
-          "days_in_stage": 30,
+          "days_in_stage": 32,
           "stall_reason": "External approval / reply pending",
           "classification": "HIGH PROBABILITY",
           "conflict": true
@@ -198,7 +204,7 @@
         "candidate_next_phase": "1B",
         "ready_for_review": false
       },
-      "decision": "Keep system changes narrow; protect revenue execution."
+      "decision": "Do not add new standing surfaces until a live revenue object closes."
     },
     "stop_doing": {
       "status": "WHAT WE ARE NOT DOING",
@@ -222,7 +228,7 @@
   "focus_collapse": {
     "h1_move": "Advance Shea Dempsey, DMSc, MBA, PA-C, EM-CAQ now: Keep the relationship warm; send a short friendly follow-up if useful, and revisit a guest lecture / student Q&A only if it feels natural.",
     "h2_emphasis": "System: Tier 1-2",
-    "system_constraint": "Keep system changes narrow; protect revenue execution."
+    "system_constraint": "Do not add new standing surfaces until a live revenue object closes."
   },
   "exact_sources_used": {
     "awareness_strip": [
