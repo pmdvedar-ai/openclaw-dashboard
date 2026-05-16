@@ -1,7 +1,7 @@
 {
-  "generated": "2026-05-13T16:05:33.944880+00:00",
+  "generated": "2026-05-16T00:05:06.582594+00:00",
   "meta": {
-    "generated_local": "Wed May 13, 2026, 12:05 PM ET",
+    "generated_local": "Fri May 15, 2026, 8:05 PM ET",
     "decision_hash": {
       "fields": [
         "h1_move",
@@ -11,16 +11,16 @@
       ],
       "normalized": {
         "h1_move": "advance shea dempsey, dmsc, mba, pa-c, em-caq now: keep the relationship warm; send a short friendly follow-up if useful, and revisit a guest lecture / student q&a only if it feels natural.",
-        "h2_emphasis": "system: tier 1-2",
+        "h2_emphasis": "system: s apr 8 post (conduit quality is a leadership problem) — strong co-sign of formal evh pathway thesis. founder of vesselharvest.com (evh/erah online courses, $349-649, up to 41 cme credits), enlighten medical media (accme-accredited cme provider, org id 0008307), e-echocardiography.com, pastartup.co (pre-pa/pa school audience since 2017), onefivenine group llc. 15+ yrs evh experience. not a competitor — upstream of pol",
         "interrupt_state": "⚠ interrupt: enforcer blocked",
         "system_constraint": "do not add new standing surfaces until a live revenue object closes."
       },
       "method": "sha256(json(sorted normalized semantic decision fields only))",
-      "value": "31732a98a3154336b5e010217185877c7598b6b9e2628e4c23825111f9252d6a",
+      "value": "26bb9432d52d886951ad1d2129dfe2b6391b861ce37db94a620ae25277a6fec9",
       "changed": true
     },
     "publish_target": "https://pmdvedar-ai.github.io/openclaw-dashboard",
-    "change_summary": "Interrupt state",
+    "change_summary": "H2 emphasis",
     "publish_recommended": true,
     "lookback": {
       "h1_days": 14,
@@ -57,14 +57,7 @@
     },
     "upcoming_schedule": {
       "status": "WHAT IS COMING UP",
-      "items": [
-        {
-          "label": "APP Retention Risk Audit — \"Good APPs usually do not leave without warning. The system misses the warning signs first.\"",
-          "when": "May 14, 12:00 AM ET",
-          "kind": "LinkedIn schedule",
-          "detail": "LinkedIn schedule"
-        }
-      ]
+      "items": []
     },
     "interrupts": {
       "status": "⚠ INTERRUPT: Enforcer blocked",
@@ -83,7 +76,7 @@
           "stage": "warm-follow-up",
           "next_action": "Keep the relationship warm; send a short friendly follow-up if useful, and revisit a guest lecture / student Q&A only if it feels natural.",
           "last_movement": "May 4, 11:34 PM ET",
-          "days_in_stage": 9,
+          "days_in_stage": 11,
           "stall_reason": "Intentional wait state",
           "classification": "HIGH PROBABILITY",
           "conflict": false
@@ -93,7 +86,7 @@
           "stage": "proposal",
           "next_action": "Await scheduled May 9 follow-up send, then watch for reply after the COO conversation.",
           "last_movement": "May 1, 5:29 PM ET",
-          "days_in_stage": 12,
+          "days_in_stage": 14,
           "stall_reason": "External approval / reply pending",
           "classification": "HIGH PROBABILITY",
           "conflict": true
@@ -103,7 +96,7 @@
           "stage": "proposal",
           "next_action": "Wait for reply after COO meeting. Check in May 12 if no response.",
           "last_movement": "Apr 9, 8:30 PM ET",
-          "days_in_stage": 34,
+          "days_in_stage": 36,
           "stall_reason": "External approval / reply pending",
           "classification": "HIGH PROBABILITY",
           "conflict": true
@@ -141,15 +134,6 @@
       "signal_revenue_gap": false,
       "items": [
         {
-          "type": "L3",
-          "text": "Tier 1-2",
-          "component": "System",
-          "opportunity_id": "ot-20260328-0003",
-          "linked": true,
-          "source": "Jonathan Kiemel, PA-C",
-          "stage": "no-response"
-        },
-        {
           "type": "L1",
           "text": "s Apr 8 post (Conduit Quality Is a Leadership Problem) — strong co-sign of formal EVH pathway thesis. Founder of VesselHarvest.com (EVH/ERAH online courses, $349-649, up to 41 CME credits), Enlighten Medical Media (ACCME-accredited CME provider, Org ID 0008307), e-Echocardiography.com, PAStartup.co (pre-PA/PA school audience since 2017), OneFiveNine Group LLC. 15+ yrs EVH experience. NOT a competitor — upstream of Pol",
           "component": "System",
@@ -166,9 +150,18 @@
           "linked": true,
           "source": "Chris Darst, MPAS, PA-C",
           "stage": "sent"
+        },
+        {
+          "type": "L3",
+          "text": "partnership / course cross-promo / CME accreditation / podcast",
+          "component": "System",
+          "opportunity_id": "ot-20260408-chris-darst",
+          "linked": true,
+          "source": "Chris Darst, MPAS, PA-C",
+          "stage": "sent"
         }
       ],
-      "decision": "System: Tier 1-2"
+      "decision": "System: s Apr 8 post (Conduit Quality Is a Leadership Problem) — strong co-sign of formal EVH pathway thesis. Founder of VesselHarvest.com (EVH/ERAH online courses, $349-649, up to 41 CME credits), Enlighten Medical Media (ACCME-accredited CME provider, Org ID 0008307), e-Echocardiography.com, PAStartup.co (pre-PA/PA school audience since 2017), OneFiveNine Group LLC. 15+ yrs EVH experience. NOT a competitor — upstream of Pol"
     },
     "objection_intelligence": {
       "status": "NO OBJECTION DATA",
@@ -223,7 +216,7 @@
   },
   "focus_collapse": {
     "h1_move": "Advance Shea Dempsey, DMSc, MBA, PA-C, EM-CAQ now: Keep the relationship warm; send a short friendly follow-up if useful, and revisit a guest lecture / student Q&A only if it feels natural.",
-    "h2_emphasis": "System: Tier 1-2",
+    "h2_emphasis": "System: s Apr 8 post (Conduit Quality Is a Leadership Problem) — strong co-sign of formal EVH pathway thesis. Founder of VesselHarvest.com (EVH/ERAH online courses, $349-649, up to 41 CME credits), Enlighten Medical Media (ACCME-accredited CME provider, Org ID 0008307), e-Echocardiography.com, PAStartup.co (pre-PA/PA school audience since 2017), OneFiveNine Group LLC. 15+ yrs EVH experience. NOT a competitor — upstream of Pol",
     "system_constraint": "Do not add new standing surfaces until a live revenue object closes."
   },
   "exact_sources_used": {
@@ -243,6 +236,10 @@
       {
         "label": "linkedin run artifact",
         "path": "data/linkedin-post-runs/2026-05-12-measuring-presence-not-capability.json"
+      },
+      {
+        "label": "linkedin run artifact",
+        "path": "data/linkedin-post-runs/2026-05-14-app-onboarding-scorecard-lead-magnet.json"
       }
     ],
     "h1_revenue_engine": [
