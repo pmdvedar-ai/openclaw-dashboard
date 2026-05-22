@@ -1,7 +1,7 @@
 {
-  "generated": "2026-05-16T00:05:06.582594+00:00",
+  "generated": "2026-05-22T00:05:06.618494+00:00",
   "meta": {
-    "generated_local": "Fri May 15, 2026, 8:05 PM ET",
+    "generated_local": "Thu May 21, 2026, 8:05 PM ET",
     "decision_hash": {
       "fields": [
         "h1_move",
@@ -11,12 +11,12 @@
       ],
       "normalized": {
         "h1_move": "advance shea dempsey, dmsc, mba, pa-c, em-caq now: keep the relationship warm; send a short friendly follow-up if useful, and revisit a guest lecture / student q&a only if it feels natural.",
-        "h2_emphasis": "system: s apr 8 post (conduit quality is a leadership problem) — strong co-sign of formal evh pathway thesis. founder of vesselharvest.com (evh/erah online courses, $349-649, up to 41 cme credits), enlighten medical media (accme-accredited cme provider, org id 0008307), e-echocardiography.com, pastartup.co (pre-pa/pa school audience since 2017), onefivenine group llc. 15+ yrs evh experience. not a competitor — upstream of pol",
+        "h2_emphasis": "no qualifying proof signal — convert a live buyer interaction into reusable proof this cycle.",
         "interrupt_state": "⚠ interrupt: enforcer blocked",
         "system_constraint": "do not add new standing surfaces until a live revenue object closes."
       },
       "method": "sha256(json(sorted normalized semantic decision fields only))",
-      "value": "26bb9432d52d886951ad1d2129dfe2b6391b861ce37db94a620ae25277a6fec9",
+      "value": "7f7a52c6e709906f4690860e2d91a0a0afce0cd534b1862841289ad82a7b2d2d",
       "changed": true
     },
     "publish_target": "https://pmdvedar-ai.github.io/openclaw-dashboard",
@@ -76,7 +76,7 @@
           "stage": "warm-follow-up",
           "next_action": "Keep the relationship warm; send a short friendly follow-up if useful, and revisit a guest lecture / student Q&A only if it feels natural.",
           "last_movement": "May 4, 11:34 PM ET",
-          "days_in_stage": 11,
+          "days_in_stage": 17,
           "stall_reason": "Intentional wait state",
           "classification": "HIGH PROBABILITY",
           "conflict": false
@@ -86,7 +86,7 @@
           "stage": "proposal",
           "next_action": "Await scheduled May 9 follow-up send, then watch for reply after the COO conversation.",
           "last_movement": "May 1, 5:29 PM ET",
-          "days_in_stage": 14,
+          "days_in_stage": 20,
           "stall_reason": "External approval / reply pending",
           "classification": "HIGH PROBABILITY",
           "conflict": true
@@ -96,7 +96,7 @@
           "stage": "proposal",
           "next_action": "Wait for reply after COO meeting. Check in May 12 if no response.",
           "last_movement": "Apr 9, 8:30 PM ET",
-          "days_in_stage": 36,
+          "days_in_stage": 42,
           "stall_reason": "External approval / reply pending",
           "classification": "HIGH PROBABILITY",
           "conflict": true
@@ -113,9 +113,9 @@
     "execution_enforcer": {
       "status": "DO THIS NOW",
       "score": null,
-      "current_move": "Run the Baylor close sequence to outcome: confirm the May 9 COO follow-up sends, attach or offer the one-page proof asset, and update the case file the same day with one of three states — replied, forwarded internally, or no-response.",
+      "current_move": "Send one direct forcing follow-up to Mitesh asking three things only: did the COO/Director conversation happen, was the executive brief forwarded, and what exact next decision date or blocker now exists; then update the case file the same day to one of three states — replied, forwarded internally, or no-response.",
       "blocked": true,
-      "block_reason": "Carry-forward: Baylor close sequence remains incomplete because the case was not closed to a usable same-day state (replied, forwarded internally, or no-response).",
+      "block_reason": "Blocked: Baylor forcing follow-up has not been executed for 2 cycles and the case still is not closed to a usable state (replied, forwarded internally, or no-response).",
       "carry_forward": true,
       "gate_failures": [],
       "move_verification": {
@@ -130,38 +130,10 @@
       "decision": "Resolve the current non-negotiable move before assigning new work."
     },
     "proof_moat": {
-      "status": "WHAT IS GETTING STRONGER",
+      "status": "NO SIGNAL",
       "signal_revenue_gap": false,
-      "items": [
-        {
-          "type": "L1",
-          "text": "s Apr 8 post (Conduit Quality Is a Leadership Problem) — strong co-sign of formal EVH pathway thesis. Founder of VesselHarvest.com (EVH/ERAH online courses, $349-649, up to 41 CME credits), Enlighten Medical Media (ACCME-accredited CME provider, Org ID 0008307), e-Echocardiography.com, PAStartup.co (pre-PA/PA school audience since 2017), OneFiveNine Group LLC. 15+ yrs EVH experience. NOT a competitor — upstream of Pol",
-          "component": "System",
-          "opportunity_id": "ot-20260408-chris-darst",
-          "linked": true,
-          "source": "Chris Darst, MPAS, PA-C",
-          "stage": "sent"
-        },
-        {
-          "type": "L1",
-          "text": "s courses; (3) PAStartup Podcast guest — reaches pre-PA and new PA audience, perfect for Pol",
-          "component": "System",
-          "opportunity_id": "ot-20260408-chris-darst",
-          "linked": true,
-          "source": "Chris Darst, MPAS, PA-C",
-          "stage": "sent"
-        },
-        {
-          "type": "L3",
-          "text": "partnership / course cross-promo / CME accreditation / podcast",
-          "component": "System",
-          "opportunity_id": "ot-20260408-chris-darst",
-          "linked": true,
-          "source": "Chris Darst, MPAS, PA-C",
-          "stage": "sent"
-        }
-      ],
-      "decision": "System: s Apr 8 post (Conduit Quality Is a Leadership Problem) — strong co-sign of formal EVH pathway thesis. Founder of VesselHarvest.com (EVH/ERAH online courses, $349-649, up to 41 CME credits), Enlighten Medical Media (ACCME-accredited CME provider, Org ID 0008307), e-Echocardiography.com, PAStartup.co (pre-PA/PA school audience since 2017), OneFiveNine Group LLC. 15+ yrs EVH experience. NOT a competitor — upstream of Pol"
+      "items": [],
+      "decision": "No qualifying proof signal — convert a live buyer interaction into reusable proof this cycle."
     },
     "objection_intelligence": {
       "status": "NO OBJECTION DATA",
@@ -216,7 +188,7 @@
   },
   "focus_collapse": {
     "h1_move": "Advance Shea Dempsey, DMSc, MBA, PA-C, EM-CAQ now: Keep the relationship warm; send a short friendly follow-up if useful, and revisit a guest lecture / student Q&A only if it feels natural.",
-    "h2_emphasis": "System: s Apr 8 post (Conduit Quality Is a Leadership Problem) — strong co-sign of formal EVH pathway thesis. Founder of VesselHarvest.com (EVH/ERAH online courses, $349-649, up to 41 CME credits), Enlighten Medical Media (ACCME-accredited CME provider, Org ID 0008307), e-Echocardiography.com, PAStartup.co (pre-PA/PA school audience since 2017), OneFiveNine Group LLC. 15+ yrs EVH experience. NOT a competitor — upstream of Pol",
+    "h2_emphasis": "No qualifying proof signal — convert a live buyer interaction into reusable proof this cycle.",
     "system_constraint": "Do not add new standing surfaces until a live revenue object closes."
   },
   "exact_sources_used": {
@@ -240,6 +212,14 @@
       {
         "label": "linkedin run artifact",
         "path": "data/linkedin-post-runs/2026-05-14-app-onboarding-scorecard-lead-magnet.json"
+      },
+      {
+        "label": "linkedin run artifact",
+        "path": "data/linkedin-post-runs/2026-05-19-a-stable-cardiac-surgery-app-team-is-not-the-sam.json"
+      },
+      {
+        "label": "linkedin run artifact",
+        "path": "data/linkedin-post-runs/2026-05-21-the-best-first-assists-are-not-the-fastest-hands.json"
       }
     ],
     "h1_revenue_engine": [
@@ -263,7 +243,7 @@
       },
       {
         "label": "latest CSO brief",
-        "path": "strategy/2026-05-11-cso-brief.md"
+        "path": "strategy/2026-05-18-cso-brief.md"
       }
     ],
     "proof_moat": [
@@ -330,6 +310,7 @@
     "Erin Switzer MacMillan: tracker vs lead file disagree",
     "Mitesh J. Patel, MBA, MSHS, PA-C: tracker vs lead file disagree",
     "ENFORCER ARTIFACT MISSING",
+    "Signal capture is still weak; proof extraction depends on tracker notes rather than a dedicated signal store.",
     "Objection capture remains sparse in canonical files."
   ],
   "implementation_plan": [
