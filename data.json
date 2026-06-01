@@ -1,7 +1,7 @@
 {
-  "generated": "2026-05-22T00:05:06.618494+00:00",
+  "generated": "2026-06-01T00:05:07.185855+00:00",
   "meta": {
-    "generated_local": "Thu May 21, 2026, 8:05 PM ET",
+    "generated_local": "Sun May 31, 2026, 8:05 PM ET",
     "decision_hash": {
       "fields": [
         "h1_move",
@@ -10,17 +10,17 @@
         "system_constraint"
       ],
       "normalized": {
-        "h1_move": "advance shea dempsey, dmsc, mba, pa-c, em-caq now: keep the relationship warm; send a short friendly follow-up if useful, and revisit a guest lecture / student q&a only if it feels natural.",
-        "h2_emphasis": "no qualifying proof signal — convert a live buyer interaction into reusable proof this cycle.",
+        "h1_move": "advance john young now: send the promised retention audit / onboarding review material and keep the lane warm through the june troy locum window.",
+        "h2_emphasis": "system: s services during active corewell attrition. john confirmed the real pain is changing expectations, compensation friction, toxic personalities, and august onboarding strain; he was open to receiving pol",
         "interrupt_state": "⚠ interrupt: enforcer blocked",
-        "system_constraint": "do not add new standing surfaces until a live revenue object closes."
+        "system_constraint": "keep system changes narrow; protect revenue execution."
       },
       "method": "sha256(json(sorted normalized semantic decision fields only))",
-      "value": "7f7a52c6e709906f4690860e2d91a0a0afce0cd534b1862841289ad82a7b2d2d",
+      "value": "4230bb5bb18794e1dc6d6ddf67f6b74d22e32dbe705abc1066f6585b56f9c250",
       "changed": true
     },
     "publish_target": "https://pmdvedar-ai.github.io/openclaw-dashboard",
-    "change_summary": "H2 emphasis",
+    "change_summary": "H1 move; H2 emphasis",
     "publish_recommended": true,
     "lookback": {
       "h1_days": 14,
@@ -57,7 +57,20 @@
     },
     "upcoming_schedule": {
       "status": "WHAT IS COMING UP",
-      "items": []
+      "items": [
+        {
+          "label": "John Young",
+          "when": "Jun 2, 12:00 AM ET",
+          "kind": "Outreach next action",
+          "detail": "Send the promised retention audit / onboarding review material and keep the lane warm through the June Troy locum window."
+        },
+        {
+          "label": "A lot of cardiac surgery programs think they have an APP productivity problem.",
+          "when": "Jun 2, 12:00 AM ET",
+          "kind": "LinkedIn schedule",
+          "detail": "LinkedIn schedule"
+        }
+      ]
     },
     "interrupts": {
       "status": "⚠ INTERRUPT: Enforcer blocked",
@@ -68,15 +81,25 @@
   },
   "sections": {
     "h1_revenue_engine": {
-      "failure": "H1 FAILURE: NO REVENUE MOVEMENT",
+      "failure": null,
       "status": "STALE OR UNCERTAIN DATA",
       "items": [
+        {
+          "name": "John Young",
+          "stage": "warm-follow-up",
+          "next_action": "Send the promised retention audit / onboarding review material and keep the lane warm through the June Troy locum window.",
+          "last_movement": "May 31, 7:30 PM ET",
+          "days_in_stage": 0,
+          "stall_reason": "No explicit stall reason logged",
+          "classification": "HIGH PROBABILITY",
+          "conflict": true
+        },
         {
           "name": "Shea Dempsey, DMSc, MBA, PA-C, EM-CAQ",
           "stage": "warm-follow-up",
           "next_action": "Keep the relationship warm; send a short friendly follow-up if useful, and revisit a guest lecture / student Q&A only if it feels natural.",
           "last_movement": "May 4, 11:34 PM ET",
-          "days_in_stage": 17,
+          "days_in_stage": 27,
           "stall_reason": "Intentional wait state",
           "classification": "HIGH PROBABILITY",
           "conflict": false
@@ -86,36 +109,26 @@
           "stage": "proposal",
           "next_action": "Await scheduled May 9 follow-up send, then watch for reply after the COO conversation.",
           "last_movement": "May 1, 5:29 PM ET",
-          "days_in_stage": 20,
-          "stall_reason": "External approval / reply pending",
-          "classification": "HIGH PROBABILITY",
-          "conflict": true
-        },
-        {
-          "name": "Mitesh J. Patel, MBA, MSHS, PA-C",
-          "stage": "proposal",
-          "next_action": "Wait for reply after COO meeting. Check in May 12 if no response.",
-          "last_movement": "Apr 9, 8:30 PM ET",
-          "days_in_stage": 42,
+          "days_in_stage": 30,
           "stall_reason": "External approval / reply pending",
           "classification": "HIGH PROBABILITY",
           "conflict": true
         }
       ],
-      "close_target": "Shea Dempsey, DMSc, MBA, PA-C, EM-CAQ",
+      "close_target": "John Young",
       "immediate_decision": [
-        "Shea Dempsey, DMSc, MBA, PA-C, EM-CAQ",
-        "Mitesh J. Patel, MBA, MSHS, PA-C"
+        "John Young",
+        "Shea Dempsey, DMSc, MBA, PA-C, EM-CAQ"
       ],
       "remove_from_pipeline": [],
-      "decision": "Advance Shea Dempsey, DMSc, MBA, PA-C, EM-CAQ now: Keep the relationship warm; send a short friendly follow-up if useful, and revisit a guest lecture / student Q&A only if it feels natural."
+      "decision": "Advance John Young now: Send the promised retention audit / onboarding review material and keep the lane warm through the June Troy locum window."
     },
     "execution_enforcer": {
       "status": "DO THIS NOW",
       "score": null,
       "current_move": "Send one direct forcing follow-up to Mitesh asking three things only: did the COO/Director conversation happen, was the executive brief forwarded, and what exact next decision date or blocker now exists; then update the case file the same day to one of three states — replied, forwarded internally, or no-response.",
       "blocked": true,
-      "block_reason": "Blocked: Baylor forcing follow-up has not been executed for 2 cycles and the case still is not closed to a usable state (replied, forwarded internally, or no-response).",
+      "block_reason": "Critical block: Baylor forcing follow-up has not been executed for 3 cycles and the case still is not closed to a usable state (replied, forwarded internally, or no-response).",
       "carry_forward": true,
       "gate_failures": [],
       "move_verification": {
@@ -130,10 +143,20 @@
       "decision": "Resolve the current non-negotiable move before assigning new work."
     },
     "proof_moat": {
-      "status": "NO SIGNAL",
+      "status": "WHAT IS GETTING STRONGER",
       "signal_revenue_gap": false,
-      "items": [],
-      "decision": "No qualifying proof signal — convert a live buyer interaction into reusable proof this cycle."
+      "items": [
+        {
+          "type": "L1",
+          "text": "s services during active Corewell attrition. John confirmed the real pain is changing expectations, compensation friction, toxic personalities, and August onboarding strain; he was open to receiving Pol",
+          "component": "System",
+          "opportunity_id": "ot-20260531-john-young",
+          "linked": true,
+          "source": "John Young",
+          "stage": "warm-follow-up"
+        }
+      ],
+      "decision": "System: s services during active Corewell attrition. John confirmed the real pain is changing expectations, compensation friction, toxic personalities, and August onboarding strain; he was open to receiving Pol"
     },
     "objection_intelligence": {
       "status": "NO OBJECTION DATA",
@@ -165,7 +188,7 @@
         "candidate_next_phase": "1B",
         "ready_for_review": false
       },
-      "decision": "Do not add new standing surfaces until a live revenue object closes."
+      "decision": "Keep system changes narrow; protect revenue execution."
     },
     "stop_doing": {
       "status": "WHAT WE ARE NOT DOING",
@@ -187,9 +210,9 @@
     }
   },
   "focus_collapse": {
-    "h1_move": "Advance Shea Dempsey, DMSc, MBA, PA-C, EM-CAQ now: Keep the relationship warm; send a short friendly follow-up if useful, and revisit a guest lecture / student Q&A only if it feels natural.",
-    "h2_emphasis": "No qualifying proof signal — convert a live buyer interaction into reusable proof this cycle.",
-    "system_constraint": "Do not add new standing surfaces until a live revenue object closes."
+    "h1_move": "Advance John Young now: Send the promised retention audit / onboarding review material and keep the lane warm through the June Troy locum window.",
+    "h2_emphasis": "System: s services during active Corewell attrition. John confirmed the real pain is changing expectations, compensation friction, toxic personalities, and August onboarding strain; he was open to receiving Pol",
+    "system_constraint": "Keep system changes narrow; protect revenue execution."
   },
   "exact_sources_used": {
     "awareness_strip": [
@@ -220,6 +243,22 @@
       {
         "label": "linkedin run artifact",
         "path": "data/linkedin-post-runs/2026-05-21-the-best-first-assists-are-not-the-fastest-hands.json"
+      },
+      {
+        "label": "linkedin run artifact",
+        "path": "data/linkedin-post-runs/2026-05-26-hospitals-are-getting-more-serious-about-app-pip-result.json"
+      },
+      {
+        "label": "linkedin run artifact",
+        "path": "data/linkedin-post-runs/2026-05-26-hospitals-are-getting-more-serious-about-app-pip.json"
+      },
+      {
+        "label": "linkedin run artifact",
+        "path": "data/linkedin-post-runs/2026-06-09-a-fellowship-is-not-a-readiness-system-result.json"
+      },
+      {
+        "label": "linkedin run artifact",
+        "path": "data/linkedin-post-runs/2026-06-09-a-fellowship-is-not-a-readiness-system.json"
       }
     ],
     "h1_revenue_engine": [
@@ -233,7 +272,7 @@
       },
       {
         "label": "lead context",
-        "path": "consulting/leads/erin-switzer-macmillan.md"
+        "path": "consulting/leads/john-young.md"
       }
     ],
     "execution_enforcer": [
@@ -243,7 +282,7 @@
       },
       {
         "label": "latest CSO brief",
-        "path": "strategy/2026-05-18-cso-brief.md"
+        "path": "strategy/2026-05-25-cso-brief.md"
       }
     ],
     "proof_moat": [
@@ -307,10 +346,8 @@
   },
   "system_gaps_conflicts": [
     "Mitesh J. Patel, MBA, MSHS, PA-C: tracker vs lead file disagree",
-    "Erin Switzer MacMillan: tracker vs lead file disagree",
-    "Mitesh J. Patel, MBA, MSHS, PA-C: tracker vs lead file disagree",
+    "John Young: tracker vs lead file disagree",
     "ENFORCER ARTIFACT MISSING",
-    "Signal capture is still weak; proof extraction depends on tracker notes rather than a dedicated signal store.",
     "Objection capture remains sparse in canonical files."
   ],
   "implementation_plan": [
